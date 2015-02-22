@@ -59,7 +59,7 @@ map.log();
  *
  * 1) Click next to the arrow on the last line of the console.
  *    Enter the text map.go("north") and press enter.
- *    You should have moved to The Libray.
+ *    You should have moved to The Library.
  *
  * 2) Use the map.go() command to return to The Kitchen.
  *
