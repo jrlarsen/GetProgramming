@@ -125,7 +125,7 @@ var player1 = {
 log(player1);
 ```
 
-
+[jsbin: Listing 3.11](http://jsbin.com/kidovo/edit?js,console)
 ```javascript
 function log(player) {
     console.log(player.name + " is in " + player.location);
