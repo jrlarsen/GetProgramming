@@ -1,5 +1,6 @@
 // Adventures In Code
 // Listing 4.04
+// http://jsbin.com/lotoxo/edit?js,console
 
 function Location(title, description) {
     this.title = title;
