@@ -9,6 +9,7 @@ A simple JavaScript adventure game to help teach programming concepts.
 ### Chapter 2 - Adventures in Code - Welcome to Harmony
 
 
+
 ## Part 2 - Castles and Characters
 
 ### Chapter 3 - Players
@@ -22,7 +23,9 @@ Locations will have a title, a description, an inventory and an optional challen
 ### Chapter 6 - Items and Inventory
 
 
+
 ## Part 3 - Buttons and Browsers
+
 
 
 ## Part 4 - Ajax and APIs
