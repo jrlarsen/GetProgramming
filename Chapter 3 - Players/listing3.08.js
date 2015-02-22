@@ -1,6 +1,6 @@
 // Adventures In Code
 // Listing 3.08
-// http://jsbin.com/kamiri
+// http://jsbin.com/kamiri/edit?js,console
 
 function log(player) {
     console.log(player.name + " is in " + player.location);

@@ -1,6 +1,6 @@
 // Adventures In Code
 // Listing 4.02
-// http://jsbin.com/liviro
+// http://jsbin.com/liviro/edit?js,console
 
 function log(location) {
     console.log(location.title + "...");

@@ -1,6 +1,6 @@
 // Adventures In Code
 // Listing 3.05
-// http://jsbin.com/hakajo
+// http://jsbin.com/hakajo/edit?js,console
 
 var player1 = {};
 var player2;

@@ -1,6 +1,6 @@
 // Adventures In Code
 // Listing 4.01
-// http://jsbin.com/dekiva
+// http://jsbin.com/dekiva/edit?js,console
 
 var location1 = {
     title: "The Library",

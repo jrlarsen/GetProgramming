@@ -1,6 +1,6 @@
 // Adventures In Code
 // Listing 3.09
-// http://jsbin.com/vojuli
+// http://jsbin.com/vojuli/edit?js,console
 
 function log(player) {
     console.log(player.name + " is in " + player.location);

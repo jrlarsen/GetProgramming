@@ -1,6 +1,6 @@
 // Adventures In Code
 // Listing 3.01
-// http://jsbin.com/heniza
+// http://jsbin.com/heniza/edit?js,console
 
 var playerName = "Simon";
 console.log(playerName);

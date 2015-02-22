@@ -1,6 +1,6 @@
 // Adventures In Code
 // Listing 3.04
-// http://jsbin.com/ficisa
+// http://jsbin.com/ficisa/edit?js,console
 
 var player1 = {};
 

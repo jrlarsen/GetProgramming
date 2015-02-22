@@ -1,6 +1,6 @@
 // Adventures In Code
 // Listing 3.07
-// http://jsbin.com/cuxava
+// http://jsbin.com/cuxava/edit?js,console
 
 function log(player) {
     console.log(player.name + " is in " + player.location);
