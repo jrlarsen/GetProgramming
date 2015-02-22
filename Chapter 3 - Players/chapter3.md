@@ -1,13 +1,24 @@
 # Players
 
-## Ready Player One
+## Variables
 
+We need to be able to store information about our players. Some of that information may stay the same throughout the game. Some may change.
+
+In a program, we can use variables to store information for later use.
+
+### Ready Player One
+
+There first piece of information we need is a name for the player.
 
 [jsbin: Listing 3.01](http://jsbin.com/heniza/edit?js,console)
 ```javascript
 var playerName = "Simon";
 console.log(playerName);
 ```
+
+console.log is an instruction to display information on the console.
+
+As our game design evolves, we will want to add more information about each player. We might want to know where they are in our world.
 
 [jsbin: Listing 3.02](http://jsbin.com/vofimi/edit?js,console)
 ```javascript
@@ -16,6 +27,13 @@ var playerLocation = "The Library";
 
 console.log(playerName + " is in " + playerLocation);
 ```
+
+We can join pieces of text together to make longer pieces of text by using the '+' symbol.
+
+
+### Ready Player Two
+
+We can continue to add more variables as we need them. Here's some information for a second player.
 
 [jsbin: Listing 3.03](http://jsbin.com/hotira/edit?js,console)
 ```javascript
@@ -28,6 +46,13 @@ var player2Location = "The Kitchen";
 console.log(player1Name + " is in " + player1Location);
 console.log(player2Name + " is in " + player2Location);
 ```
+
+As more players join the game, the number of variables will quickly get out of hand. We need a way to organise our variables and our data.
+
+
+### Objects
+
+Instead of having a variable for every piece of information we need to store, we can create an object for each player. Information about the player can then be stored as a property of the object.
 
 [jsbin: Listing 3.04](http://jsbin.com/ficisa/edit?js,console)
 ```javascript
