@@ -1,4 +1,4 @@
-# AdventuresInCode
+# Adventures In Code
 A simple JavaScript adventure game to help teach programming concepts.
 
 * Players
