@@ -39,6 +39,7 @@ var location1 = {
 log(location1);
 ```
 
+### Constructing Location Objects
 
 [jsbin: Listing 4.03](http://jsbin.com/yoluyi/edit?js,console)
 ```javascript
@@ -53,6 +54,7 @@ console.log(location1.title);
 console.log(location1.description);
 ```
 
+### The log Method for Locations
 
 [jsbin: Listing 4.04](http://jsbin.com/lotoxo/edit?js,console)
 ```javascript
@@ -71,6 +73,7 @@ var location1 = new Location("The Library", "You are in a dusty library. Old boo
 location1.log();
 ```
 
+### Using Arrays to hold Items and Exits
 
 [jsbin: Listing 4.05](http://jsbin.com/xisuku/edit?js,console)
 ```javascript
@@ -113,6 +116,7 @@ location1.items.push("a rusty key");
 location1.log();
 ```
 
+### Using a Method to Add Exits
 
 [jsbin: Listing 4.06](http://jsbin.com/maviza/edit?js,console)
 ```javascript
@@ -158,6 +162,7 @@ location1.addExit("north");
 location1.log();
 ```
 
+### Adding and Removing Items
 
 [jsbin: Listing 4.07](http://jsbin.com/laziso/edit?js,console)
 ```javascript
@@ -218,6 +223,8 @@ location1.removeItem("a torch");
 location1.log();
 ```
 
+
+### Prototypes
 
 [jsbin: Listing 4.08](http://jsbin.com/quliha/edit?js,console)
 ```javascript
