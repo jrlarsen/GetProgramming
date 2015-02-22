@@ -1,5 +1,6 @@
 // Adventures In Code
 // Listing 3.11
+// http://jsbin.com/kidovo
 
 function log(player) {
     console.log(player.name + " is in " + player.location);

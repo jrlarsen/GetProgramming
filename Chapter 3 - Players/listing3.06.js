@@ -1,5 +1,6 @@
 // Adventures In Code
-// Listing 3.6
+// Listing 3.06
+// http://jsbin.com/caponu
 
 function log(player) {
     console.log(player.name + " is in " + player.location);

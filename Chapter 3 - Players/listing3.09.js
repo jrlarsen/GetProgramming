@@ -1,15 +1,16 @@
 // Adventures In Code
-// Listing 3.8
+// Listing 3.09
+// http://jsbin.com/vojuli
 
 function log(player) {
     console.log(player.name + " is in " + player.location);
 }
 
-var player1 = { name : "Kandra", location : "The Armoury" };
-var player2 = { name : "Dax", location : "The Kitchen" };
-var player3 = { name : "Brin", location : "The Library" };
-
-var players = [ player1 , player2 , player3 ];
+var players = [
+    { name : "Kandra", location : "The Armoury" },
+    { name : "Dax", location : "The Kitchen" },
+    { name : "Brin", location : "The Library" }
+];
 
 players.forEach(log);
 
@@ -20,8 +21,7 @@ players.forEach(log);
  * 1) Change some names and locations.
  *    Run the program again.
  *
- * 2) Create two more players.
- *    Add them to the players list.
+ * 2) Create two more players in the players list.
  *    Run the program again
  *
  * 3) Can the same player turn up more than once

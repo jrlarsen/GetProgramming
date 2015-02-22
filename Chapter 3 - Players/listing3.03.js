@@ -1,5 +1,6 @@
 // Adventures In Code
-// Listing 3.3
+// Listing 3.03
+// http://jsbin.com/hotira
 
 var player1Name = "Kandra";
 var player1Location = "The Armoury";

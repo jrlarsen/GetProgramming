@@ -1,5 +1,6 @@
 // Adventures In Code
 // Listing 3.10
+// http://jsbin.com/mexene
 
 function log(player) {
     console.log(player.name + " is in " + player.location);

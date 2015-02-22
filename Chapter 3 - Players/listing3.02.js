@@ -1,5 +1,6 @@
 // Adventures In Code
-// Listing 3.2
+// Listing 3.02
+// http://jsbin.com/vofimi
 
 var playerName = "Dax";
 var playerLocation = "The Library";

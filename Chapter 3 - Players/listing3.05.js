@@ -1,5 +1,6 @@
 // Adventures In Code
-// Listing 3.5
+// Listing 3.05
+// http://jsbin.com/hakajo
 
 var player1 = {};
 var player2;

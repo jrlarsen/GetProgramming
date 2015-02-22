@@ -1,5 +1,6 @@
 // Adventures In Code
-// Listing 3.7
+// Listing 3.07
+// http://jsbin.com/cuxava
 
 function log(player) {
     console.log(player.name + " is in " + player.location);
