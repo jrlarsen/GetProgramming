@@ -1,4 +1,4 @@
-(function(aic) {
+(function() {
 
     function Location(title, description) {
         this.title = title;
@@ -63,6 +63,7 @@
         }
     };
 
-    aic.Location = Location;
+    AdventuresInCode = AdventuresInCode || {};
+    AdventuresInCode.Location = Location;
 
-})(AdventuresInCode);
+})();

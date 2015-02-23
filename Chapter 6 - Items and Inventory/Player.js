@@ -1,4 +1,4 @@
-(function(aic) {
+(function() {
 
     function Player(name) {
         this.name = name;
@@ -38,6 +38,7 @@
         }
     };
 
-    aic.Player = Player;
+    AdventuresInCode = AdventuresInCode || {};
+    AdventuresInCode.Player = Player;
 
-})(AdventuresInCode);
+})();
