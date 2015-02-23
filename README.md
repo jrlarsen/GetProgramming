@@ -20,11 +20,11 @@ An overview of the adventure game to be built and how it will help the reader le
 Building the components that will be used in the full program.
 Intro to jsBin and how to interact with the code examples.
 
-### Chapter 3 - Players
+### Chapter 3 - Players and Properties
 Variables, basic objects, properties.
 Logging to the console.
 
-### Chapter 4 - Locations
+### Chapter 4 - Locations and Loops
 Constructor functions, arrays.
 
 ### Chapter 5 - Maps and Movement
