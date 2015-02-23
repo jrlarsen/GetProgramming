@@ -38,7 +38,6 @@
         }
     };
 
-    AdventuresInCode = AdventuresInCode || {};
     AdventuresInCode.Player = Player;
 
 })();
