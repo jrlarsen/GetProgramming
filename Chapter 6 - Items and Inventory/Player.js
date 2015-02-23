@@ -1,16 +1,9 @@
-// Adventures In Code
-// Listing 6.01
-// http://jsbin.com/neraku/edit?js,console
-
-function Location(title, description) {
-    this.title = title;
-    this.description = description;
-    this.exits = {};
-    this.numberOfExits = 0;
+function Player(name) {
+    this.name = name;
     this.items = [];
 }
 
-Location.prototype = {
+Player.prototype = {
     addItem: function(itemName) {
         if (this.items.indexOf(itemName) === -1) {
             this.items.push(itemName);
@@ -28,18 +21,12 @@ Location.prototype = {
         var i, n;
 
         if (this.items.length) {
-            console.log(this.title + " has:");
+            console.log(this.name + " has:");
             for (i = 0, n = this.items.length; i < n; i++) {
                 console.log("(" + i + ") " + this.items[i]);
             }
         } else {
-            console.log(this.title + " has no items.");
+            console.log(this.name + " has no items.");
         }
     }
 };
-
-var dungeon = new Location("The Dungeon", "You are in a dark, dank dungeon.");
-dungeon.addItem("a mysterious sapphire");
-dungeon.addItem("a stick");
-
-dungeon.logItems();

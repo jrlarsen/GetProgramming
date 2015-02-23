@@ -1,7 +1,3 @@
-// Adventures In Code
-// Listing 6.01
-// http://jsbin.com/neraku/edit?js,console
-
 function Location(title, description) {
     this.title = title;
     this.description = description;
@@ -37,9 +33,3 @@ Location.prototype = {
         }
     }
 };
-
-var dungeon = new Location("The Dungeon", "You are in a dark, dank dungeon.");
-dungeon.addItem("a mysterious sapphire");
-dungeon.addItem("a stick");
-
-dungeon.logItems();
