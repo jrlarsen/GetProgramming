@@ -32,6 +32,12 @@ Prototypes.
 
 ### Chapter 6 - Items and Inventory
 Putting it all together for a working game.
+Immediately invoked function expressions. Don't pollute the global namespace.
+Importing scripts - external class and map files.
+Loose coupling.
+
+### Chapter 7 - Challenges and Champions
+Location exits may now need challenges to be overcome by using items.
 
 
 ## Part 3 - Buttons and Browsers
