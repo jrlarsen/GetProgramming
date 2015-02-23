@@ -1,4 +1,4 @@
-# Players
+# Players and Properties
 
 ## Variables
 
