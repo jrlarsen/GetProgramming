@@ -1,3 +1,7 @@
+// Adventures in Code
+// Listing 6.06
+// http://jsbin.com/sopizo/edit?js,console
+
 function Player(name) {
     this.name = name;
     this.items = [];
@@ -35,3 +39,9 @@ Player.prototype = {
         this.logItems();
     }
 };
+
+var player = new Player("Brin");
+player.addItem("a sword");
+player.addItem("a rusty key");
+
+player.log();

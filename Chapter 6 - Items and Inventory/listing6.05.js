@@ -1,3 +1,7 @@
+// Adventures in Code
+// Listing 6.05
+// http://jsbin.com/secase/edit?js,console
+
 function Location(title, description) {
     this.title = title;
     this.description = description;
@@ -60,3 +64,11 @@ Location.prototype = {
         this.logExits();
     }
 };
+
+var dungeon = new Location("The Dungeon", "You are in a dark, dank dungeon.");
+var cave = new Location("The Cave", "You are in a dismal cave. It is cold.");
+dungeon.addExit("north", cave);
+dungeon.addItem("a rotten barrel");
+dungeon.addItem("a glittering rock");
+
+dungeon.log();
