@@ -24,9 +24,10 @@ Logging to the console.
 Constructor functions, arrays.
 
 ### Chapter 5 - Maps and Movement
+Prototypes.
 
 ### Chapter 6 - Items and Inventory
-
+Putting it all together for a working game.
 
 
 ## Part 3 - Buttons and Browsers
@@ -35,7 +36,7 @@ Minimal HTML.
 Text box, button, div.
 Reacting to a click event.
 Importing scripts, including a map file for the game.
-
+Templating.
 
 ## Part 4 - Ajax and APIs
 Pulling info from a server.
