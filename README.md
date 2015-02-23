@@ -37,7 +37,7 @@ Putting it all together for a working game.
 ## Part 3 - Buttons and Browsers
 Moving to the browser.
 Minimal HTML.
-Text box, button, div.
+Text box, button, div, h1, p.
 Reacting to a click event.
 Importing scripts, including a map file for the game.
 Templating.
