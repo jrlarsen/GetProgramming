@@ -20,17 +20,17 @@ An overview of the adventure game to be built and how it will help the reader le
 Building the components that will be used in the full program.
 Intro to jsBin and how to interact with the code examples.
 
-### Chapter 3 - Players and Properties
+### Chapter 3 - [Players and Properties](https://github.com/jrlarsen/AdventuresInCode/blob/master/Chpt3/chapter3.md)
 Variables, basic objects, properties.
 Logging to the console.
 
-### Chapter 4 - Locations and Loops
+### Chapter 4 - [Locations and Loops](https://github.com/jrlarsen/AdventuresInCode/blob/master/Chpt4/chapter4.md)
 Constructor functions, arrays.
 
-### Chapter 5 - Maps and Movement
+### Chapter 5 - [Maps and Movement](https://github.com/jrlarsen/AdventuresInCode/blob/master/Chpt5/chapter5.md)
 Prototypes.
 
-### Chapter 6 - Items and Inventory
+### Chapter 6 - [Items and Inventory](https://github.com/jrlarsen/AdventuresInCode/blob/master/Chpt6/chapter6.md)
 Putting it all together for a working game.
 Immediately invoked function expressions. Don't pollute the global namespace.
 Importing scripts - external class and map files.
