@@ -1,6 +1,10 @@
 # Adventures In Code
 A JavaScript adventure game to help teach programming concepts.
 
+The focus will be on understanding and practising each concept rather than covering every feature of JavaScript.
+
+The book could have sidebars or mini-chapters introducing some research into successful learning techniques that are not always intuitive. E.g. desirable difficulty, interteaving, spacing, repitition, testing as learning.  
+
 
 ## Part 1
 
