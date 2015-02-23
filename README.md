@@ -30,8 +30,14 @@ Constructor functions, arrays.
 
 
 ## Part 3 - Buttons and Browsers
-
+Moving to the browser.
+Minimal HTML.
+Text box, button, div.
+Reacting to a click event.
+Importing scripts, including a map file for the game.
 
 
 ## Part 4 - Ajax and APIs
-
+Pulling info from a server.
+Local storage.
+Node.js? Websockets? Multiple players?
