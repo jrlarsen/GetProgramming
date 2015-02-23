@@ -1,5 +1,5 @@
 # Adventures In Code
-A JavaScript adventure game to help teach programming concepts.
+Creating a JavaScript adventure game to help teach programming concepts.
 
 The focus will be on understanding and practising each concept rather than covering every feature of JavaScript.
 
