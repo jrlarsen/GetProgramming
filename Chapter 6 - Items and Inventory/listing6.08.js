@@ -1,33 +1,16 @@
-// Adventures in Code
-// Listing 6.07
-// http://jsbin.com/rojobe/edit?js,console
-
-var Location = AdventuresInCode.Location;
-var Player = AdventuresInCode.Player;
-
-var kitchen = new Location(
-        "The Kitchen",
-        "You are in a large kitchen. There is the stench of decay."
-    ),
-
-    library = new Location(
-        "The Library",
-        "You are in a dusty library. Ancient books line the walls."
-    ),
-
-    player = new Player("Dax");
-
-kitchen.addExit("north", library);
-library.addExit("south", kitchen);
-
-kitchen.addItem("a cleaver");
-library.addItem("a rusty key");
-
-player.addItem("a sword");
+// Adventures In Code
+// Listing 6.08
+// http://jsbin.com/walahu/edit?js,console
 
 var game = {
-    location: kitchen,
-    player: player,
+    location: null,
+    player: null,
+
+    start: function(startLocation, player) {
+        game.location = startLocation;
+        game.player = player;
+        game.log();
+    },
 
     me: function() {
         game.player.log();
@@ -79,4 +62,4 @@ var game = {
     }
 };
 
-game.log();
+game.start(AdventuresInCode.startLocation, new AdventuresInCode.Player("Dax"));
