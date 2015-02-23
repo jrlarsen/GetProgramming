@@ -1,4 +1,4 @@
-# Locations
+# Locations and Loops
 
 
 [jsbin: Listing 4.01](http://jsbin.com/dekiva/edit?js,console)
