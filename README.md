@@ -43,7 +43,11 @@ Constructing locations.
 * 4.5 sharing method code with prototypes
 
 ### Chapter 5 - [Maps and Movement](https://github.com/jrlarsen/AdventuresInCode/blob/master/Chpt5/chapter5.md)
-Prototypes.
+Linking locations together.
+* 5.1 references and bracket notation for object properties
+* 5.2 object property enumeration
+* 5.3 maintaining game state, a singleton game object and avoiding global variables
+* 5.4 defensive coding and throwing errors
 
 ### Chapter 6 - [Items and Inventory](https://github.com/jrlarsen/AdventuresInCode/blob/master/Chpt6/chapter6.md)
 Putting it all together for a working game.
