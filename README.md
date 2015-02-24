@@ -61,7 +61,12 @@ Putting it all together for a working game.
 * 6.5 map files and loose coupling
 
 ### Chapter 7 - Challenges and Champions
-Location exits may now need challenges to be overcome by using items.
+Location may now have challenges to overcome by using items.
+* 7.1 completing the adventure - success criteria
+* 7.2 refactoring to include a new feature
+* 7.3 information hiding with closures
+* 7.4 playing the game
+* 7.5 trying to break the game
 
 
 ## Part 3 - Buttons and Browsers
