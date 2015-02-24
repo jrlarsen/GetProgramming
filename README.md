@@ -32,8 +32,12 @@ Key programming concepts:
 * arrays and enumeration
 
 ### Chapter 3 - [Players and Properties](https://github.com/jrlarsen/AdventuresInCode/blob/master/Chpt3/chapter3.md)
-Variables, basic objects, properties.
-Logging to the console.
+Representing a player in code.
+* 3.1 variables and values
+* 3.2 organising with objects and properties
+* 3.3 reusuing code with functions and arguments
+* 3.4 arrays as lists and joining arrays
+* 3.5 conditions with if
 
 ### Chapter 4 - [Locations and Loops](https://github.com/jrlarsen/AdventuresInCode/blob/master/Chpt4/chapter4.md)
 Constructor functions, arrays.
