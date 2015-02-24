@@ -28,26 +28,29 @@ Building the components that will be used in the full program. Getting a sense o
 
 ### Chapter 3 - [Players and Properties](https://github.com/jrlarsen/AdventuresInCode/blob/master/Chpt3/chapter3.md)
 Representing a player in code.
-* 3.1 variables and values
-* 3.2 organising with objects and properties
-* 3.3 reusuing code with functions and arguments
-* 3.4 arrays as lists and joining arrays
-* 3.5 conditions with if
+* 3.1 storing and using information about players
+* 3.2 variables and values
+* 3.3 organising with objects and properties
+* 3.4 reusuing code with functions and arguments
+* 3.5 arrays as lists and joining arrays
+* 3.6 conditions with if
 
 ### Chapter 4 - [Locations and Loops](https://github.com/jrlarsen/AdventuresInCode/blob/master/Chpt4/chapter4.md)
 Constructing locations.
-* 4.1 conditions with if and else
-* 4.2 building object templates with constructor functions, this and new
-* 4.3 making objects take action with methods
-* 4.4 accessing properties with set and get methods (use ES setters and getters?)
-* 4.5 sharing method code with prototypes
+* 4.1 creating a blueprint we can use to create locations
+* 4.2 conditions with if and else
+* 4.3 building object templates with constructor functions, this and new
+* 4.4 making objects take action with methods
+* 4.5 accessing properties with set and get methods (use ES setters and getters?)
+* 4.6 sharing method code with prototypes
 
 ### Chapter 5 - [Maps and Movement](https://github.com/jrlarsen/AdventuresInCode/blob/master/Chpt5/chapter5.md)
 Linking locations together.
-* 5.1 references and bracket notation for object properties
-* 5.2 object property enumeration
-* 5.3 maintaining game state, a singleton game object and avoiding global variables
-* 5.4 defensive coding and throwing errors
+* 5.1 keeping our program organised as we link locations to build our world
+* 5.2 references and bracket notation for object properties
+* 5.3 object property enumeration
+* 5.4 maintaining game state, a singleton game object and avoiding global variables
+* 5.5 defensive coding and throwing errors
 
 ### Chapter 6 - [Items and Inventory](https://github.com/jrlarsen/AdventuresInCode/blob/master/Chpt6/chapter6.md)
 Putting it all together for a working game.
