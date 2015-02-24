@@ -27,8 +27,9 @@ Overview of the three versions of the game we will build. Some code snippets but
 Building the components that will be used in the full program.
 Key programming concepts:  
 * variables and values
-* functions, arguments and efficiency
-* basic intro to objects
+* functions and code reuse
+* objects and properties
+* arrays and enumeration
 
 ### Chapter 3 - [Players and Properties](https://github.com/jrlarsen/AdventuresInCode/blob/master/Chpt3/chapter3.md)
 Variables, basic objects, properties.
