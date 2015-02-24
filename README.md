@@ -54,9 +54,11 @@ Linking locations together.
 
 ### Chapter 6 - [Items and Inventory](https://github.com/jrlarsen/AdventuresInCode/blob/master/Chpt6/chapter6.md)
 Putting it all together for a working game.
-Immediately invoked function expressions. Don't pollute the global namespace.
-Importing scripts - external class and map files.
-Loose coupling.
+* 6.1 organising all our game elements to safely build the game
+* 6.2 global scope and using functions to limit scope
+* 6.3 loading and executing external scripts
+* 6.4 managing the pieces with game methods
+* 6.5 map files and loose coupling
 
 ### Chapter 7 - Challenges and Champions
 Location exits may now need challenges to be overcome by using items.
