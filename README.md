@@ -101,10 +101,27 @@ This text adventure could look a whole lot better.
 A fully functioning adventure
 * 11.1 Reusing all our code
 * 11.2 Loading multiple maps
-* 11.3 Starting, stopping and switching games
+* 11.3 Templates
+* 11.4 Navigation UI
+* 11.5 Starting, stopping and switching games
+* 11.6 Saving state locally
 
 
 ## Part 4 - Ajax and APIs
-Pulling info from a server.
-Local storage.
-Node.js? Websockets? Multiple players?
+Using a server to provide and store data
+
+### Chapter 12 - An Adventure API
+Adventures on demand.
+* 12.1 We don't need to load the whole adventure at once
+* 12.2 Introducing the Adventure RESTful API
+* 12.3 Loading each location
+* 12.4 Listing available maps
+
+### Chapter 13 - A Really Quick Introduction To Node.js and Express.js
+Investigating the Adventure API
+
+
+### Chapter 14 - Multiplayer Adventures with Socket.io
+We can play with friends.
+
+
