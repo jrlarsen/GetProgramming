@@ -37,7 +37,7 @@ Representing a player in code.
 
 ### Chapter 4 - [Locations and Loops](https://github.com/jrlarsen/AdventuresInCode/blob/master/Chpt4/chapter4.md)
 Constructing locations.
-* 4.1 creating a blueprint we can use to create locations
+* 4.1 creating a blueprint we can use to construct locations
 * 4.2 conditions with if and else
 * 4.3 building object templates with constructor functions, this and new
 * 4.4 making objects take action with methods
