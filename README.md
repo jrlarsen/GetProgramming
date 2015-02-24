@@ -114,14 +114,24 @@ Using a server to provide and store data
 Adventures on demand.
 * 12.1 We don't need to load the whole adventure at once
 * 12.2 Introducing the Adventure RESTful API
-* 12.3 Loading each location
-* 12.4 Listing available maps
+* 12.3 JSON
+* 12.4 Loading each location
+* 12.5 Listing available maps
 
 ### Chapter 13 - A Really Quick Introduction To Node.js and Express.js
 Investigating the Adventure API
-
+* 13.1 JavaScript on the server
+* 13.2 Installing Node and using npm
+* 13.3 Modules and require
+* 13.4 Express
+* 13.5 Loading our map JSON files and responding to API requests
+* 13.6 Saving game state on the server
 
 ### Chapter 14 - Multiplayer Adventures with Socket.io
 We can play with friends.
-
+* 14.1 Real-time updates
+* 14.2 Using socket.io on the server and the browser
+* 14.3 Sending and receiving game messages
+* 14.4 Bumping into other characters
+* 14.5 Swapping items
 
