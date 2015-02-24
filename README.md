@@ -40,7 +40,12 @@ Representing a player in code.
 * 3.5 conditions with if
 
 ### Chapter 4 - [Locations and Loops](https://github.com/jrlarsen/AdventuresInCode/blob/master/Chpt4/chapter4.md)
-Constructor functions, arrays.
+Constructing locations.
+* 4.1 conditions with if and else
+* 4.2 building object templates with constructor functions, this and new
+* 4.3 making objects take action with methods
+* 4.4 accessing properties with set and get methods (use ES setters and getters?)
+* 4.5 sharing method code with prototypes
 
 ### Chapter 5 - [Maps and Movement](https://github.com/jrlarsen/AdventuresInCode/blob/master/Chpt5/chapter5.md)
 Prototypes.
