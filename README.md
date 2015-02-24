@@ -9,15 +9,15 @@ The book could have sidebars or mini-chapters introducing some research into suc
 ## Part 1
 
 ### Chapter 1 - Programs and JavaScript
-What is a program? What do programmers do? Programming as an art and science.
-Programming takes practice. It's not just learning key words, it's learning structures, patterns and best practices.
-What is JavaScript and why is it important? JavaScript in the browser and on the server.
-JavaScript libraries.
+What is a program? What do programmers do? Programming as an art and science.  
+Programming takes practice. It's not just learning key words, it's learning structures, patterns and best practices.  
+What is JavaScript and why is it important? JavaScript in the browser and on the server.  
+JavaScript libraries.  
 
 
 ### Chapter 2 - Adventures in Code - Mapping the Land
-An overview of the adventure game to be built and how it will help the reader learn. A graphical representation of what will be covered in the book - a map.
-Overview of the three versions of the game we will build. Some code snippets but only as a taste of what is to come.
+An overview of the adventure game to be built and how it will help the reader learn. A graphical representation of what will be covered in the book - a map.  
+Overview of the three versions of the game we will build. Some code snippets but only as a taste of what is to come.  
 * Example 1 - Intro to jsBin and interacting via the console.
 * Example 2 - Browser based version. Interacting via form controls. View source. Browser developer tools and the console.
 * Example 3 - Browser and server based version. Information to and from the server. Multiple players. Saving data locally and on the server.
