@@ -23,9 +23,12 @@ Overview of the three versions of the game we will build. Some code snippets but
 * Example 3 - Browser and server based version. Information to and from the server. Multiple players. Saving data locally and on the server.
 
 
-## Part 2 - Castles and Characters
+## Part 2 - Characters and Components
 Building the components that will be used in the full program.
-Intro to jsBin and how to interact with the code examples.
+Key programming concepts:  
+* variables and values
+* functions, arguments and efficiency
+* basic intro to objects
 
 ### Chapter 3 - [Players and Properties](https://github.com/jrlarsen/AdventuresInCode/blob/master/Chpt3/chapter3.md)
 Variables, basic objects, properties.
