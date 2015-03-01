@@ -1,6 +1,6 @@
+// jsbin.com/maviza/edit?js,console
 // Adventures In Code
 // Listing 4.06
-// http://jsbin.com/maviza/edit?js,console
 
 function Location(title, description) {
     this.title = title;

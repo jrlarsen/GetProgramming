@@ -1,6 +1,6 @@
+// jsbin.com/quliha/edit?js,console
 // Adventures In Code
 // Listing 4.08
-// http://jsbin.com/quliha/edit?js,console
 
 function Location(title, description) {
     this.title = title;
@@ -15,27 +15,27 @@ Location.prototype.log = function() {
     console.log(this.description);
 
     if (this.items.length > 0) {
-        console.log("Items: " + this.items.join(', ') + '.');
+      console.log("Items: " + this.items.join(', ') + '.');
     } else {
-        console.log("There are no items here.");
+      console.log("There are no items here.");
     }
 
     if (this.exits.length > 0) {
-        console.log("Exits: " + this.exits.join(', ') + '.');
+      console.log("Exits: " + this.exits.join(', ') + '.');
     } else {
-        console.log("There are no exits. You are trapped!");
+      console.log("There are no exits. You are trapped!");
     }
 };
 
 Location.prototype.addExit = function(newExit) {
     if (this.exits.indexOf(newExit) === -1) {
-        this.exits.push(newExit);
+      this.exits.push(newExit);
     }
 };
 
 Location.prototype.addItem = function(item) {
     if (this.items.indexOf(item) === -1) {
-        this.items.push(item);
+      this.items.push(item);
     }
 };
 
@@ -43,7 +43,7 @@ Location.prototype.removeItem = function(item) {
     var itemIndex = this.items.indexOf(item);
 
     if (itemIndex !== -1) {
-        this.items.splice(itemIndex, 1);
+      this.items.splice(itemIndex, 1);
     }
 };
 

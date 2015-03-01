@@ -1,9 +1,9 @@
+// jsbin.com/kamiri/edit?js,console
 // Adventures In Code
 // Listing 3.08
-// http://jsbin.com/kamiri/edit?js,console
 
 function log(player) {
-    console.log(player.name + " is in " + player.location);
+  console.log(player.name + " is in " + player.location);
 }
 
 var player1 = { name : "Kandra", location : "The Armoury" };
@@ -16,16 +16,16 @@ players.forEach(log);
 
 
 /**
- * Adventures
- *
- * 1) Change some names and locations.
- *    Run the program again.
- *
- * 2) Create two more players.
- *    Add them to the players list.
- *    Run the program again
- *
- * 3) Can the same player turn up more than once
- *    in the players list?
- *
- */
+* Adventures
+*
+* 1) Change some names and locations.
+*    Run the program again.
+*
+* 2) Create two more players.
+*    Add them to the players list.
+*    Run the program again
+*
+* 3) Can the same player turn up more than once
+*    in the players list?
+*
+*/

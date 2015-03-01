@@ -1,6 +1,6 @@
+// jsbin.com/cigafu/edit?js,console
 // Adventures In Code
 // Listing 5.04
-// http://jsbin.com/cigafu/edit?js,console
 
 function Location(title, description) {
     this.title = title;

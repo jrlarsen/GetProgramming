@@ -1,20 +1,20 @@
+// jsbin.com/rojobe/edit?js,console
 // Adventures in Code
 // Listing 6.07
-// http://jsbin.com/rojobe/edit?js,console
 
 var Location = AdventuresInCode.Location;
 var Player = AdventuresInCode.Player;
 
 var kitchen = new Location(
-        "The Kitchen",
-        "You are in a large kitchen. There is the stench of decay."
+      "The Kitchen",
+      "You are in a large kitchen. There is the stench of decay."
     ),
-
+    
     library = new Location(
-        "The Library",
-        "You are in a dusty library. Ancient books line the walls."
+      "The Library",
+      "You are in a dusty library. Ancient books line the walls."
     ),
-
+    
     player = new Player("Dax");
 
 kitchen.addExit("north", library);
@@ -47,16 +47,16 @@ var game = {
             console.log("You search in vain for that item does not exist.");
         }
     },
-
+  
     drop: function(itemIndex) {
-        var item = game.player.items[itemIndex];
-        if (item !== undefined) {
-            game.location.addItem(item);
-            game.player.removeItem(item);
-            console.log(game.player.name + " drops " + item);
-        } else {
-            console.log("You do not have that item.");
-        }
+      var item = game.player.items[itemIndex];
+      if (item !== undefined) {
+        game.location.addItem(item);
+        game.player.removeItem(item);
+        console.log(game.player.name + " drops " + item);
+      } else {
+        console.log("You do not have that item.");
+      }
     },
 
     go : function(direction) {
@@ -72,10 +72,10 @@ var game = {
             throw new Error("The game needs a current location before we can go.");
         }
     },
-
+  
     log: function() {
-        game.me();
-        game.here();
+      game.me();
+      game.here();
     }
 };
 
