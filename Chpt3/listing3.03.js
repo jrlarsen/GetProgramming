@@ -1,6 +1,6 @@
+// jsbin.com/hotira/edit?js,console
 // Adventures In Code
 // Listing 3.03
-// http://jsbin.com/hotira/edit?js,console
 
 var player1Name = "Kandra";
 var player1Location = "The Armoury";
@@ -13,12 +13,12 @@ console.log(player2Name + " is in " + player2Location);
 
 
 /**
- * Adventures
- *
- * 1) Change the names and locations and
- *    run the program again.
- *
- * 2) Add a third player.
- *    Display their name and location in the same way.
- *
- */
+* Adventures
+*
+* 1) Change the names and locations and
+*    run the program again.
+*
+* 2) Add a third player.
+*    Display their name and location in the same way.
+*
+*/

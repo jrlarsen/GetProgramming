@@ -1,6 +1,6 @@
+// jsbin.com/sopizo/edit?js,console
 // Adventures in Code
 // Listing 6.06
-// http://jsbin.com/sopizo/edit?js,console
 
 function Player(name) {
     this.name = name;
@@ -33,10 +33,10 @@ Player.prototype = {
             console.log(this.name + " has no items.");
         }
     },
-
+  
     log: function() {
-        console.log(this.name);
-        this.logItems();
+      console.log(this.name);
+      this.logItems();
     }
 };
 

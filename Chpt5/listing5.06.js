@@ -1,71 +1,71 @@
+// jsbin.com/jakeci/edit?js,console
 // Adventures In Code
 // Listing 5.06
-// http://jsbin.com/jakeci/1/edit?js,console
 
 function Location(title, description) {
-    this.title = title;
-    this.description = description;
-    this.exits = {};
-    this.numberOfExits = 0;
+  this.title = title;
+  this.description = description;
+  this.exits = {};
+  this.numberOfExits = 0;
 }
 
 Location.prototype.addExit = function(title, destination) {
-    if (this.exits[title] === undefined) {
-        this.exits[title] = destination;
-        this.numberOfExits++;
-    }
+  if (this.exits[title] === undefined) {
+    this.exits[title] = destination;
+    this.numberOfExits++;
+  }
 };
 
 Location.prototype.log = function() {
-    var title;
+  var title;
 
-    console.log(this.title + "...");
-    console.log(this.description);
+  console.log(this.title + "...");
+  console.log(this.description);
 
-    if (this.numberOfExits) {
-        console.log("Exits:");
-        for (title in this.exits) {
-            console.log("\t\t" + title);
-        }
-    } else {
-        console.log("There are no exits. You are trapped!");
+  if (this.numberOfExits) {
+    console.log("Exits:");
+    for (title in this.exits) {
+      console.log("\t\t" + title);
     }
+  } else {
+    console.log("There are no exits. You are trapped!");
+  }
 };
 
 var map = {
-    currentLocation : null,
-
-    go : function(direction) {
-        if (map.currentLocation) {
-            if (map.currentLocation.exits[direction] !== undefined) {
-                map.currentLocation = map.currentLocation.exits[direction];
-                map.log();
-            } else {
-                console.log("*** There is no exit in that direction. ***");
-            }
-            return "-->";
-        } else {
-            throw new Error("The map needs a current location before we can go.");
-        }
-    },
-
-    log : function() {
-        if (map.currentLocation) {
-            map.currentLocation.log();
-        } else {
-            throw new Error("A current location has not been set for the map.");
-        }
+  currentLocation : null,
+  
+  go : function(direction) {
+    if (map.currentLocation) {
+      if (map.currentLocation.exits[direction] !== undefined) {
+        map.currentLocation = map.currentLocation.exits[direction];
+        map.log();
+      } else {
+        console.log("*** There is no exit in that direction. ***");
+      }
+      return "-->";
+    } else {
+      throw new Error("The map needs a current location before we can go.");
     }
+  },
+  
+  log : function() {
+    if (map.currentLocation) {
+      map.currentLocation.log();
+    } else {
+      throw new Error("A current location has not been set for the map.");
+    }
+  }
 };
 
 var location1 = new Location(
-    "The Kitchen",
-    "You are in a large kitchen. There is a strong stench of decay."
+  "The Kitchen",
+  "You are in a large kitchen. There is a strong stench of decay."
 );
 
 var location2 = new Location(
-    "The Library",
-    "You are in a dusty, old library. Ancient books line every wall."
+  "The Library",
+  "You are in a dusty, old library. Ancient books line every wall."
 );
 
 location1.addExit("north", location2);

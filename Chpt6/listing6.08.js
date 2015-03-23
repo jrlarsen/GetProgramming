@@ -1,15 +1,15 @@
+// jsbin.com/walahu/edit?js,console
 // Adventures In Code
 // Listing 6.08
-// http://jsbin.com/walahu/edit?js,console
 
 var game = {
     location: null,
     player: null,
-
+  
     start: function(startLocation, player) {
-        game.location = startLocation;
-        game.player = player;
-        game.log();
+      game.location = startLocation;
+      game.player = player;
+      game.log();
     },
 
     me: function() {

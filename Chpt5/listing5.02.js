@@ -1,6 +1,6 @@
+// jsbin.com/gugami/edit?js,console
 // Adventures In Code
 // Listing 5.02
-// http://jsbin.com/gugami/edit?js,console
 
 function Location(title, description) {
     this.title = title;

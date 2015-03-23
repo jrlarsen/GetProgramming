@@ -1,6 +1,6 @@
+// jsbin.com/yabosi/edit?js,console
 // Adventures In Code
 // Listing 5.01
-// http://jsbin.com/yabosi/edit?js,console
 
 function Location(title, description) {
     this.title = title;

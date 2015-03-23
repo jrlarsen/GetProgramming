@@ -1,9 +1,9 @@
+// jsbin.com/cuxava/edit?js,console
 // Adventures In Code
 // Listing 3.07
-// http://jsbin.com/cuxava/edit?js,console
 
 function log(player) {
-    console.log(player.name + " is in " + player.location);
+  console.log(player.name + " is in " + player.location);
 }
 
 var player1 = { name : "Kandra", location : "The Armoury" };
@@ -16,12 +16,12 @@ log(player3);
 
 
 /**
- * Adventures
- *
- * 1) Change some names and locations.
- *    Run the program again.
- *
- * 2) Add two more players.
- *    Display their details on the console.
- *
- */
+* Adventures
+*
+* 1) Change some names and locations.
+*    Run the program again.
+*
+* 2) Add two more players.
+*    Display their details on the console.
+*
+*/

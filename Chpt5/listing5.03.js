@@ -1,28 +1,28 @@
+// jsbin.com/fuwiju/edit?js,console
 // Adventures In Code
 // Listing 5.03
-// http://jsbin.com/fuwiju/edit?js,console
 
 function Location(title, description) {
-    this.title = title;
-    this.description = description;
-    this.exits = {};
+  this.title = title;
+  this.description = description;
+  this.exits = {};
 }
 
 Location.prototype.addExit = function(title, destination) {
-    this.exits[title] = destination;
+  this.exits[title] = destination;
 };
 
 Location.prototype.log = function() {
-    var title;
-
-    console.log("--------------------------------------");
-    console.log(this.title + "...");
-    console.log(this.description);
-
-    console.log("Exits:");
-    for (title in this.exits) {
-        console.log("\t\t" + title);
-    }
+  var title;
+  
+  console.log("--------------------------------------");
+  console.log(this.title + "...");
+  console.log(this.description);
+  
+  console.log("Exits:");
+  for (title in this.exits) {
+    console.log("\t\t" + title);
+  }
 };
 
 var location1 = new Location("The Kitchen", "You are in a large kitchen. There is a strong stench of decay.");

@@ -1,6 +1,6 @@
+// jsbin.com/secase/edit?js,console
 // Adventures in Code
 // Listing 6.05
-// http://jsbin.com/secase/edit?js,console
 
 function Location(title, description) {
     this.title = title;
