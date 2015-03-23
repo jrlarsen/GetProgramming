@@ -26,31 +26,31 @@ The book could have sidebars or mini-chapters introducing some research into suc
 ## Part 2 - Characters and Components
 Building the components that will be used in the full program. Getting a sense of the modular nature of programs. Each object or function has its part to play. Complicated programs are often made from simple parts.
 
-### Chapter 3 - [Players and Properties](https://github.com/jrlarsen/AdventuresInCode/blob/master/Chpt3/chapter3.md)
-Representing a player in code.
+### Chapter 3 - [Meet the Players](https://github.com/jrlarsen/AdventuresInCode/blob/master/Chpt3/chapter3.md)
+Representing a player in code with variables, objects and functions.
 * 3.1 Storing and using information about players
 * 3.2 Variables and values
 * 3.3 Organising with objects and properties
-* 3.4 Reusuing code with functions and arguments
-* 3.5 Arrays as lists and joining arrays
-* 3.6 Conditions with if
+* 3.4 Reusing code with functions and arguments
+* 3.5 Listing player items with arrays
+* 3.6 Checking conditions: the if statement
 
-### Chapter 4 - [Locations and Loops](https://github.com/jrlarsen/AdventuresInCode/blob/master/Chpt4/chapter4.md)
-Constructing locations.
+### Chapter 4 - [Location, Location, Location](https://github.com/jrlarsen/AdventuresInCode/blob/master/Chpt4/chapter4.md)
+Constructor functions, prototypes and the this and new key words.
 * 4.1 Creating a blueprint we can use to construct locations
-* 4.2 Conditions with if and else
-* 4.3 Building object templates with constructor functions, this and new
+* 4.2 Checking conditions: if and else
+* 4.3 Locations are the same but different: constructor functions, this and new
 * 4.4 Making objects take action with methods
-* 4.5 Accessing properties with set and get methods (use ES setters and getters?)
-* 4.6 Sharing method code with prototypes
+* 4.5 Accessing properties with set and get (use ES setters and getters?)
+* 4.6 Don't repeat yourself: sharing code with prototypes
 
 ### Chapter 5 - [Maps and Movement](https://github.com/jrlarsen/AdventuresInCode/blob/master/Chpt5/chapter5.md)
-Linking locations together.
+More on working with properties, references and variables.
 * 5.1 Keeping our program organised as we link locations to build our world
-* 5.2 References and bracket notation for object properties
-* 5.3 Object property enumeration
-* 5.4 Maintaining game state, a singleton game object and avoiding global variables
-* 5.5 Defensive coding and throwing errors
+* 5.2 Linking one location to another: references and bracket notation
+* 5.3 Listing the exits: the for...in loop
+* 5.4 Where am I? What have I got?: game state and avoiding global variables
+* 5.5 I don't know how to do that!: defensive coding and throwing errors
 
 ### Chapter 6 - [Items and Inventory](https://github.com/jrlarsen/AdventuresInCode/blob/master/Chpt6/chapter6.md)
 Putting it all together for a working game.
