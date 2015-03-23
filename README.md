@@ -52,13 +52,13 @@ More on working with properties, references and variables.
 * 5.4 Where am I? What have I got?: game state and avoiding global variables
 * 5.5 I don't know how to do that!: defensive coding and throwing errors
 
-### Chapter 6 - [Items and Inventory](https://github.com/jrlarsen/AdventuresInCode/blob/master/Chpt6/chapter6.md)
-Putting it all together for a working game.
+### Chapter 6 - [Putting the Pieces in Place](https://github.com/jrlarsen/AdventuresInCode/blob/master/Chpt6/chapter6.md)
+Scripts, files and controllers.
 * 6.1 Organising all our game elements to safely build the game
-* 6.2 Global scope and using functions to limit scope
-* 6.3 Loading and executing external scripts
-* 6.4 Managing the pieces with game methods
-* 6.5 Map files and loose coupling
+* 6.2 Creating a safe place to play: protecting our variables
+* 6.3 Loading Player and Location code: external scripts
+* 6.4 Controlling the game: a singleton object
+* 6.5 Multiple worlds: map files and loose coupling
 
 ### Chapter 7 - Challenges and Champions
 Location may now have challenges to overcome by using items.
