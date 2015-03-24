@@ -61,26 +61,18 @@ Scripts, files and controllers.
 * 6.5 Multiple worlds: map files and loose coupling
 
 ### Chapter 7 - Challenges and Champions
-Location may now have challenges to overcome by using items.
-* 7.1 Completing the adventure - success criteria
-* 7.2 Refactoring to include a new feature
-* 7.3 Information hiding with closures
+Logic, refactoring and testing
+* 7.1 Completing the adventure - overcoming challenges
+* 7.2 Adding a new feature: refactoring
+* 7.3 Complicated decisions: logic operators
 * 7.4 Playing the game
-* 7.5 Trying to break the game
+* 7.5 Trying to break the game: testing
 
 
 ## Part 3 - Buttons and Browsers
 Moving to the browser.
 
-### Chapter 8 - A Really Quick Introduction To HTML
-Minimal HTML.
-* 8.1 HTML and web pages
-* 8.2 Common elements and tags
-* 8.3 Semantic markup, ids and classes
-* 8.4 Forms and input elements
-* 8.5 script tags
-
-### Chapter 9 - Events
+### Chapter 8 - User Interface and Events
 Responding to button clicks and key presses.
 * 9.1 Goodbye console, hello text box
 * 9.2 Alerts and Prompts
@@ -89,15 +81,7 @@ Responding to button clicks and key presses.
 * 9.5 The DOM - appending elements
 * 9.6 Cross-browser issues
 
-### Chapter 10 - A Really Quick Introduction to CSS
-This text adventure could look a whole lot better.
-* 10.1 Linking to stylesheets
-* 10.2 Selectors, properties, attributes
-* 10.3 Margin and padding
-* 10.4 Positioning and floating
-* 10.5 Colours and fonts
-
-### Chapter 11 - Browser Based Adventures
+### Chapter 9 - Browser Based Adventures
 A fully functioning adventure
 * 11.1 Reusing all our code
 * 11.2 Loading multiple maps
@@ -110,7 +94,7 @@ A fully functioning adventure
 ## Part 4 - Ajax and APIs
 Using a server to provide and store data
 
-### Chapter 12 - An Adventure API
+### Chapter 10 - An Adventure API
 Adventures on demand.
 * 12.1 We don't need to load the whole adventure at once
 * 12.2 Introducing the Adventure RESTful API
@@ -118,8 +102,8 @@ Adventures on demand.
 * 12.4 Loading each location
 * 12.5 Listing available maps
 
-### Chapter 13 - A Really Quick Introduction To Node.js and Express.js
-Investigating the Adventure API
+### Chapter 11 - How the API was Built
+Investigating the Adventure API - Node.js and Express.js
 * 13.1 JavaScript on the server
 * 13.2 Installing Node and using npm
 * 13.3 Modules and require
@@ -127,7 +111,7 @@ Investigating the Adventure API
 * 13.5 Loading our map JSON files and responding to API requests
 * 13.6 Saving game state on the server
 
-### Chapter 14 - Multiplayer Adventures with Socket.io
+### Chapter 12 - Multiplayer Adventures with Socket.io
 We can play with friends.
 * 14.1 Real-time updates
 * 14.2 Using socket.io on the server and the browser
