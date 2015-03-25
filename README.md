@@ -74,21 +74,21 @@ Moving to the browser.
 
 ### Chapter 8 - User Interface and Events
 Responding to button clicks and key presses.
-* 9.1 Goodbye console, hello text box
-* 9.2 Alerts and Prompts
-* 9.3 Responding to events with handlers
-* 9.4 Parsing input and switch blocks
-* 9.5 The DOM - appending elements
-* 9.6 Cross-browser issues
+* 8.1 Goodbye console, hello text box
+* 8.2 Alerts and Prompts
+* 8.3 Responding to events with handlers
+* 8.4 Parsing input and switch blocks
+* 8.5 The DOM - appending elements
+* 8.6 Cross-browser issues
 
 ### Chapter 9 - Browser Based Adventures
 A fully functioning adventure
-* 11.1 Reusing all our code
-* 11.2 Loading multiple maps
-* 11.3 Templates
-* 11.4 Navigation UI
-* 11.5 Starting, stopping and switching games
-* 11.6 Saving state locally
+* 9.1 Reusing all our code
+* 9.2 Loading multiple maps
+* 9.3 Templates
+* 9.4 Navigation UI
+* 9.5 Starting, stopping and switching games
+* 9.6 Saving state locally
 
 
 ## Part 4 - Ajax and APIs
@@ -96,26 +96,26 @@ Using a server to provide and store data
 
 ### Chapter 10 - An Adventure API
 Adventures on demand.
-* 12.1 We don't need to load the whole adventure at once
-* 12.2 Introducing the Adventure RESTful API
-* 12.3 JSON
-* 12.4 Loading each location
-* 12.5 Listing available maps
+* 10.1 We don't need to load the whole adventure at once
+* 10.2 Introducing the Adventure RESTful API
+* 10.3 JSON
+* 10.4 Loading each location
+* 10.5 Listing available maps
 
 ### Chapter 11 - How the API was Built
 Investigating the Adventure API - Node.js and Express.js
-* 13.1 JavaScript on the server
-* 13.2 Installing Node and using npm
-* 13.3 Modules and require
-* 13.4 Express
-* 13.5 Loading our map JSON files and responding to API requests
-* 13.6 Saving game state on the server
+* 11.1 JavaScript on the server
+* 11.2 Installing Node and using npm
+* 11.3 Modules and require
+* 11.4 Express
+* 11.5 Loading our map JSON files and responding to API requests
+* 11.6 Saving game state on the server
 
 ### Chapter 12 - Multiplayer Adventures with Socket.io
 We can play with friends.
-* 14.1 Real-time updates
-* 14.2 Using socket.io on the server and the browser
-* 14.3 Sending and receiving game messages
-* 14.4 Bumping into other characters
-* 14.5 Swapping items
+* 12.1 Real-time updates
+* 12.2 Using socket.io on the server and the browser
+* 12.3 Sending and receiving game messages
+* 12.4 Bumping into other characters
+* 12.5 Swapping items
 
