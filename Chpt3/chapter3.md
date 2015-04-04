@@ -6,7 +6,8 @@ Throughout each adventure, we need to be able to store information about our pla
 
 In a program, we can use variables to store information for later use. A variable allows us to refer to information by using a label.
 
-### 3.1.1 Ready Player One
+
+### 3.1.1 Creating and Using a Variable
 
 The first piece of information we need is a name for each player.
 
@@ -28,15 +29,19 @@ console.log(playerName);
 
 As our game design evolves, we will want to add more information about each player. We might want to know where they are in our world, their current health or which items they are carrying. The information could be text, numbers, dates, lists or some other type of data.
 
+
+### 3.1.2 Strings: Joining Text
+
 When we have more data about a player, we can display messages made up of multiple pieces of text by using the `+` symbol. When working with text, this symbol is the concatenation operator and is used to join the separate pieces of text into a single piece.
 
-In programming, a piece of data that is text is called a string. In the example above, the variable `playerName` has a value which is the string "Dax". When using the `log` function of the console, we can display messages without using variables by using string literals, pieces of text within speech marks. Double, `"`, or single, `'`,  speech marks both work but you must start and end your string with the same mark.
+In programming, a piece of data that is text is called a string. In the example above, the variable `playerName` has a value which is the string "Simon". When using the `log` function of the console, we can display messages without using variables by using string literals, pieces of text within speech marks. Double, `"`, or single, `'`,  speech marks both work but you must start and end your string with the same mark.
 
 ```javascript
 console.log("You are in a murky wood.");
 console.log('Congratulations! You have found the treasure.');
 ```
 > You are in a murky wood.
+
 > Congratulations! You have found the treasure.
 
 The concatenation operator, `+` can combine string literals and variables.
@@ -50,6 +55,7 @@ var playerHealth = 45;
 console.log(playerName + " is in " + playerLocation);
 ```
 > Dax is in The Library
+
 
 
 ### Ready Player Two
