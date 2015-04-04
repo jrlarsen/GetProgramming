@@ -24,9 +24,7 @@ var playerName = "Simon";
 console.log(playerName);
 ```
 
-```javascript
-Simon
-```
+> Simon
 
 As our game design evolves, we will want to add more information about each player. We might want to know where they are in our world, their current health or which items they are carrying. The information could be text, numbers, dates, lists or some other type of data.
 
@@ -41,9 +39,8 @@ var playerHealth = 45;
 console.log(playerName + " is in " + playerLocation);
 ```
 
-```javascript
-Dax is in The Library
-```
+> Dax is in The Library
+
 
 ### Ready Player Two
 
