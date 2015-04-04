@@ -61,7 +61,7 @@ Notice the spaces in the logged string literal; it is a common mistake to forget
 
 ### 3.1.3 Ready Player Two: More and More Variables
 
-As we progress through our program we will find we need to store more and more information about a player. In a multi-player environment we will need to store all that information for every player. Choosing good variable names becomes ever more important and ever more repetitive and tedious.
+As we progress through our program we will find we need to store more and more information about a player. In a multi-player environment we will need to store all that information for every player. Choosing good variable names becomes ever more important and can become ever more repetitive and tedious.
 
 [jsbin: Listing 3.03](http://jsbin.com/hotira/edit?js,console)
 ```javascript
@@ -82,9 +82,9 @@ As more players join the game, the number of variables will quickly get out of h
 
 ### 3.1.4 Objects: Collecting a Player's Properties
 
-Instead of having a variable for every piece of information we need to store, we can create a single variable for each player. We would then want information about the player to be stored as sub-variables. The mechanism for such variables and sub-variables in JavaScript uses what are called *objects*. A variable can be a label for one of these objects. For example, the value of `player1' could be an object. The information about that player, the 'sub-variables' are then attached to the object as *properties*.
+Instead of having a variable for every piece of information we need to store, we can create a single variable for each player. We would then want information about the player to be stored as sub-variables. The mechanism for such variables and sub-variables in JavaScript uses what are called *objects*. A variable can be a label for one of these objects. For example, the value of `player1` could be an object. The information about that player is then attached to the object as *properties*.
 
-An object is created using curly brackets, `{}`. Properties can then be set on the object by using *dot notation*.
+An empty object, one with no properties, is created using curly brackets, `{}`. Properties can then be set on the object by using *dot notation*.
 
 [jsbin: Listing 3.04](http://jsbin.com/ficisa/edit?js,console)
 ```javascript
