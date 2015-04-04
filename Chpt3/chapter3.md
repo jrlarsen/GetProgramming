@@ -4,10 +4,10 @@
 
 Throughout each adventure, we need to be able to store information about our players.  For example, we may want to keep track of names, a character's health, which items they are carrying or where they are. Some of that information may stay the same during a game and some may change.
 
-In a program, we can use variables to store information for later use. A variable allows us to refer to information by using a label.
+In a program, we can use *variables* to store information for later use. A variable allows us to refer to information by using a label.
 
 
-### 3.1.1 Creating and Using a Variable
+### 3.1.1 Ready Player One: Creating and Using a Variable
 
 The first piece of information we need is a name for each player.
 
@@ -15,7 +15,7 @@ The first piece of information we need is a name for each player.
 var playerName = "Simon";
 ```
 
-The player's name is Simon. We have chosen to give the player's name the label `playerName`. It is common (and sensible) practice to give variables labels which help anyone reading the code understand how the variable will be used. From now on in the program, whenever we need to use the player's name we can refer to it using the label `playerName`. The `var` keyword in the code is used when we are creating a new variable in the program.
+The player's name is Simon. We have chosen to give the player's name the label `playerName`. It is good practice to give variables labels which help anyone reading the code understand how the variable will be used. From now on in the program, whenever we need to use the player's name we can refer to it using the label `playerName`. The `var` keyword in the code is used when we are creating a new variable in the program.
 
 Let's use the `playerName` variable to display its value on the console in jsBin. The console has a built in function called `log` which will display information.
 
@@ -27,14 +27,14 @@ console.log(playerName);
 
 > Simon
 
-As our game design evolves, we will want to add more information about each player. We might want to know where they are in our world, their current health or which items they are carrying. The information could be text, numbers, dates, lists or some other type of data.
+As our game design evolves, we will want to add more information about each player. We might want to know where they are in our world, their current health or which items they are carrying. The information could be text, numbers, dates, lists or some other *data types*.
 
 
-### 3.1.2 Strings: Joining Text
+### 3.1.2 Displaying Text: String Concatenation
 
-When we have more data about a player, we can display messages made up of multiple pieces of text by using the `+` symbol. When working with text, this symbol is the concatenation operator and is used to join the separate pieces of text into a single piece.
+As we collect more data about a player, we can display messages made up of multiple pieces of text by using the `+` symbol. When working with text, this symbol is the *concatenation operator* and is used to join the separate pieces of text into a single piece.
 
-In programming, a piece of data that is text is called a string. In the example above, the variable `playerName` has a value which is the string "Simon". When using the `log` function of the console, we can display messages without using variables by using string literals, pieces of text within speech marks. Double, `"`, or single, `'`,  speech marks both work but you must start and end your string with the same mark.
+In programming, a piece of data that is text is called a *string*. In the example above, the variable `playerName` has a value which is the string "Simon". When using the `log` function of the console, we can display messages without using variables by using *string literals*, pieces of text within speech marks. Double, `"`, or single, `'`,  speech marks both work but you must start and end your string with the same mark.
 
 ```javascript
 console.log("You are in a murky wood.");
@@ -56,9 +56,10 @@ console.log(playerName + " is in " + playerLocation);
 ```
 > Dax is in The Library
 
+Notice the spaces in the logged string literal; it is a common mistake to forget spaces when concatenating strings and variables.
 
 
-### Ready Player Two
+### 3.1.3 Ready Player Two - More and More Variables
 
 We can continue to add more variables as we need them. Here's some information for a second player.
 
