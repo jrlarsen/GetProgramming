@@ -30,6 +30,17 @@ As our game design evolves, we will want to add more information about each play
 
 When we have more data about a player, we can display messages made up of multiple pieces of text by using the `+` symbol. When working with text, this symbol is the concatenation operator and is used to join the separate pieces of text into a single piece.
 
+In programming, a piece of data that is text is called a string. In the example above, the variable `playerName` has a value which is the string "Dax". When using the `log` function of the console, we can display messages without using variables by using string literals, pieces of text within speech marks. Double, `"`, or single, `'`,  speech marks both work but you must start and end your string with the same mark.
+
+```javascript
+console.log("You are in a murky wood.");
+console.log('Congratulations! You have found the treasure.');
+```
+> You are in a murky wood.
+> Congratulations! You have found the treasure.
+
+The concatenation operator, `+` can combine string literals and variables.
+
 [jsbin: Listing 3.02](http://jsbin.com/vofimi/edit?js,console)
 ```javascript
 var playerName = "Dax";
@@ -38,7 +49,6 @@ var playerHealth = 45;
 
 console.log(playerName + " is in " + playerLocation);
 ```
-
 > Dax is in The Library
 
 
