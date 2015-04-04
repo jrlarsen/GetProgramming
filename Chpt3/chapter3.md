@@ -80,11 +80,14 @@ console.log(player2Name + " is in " + player2Location);
 As more players join the game, the number of variables will quickly get out of hand. We need a better way to organise our variables and our data.
 
 
-### 3.1.4 Objects: Collecting a Player's Properties
+### 3.2 Objects: Collecting a Player's Properties
 
 Instead of having a variable for every piece of information we need to store, we can create a single variable for each player. We would then want information about the player to be stored as sub-variables. The mechanism for such variables and sub-variables in JavaScript uses what are called *objects*. A variable can be a label for one of these objects. For example, the value of `player1` could be an object. Each piece of information about that player is then attached to the object as a *property*.
 
-An empty object, one with no properties, is created using curly brackets, `{}`. Properties can then be set on the object by using *dot notation*.
+
+### 3.2.1 Adding Properties to Empty Objects
+
+An empty object, one with no properties, is created using empty curly brackets, `{}`. Properties can then be set on the object by using *dot notation*.
 
 [jsbin: Listing 3.04](http://jsbin.com/ficisa/edit?js,console)
 ```javascript
@@ -99,19 +102,35 @@ console.log(player1.name + " is in " + player1.location);
 
 Notice, in the example above, that only a single variable, `player1`, is used. The name and location are set as properties of the object.
 
+
+### 3.2.2 Creating Objects with Existing Properties
+
+In the previous example we created an empty object and then added properties to it. It is also possible to create an object with properties already in place. We simply include the property names and values between the curly brackets.
+
 [jsbin: Listing 3.05](http://jsbin.com/hakajo/edit?js,console)
 ```javascript
-var player1 = {};
-var player2;
+var player2 = { name : "Dax", location : "The Kitchen" };
 
-player1.name = "Kandra";
-player1.location = "The Armoury";
-
-player2 = { name : "Dax", location : "The Kitchen" };
-
-console.log(player1.name + " is in " + player1.location);
 console.log(player2.name + " is in " + player2.location);
 ```
+> Dax is in The Kitchen
+
+Within the curly brackets, the properties are separated by commas. Each property is made up of the property name, or *key*, and the property value. Each key and value are separated by a colon, `:`.
+
+Extra properties can be added to an object after it has been created and existing properties can be changed.
+
+```javascript
+var player2 = { name : "Dax", health : 42 };
+
+player2.location = "The Dungeon";
+player2.name = "Kandra";
+
+console.log(player2.name + " is in " + player2.location);
+```
+>Kandra is in The Dungeon
+
+
+### 3.3 Don't Repeat Yourself: Functions
 
 [jsbin: Listing 3.06](http://jsbin.com/caponu/edit?js,console)
 ```javascript
@@ -140,6 +159,9 @@ log(player1);
 log(player2);
 log(player3);
 ```
+
+
+### 3.4 Lists: Arrays
 
 [jsbin: Listing 3.08](http://jsbin.com/kamiri/edit?js,console)
 ```javascript
@@ -186,6 +208,9 @@ var player1 = {
 
 log(player1);
 ```
+
+
+### 3.5 Making Decisions: The if Statement
 
 [jsbin: Listing 3.11](http://jsbin.com/kidovo/edit?js,console)
 ```javascript
