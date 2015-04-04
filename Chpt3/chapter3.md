@@ -82,7 +82,7 @@ As more players join the game, the number of variables will quickly get out of h
 
 ### 3.1.4 Objects: Collecting a Player's Properties
 
-Instead of having a variable for every piece of information we need to store, we can create a single variable for each player. We would then want information about the player to be stored as sub-variables. The mechanism for such variables and sub-variables in JavaScript uses what are called *objects*. A variable can be a label for one of these objects. For example, the value of `player1` could be an object. The information about that player is then attached to the object as *properties*.
+Instead of having a variable for every piece of information we need to store, we can create a single variable for each player. We would then want information about the player to be stored as sub-variables. The mechanism for such variables and sub-variables in JavaScript uses what are called *objects*. A variable can be a label for one of these objects. For example, the value of `player1` could be an object. Each piece of information about that player is then attached to the object as a *property*.
 
 An empty object, one with no properties, is created using curly brackets, `{}`. Properties can then be set on the object by using *dot notation*.
 
