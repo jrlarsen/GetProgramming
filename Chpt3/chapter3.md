@@ -8,9 +8,8 @@ In a program, we can use variables to store information for later use. A variabl
 
 ### 3.1.1 Ready Player One
 
-There first piece of information we need is a name for each player.
+The first piece of information we need is a name for each player.
 
-[jsbin: Listing 3.01](http://jsbin.com/heniza/edit?js,console)
 ```javascript
 var playerName = "Simon";
 ```
