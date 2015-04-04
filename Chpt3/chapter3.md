@@ -27,7 +27,7 @@ console.log(playerName);
 
 > Simon
 
-As our game design evolves, we will want to add more information about each player. We might want to know where they are in our world, their current health or which items they are carrying. The information could be text, numbers, dates, lists or some other *data types*.
+As our game design evolves, we will want to add more information about each player. We might want to know where they are in our world, their current health or which items they are carrying. The information could be text, numbers, dates, lists or some other *data types*. We will mostly be using text information in our program so in the next section we'll have a quick look at some of the ways we can use text and text variables.
 
 
 ### 3.1.2 Displaying Text: String Concatenation
@@ -59,28 +59,32 @@ console.log(playerName + " is in " + playerLocation);
 Notice the spaces in the logged string literal; it is a common mistake to forget spaces when concatenating strings and variables.
 
 
-### 3.1.3 Ready Player Two - More and More Variables
+### 3.1.3 Ready Player Two: More and More Variables
 
-We can continue to add more variables as we need them. Here's some information for a second player.
+As we progress through our program we will find we need to store more and more information about a player. In a multi-player environment we will need to store all that information for every player. Choosing good variable names becomes ever more important and ever more repetitive and tedious.
 
 [jsbin: Listing 3.03](http://jsbin.com/hotira/edit?js,console)
 ```javascript
 var player1Name = "Kandra";
 var player1Location = "The Armoury";
+var player1Health = 53;
 
 var player2Name = "Dax";
 var player2Location = "The Kitchen";
+var player2Health = 28;
 
 console.log(player1Name + " is in " + player1Location);
 console.log(player2Name + " is in " + player2Location);
 ```
 
-As more players join the game, the number of variables will quickly get out of hand. We need a way to organise our variables and our data.
+As more players join the game, the number of variables will quickly get out of hand. We need a better way to organise our variables and our data.
 
 
-### Objects
+### 3.1.4 Objects: Collecting a Player's Properties
 
-Instead of having a variable for every piece of information we need to store, we can create an object for each player. Information about the player can then be stored as a property of the object.
+Instead of having a variable for every piece of information we need to store, we can create a single variable for each player. We would then want information about the player to be stored as sub-variables. The mechanism for such variables and sub-variables in JavaScript uses what are called *objects*. A variable can be a label for one of these objects. For example, the value of `player1' could be an object. The information about that player, the 'sub-variables' are then attached to the object as *properties*.
+
+An object is created using curly brackets, `{}`. Properties can then be set on the object by using *dot notation*.
 
 [jsbin: Listing 3.04](http://jsbin.com/ficisa/edit?js,console)
 ```javascript
@@ -91,6 +95,9 @@ player1.location = "The Armoury";
 
 console.log(player1.name + " is in " + player1.location);
 ```
+> Kandra is in The Armoury
+
+Notice, in the example above, that only a single variable, `player1`, is used. The name and location are set as properties of the object.
 
 [jsbin: Listing 3.05](http://jsbin.com/hakajo/edit?js,console)
 ```javascript
