@@ -14,7 +14,7 @@ The first piece of information we need is a name for each player.
 var playerName = "Simon";
 ```
 
-The player's name is Simon. We have chosen to give the player's name the label `playerName`. From now on in the program, whenever we need to use the player's name we can refer to it using the label `playerName`. The `var` keyword in the code is used when we are creating a new variable in the program.
+The player's name is Simon. We have chosen to give the player's name the label `playerName`. It is common (and sensible) practice to give variables labels which help anyone reading the code understand how the variable will be used. From now on in the program, whenever we need to use the player's name we can refer to it using the label `playerName`. The `var` keyword in the code is used when we are creating a new variable in the program.
 
 Let's use the `playerName` variable to display its value on the console in jsBin. The console has a built in function called `log` which will display information.
 
