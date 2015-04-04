@@ -1,14 +1,23 @@
-# Players and Properties
+# 3. Players and Properties
 
-## Variables
+## 3.1 Variables
 
-We need to be able to store information about our players. Some of that information may stay the same throughout the game. Some may change.
+Throughout each adventure, we need to be able to store information about our players.  For example, we may want to keep track of names, a character's health, which items they are carrying or where they are. Some of that information may stay the same during a game and some may change.
 
-In a program, we can use variables to store information for later use.
+In a program, we can use variables to store information for later use. A variable allows us to refer to information by using a label.
 
-### Ready Player One
+### 3.1.1 Ready Player One
 
-There first piece of information we need is a name for the player.
+There first piece of information we need is a name for each player.
+
+[jsbin: Listing 3.01](http://jsbin.com/heniza/edit?js,console)
+```javascript
+var playerName = "Simon";
+```
+
+The player's name is Simon. We have chosen to give the player's name the label `playerName`. From now on in the program, whenever we need to use the player's name we can refer to it using the label `playerName`. The `var` keyword in the code is used when we are creating a new variable in the program.
+
+Let's use the `playerName` variable to display its value on the console in jsBin. The console has a built in function called `log` which will display information.
 
 [jsbin: Listing 3.01](http://jsbin.com/heniza/edit?js,console)
 ```javascript
@@ -16,7 +25,6 @@ var playerName = "Simon";
 console.log(playerName);
 ```
 
-console.log is an instruction to display information on the console.
 
 As our game design evolves, we will want to add more information about each player. We might want to know where they are in our world.
 
