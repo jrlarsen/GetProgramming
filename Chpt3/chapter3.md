@@ -24,19 +24,26 @@ var playerName = "Simon";
 console.log(playerName);
 ```
 
+```javascript
+Simon
+```
 
-As our game design evolves, we will want to add more information about each player. We might want to know where they are in our world.
+As our game design evolves, we will want to add more information about each player. We might want to know where they are in our world, their current health or which items they are carrying. The information could be text, numbers, dates, lists or some other type of data.
+
+When we have more data about a player, we can display messages made up of multiple pieces of text by using the `+` symbol. When working with text, this symbol is the concatenation operator and is used to join the separate pieces of text into a single piece.
 
 [jsbin: Listing 3.02](http://jsbin.com/vofimi/edit?js,console)
 ```javascript
 var playerName = "Dax";
 var playerLocation = "The Library";
+var playerHealth = 45;
 
 console.log(playerName + " is in " + playerLocation);
 ```
 
-We can join pieces of text together to make longer pieces of text by using the '+' symbol.
-
+```javascript
+Dax is in The Library
+```
 
 ### Ready Player Two
 
