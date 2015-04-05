@@ -161,7 +161,7 @@ var log = function (player) {
 }
 ```
 
-A variable is created as normal with the `var` keyword. We have given it the label `log`. In round brackets we have placed another label, `player`, which is used to refer to whichever player we pass to the function when we use it. The `console.log` function uses the `name` and `location` properties of the player we pass to the function.
+A variable is created as normal with the `var` keyword. We have given it the label `log`. In round brackets we have placed another label, `player`, which is used to refer to whichever player we pass to the function when we use it. The code that will be executed whenever we use our function is placed between curly brackets. Code surrounded by curly brackets in this way is called a *code block*. The `console.log` function uses the `name` and `location` properties of the player we pass to the function.
 
 We can then use the function to log information about a player.
 
