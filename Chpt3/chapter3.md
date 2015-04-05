@@ -158,7 +158,7 @@ To display our message about each player we can create a logging function. We th
 ```javascript
 var log = function (player) {
     console.log(player.name + " is in " + player.location);
-}
+};
 ```
 
 A variable is created as normal with the `var` keyword. We have given it the label `log`. In round brackets we have placed another label, `player`, which is used to refer to whichever player we pass to the function when we use it. The code that will be executed whenever we use our function is placed between curly brackets. Code surrounded by curly brackets in this way is called a *code block*. The `console.log` function uses the `name` and `location` properties of the player we pass to the function.
@@ -167,9 +167,9 @@ We can then use the function to log information about a player.
 
 [jsbin: Listing 3.06](http://jsbin.com/caponu/edit?js,console)
 ```javascript
-function log(player) {
+var log = function (player) {
     console.log(player.name + " is in " + player.location);
-}
+};
 
 var player1 = { name : "Kandra", location : "The Armoury" };
 
@@ -181,9 +181,9 @@ Now that we have a logging function, we can use it to display information about 
 
 [jsbin: Listing 3.07](http://jsbin.com/cuxava/edit?js,console)
 ```javascript
-function log(player) {
+var log = function (player) {
     console.log(player.name + " is in " + player.location);
-}
+};
 
 var player1 = { name : "Kandra", location : "The Armoury" };
 var player2 = { name : "Dax", location : "The Kitchen" };
