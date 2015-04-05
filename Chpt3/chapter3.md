@@ -132,18 +132,52 @@ console.log(player2.name + " is in " + player2.location);
 
 ### 3.3 Don't Repeat Yourself: Functions
 
+As more players are created, we find ourselves repeating similar code to display information about each one. Notice how the three calls to `console.log` below have exactly the same structure and each uses a variable that refers to a player.
+
+```javascript
+var player1 = { name : "Kandra", location : "The Armoury" };
+var player2 = { name : "Dax", location : "The Kitchen" };
+var player3 = { name : "Brin", location : "The Library" };
+
+console.log(player1.name + " is in " + player1.location);
+console.log(player2.name + " is in " + player2.location);
+console.log(player3.name + " is in " + player3.location);
+```
+> Kandra is in The Armoury
+
+> Dax is in The Kitchen
+
+> Brin is in The Library
+
+If we want to change the message displayed about each player, we have to change it three times, once for each player. If there were even more players, changing the message would become overly repetitive and error prone.
+
+A better approach is to use a variable to give a block of code a label. We can then use that label to run the block of code whenever it is needed. Such a reusable block of code is called a *function*.
+
+To display our message about each player we can create a logging function. We then call the function, using its variable label, and pass it whichever player we want the message to be about.
+
+```javascript
+var log = function (player) {
+    console.log(player.name + " is in " + player.location);
+}
+```
+
+A variable is created as normal with the `var` keyword. We have given it the label `log`. In round brackets we have placed another label, `player`, which is used to refer to whichever player we pass to the function when we use it. The `console.log` function uses the `name` and `location` properties of the player we pass to the function.
+
+We can then use the function to log information about a player.
+
 [jsbin: Listing 3.06](http://jsbin.com/caponu/edit?js,console)
 ```javascript
 function log(player) {
     console.log(player.name + " is in " + player.location);
 }
 
-var player1 = {};
-player1.name = "Kandra";
-player1.location = "The Armoury";
+var player1 = { name : "Kandra", location : "The Armoury" };
 
 log(player1);
 ```
+> Kandra is in The Armoury
+
+Now that we have a logging function, we can use it to display information about any player. We just pass the player variable to the function by placing the player variable between the brackets when we call the function.
 
 [jsbin: Listing 3.07](http://jsbin.com/cuxava/edit?js,console)
 ```javascript
@@ -159,6 +193,13 @@ log(player1);
 log(player2);
 log(player3);
 ```
+> Kandra is in The Armoury
+
+> Dax is in The Kitchen
+
+> Brin is in The Library
+
+Now, if we decide to change how we display player information, we only need to change our logging function. That's one change rather than many.
 
 
 ### 3.4 Lists: Arrays
