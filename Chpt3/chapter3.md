@@ -204,6 +204,40 @@ Now, if we decide to change how we display player information, we only need to c
 
 ### 3.4 Lists: Arrays
 
+We've managed to put our player logging code into a function. However, we still have to manually call the function for each of our players.
+
+```javascript
+log(player1);
+log(player2);
+log(player3);
+```
+
+It would be useful to be able to say "log information about all of these players." If we had a list of all the players, we could write code that calls the log function for each of the list items. In JavaScript such a list is called an *array*. To create an array we place our list items between square brackets and separate them with commas.
+ 
+```javascript
+var players = [ player1, player2, player3 ];
+```
+
+We have created an array of our three players and a variable for the array with label `players`.
+
+To access an individual item in the array we use an *index* that refers to the position of the item. We start counting from zero, so the first item has index 0, the second item has index 1, the third item has index 2, and so on. `players[0]` is the first item in the array.
+
+```javascript
+var log = function (player) {
+    console.log(player.name + " is in " + player.location);
+}
+
+var player1 = { name : "Kandra", location : "The Armoury" };
+var player2 = { name : "Dax", location : "The Kitchen" };
+var player3 = { name : "Brin", location : "The Library" };
+
+var players = [ player1 , player2 , player3 ];
+
+log(players[0]);
+```
+> Kandra is in The Armoury
+
+
 [jsbin: Listing 3.08](http://jsbin.com/kamiri/edit?js,console)
 ```javascript
 function log(player) {
