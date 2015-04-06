@@ -279,8 +279,12 @@ players.forEach(log);
 
 The `players` variable refers to an array. We can therefore use dot notation to call the `forEach` function on that array. Between the round brackets of the call to `forEach` we specify the `log` variable which refers to our logging function. As a result, the logging function is called for each player in the `players` array. Perfect!
 
-The process of stepping through an array, item by item, is called *iteration*. 
+The process of stepping through an array, item by item, is called *iteration*.
 
+
+### 3.4.3 Reducing the Number of Variables
+
+If we are going to use an array to list our players, we may not need individual variables for each player. We can create the player objects when we create the `players` array.
 
 [jsbin: Listing 3.09](http://jsbin.com/vojuli/edit?js,console)
 ```javascript
@@ -296,6 +300,26 @@ var players = [
 
 players.forEach(log);
 ```
+
+We have placed our player objects directly into an array, rather than assigning the objects to separate `player1`, `player2` and `player3` variables and then placing those variables into the array.
+
+
+### 3.4.4 Player Items: Another Array
+
+Now that we have seen how to create arrays to represent lists, we have a good way of keeping track of the items a player has in our game. As they investigate their surroundings, players will pick up items they find and drop items they have used. The `items` property of each player will use an array to list that player's current inventory, the items they are carrying.
+
+```javascript
+var player1 = {
+    name : "Brin",
+    location : "The Library",
+    items : [ "a sword" , "a lamp" ]
+};
+```
+
+Our player has been created with two initial items, a sword and a lamp. We can use dot notation to refer to the array of items, `player1.items`. We can then use index notation to refer to an individual item. To refer to the second item we would use `player1.items[1]`. (Remember the first item in an array has an index of 0).
+
+
+### 3.4.5 Logging Player Items: The join Function
 
 [jsbin: Listing 3.10](http://jsbin.com/mexene/edit?js,console)
 ```javascript
