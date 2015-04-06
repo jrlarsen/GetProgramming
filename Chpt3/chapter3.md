@@ -220,6 +220,8 @@ var players = [ player1, player2, player3 ];
 
 We have created an array of our three players and a variable for the array with label `players`.
 
+### 3.4.1 Using an Index to Access an Item in an Array
+
 To access an individual item in the array we use an *index* that refers to the position of the item. We start counting from zero, so the first item has index 0, the second item has index 1, the third item has index 2, and so on. `players[0]` is the first item in the array.
 
 ```javascript
@@ -234,13 +236,30 @@ var player3 = { name : "Brin", location : "The Library" };
 var players = [ player1 , player2 , player3 ];
 
 log(players[0]);
+log(players[1]);
+log(players[2]);
 ```
 > Kandra is in The Armoury
 
+> Dax is in The Kitchen
+
+> Brin is in The Library
+
+### 3.4.2 Stepping Through the Items in an Array: The forEach Function
+
+Okay, so we've managed to put our players into an array but we're still manually calling the log function for each of them.
+
+```javascript
+log(players[0]);
+log(players[1]);
+log(players[2]);
+```
+
+Fortunately, arrays have a number of built in functions to help us work with them. One such function, `forEach`, lets us pass each item in the array to another function we specify. That's exactly what we need; for each player we want to call the `log` function.
 
 [jsbin: Listing 3.08](http://jsbin.com/kamiri/edit?js,console)
 ```javascript
-function log(player) {
+var log = function (player) {
     console.log(player.name + " is in " + player.location);
 }
 
@@ -252,6 +271,16 @@ var players = [ player1 , player2 , player3 ];
 
 players.forEach(log);
 ```
+> Kandra is in The Armoury
+
+> Dax is in The Kitchen
+
+> Brin is in The Library
+
+The `players` variable refers to an array. We can therefore use dot notation to call the `forEach` function on that array. Between the round brackets of the call to `forEach` we specify the `log` variable which refers to our logging function. As a result, the logging function is called for each player in the `players` array. Perfect!
+
+The process of stepping through an array, item by item, is called *iteration*. 
+
 
 [jsbin: Listing 3.09](http://jsbin.com/vojuli/edit?js,console)
 ```javascript
