@@ -56,7 +56,7 @@ console.log(playerName + " is in " + playerLocation);
 ```
 > Dax is in The Library
 
-Notice the spaces in the logged string literal, `" is in "; it is a common mistake to forget spaces when concatenating strings and variables.
+Notice the spaces in the logged string literal, `" is in "`; it is a common mistake to forget spaces when concatenating strings and variables.
 
 
 ### 3.1.3 Ready Player Two: More and More Variables
