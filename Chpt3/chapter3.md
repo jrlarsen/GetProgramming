@@ -84,6 +84,8 @@ As more players join the game, the number of variables will quickly get out of h
 
 Instead of having a variable for every piece of information we need to store, we can create a single variable for each player. We would then want information about the player to be stored as sub-variables. The mechanism for such variables and sub-variables in JavaScript uses what are called *objects*. A variable can be a label for one of these objects. For example, the value of `player1` could be an object. Each piece of information about that player is then attached to the object as a *property*.
 
+(Diagram showing separate variables vs a single player variable with properties.)
+
 
 ### 3.2.1 Adding Properties to Empty Objects
 
@@ -100,7 +102,7 @@ console.log(player1.name + " is in " + player1.location);
 ```
 > Kandra is in The Armoury
 
-Notice, in the example above, that only a single variable, `player1`, is used. The name and location are set as properties of the object.
+Notice, in the example above, that only a single variable, `player1`, is used. The name and location are set as properties of the `player1` object.
 
 
 ### 3.2.2 Creating Objects with Existing Properties
@@ -227,7 +229,7 @@ To access an individual item in the array we use an *index* that refers to the p
 ```javascript
 var log = function (player) {
     console.log(player.name + " is in " + player.location);
-}
+};
 
 var player1 = { name : "Kandra", location : "The Armoury" };
 var player2 = { name : "Dax", location : "The Kitchen" };
@@ -261,7 +263,7 @@ Fortunately, arrays have a number of built in functions to help us work with the
 ```javascript
 var log = function (player) {
     console.log(player.name + " is in " + player.location);
-}
+};
 
 var player1 = { name : "Kandra", location : "The Armoury" };
 var player2 = { name : "Dax", location : "The Kitchen" };
@@ -290,7 +292,7 @@ If we are going to use an array to list our players, we may not need individual 
 ```javascript
 var log = function (player) {
     console.log(player.name + " is in " + player.location);
-}
+};
 
 var players = [
     { name : "Kandra", location : "The Armoury" },
@@ -318,6 +320,8 @@ var player1 = {
 
 Our player has been created with two initial items, a sword and a lamp. We can use dot notation to refer to the array of items, `player1.items`. We can then use index notation to refer to an individual item. To refer to the second item we would use `player1.items[1]`. (Remember the first item in an array has an index of 0).
 
+Notice, we have placed each property on a separate line in the example above. For the most part, JavaScript isn't fussy about spaces and new lines; we can set out our code to make it easier to read and follow. Different programmers have different styles for setting out their code. It is common for teams and companies to have a set of style rules to follow so that all of the code in a project is consistent. Even as a solo programmer, it's a good idea to stick to a single, easy to follow style.
+
 
 ### 3.4.5 Logging Player Items: The join Function
 
@@ -339,7 +343,7 @@ We can now update our logging function to display information about the items a 
 var log = function (player) {
     console.log(player.name + " is in " + player.location);
     console.log(player.name + " has: " + player.items.join(', ') + '.');
-}
+};
 
 var player1 = {
     name : "Brin",
@@ -358,13 +362,13 @@ log(player1);
 
 [jsbin: Listing 3.11](http://jsbin.com/kidovo/edit?js,console)
 ```javascript
-function log(player) {
+var log = function (player) {
     console.log(player.name + " is in " + player.location);
-
+    
     if (player.items.length > 0) {
-        console.log(player.name + " has: " + player.items.join(', ') + '.');
+        console.log(player.name + " has: " + player.items.join(', ') + ".");
     }
-}
+};
 
 var player1 = {
     name : "Brin",
