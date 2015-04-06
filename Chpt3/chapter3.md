@@ -288,7 +288,7 @@ If we are going to use an array to list our players, we may not need individual 
 
 [jsbin: Listing 3.09](http://jsbin.com/vojuli/edit?js,console)
 ```javascript
-function log(player) {
+var log = function (player) {
     console.log(player.name + " is in " + player.location);
 }
 
@@ -321,9 +321,22 @@ Our player has been created with two initial items, a sword and a lamp. We can u
 
 ### 3.4.5 Logging Player Items: The join Function
 
+When logging information about a player, we would like to display a list of the items in the player's inventory. We could use `forEach` to iterate over the items and log each one. However, there is another array function, `join`, which will join all the items in the array into a single string, a single piece of text. We can also pass a string to the `join` function to act as a separator. The separator will be placed between each pair of items.
+
+```javascript
+var items = [ "a sword", "a lamp" ];
+
+var itemText = items.join(', ');
+
+console.log(itemText);
+```
+> a sword, a lamp
+
+We can now update our logging function to display information about the items a player is carrying.
+
 [jsbin: Listing 3.10](http://jsbin.com/mexene/edit?js,console)
 ```javascript
-function log(player) {
+var log = function (player) {
     console.log(player.name + " is in " + player.location);
     console.log(player.name + " has: " + player.items.join(', ') + '.');
 }
@@ -336,6 +349,9 @@ var player1 = {
 
 log(player1);
 ```
+> Brin is in The Library
+
+> Brin has: a sword, a lamp.
 
 
 ### 3.5 Making Decisions: The if Statement
