@@ -31,9 +31,9 @@
 
 ### Chapter 5 – Passing data to and from functions
 * 5.1 Function reuse and versatility
-* 5.1 Passing data to functions
-* 5.2 Using objects as arguments
-* 5.3 Returning data from functions
+* 5.2 Passing data to functions
+* 5.3 Using objects as arguments
+* 5.4 Returning data from functions
 
 ### Chapter 6 – Arrays
 * 6.1 Another way to group values
