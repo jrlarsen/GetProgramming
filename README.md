@@ -53,6 +53,7 @@
 * 8.2 Using dot notation and bracket notation to access properties
 * 8.3 Loops: for, for in and while
 
+
 ## Part 2 – Organizing our programs
 
 ### Chapter 9 – User interaction via the console
