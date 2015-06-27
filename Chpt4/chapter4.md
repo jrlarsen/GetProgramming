@@ -14,7 +14,7 @@ var player1 = {
   health: 50
 };
 
-console.log("Player information for " + player1.nam);
+console.log("Player information for " + player1.name);
 console.log("------------------------------");
 console.log(player1.name + " is in " + player1.location);
 console.log(player1.name + " has health " + player1.health);
