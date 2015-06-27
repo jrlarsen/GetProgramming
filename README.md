@@ -1,121 +1,116 @@
-# Adventures In Code
-Creating a JavaScript adventure game to help teach programming concepts.
-
-The focus will be on understanding and practising each concept rather than covering every feature of JavaScript.
-
-The book could have sidebars or mini-chapters introducing some research into successful learning techniques that are not always intuitive. E.g. desirable difficulty, interleaving, spacing, repetition, testing as learning.  
+# Adventures In JavaScript
 
 
-## Part 1
 
-### Chapter 1 - Programs and JavaScript
-* 1.1 What is a program? What do programmers do? Programming as an art and science.  
-* 1.2 Programming takes practice. It's not just learning key words, it's learning structures, patterns and best practices.  
-* 1.3 What is JavaScript and why is it important? JavaScript in the browser and on the server.  
-* 1.4 JavaScript libraries.  
+## Part 1 – Core concepts on the console
+
+### Chapter 1 – Programming, JavaScript and jsBin
+* 1.1 Programming, patterns and practice  
+* 1.2 JavaScript
+* 1.3 Hands-on with the jsBin sandbox  
+* 1.4 A text adventure: our running example
+* 1.5 Further examples: depth through breadth
+
+### Chapter 2 – Variables
+* 2.1 Storing and using information
+* 2.2 Variables and values
+* 2.3 Listing items with arrays
+* 2.3 Organizing with objects and properties
+
+### Chapter 3 – Objects
+* 3.1 A need for organization
+* 3.2 Creating objects
+* 3.3 Accessing object properties
+* 3.4 Further examples
+
+### Chapter 4 – Functions
+* 4.1 Reusing code with functions
+* 4.2 Passing information to functions
+* 4.3 Returning information from functions
+* 4.4 Checking conditions: the if statement
+
+### Chapter 5 – Arrays
+* 5.1 Another way to group values
+* 5.2 Creating an array
+* 5.3 Accessing array elements
+* 5.4 Visiting each element in an array with forEach
+
+### Chapter 6 – Creating objects with constructors and prototypes
+* 6.1 Creating a blueprint for similar objects
+* 6.2 Using the blueprints: constructor functions, this and new
+* 6.3 Methods: functions as properties
+* 6.4 Accessing properties with methods
+* 6.5 Sharing properties with prototypes
+
+### Chapter 7 – Working with more complicated objects
+* 7.1 Objects as properties of objects
+* 7.2 Using dot notation and bracket notation to access properties
+* 7.3 Loops: for, for in and while
+
+## Part 2 – Organizing our programs
+
+### Chapter 8 – User interaction via the console
+* 8.1 Global variables and scope 
+* 8.2 Inspecting global variables with the console
+* 8.3 Avoiding global variables
+* 8.4 Making functions available to the user
+
+### Chapter 9 – Checking values and coping with errors
+* 9.1 Don’t trust user input
+* 9.2 Checking arguments and setting default values
+* 9.3 Once more with feedback
+* 9.4 Throwing errors 
+
+### Chapter 10 – Managing multiple scripts
+* 10.1 Divide and conquer: breaking a program up
+* 10.2 Using script tags on jsBin
+* 10.3 Protecting our variables when loading scripts
+* 10.4 Using the loaded scripts
+* 10.5 Loading data with scripts
+
+### Chapter 11 – Refactoring and testing
+* 11.1 Completing the adventure - overcoming challenges
+* 11.2 Adding a new feature: refactoring
+* 11.3 Complicated decisions: logic operators
+* 11.4 Playing the adventure game
+* 11.5 Trying to break the game: testing
+
+## Part 3 - JavaScript in the browser
+
+### Chapter 12 - User interfaces and events
+* 12.1 Using a web page as a user interface
+* 12.2 Browser alerts and prompts
+* 12.4 HTML elements: h1, p, input and button
+* 12.3 Responding to events with handlers
+* 12.5 Updating elements using ids
+
+### Chapter 13 – Templates
+* 13.1 String concatenation is messy
+* 13.2 Using arrays to build strings
+* 13.3 Templates and placeholders
+* 13.4 Data and presentation
+
+### Chapter 14 – Loading data via APIs
+* 14.1 We don't need to load all the data at once
+* 14.2 APIs on the web
+* 14.3 Introducing the Adventure API
+* 14.4 JSON
+* 14.5 Ajax and the XHR object
 
 
-### Chapter 2 - Adventures in Code - Mapping the Land
-* 2.1 An overview of the adventure game to be built and how it will help the reader learn. A graphical representation of what will be covered in the book - a map.  
-* 2.2 Overview of the three versions of the game we will build. Some code snippets but only as a taste of what is to come.  
-* 2.3 Example 1 - Intro to jsBin and interacting via the console.
-* 2.4 Example 2 - Browser based version. Interacting via form controls. View source. Browser developer tools and the console.
-* 2.5 Example 3 - Browser and server based version. Information to and from the server. Multiple players. Saving data locally and on the server.
+## Part 4 – The server, Node, Express and Socket.io (online extras)
 
+### Chapter 15 – Building an API with Node and Express
+* 15.1 JavaScript on the server
+* 15.2 Installing Node and using npm
+* 15.3 Modules and require
+* 15.4 Express
+* 15.5 Loading our map JSON files and responding to API requests
+* 15.6 Saving game state on the server
 
-## Part 2 - Characters and Components
-Building the components that will be used in the full program. Getting a sense of the modular nature of programs. Each object or function has its part to play. Complicated programs are often made from simple parts.
-
-### Chapter 3 - [Meet the Players](https://github.com/jrlarsen/AdventuresInCode/blob/master/Chpt3/chapter3.md)
-Representing a player in code with variables, objects and functions.
-* 3.1 Storing and using information about players
-* 3.2 Variables and values
-* 3.3 Organising with objects and properties
-* 3.4 Reusing code with functions and arguments
-* 3.5 Listing player items with arrays
-* 3.6 Checking conditions: the if statement
-
-### Chapter 4 - [Location, Location, Location](https://github.com/jrlarsen/AdventuresInCode/blob/master/Chpt4/chapter4.md)
-Constructor functions, prototypes and the this and new key words.
-* 4.1 Creating a blueprint we can use to construct locations
-* 4.2 Checking conditions: if and else
-* 4.3 Locations are the same but different: constructor functions, this and new
-* 4.4 Making objects take action with methods
-* 4.5 Accessing properties with set and get (use ES setters and getters?)
-* 4.6 Don't repeat yourself: sharing code with prototypes
-
-### Chapter 5 - [Maps and Movement](https://github.com/jrlarsen/AdventuresInCode/blob/master/Chpt5/chapter5.md)
-More on working with properties, references and variables.
-* 5.1 Keeping our program organised as we link locations to build our world
-* 5.2 Linking one location to another: references and bracket notation
-* 5.3 Listing the exits: the for...in loop
-* 5.4 Where am I? What have I got?: game state and avoiding global variables
-* 5.5 I don't know how to do that!: defensive coding and throwing errors
-
-### Chapter 6 - [Putting the Pieces in Place](https://github.com/jrlarsen/AdventuresInCode/blob/master/Chpt6/chapter6.md)
-Scripts, files and controllers.
-* 6.1 Organising all our game elements to safely build the game
-* 6.2 Creating a safe place to play: protecting our variables
-* 6.3 Loading Player and Location code: external scripts
-* 6.4 Controlling the game: a singleton object
-* 6.5 Multiple worlds: map files and loose coupling
-
-### Chapter 7 - Challenges and Champions
-Logic, refactoring and testing
-* 7.1 Completing the adventure - overcoming challenges
-* 7.2 Adding a new feature: refactoring
-* 7.3 Complicated decisions: logic operators
-* 7.4 Playing the game
-* 7.5 Trying to break the game: testing
-
-
-## Part 3 - Buttons and Browsers
-Moving to the browser.
-
-### Chapter 8 - User Interface and Events
-Responding to button clicks and key presses.
-* 8.1 Goodbye console, hello text box
-* 8.2 Alerts and Prompts
-* 8.3 Responding to events with handlers
-* 8.4 Parsing input and switch blocks
-* 8.5 The DOM - appending elements
-* 8.6 Cross-browser issues
-
-### Chapter 9 - Browser Based Adventures
-A fully functioning adventure
-* 9.1 Reusing all our code
-* 9.2 Loading multiple maps
-* 9.3 Templates
-* 9.4 Navigation UI
-* 9.5 Starting, stopping and switching games
-* 9.6 Saving state locally
-
-
-## Part 4 - Ajax and APIs
-Using a server to provide and store data
-
-### Chapter 10 - An Adventure API
-Adventures on demand.
-* 10.1 We don't need to load the whole adventure at once
-* 10.2 Introducing the Adventure RESTful API
-* 10.3 JSON
-* 10.4 Loading each location
-* 10.5 Listing available maps
-
-### Chapter 11 - How the API was Built
-Investigating the Adventure API - Node.js and Express.js
-* 11.1 JavaScript on the server
-* 11.2 Installing Node and using npm
-* 11.3 Modules and require
-* 11.4 Express
-* 11.5 Loading our map JSON files and responding to API requests
-* 11.6 Saving game state on the server
-
-### Chapter 12 - Multiplayer Adventures with Socket.io
-We can play with friends.
-* 12.1 Real-time updates
-* 12.2 Using socket.io on the server and the browser
-* 12.3 Sending and receiving game messages
-* 12.4 Bumping into other characters
-* 12.5 Swapping items
-
+### Chapter 16 – Real-time messaging with Socket.io
+* 16.1 Real-time updates
+* 16.2 Using socket.io on the server and the browser
+* 16.3 Sending and receiving game messages
+* 16.4 Bumping into other characters
+* 16.5 Swapping items
