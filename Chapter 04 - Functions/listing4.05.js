@@ -1,26 +1,31 @@
 /* Adventures in JavaScript
  * Listing 4.05
- * Using a function to display object properties
+ * Two more function definitions and assignments
  */
 
-var showPlayerInfo = function () {
-    console.log("Player information for " + player.name);
-    console.log("------------------------------");
-    console.log(player.name + " is in " + player.location);
-    console.log(player.name + " has health " + player.health);
-    console.log("------------------------------");
+var findTotal = function () {
+    result = number1 + number2;
+};
+
+var displayMenu = function () {
+    console.log("Please choose an option:");
+    console.log("(1) Print log");
+    console.log("(2) Upload file");
+    console.log("(9) Quit");
 };
 
 
 
 /* Further Adventures
  *
- * 1) Add a call to showPlayerInfo and run the program. What happens?
+ * 1) Declare number1, number2 and result variables
  *
- * 2) Declare a player variable but don't assign it a value. Run the program. What happens now?
+ * 2) Assign values to the variables
  *
- * 3) Create an empty object and assign it to the player variable. Run the program again. Does the output change?
+ * 3) Call the findTotal function
  *
- * 4) Add name, location and health properties to the player object. Run one more time. Is the output as expected?
+ * 4) Display the result on the console
+ *
+ * 5) call the displayMenu function
  *
  */

@@ -1,6 +1,6 @@
 /* Adventures in JavaScript
  * Listing 4.04
- * Calling the sayHello function three times
+ * A simple function definition and assignment
  */
 
 var sayHello = function () {
@@ -8,19 +8,17 @@ var sayHello = function () {
 };
 
 sayHello();
-sayHello();
-sayHello();
 
 
 
 /* Further Adventures
  *
- * 1) Change the message from the sayHello function
+ * 1) Add a second sayHello(); on a new line. Run the program
  *
- * To add a line-break to a string, insert '\n'
- * e.g. "Line One\nLine Two"
+ * 2) Change the message from the sayHello function
  *
- * 2) Break the Hello World! message across two lines
+ * 3) Create a sayGoodbye function
  *
- * 3) Create a function that prints the letters of "Hello World!" one by one down the page
+ * 4) Make the program say goodbye ten times
+ *
  */

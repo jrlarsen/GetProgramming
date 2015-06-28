@@ -1,55 +1,30 @@
 /* Adventures in JavaScript
  * Listing 4.07
- * Using the same function with multiple objects
+ * Using the findTotal function to display a calculation
  */
 
-var player1 = {
-    name: "Kandra",
-    location: "The Old Library",
-    health: 50
+var number1 = 1000;
+var number2 = 66;
+var result;
+
+var findTotal = function () {
+    result = number1 + number2;
 };
 
-var player2 = {
-    name: "Dax",
-    location: "The Dungeon of Doom",
-    health: 40
-};
+findTotal();
 
-var player3 = {
-    name: "Blinky",
-    location: "The Maze",
-    health: 2000
-};
-
-var player;
-
-var showPlayerInfo = function () {
-    console.log("Player information for " + player.name);
-    console.log("------------------------------");
-    console.log(player.name + " is in " + player.location);
-    console.log(player.name + " has health " + player.health);
-    console.log("------------------------------");
-};
-
-player = player1;
-showPlayerInfo();
-
-player = player2;
-showPlayerInfo();
-
-player = player3;
-showPlayerInfo();
+console.log(number1 + " + " + number2 + " = " + result);
 
 
 
 /* Further Adventures
  *
- * 1) Create an object to represent a multiple choice quiz question
+ * 1) Change number1 and number2 and run the program
  *
- * 2) Create two more quiz question objects
+ * 2) Add a third variable, number3, and assign it a value
  *
- * 3) Create a function to show the question and answer options
+ * 3) Update the findTotal function to add the three numbers
  *
- * 4) Use the same variable assignment technique as above to display all three questions on the console
+ * 4) Update the console.log line to show the new calculation
  *
  */

@@ -1,54 +1,25 @@
 /* Adventures in JavaScript
  * Listing 4.08
- * Updating our display function to add a blank line
+ * Displaying a menu
  */
 
-var player1 = {
-    name: "Kandra",
-    location: "The Old Library",
-    health: 50
+var displayMenu = function () {
+    console.log("Please choose an option:");
+    console.log("(1) Print log");
+    console.log("(2) Upload file");
+    console.log("(9) Quit");
 };
 
-var player2 = {
-    name: "Dax",
-    location: "The Dungeon of Doom",
-    health: 40
-};
-
-var player3 = {
-    name: "Blinky",
-    location: "The Maze",
-    health: 2000
-};
-
-var player;
-
-var showPlayerInfo = function () {
-    console.log("Player information for " + player.name);
-    console.log("------------------------------");
-    console.log(player.name + " is in " + player.location);
-    console.log(player.name + " has health " + player.health);
-    console.log("------------------------------");
-    console.log("");
-};
-
-player = player1;
-showPlayerInfo();
-
-player = player2;
-showPlayerInfo();
-
-player = player3;
-showPlayerInfo();
+displayMenu();
 
 
 
 /* Further Adventures
  *
- * 1) Create three objects to represent blog posts
+ * 1) Add two more options to the displayMenu function and run the program
  *
- * 2) Create a function to display the posts on the console
+ * 2) Create your own displayMyMenu function
  *
- * 3) Can you find your own way of visually separating the different blog posts on the console?
+ * 3) Add a line to call your function as well. Run the program
  *
  */
