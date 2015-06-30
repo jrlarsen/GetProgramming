@@ -1,26 +1,26 @@
 /* Adventures in JavaScript
- * Listing 4.12
- * A function with two arguments
+ * Listing 5.04
+ * Calling the same function with different arguments
  */
 
-var showSum = function (number1, number2) {
-    var total = number1 + number2;
-    console.log("The sum is " + total);
+var showMessage = function (message) {
+    console.log("The message is: " + message);
 };
 
-showSum(30, 23);
-showSum(2.8, -5);
+var myMessage = "Hello to Jason Isaacs";
+
+showMessage("Hello World!");
+showMessage(myMessage);
+showMessage(myMessage + " and Stephen Fry");
 
 
 
 /* Further Adventures
  *
- * 1) Use the showSum function to add 56 and 74
+ * 1) Change the value assigned to myMessage and run the program
  *
- * 2) Create a showProduct function to multiply two numbers
+ * 2) Add a couple more calls to showMessage with different arguments
  *
- * 3) Use your function to multiply three pairs of numbers
- *
- * 4) What about showDifference and showQuotient for subtraction and division?
+ * 3) Change the extra text added in the showMessage function
  *
  */

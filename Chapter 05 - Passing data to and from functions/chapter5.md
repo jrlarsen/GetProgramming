@@ -31,11 +31,43 @@ showMessage();
 ```
 
 
-### Passing information to a function
-[jsBin Listing 5.02] (http://jsbin.com/xucemu/edit?js,console)
+### Breaking a function by changing a variable name
+[jsBin Listing 5.02] (http://jsbin.com/yaresa/edit?js,console)
 ```javascript
 /* Adventures in JavaScript
  * Listing 5.02
+ * Breaking a function by changing a variable name
+ */
+
+var msg = "Hello World!";
+
+var showMessage = function () {
+	console.log(message);
+};
+
+showMessage();
+
+
+
+/* Further Adventures
+ *
+ * 1) Update the console.log argument so the program works
+ *
+ * 2) Declare another message variable and assign it a value
+ *
+ * 3) Display the new message as well as the old one
+ *
+ * 4) Display a single message created by joining the two strings
+ *
+ */
+```
+
+
+### Passing information to a function
+[jsBin Listing 5.03] (http://jsbin.com/xucemu/edit?js,console)
+```javascript
+/* Adventures in JavaScript
+ * Listing 5.03
  * Passing information to a function
  */
 
@@ -62,10 +94,10 @@ showMessage("Hello World!");
 
 
 ### Calling the same function with different arguments
-[jsBin Listing 5.03] (http://jsbin.com/zavavo/edit?js,console)
+[jsBin Listing 5.04] (http://jsbin.com/zavavo/edit?js,console)
 ```javascript
 /* Adventures in JavaScript
- * Listing 5.03
+ * Listing 5.04
  * Calling the same function with different arguments
  */
 
@@ -94,10 +126,10 @@ showMessage(myMessage + " and Stephen Fry");
 
 
 ### A function with two arguments
-[jsBin Listing 5.04] (http://jsbin.com/siyelu/edit?js,console)
+[jsBin Listing 5.05] (http://jsbin.com/siyelu/edit?js,console)
 ```javascript
 /* Adventures in JavaScript
- * Listing 5.04
+ * Listing 5.05
  * A function with two arguments
  */
 
@@ -126,10 +158,10 @@ showSum(2.8, -5);
 
 
 ### Passing an object as an argument to a function
-[jsBin Listing 5.05] (http://jsbin.com/yotimic/edit?js,console)
+[jsBin Listing 5.06] (http://jsbin.com/yotimic/edit?js,console)
 ```javascript
 /* Adventures in JavaScript
- * Listing 5.05
+ * Listing 5.06
  * Passing an object as an argument to a function
  */
 
@@ -166,11 +198,51 @@ showPlayerInfo(player1);
 ```
 
 
-### Returning the sum of two numbers
-[jsBin Listing 5.06] (http://jsbin.com/haqapu/edit?js,console)
+### A function that adds properties to an object
+[jsBin Listing 5.07] (http://jsbin.com/qevodu/edit?js,console)
 ```javascript
 /* Adventures in JavaScript
- * Listing 5.06
+ * Listing 5.07
+ * A function that adds properties to an object
+ */
+
+var sale1 = { price: 14, rate: 15 };
+
+var calculateTax = function (sale) {
+	sale.tax = sale.price * sale.rate / 100;
+	sale.total = sale.price + sale.tax;
+};
+
+var displaySale = function (sale) { 
+  console.log("price = $" + sale.price.toFixed(2));
+  console.log("tax @ " + sale.rate + "% = $" + sale.tax.toFixed(2));
+  console.log("total cost = $" + sale.total.toFixed(2));
+};
+
+calculateTax(sale1);
+displaySale(sale1);
+
+
+
+/* Further Adventures
+ *
+ * 1) Change the rate property of the sale1 object and run the program
+ *
+ * 2) Add a second sale object, sale2
+ *
+ * 3) Add calls to calculateTax and displaySale to display sale info for sale2
+ *
+ * 4) Can you find a way to combine the calls to calculateTax and displaySale ?
+ *
+ */
+```
+
+
+### Returning the sum of two numbers
+[jsBin Listing 5.08] (http://jsbin.com/haqapu/edit?js,console)
+```javascript
+/* Adventures in JavaScript
+ * Listing 5.08
  * Returning the sum of two numbers
  */
 
@@ -193,7 +265,7 @@ console.log(result);
  * 2) Change the call to console.log so that the display on the console reads: 'The sum of 10 and 35 is 45' using the sum function to generate the answer
  *
  * 3) Can you use the sum function as it is to add more than two numbers?
- *    [Hint: You can nest calls to sum]
+ *    Hint: You can nest calls to sum
  *
  * 4) Create a function to find the sum of three numbers given as arguments
  *
@@ -202,10 +274,10 @@ console.log(result);
 
 
 ### A function with three arguments
-[jsBin Listing 5.07] (http://jsbin.com/jedigi/edit?js,console)
+[jsBin Listing 5.09] (http://jsbin.com/jedigi/edit?js,console)
 ```javascript
 /* Adventures in JavaScript
- * Listing 5.07
+ * Listing 5.09
  * A function with three arguments
  */
 

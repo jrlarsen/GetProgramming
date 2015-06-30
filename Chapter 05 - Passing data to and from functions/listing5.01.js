@@ -1,5 +1,5 @@
 /* Adventures in JavaScript
- * Listing 4.09
+ * Listing 5.01
  * Relying on a variable outside of the function
  */
 

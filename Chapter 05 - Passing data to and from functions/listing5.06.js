@@ -1,29 +1,35 @@
 /* Adventures in JavaScript
- * Listing 4.14
- * Returning the sum of two numbers
+ * Listing 5.06
+ * Passing an object as an argument to a function
  */
 
-var sum = function (number1, number2) {
-    var total = number1 + number2;
-
-    return total;
+var player1 = {
+    name: "Kandra",
+    location: "The Old Library",
+    health: 50
 };
 
-var result = sum(10, 35);
+var showPlayerInfo = function (player) {
+    console.log("Player information for " + player.name);
+    console.log("------------------------------");
+    console.log(player.name + " is in " + player.location);
+    console.log(player.name + " has health " + player.health);
+    console.log("------------------------------");
+    console.log("");
+};
 
-console.log(result);
+showPlayerInfo(player1);
 
 
 
 /* Further Adventures
  *
- * 1) Find and display the sum of a different pair of numbers
+ * 1) Create a second player object
  *
- * 2) Change the call to console.log so that the display on the console reads: 'The sum of 10 and 35 is 45' using the sum function to generate the answer
+ * 2) Add a second call to showPlayerInfo so both players' info is displayed
  *
- * 3) Can you use the sum function as it is to add more than two numbers?
- *    [Hint: You can nest calls to sum]
+ * 3) Create an object to represent a book with at least author and title properties
  *
- * 4) Create a function to find the sum of three numbers given as arguments
+ * 4) Create a function to display the details of a book object passed to the function
  *
  */

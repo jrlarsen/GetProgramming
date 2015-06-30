@@ -1,26 +1,24 @@
 /* Adventures in JavaScript
- * Listing 4.11
- * Calling the same function with different arguments
+ * Listing 5.03
+ * Passing information to a function
  */
 
 var showMessage = function (message) {
     console.log("The message is: " + message);
 };
 
-var myMessage = "Hello to Jason Isaacs";
-
 showMessage("Hello World!");
-showMessage(myMessage);
-showMessage(myMessage + " and Stephen Fry");
 
 
 
 /* Further Adventures
  *
- * 1) Change the value assigned to myMessage and run the program
+ * 1) Change the message in the brackets when showMessage is called on line 10
  *
- * 2) Add a couple more calls to showMessage with different arguments
+ * The value in the brackets when showMessage is run is called an argument. "Hello World!" was the original argument on line 10
  *
- * 3) Change the extra text added in the showMessage function
+ * 2) Add two more calls to the showMessage function with different arguments each time
+ *
+ * 3) Change the showMessage function itself. Make it add some extra text after the message passed in
  *
  */

@@ -1,24 +1,26 @@
 /* Adventures in JavaScript
- * Listing 4.10
- * Passing information to a function
+ * Listing 5.02
+ * Breaking a function by changing a variable name
  */
 
-var showMessage = function (message) {
-    console.log("The message is: " + message);
+var msg = "Hello World!";
+
+var showMessage = function () {
+    console.log(message);
 };
 
-showMessage("Hello World!");
+showMessage();
 
 
 
 /* Further Adventures
  *
- * 1) Change the message in the brackets when showMessage is called on line 10
+ * 1) Update the console.log argument so the program works
  *
- * The value in the brackets when showMessage is run is called an argument. "Hello World!" was the original argument on line 10
+ * 2) Declare another message variable and assign it a value
  *
- * 2) Add two more calls to the showMessage function with different arguments each time
+ * 3) Display the new message as well as the old one
  *
- * 3) Change the showMessage function itself. Make it add some extra text after the message passed in
+ * 4) Display a single message created by joining the two strings
  *
  */
