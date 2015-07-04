@@ -12,10 +12,10 @@
 * 1.5 Further examples: depth through breadth
 
 ### Chapter 2 – Variables
-* 2.1 Storing and using information
-* 2.2 Variables and values
-* 2.3 Listing items with arrays
-* 2.3 Organizing with objects and properties
+* 2.1 What is a variable?
+* 2.2 Declaring variables and assigning values
+* 2.3 Variable names
+* 2.4 Adventure Game - player variables
 
 ### Chapter 3 – Objects
 * 3.1 A need for organization
