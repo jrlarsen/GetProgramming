@@ -221,59 +221,295 @@ var player2 = {
 ```
 
 
-### 
-[jsbin: Listing 3.08]()
+### Using dot notation to access property values
+[jsbin: Listing 3.08](http://jsbin.com/funiyu/edit?js,console)
 ```javascript
+/* Adventures in JavaScript
+ * Listing 3.08
+ * Using dot notation to access property values
+ */
 
+var player1 = {
+  name : "Kandra",
+	location : "The Old Library",
+	health : 50
+};
+
+console.log(player1.name);
+console.log(player1.location);
+
+
+
+/* Further Adventures
+ *
+ * 1) Log the health property to the console.
+ *
+ * 2) Add a second player.
+ *
+ * 3) Log their details to the console.
+ *
+ * 4) In the console tab, click just after the blue arrow.
+ *    Type in player1.name and press Enter.
+ *    Once the program is run, object properties
+ *    are available interactively via the console.
+ *
+ */
 ```
 
 
-### 
-[jsbin: Listing 3.09]()
+### Concatenating string properties
+[jsbin: Listing 3.09](http://jsbin.com/yoweti/edit?js,console)
 ```javascript
+/* Adventures in JavaScript
+ * Listing 3.09
+ * Concatenating string properties
+ */
 
+var player1 = {
+	name: "Kandra",
+	location: "The Old Library"
+};
+
+var player2 = {
+	name: "Dax",
+	location: "The Dungeon of Doom"
+};
+
+console.log(player1.name + " is in " + player1.location);
+console.log(player2.name + " is in " + player2.location);
+
+
+
+/* Further Adventures
+ *
+ * 1) Add a third player.
+ *
+ * 2) Log their details to the console.
+ *
+ * 3) Add a third property.
+ *
+ * 4) Update the messages logged to include the
+ *    new property.
+ *
+ */
 ```
 
 
-### 
-[jsbin: Listing 3.10]()
+### Using dot notation to update a property
+[jsbin: Listing 3.10](http://jsbin.com/mulimi/edit?js,console)
 ```javascript
+/* Adventures in JavaScript
+ * Listing 3.10
+ * Using dot notation to update a property
+ */
 
+var player1 = {
+	name: "Kandra",
+	location: "The Old Library"
+};
+
+player1.location = "The Docks";
+player1.health = 50;
+
+
+
+/* Further Adventures
+ *
+ * 1) Run the program.
+ *
+ * 2) In the console tab, click to the right
+ *    of the blue arrow.
+ *
+ * 3) Change the value of the location property
+ *    by typing player1.location = "The ISS";
+ *    and pressing Enter.
+ *
+ * 4) Update other properties using the console.
+ *
+ */
 ```
 
 
-### 
-[jsbin: Listing 3.11]()
+### Using a property in a calculation
+[jsbin: Listing 3.11](http://jsbin.com/cuboko/edit?js,console)
 ```javascript
+/* Adventures in JavaScript
+ * Listing 3.11
+ * Using a property in a calculation
+ */
 
+var player1 = {
+	name: "Kandra",
+	health: 50
+};
+
+console.log(player1.name + " has health " + player1.health);
+
+player1.health = player1.health + 10;
+
+console.log(player1.name + " has health " + player1.health);
+
+
+
+/* Further Adventures
+ *
+ * 1) Write code to increase player1's health by 10%.
+ *
+ * 2) Add a second player.
+ *
+ * 3) Use the players' properties to find the sum
+ *    of their health scores and log it to the console,
+ *    along with an appropriate message that includes
+ *    their names.
+ *
+ */
 ```
 
 
-### 
-[jsbin: Listing 3.12]()
+### A blog post
+[jsbin: Listing 3.12](http://jsbin.com/jiculu/edit?js,console)
 ```javascript
+/* Adventures in JavaScript
+ * Listing 3.12
+ * A blog post
+ */
 
+var post = {
+	id : 1,
+	title : "My Crazy Space Adventure",
+	author : "Philae",
+	created : "2015-06-21",
+	approved : true,
+	body : "You will not believe where I just woke up!! Only on a comet..."
+};
+
+
+
+/* Further Adventures
+ *
+ * 1) Display some of the properties.
+ *
+ * 2) Add a second post.
+ *
+ * We'd like to be able to display posts only if
+ * the approved property is true.
+ *
+ */
 ```
 
 
-### 
-[jsbin: Listing 3.13]()
+### A calendar event
+[jsbin: Listing 3.13](http://jsbin.com/viroho/edit?js,console)
 ```javascript
+/* Adventures in JavaScript
+ * Listing 3.13
+ * A calendar event
+ */
 
+var event = {
+	title : "Appraisal Meeting",
+	startDate : "2016-10-04 16:00:00",
+	endDate : "2016-10-04 17:00:00",
+	location : "Martha's office",
+	importance: 1,
+	notes : 'Don\'t forget the portfolio!'
+};
+
+
+
+/* Further Adventures
+ *
+ * 1) Remove the backslash from the notes property.
+ *
+ * 2) Take a look at the errors reported by jsBin.
+ *
+ * 3) Put the backslash back.
+ *
+ * 4) See how the location property doesn't need
+ *    a backslash. What happens if you add one and
+ *    log the location property?
+ *
+ * 5) What if you want to show a backslash
+ *    as part of a string?
+ *
+ */
 ```
 
 
-### 
-[jsbin: Listing 3.14]()
+### Location for a weather app
+[jsbin: Listing 3.14](http://jsbin.com/diguhe/edit?js,console)
 ```javascript
+/* Adventures in JavaScript
+ * Listing 3.14
+ * Location for a weather app
+ */
 
+var location = {
+  "city"      : "San Francisco",
+  "state"     : "CA",
+  "country"   : "US",
+  "zip"       : "94101",
+  "latitude"  : 37.775,
+  "longitude" : -122.418,
+  "elevation" : 47.000
+};
+
+
+
+/* Further Adventures
+ *
+ * 1) Run the program
+ *
+ * 2) In the console tab, click after the blue arrow.
+ *    Type location.city followed by Enter
+ *    to show the city property.
+ *
+ * Hmmmm, something's not right!
+ *
+ * 3) Type location and press Enter
+ *    to display the whole location object.
+ *
+ * Okay, that's definitely not our location object.
+ *
+ * This is an example of a variable collision.
+ * Browsers (and jsBin) are programs themselves and
+ * create their own variables.
+ * Other code, not ours, has declared its own
+ * location variable, over-writing ours.
+ *
+ * 4) Change our location variable, now calling
+ *    it geolocation.
+ *    Repeat steps 1, 2 and 3, using geolocation
+ *    instead of location.
+ *
+ */
 ```
 
 
-### 
-[jsbin: Listing 3.15]()
+### A question and answer for a quiz app
+[jsbin: Listing 3.15](http://jsbin.com/damoto/edit?js,console)
 ```javascript
+/* Adventures in JavaScript
+ * Listing 3.15
+ * A question and answer for a quiz app
+ */
 
+var questionAndAnswer = {
+	question: "What is the capital of France?",
+	answer1: "Bordeaux",
+	answer2: "F",
+	answer3: "Paris",
+	answer4: "Brussels",
+	correctAnswer: "Paris",
+	marksForQuestion: 2
+};
+
+
+
+/* Further Adventures
+ *
+ * 1) Use console.log to present the question
+ *    and answer options in a nicely formatted way.
+ *
+ */
 ```
-
-
