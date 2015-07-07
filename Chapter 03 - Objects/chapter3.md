@@ -1,4 +1,4 @@
-# Functions
+# Objects
 
 ### Using variables to represent a single player
 [jsbin: Listing 3.01](http://jsbin.com/fucuxah/edit?js,console)
