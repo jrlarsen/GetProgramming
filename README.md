@@ -36,10 +36,10 @@
 * 5.4 Returning data from functions
 
 ### Chapter 6 – Arrays
-* 6.1 Another way to group values
-* 6.2 Creating an array
-* 6.3 Accessing array elements
-* 6.4 Visiting each element in an array with forEach
+* 6.1 Creating arrays and accessing elements
+* 6.2 Array methods
+* 6.3 Data types – a summary
+* 6.4 The Adventure Game: Our player object
 
 ### Chapter 7 – Creating objects with constructors and prototypes
 * 7.1 Creating a blueprint for similar objects
