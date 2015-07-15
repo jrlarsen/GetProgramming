@@ -42,11 +42,10 @@
 * 6.4 The Adventure Game: Our player object
 
 ### Chapter 7 – Creating objects with constructors and prototypes
-* 7.1 Creating a blueprint for similar objects
-* 7.2 Using the blueprints: constructor functions, this and new
-* 7.3 Methods: functions as properties
-* 7.4 Accessing properties with methods
-* 7.5 Sharing properties with prototypes
+* 7.1 Creating similar objects with a function
+* 7.2 Constructor functions, this and new
+* 7.3 Two examples of constructors
+* 7.4 Sharing properties with prototypes
 
 ### Chapter 8 – Working with more complicated objects
 * 8.1 Objects as properties of objects
