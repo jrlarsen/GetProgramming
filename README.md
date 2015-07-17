@@ -42,14 +42,12 @@
 ### Chapter 8 – Arrays: putting data into lists
 * 8.1 Creating arrays and accessing elements
 * 8.2 Array methods
-* 8.3 Data types – a summary
-* 8.4 The Adventure Game: Our player object
+* 8.3 The Adventure Game: Our player object
 
 ### Chapter 9 – Constructors: building objects with functions
 * 9.1 Creating similar objects with a function
 * 9.2 Constructor functions, this and new
 * 9.3 Two examples of constructors
-* 9.4 Sharing properties with prototypes
 
 ### Chapter 10 – Bracket notation: flexible property names
 * 10.1 Square brackets instead of dots
