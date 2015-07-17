@@ -1,5 +1,5 @@
 /* Adventures in JavaScript
- * Listing 7.07
+ * Listing 9.07
  * A quiz question constructor
  */
 

@@ -1,5 +1,5 @@
 /* Adventures in JavaScript
- * Listing 7.05
+ * Listing 9.05
  * Including an items array in our Place constructor
  */
 

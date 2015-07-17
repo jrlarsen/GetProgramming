@@ -1,5 +1,5 @@
 /* Adventures in JavaScript
- * Listing 7.01
+ * Listing 9.01
  * Using a function to create an object
  */
 

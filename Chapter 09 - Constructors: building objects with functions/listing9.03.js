@@ -1,5 +1,5 @@
 /* Adventures in JavaScript
- * Listing 7.03
+ * Listing 9.03
  * An array of constructed objects
  */
 

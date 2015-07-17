@@ -1,5 +1,5 @@
 /* Adventures in JavaScript
- * Listing 7.10
+ * Listing 9.10
  * Updating a property on the prototype
  */
 

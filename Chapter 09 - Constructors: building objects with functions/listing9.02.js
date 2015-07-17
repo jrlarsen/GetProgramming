@@ -1,5 +1,5 @@
 /* Adventures in JavaScript
- * Listing 7.02
+ * Listing 9.02
  * Adding methods to our constructed object
  */
 

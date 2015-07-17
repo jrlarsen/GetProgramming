@@ -1,5 +1,5 @@
 /* Adventures in JavaScript
- * Listing 7.06
+ * Listing 9.06
  * Creating multiple Places with our constructor
  */
 

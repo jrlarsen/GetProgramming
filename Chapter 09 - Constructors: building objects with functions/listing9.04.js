@@ -1,5 +1,5 @@
 /* Adventures in JavaScript
- * Listing 7.04
+ * Listing 9.04
  * A Place constructor
  */
 

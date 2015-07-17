@@ -1,5 +1,5 @@
 /* Adventures in JavaScript
- * Listing 7.08
+ * Listing 9.08
  * A calendar event constructor
  */
 

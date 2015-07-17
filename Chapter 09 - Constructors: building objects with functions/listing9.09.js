@@ -1,5 +1,5 @@
 /* Adventures in JavaScript
- * Listing 7.09
+ * Listing 9.09
  * Sharing functions with the Place prototype
  */
 
