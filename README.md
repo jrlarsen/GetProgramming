@@ -47,10 +47,9 @@
 * 7.3 Two examples of constructors
 * 7.4 Sharing properties with prototypes
 
-### Chapter 8 – Working with more complicated objects
-* 8.1 Objects as properties of objects
-* 8.2 Using dot notation and bracket notation to access properties
-* 8.3 Loops: for, for in and while
+### Chapter 8 – Bracket notation for object properties
+* 8.1 Square brackets instead of dots
+* 8.2 The Adventure Game: players and places
 
 
 ## Part 2 – Organizing our programs
