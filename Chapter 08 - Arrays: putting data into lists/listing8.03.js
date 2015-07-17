@@ -1,5 +1,5 @@
 /* Adventures in JavaScript
- * Listing 6.03
+ * Listing 8.03
  * Accessing array elements
  */
 

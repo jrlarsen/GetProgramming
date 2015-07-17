@@ -1,5 +1,5 @@
 /* Adventures in JavaScript
- * Listing 6.11
+ * Listing 8.11
  * A player object
  */
 

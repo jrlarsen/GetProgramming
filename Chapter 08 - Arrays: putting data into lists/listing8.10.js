@@ -1,5 +1,5 @@
 /* Adventures in JavaScript
- * Listing 6.10
+ * Listing 8.10
  * Displaying a multiple choice question
  */
 

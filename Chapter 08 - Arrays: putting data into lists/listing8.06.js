@@ -1,5 +1,5 @@
 /* Adventures in JavaScript
- * Listing 6.06
+ * Listing 8.06
  * Manipulating arrays with push, pop and join
  */
 

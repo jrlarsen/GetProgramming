@@ -1,5 +1,5 @@
 /* Adventures in JavaScript
- * Listing 6.09
+ * Listing 8.09
  * Finding the total shopping bill
  */
 

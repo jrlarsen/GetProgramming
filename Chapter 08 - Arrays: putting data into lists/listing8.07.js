@@ -1,5 +1,5 @@
 /* Adventures in JavaScript
- * Listing 6.07
+ * Listing 8.07
  * Iterating over an array with forEach
  */
 

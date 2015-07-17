@@ -1,5 +1,5 @@
 /* Adventures in JavaScript
- * Listing 6.05
+ * Listing 8.05
  * Passing an array to a function
  */
 

@@ -1,5 +1,5 @@
 /* Adventures in JavaScript
- * Listing 6.02
+ * Listing 8.02
  * Using existing objects in an array
  */
 

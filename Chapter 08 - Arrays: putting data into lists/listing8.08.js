@@ -1,5 +1,5 @@
 /* Adventures in JavaScript
- * Listing 6.08
+ * Listing 8.08
  * Calling forEach with an inline function
  */
 

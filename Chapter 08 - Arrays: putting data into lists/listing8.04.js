@@ -1,5 +1,5 @@
 /* Adventures in JavaScript
- * Listing 6.04
+ * Listing 8.04
  * Using a variable as an index
  */
 

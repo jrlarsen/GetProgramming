@@ -1,11 +1,11 @@
-# Chapter 06 - Arrays
+# Chapter 08 - Arrays: putting data into lists
 
 
 ### Creating arrays
-[jsbin: Listing 6.01](http://jsbin.com/cevodu/edit?js,console)
+[jsbin: Listing 8.01](http://jsbin.com/cevodu/edit?js,console)
 ```javascript
 /* Adventures in JavaScript
- * Listing 6.01
+ * Listing 8.01
  * Creating arrays
  */
 
@@ -36,10 +36,10 @@ console.log(names);
 
 
 ### Using existing objects in an array
-[jsbin: Listing 6.02](http://jsbin.com/gizulu/edit?js,console)
+[jsbin: Listing 8.02](http://jsbin.com/gizulu/edit?js,console)
 ```javascript
 /* Adventures in JavaScript
- * Listing 6.02
+ * Listing 8.02
  * Using existing objects in an array
  */
 
@@ -68,10 +68,10 @@ console.log(mazePlayers);
 
 
 ### Accessing array elements
-[jsbin: Listing 6.03](http://jsbin.com/qemufe/edit?js,console)
+[jsbin: Listing 8.03](http://jsbin.com/qemufe/edit?js,console)
 ```javascript
 /* Adventures in JavaScript
- * Listing 6.03
+ * Listing 8.03
  * Accessing array elements
  */
 
@@ -108,10 +108,10 @@ console.log("The fourth score is " + scores[3]);
 
 
 ### Using a variable as an index
-[jsbin: Listing 6.04](http://jsbin.com/veyexa/edit?js,console)
+[jsbin: Listing 8.04](http://jsbin.com/veyexa/edit?js,console)
 ```javascript
 /* Adventures in JavaScript
- * Listing 6.04
+ * Listing 8.04
  * Using a variable as an index
  */
 
@@ -141,10 +141,10 @@ console.log( days[dayInWeek - 1] );
 
 
 ### Passing an array to a function
-[jsbin: Listing 6.05](http://jsbin.com/bewebi/edit?js,console)
+[jsbin: Listing 8.05](http://jsbin.com/bewebi/edit?js,console)
 ```javascript
 /* Adventures in JavaScript
- * Listing 6.05
+ * Listing 8.05
  * Passing an array to a function
  */
 
@@ -191,10 +191,10 @@ console.log(report);
 
 
 ### Manipulating arrays with push, pop and join
-[jsbin: Listing 6.06](http://jsbin.com/faqabu/edit?js,console)
+[jsbin: Listing 8.06](http://jsbin.com/faqabu/edit?js,console)
 ```javascript
 /* Adventures in JavaScript
- * Listing 6.06
+ * Listing 8.06
  * Manipulating arrays with push, pop and join
  */
 
@@ -233,10 +233,10 @@ console.log(items.join(" and "));
 
 
 ### Iterating over an array with forEach
-[jsbin: Listing 6.07](http://jsbin.com/sokosi/edit?js,console)
+[jsbin: Listing 8.07](http://jsbin.com/sokosi/edit?js,console)
 ```javascript
 /* Adventures in JavaScript
- * Listing 6.07
+ * Listing 8.07
  * Iterating over an array with forEach
  */
 
@@ -274,10 +274,10 @@ items.forEach(showInfo);
 
 
 ### Calling forEach with an inline function
-[jsbin: Listing 6.08](http://jsbin.com/yapecu/edit?js,console)
+[jsbin: Listing 8.08](http://jsbin.com/yapecu/edit?js,console)
 ```javascript
 /* Adventures in JavaScript
- * Listing 6.08
+ * Listing 8.08
  * Calling forEach with an inline function
  */
 
@@ -315,10 +315,10 @@ items.forEach(function (item) {
 
 
 ### Finding the total shopping bill
-[jsbin: Listing 6.09](http://jsbin.com/zizixu/edit?js,console)
+[jsbin: Listing 8.09](http://jsbin.com/zizixu/edit?js,console)
 ```javascript
 /* Adventures in JavaScript
- * Listing 6.09
+ * Listing 8.09
  * Finding the total shopping bill
  */
 
@@ -361,10 +361,10 @@ console.log("The total cost is $" + getTotalBill(costs, numOfEach));
 
 
 ### Displaying a multiple choice question
-[jsbin: Listing 6.10](http://jsbin.com/lobahu/edit?js,console)
+[jsbin: Listing 8.10](http://jsbin.com/lobahu/edit?js,console)
 ```javascript
 /* Adventures in JavaScript
- * Listing 6.10
+ * Listing 8.10
  * Displaying a multiple choice question
  */
 
@@ -409,10 +409,10 @@ displayQuestion(question1);
 
 
 ### A player object
-[jsbin: Listing 6.11](http://jsbin.com/mecude/edit?js,console)
+[jsbin: Listing 8.11](http://jsbin.com/mecude/edit?js,console)
 ```javascript
 /* Adventures in JavaScript
- * Listing 6.11
+ * Listing 8.11
  * A player object
  */
 

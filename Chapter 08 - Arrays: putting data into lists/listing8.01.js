@@ -1,5 +1,5 @@
 /* Adventures in JavaScript
- * Listing 6.01
+ * Listing 8.01
  * Creating arrays
  */
 
