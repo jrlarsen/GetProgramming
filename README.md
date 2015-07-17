@@ -51,7 +51,7 @@
 * 9.3 Two examples of constructors
 * 9.4 Sharing properties with prototypes
 
-### Chapter 10 – Bracket notation: more flexible objects
+### Chapter 10 – Bracket notation: flexible property names
 * 10.1 Square brackets instead of dots
 * 10.2 The Adventure Game: players and places
 

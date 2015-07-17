@@ -1,11 +1,11 @@
-# Chapter 08 - Bracket notation for object properties
+# Chapter 10 - Bracket notation: flexible property names
 
 
 ### 
-[jsbin: Listing 8.01](http://jsbin.com/kipedu/edit?js,console)
+[jsbin: Listing 10.01](http://jsbin.com/kipedu/edit?js,console)
 ```javascript
 /* Adventures in JavaScript
- * Listing 8.01
+ * Listing 10.01
  * Bracket notation for object properties
  */
 
@@ -33,10 +33,10 @@ console.log(ages.Dax);
 
 
 ### Longer strings as keys
-[jsbin: Listing 8.023](http://jsbin.com/toviya/edit?js,console)
+[jsbin: Listing 10.02](http://jsbin.com/toviya/edit?js,console)
 ```javascript
 /* Adventures in JavaScript
- * Listing 8.02
+ * Listing 10.02
  * Longer strings as keys
  */
 
@@ -67,10 +67,10 @@ console.log(ages["Dax Aniaku"]);
 
 
 ### Using a function to add ages
-[jsbin: Listing 8.03](http://jsbin.com/pipuva/edit?js,console)
+[jsbin: Listing 10.03](http://jsbin.com/pipuva/edit?js,console)
 ```javascript
 /* Adventures in JavaScript
- * Listing 8.03
+ * Listing 10.03
  * Using a function to add ages
  */
 
@@ -112,10 +112,10 @@ console.log(ages["Dax Aniaku"]);
 
 
 ### Using Object.keys
-[jsbin: Listing 8.04](http://jsbin.com/mehuno/edit?js,console)
+[jsbin: Listing 10.04](http://jsbin.com/mehuno/edit?js,console)
 ```javascript
 /* Adventures in JavaScript
- * Listing 8.04
+ * Listing 10.04
  * Using Object.keys
  */
 
@@ -153,10 +153,10 @@ console.log(keys);
 
 
 ### Iterating over Object.keys with forEach
-[jsbin: Listing 8.05](http://jsbin.com/seteco/edit?js,console)
+[jsbin: Listing 10.05](http://jsbin.com/seteco/edit?js,console)
 ```javascript
 /* Adventures in JavaScript
- * Listing 8.05
+ * Listing 10.05
  * Iterating over Object.keys with forEach
  */
 
@@ -197,10 +197,10 @@ keys.forEach(function (key) {
 
 
 ### 
-[jsbin: Listing 8.06]()
+[jsbin: Listing 10.06]()
 ```javascript
 /* Adventures in JavaScript
- * Listing 8.06
+ * Listing 10.06
  * Counting words from tweets
  */
 
@@ -257,10 +257,10 @@ console.log(words);
 
 
 ### An exits object
-[jsbin: Listing 8.07](http://jsbin.com/daqato/edit?js,console)
+[jsbin: Listing 10.07](http://jsbin.com/daqato/edit?js,console)
 ```javascript
 /* Adventures in JavaScript
- * Listing 8.07
+ * Listing 10.07
  * An exits object
  */
 
@@ -311,10 +311,10 @@ keys.forEach(function (key) {
 
 
 ### Functions to add and show exits
-[jsbin: Listing 8.08](http://jsbin.com/mibube/edit?js,console)
+[jsbin: Listing 10.08](http://jsbin.com/mibube/edit?js,console)
 ```javascript
 /* Adventures in JavaScript
- * Listing 8.08
+ * Listing 10.08
  * Functions to add and show exits
  */
 
@@ -368,10 +368,10 @@ showExits();
 
 
 ### An exits object in the Place constructor
-[jsbin: Listing 8.09](http://jsbin.com/foboka/edit?js,console)
+[jsbin: Listing 10.09](http://jsbin.com/foboka/edit?js,console)
 ```javascript
 /* Adventures in JavaScript
- * Listing 8.09
+ * Listing 10.09
  * An exits object in the Place constructor
  */
 
@@ -421,10 +421,10 @@ kitchen.showExits();
 
 
 ### A map with four locations
-[jsbin: Listing 8.10](http://jsbin.com/bufico/edit?js,console)
+[jsbin: Listing 10.10](http://jsbin.com/bufico/edit?js,console)
 ```javascript
 /* Adventures in JavaScript
- * Listing 8.10
+ * Listing 10.10
  * A map with four locations
  */
 
@@ -496,10 +496,10 @@ currentPlace.showExits();
 
 
 ### A Player constructor function
-[jsbin: Listing 8.11](http://jsbin.com/leqahi/edit?js,console)
+[jsbin: Listing 10.11](http://jsbin.com/leqahi/edit?js,console)
 ```javascript
 /* Adventures in JavaScript
- * Listing 8.11
+ * Listing 10.11
  * A Player constructor function
  */
 
@@ -556,10 +556,10 @@ Player.prototype.showInfo = function () {
 
 
 ### A Place constructor function
-[jsbin: Listing 8.12](http://jsbin.com/zozule/edit?js,console)
+[jsbin: Listing 10.12](http://jsbin.com/zozule/edit?js,console)
 ```javascript
 /* Adventures in JavaScript
- * Listing 8.12
+ * Listing 10.12
  * A Place constructor function
  */
 
@@ -621,10 +621,10 @@ Place.prototype.showInfo = function () {
 
 
 ### Putting a player on the map
-[jsbin: Listing 8.13](http://jsbin.com/sezayo/edit?js,console)
+[jsbin: Listing 10.13](http://jsbin.com/sezayo/edit?js,console)
 ```javascript
 /* Adventures in JavaScript
- * Listing 8.13
+ * Listing 10.13
  * Putting a player on the map
  */
 
