@@ -1,5 +1,5 @@
 /* Adventures in JavaScript
- * Listing 8.09
+ * Listing 10.09
  * An exits object in the Place constructor
  */
 

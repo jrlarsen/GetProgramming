@@ -1,5 +1,5 @@
 /* Adventures in JavaScript
- * Listing 8.08
+ * Listing 10.08
  * Functions to add and show exits
  */
 

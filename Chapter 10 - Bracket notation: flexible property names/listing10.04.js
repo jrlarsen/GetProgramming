@@ -1,5 +1,5 @@
 /* Adventures in JavaScript
- * Listing 8.04
+ * Listing 10.04
  * Using Object.keys
  */
 

@@ -1,5 +1,5 @@
 /* Adventures in JavaScript
- * Listing 8.06
+ * Listing 10.06
  * Counting words from tweets
  */
 

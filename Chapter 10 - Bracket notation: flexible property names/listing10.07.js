@@ -1,5 +1,5 @@
 /* Adventures in JavaScript
- * Listing 8.07
+ * Listing 10.07
  * An exits object
  */
 

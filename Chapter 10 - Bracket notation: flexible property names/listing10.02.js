@@ -1,5 +1,5 @@
 /* Adventures in JavaScript
- * Listing 8.02
+ * Listing 10.02
  * Longer strings as keys
  */
 

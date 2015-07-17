@@ -1,5 +1,5 @@
 /* Adventures in JavaScript
- * Listing 8.05
+ * Listing 10.05
  * Iterating over Object.keys with forEach
  */
 

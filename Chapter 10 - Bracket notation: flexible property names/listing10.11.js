@@ -1,5 +1,5 @@
 /* Adventures in JavaScript
- * Listing 8.11
+ * Listing 10.11
  * A Player constructor function
  */
 

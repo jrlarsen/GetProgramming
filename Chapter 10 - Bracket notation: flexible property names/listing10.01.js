@@ -1,5 +1,5 @@
 /* Adventures in JavaScript
- * Listing 8.01
+ * Listing 10.01
  * Bracket notation for object properties
  */
 

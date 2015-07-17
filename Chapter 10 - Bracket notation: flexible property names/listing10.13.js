@@ -1,5 +1,5 @@
 /* Adventures in JavaScript
- * Listing 8.13
+ * Listing 10.13
  * Putting a player on the map
  */
 

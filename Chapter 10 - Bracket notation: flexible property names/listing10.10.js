@@ -1,5 +1,5 @@
 /* Adventures in JavaScript
- * Listing 8.10
+ * Listing 10.10
  * A map with four locations
  */
 
