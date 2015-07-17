@@ -1,11 +1,11 @@
-# Chapter 07 - Constructors and Prototypes
+# Chapter 09 - Constructors: building objects with functions
 
 
 ### Using a function to create an object
-[jsbin: Listing 7.01](http://jsbin.com/jiroyo/edit?js,console)
+[jsbin: Listing 9.01](http://jsbin.com/jiroyo/edit?js,console)
 ```javascript
 /* Adventures in JavaScript
- * Listing 7.01
+ * Listing 9.01
  * Using a function to create an object
  */
 
@@ -48,10 +48,10 @@ console.log(library.description);
 
 
 ### Adding methods to our constructed object
-[jsbin: Listing 7.02](http://jsbin.com/zogure/edit?js,console)
+[jsbin: Listing 9.02](http://jsbin.com/zogure/edit?js,console)
 ```javascript
 /* Adventures in JavaScript
- * Listing 7.02
+ * Listing 9.02
  * Adding methods to our constructed object
  */
 
@@ -91,10 +91,10 @@ library.showInfo();
 
 
 ### An array of constructed objects
-[jsbin: Listing 7.03](http://jsbin.com/jiweze/edit?js,console)
+[jsbin: Listing 9.03](http://jsbin.com/jiweze/edit?js,console)
 ```javascript
 /* Adventures in JavaScript
- * Listing 7.03
+ * Listing 9.03
  * An array of constructed objects
  */
 
@@ -147,10 +147,10 @@ places.forEach(function (place) {
 
 
 ### A Place constructor
-[jsbin: Listing 7.04](http://jsbin.com/bixico/edit?js,console)
+[jsbin: Listing 9.04](http://jsbin.com/bixico/edit?js,console)
 ```javascript
 /* Adventures in JavaScript
- * Listing 7.04
+ * Listing 9.04
  * A Place constructor
  */
 
@@ -187,10 +187,10 @@ library.showInfo();
 
 
 ### Including an items array in our Place constructor
-[jsbin: Listing 7.05](http://jsbin.com/wiguya/edit?js,console)
+[jsbin: Listing 9.05](http://jsbin.com/wiguya/edit?js,console)
 ```javascript
 /* Adventures in JavaScript
- * Listing 7.05
+ * Listing 9.05
  * Including an items array in our Place constructor
  */
 
@@ -240,10 +240,10 @@ library.showInfo();
 
 
 ### Creating multiple Places with our constructor
-[jsbin: Listing 7.06](http://jsbin.com/wewewe/edit?js,console)
+[jsbin: Listing 9.06](http://jsbin.com/wewewe/edit?js,console)
 ```javascript
 /* Adventures in JavaScript
- * Listing 7.06
+ * Listing 9.06
  * Creating multiple Places with our constructor
  */
 
@@ -309,10 +309,10 @@ dungeon = new Place(
 
 
 ### A quiz question constructor
-[jsbin: Listing 7.07](http://jsbin.com/vuyesi/edit?js,console)
+[jsbin: Listing 9.07](http://jsbin.com/vuyesi/edit?js,console)
 ```javascript
 /* Adventures in JavaScript
- * Listing 7.07
+ * Listing 9.07
  * A quiz question constructor
  */
 
@@ -366,10 +366,10 @@ question1.showQuestion();
 
 
 ### A calendar event constructor
-[jsbin: Listing 7.08](http://jsbin.com/gemiyu/edit?js,console)
+[jsbin: Listing 9.08](http://jsbin.com/gemiyu/edit?js,console)
 ```javascript
 /* Adventures in JavaScript
- * Listing 7.08
+ * Listing 9.08
  * A calendar event constructor
  */
 
@@ -420,10 +420,10 @@ calEvent.showEvent();
 
 
 ### Sharing functions with the Place prototype
-[jsbin: Listing 7.09](http://jsbin.com/cibuji/edit?js,console)
+[jsbin: Listing 9.09](http://jsbin.com/cibuji/edit?js,console)
 ```javascript
 /* Adventures in JavaScript
- * Listing 7.09
+ * Listing 9.09
  * Sharing functions with the Place prototype
  */
 
@@ -469,10 +469,10 @@ kitchen.showInfo();
 
 
 ### Updating a property on the prototype
-[jsbin: Listing 7.10](http://jsbin.com/wekaho/edit?js,console)
+[jsbin: Listing 9.10](http://jsbin.com/wekaho/edit?js,console)
 ```javascript
 /* Adventures in JavaScript
- * Listing 7.10
+ * Listing 9.10
  * Updating a property on the prototype
  */
 
