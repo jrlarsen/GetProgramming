@@ -22,5 +22,7 @@ var post = {
  *
  * We'd like to be able to display posts only if
  * the approved property is true.
+ * Part 2 of Adventures in JavaScript will
+ * investigate choices and conditions.
  *
  */

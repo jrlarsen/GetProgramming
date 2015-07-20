@@ -1,99 +1,102 @@
-# Objects
+# Objects: a way to group data
 
-### Using variables to represent a single player
+### Using variables to represent a book
 [jsbin: Listing 3.01](http://jsbin.com/fucuxah/edit?js,console)
 ```javascript
 /* Adventures in JavaScript
  * Listing 3.01
- * Using variables to represent a single player
+ * Using variables to represent a book
  */
 
-var playerName = "Kandra";
-var playerHealth = 50;
-var playerLocation = "The Old Library";
+var bookTitle;
+var bookAuthor;
 
-console.log(playerName + " is in " + playerLocation);
-console.log(playerName + " has health " + playerHealth);
+bookTitle = "The Hobbit";
+bookAuthor = "J. R. R. Tolkien";
+
+console.log(bookTitle + " by " + bookAuthor);
 
 
 
 /* Further Adventures
  *
- * 1) Declare variables for a second player
+ * 1) Declare variables for a second book
  *    and assign them values.
  *
- * 2) Add code to log their details to the console.
+ * 2) Add code to log its details to the console.
  *
- * 3) Repeat steps 1 and 2 for a third player.
+ * 3) Repeat steps 1 and 2 for a third book.
  *
- * 4) Consider the code needed for 10 players.
- *    For 100 players.
+ * 4) Consider the code needed for 10 books.
+ *    For 100 books.
  *
  */
 ```
 
 
-### Using prefixes to tell player variables apart
+### Using prefixes to tell book variables apart
 [jsbin: Listing 3.02](http://jsbin.com/qowagi/edit?js,console)
 ```javascript
 /* Adventures in JavaScript
  * Listing 3.02
- * Using prefixes to tell player variables apart
+ * Using prefixes to tell book variables apart
  */
 
-var player1Name = "Kandra";
-var player1Health = 50;
-var player1Location = "The Old Library";
+var book1Title = "The Hobbit";
+var book1Authors = "J.R.R.Tolkien";
 
-var player2Name = "Dax";
-var player2Health = 40;
-var player2Location = "The Dungeon of Doom";
+var book2Title = "Northern Lights";
+var book2Authors = "Philip Pullman";
 
-var player3Name = "Blinky";
-var player3Health = 2000;
-var player3Location = "The Maze";
+var book3Title = "The Adventures of Tom Sawyer";
+var book3Authors = "Mark Twain";
 
-console.log("There are three players so far...");
-console.log(player1Name + ", " + player2Name + " and " + player3Name);
+console.log("There are three books so far...");
+console.log(book1Title);
+console.log(book2Title);
+console.log(book3Title);
 
 
 
 /* Further Adventures
  *
- * 1) Add a fourth player.
+ * 1) Add a fourth book.
  *
- * 2) Update the messages to include the new player.
+ * 2) Update the messages to include the new book.
  *
  */
 ```
 
 
-### A player as an object
+### A book as an object
 [jsbin: Listing 3.03](http://jsbin.com/ruruko/edit?js,console)
 ```javascript
 /* Adventures in JavaScript
  * Listing 3.03
- * A player as an object
+ * A book as an object
  */
 
-var player1 = {
-	name : "Kandra",
-	health : 50,
-	location : "The Old Library"
+var book;
+
+book = {
+    title : "The Hobbit",
+    author : "J. R. R. Tolkien",
+    published : 1937
 };
 
-console.log(player1);
+console.log(book);
 
 
 
 /* Further Adventures
  *
- * 1) Change the location of player1.
+ * 1) Change the title of book to
+ *    "The Hobbit, or There and Back Again".
  *    Run the program again.
  *
- * 2) Try creating a player2 object.
+ * 2) Try creating a book2 object.
  *
- * 3) Log player2 to the console.
+ * 3) Log book2 to the console.
  *
  */
 ```
@@ -107,20 +110,22 @@ console.log(player1);
  * Creating an empty object
  */
 
-var player1 = {};
+var book;
+
+book = {};
 
 
 
 /* Further Adventures
  *
- * 1) Log player1 to the console.
+ * 1) Log book to the console.
  *
  * 2) Place your cursor between the curly braces
  *    in the code above and press enter.
  *    jsBin should add an empty line between
  *    the braces. You can add more empty lines.
  *
- * 3) Run the program again, logging player1
+ * 3) Run the program again, logging book
  *    to the console.
  *    The extra lines should make no difference
  *    to the outcome.
@@ -137,21 +142,22 @@ var player1 = {};
  * An object with a single property
  */
 
-var player1 = { name : "Kandra" };
+var book = { title : "The Hobbit" };
 
 
 
 /* Further Adventures
  *
- * 1) Log player1 to the console.
+ * 1) Log book to the console.
  *
- * 2) Create a second player.
+ * 2) Create a second book.
  *
- * 3) Log player2 to the console.
+ * 3) Log book2 to the console.
  *
- * 4) In the console tab, click after the blue arrow.
- *    Type 'player1' and press Enter.
- *    The player1 object should be displayed.
+ * 4) Run the program.
+ *    In the console tab, click after the prompt, >.
+ *    Type book and press Enter.
+ *    The book object should be displayed.
  *
  */
 ```
@@ -165,17 +171,19 @@ var player1 = { name : "Kandra" };
  * Using line breaks to aid readability
  */
 
-var player1 = {
-	name : "Kandra"
+var book;
+
+book = {
+	title : "The Hobbit"
 };
 
 
 
 /* Further Adventures
  *
- * 1) Create a second player.
+ * 1) Create a second book.
  *
- * 2) Try adding new properties to each player.
+ * 2) Try adding new properties to each book.
  *    If error messages appear, see if you can make
  *    sense of them. Do they help you to
  *    fix the problem?
@@ -192,30 +200,33 @@ var player1 = {
  * Objects with multiple properties
  */
 
-var player1 = { name : "Kandra"  ,  health : 50 };
+var book1;
+var book2;
 
-var player2 = {
-	name : "Dax",
-	health : 40
+book1 = { title : "The Hobbit" , author : "J. R. R. Tolkien" };
+
+book2 = {
+	title : "Northern Lights",
+	author : "Philip Pullman"
 };
 
 
 
 /* Further Adventures
  *
- * 1) Add a third property to each player.
+ * 1) Add a third property to each book.
  *    Don't forget the commas.
  *
- * The linear format for player1 is okay for
+ * The linear format for book1 is okay for
  * objects with few properties but becomes
  * unwieldy as more properties are added.
  *
- * 2) Add spaces to player2 properties so that
+ * 2) Add spaces to book2 properties so that
  *    the colons line up.
  *    Do you prefer the objects formatted that way?
  *
- * 3) Reformat player1 so that it has the same
- *    layout as player2.
+ * 3) Reformat book1 so that it has the same
+ *    layout as book2.
  *
  */
 ```
@@ -229,27 +240,29 @@ var player2 = {
  * Using dot notation to access property values
  */
 
-var player1 = {
-  name : "Kandra",
-	location : "The Old Library",
-	health : 50
+var book;
+
+book = {
+  title     : "The Hobbit",
+	author    : "J. R. R. Tolkien",
+	published : 1937
 };
 
-console.log(player1.name);
-console.log(player1.location);
+console.log(book.title);
+console.log(book.author);
 
 
 
 /* Further Adventures
  *
- * 1) Log the health property to the console.
+ * 1) Log the published property to the console.
  *
- * 2) Add a second player.
+ * 2) Add a second book.
  *
- * 3) Log their details to the console.
+ * 3) Log its details to the console.
  *
- * 4) In the console tab, click just after the blue arrow.
- *    Type in player1.name and press Enter.
+ * 4) In the console tab, at the prompt,
+ *    type in book.title and press Enter.
  *    Once the program is run, object properties
  *    are available interactively via the console.
  *
@@ -265,26 +278,29 @@ console.log(player1.location);
  * Concatenating string properties
  */
 
-var player1 = {
-	name: "Kandra",
-	location: "The Old Library"
+var book1;
+var book2;
+
+book1 = {
+	title: "The Hobbit",
+	author: "J. R. R. Tolkien"
 };
 
-var player2 = {
-	name: "Dax",
-	location: "The Dungeon of Doom"
+book2 = {
+	title: "Northern Lights",
+	author: "Philip Pullman"
 };
 
-console.log(player1.name + " is in " + player1.location);
-console.log(player2.name + " is in " + player2.location);
+console.log(book1.title + " by " + book1.author);
+console.log(book2.title + " by " + book2.author);
 
 
 
 /* Further Adventures
  *
- * 1) Add a third player.
+ * 1) Add a third book.
  *
- * 2) Log their details to the console.
+ * 2) Log its details to the console.
  *
  * 3) Add a third property.
  *
@@ -303,28 +319,30 @@ console.log(player2.name + " is in " + player2.location);
  * Using dot notation to update a property
  */
 
-var player1 = {
-	name: "Kandra",
-	location: "The Old Library"
+var player1;
+
+player1 = {
+	  name: "Max",
+	  attempted: 0,
+    correct: 0
 };
 
-player1.location = "The Docks";
-player1.health = 50;
+player1.attempted = 1;
+player1.correct = 1;
+player1.score = 50;
 
 
 
 /* Further Adventures
  *
- * 1) Run the program.
+ * 1) Run the program and then
+ *    click after the console prompt.
  *
- * 2) In the console tab, click to the right
- *    of the blue arrow.
+ * 2) Change the value of the score property
+ *    by typing player1.score = 100;
+ *    at the prompt and pressing Enter.
  *
- * 3) Change the value of the location property
- *    by typing player1.location = "The ISS";
- *    and pressing Enter.
- *
- * 4) Update other properties using the console.
+ * 3) Update other properties using the console.
  *
  */
 ```
@@ -338,27 +356,29 @@ player1.health = 50;
  * Using a property in a calculation
  */
 
-var player1 = {
-	name: "Kandra",
-	health: 50
+var player1;
+
+player1 = {
+	  name: "Max",
+	  score: 0
 };
 
-console.log(player1.name + " has health " + player1.health);
+console.log(player1.name + " has scored " + player1.score);
 
-player1.health = player1.health + 10;
+player1.score = player1.score + 50;
 
-console.log(player1.name + " has health " + player1.health);
+console.log(player1.name + " has scored " + player1.score);
 
 
 
 /* Further Adventures
  *
- * 1) Write code to increase player1's health by 10%.
+ * 1) Write code to increase player1's score by 10%.
  *
  * 2) Add a second player.
  *
  * 3) Use the players' properties to find the sum
- *    of their health scores and log it to the console,
+ *    of their scores and log it to the console,
  *    along with an appropriate message that includes
  *    their names.
  *
@@ -393,6 +413,8 @@ var post = {
  *
  * We'd like to be able to display posts only if
  * the approved property is true.
+ * Part 2 of Adventures in JavaScript will
+ * investigate choices and conditions.
  *
  */
 ```
@@ -513,3 +535,45 @@ var questionAndAnswer = {
  *
  */
 ```
+
+
+### A player object
+[jsbin: Listing 3.15](http://jsbin.com/qelene/edit?js,console)
+```javascript
+/* Adventures in JavaScript
+ * Listing 3.16
+ * A player object
+ */
+
+var player;
+
+player = {
+    name: "Kandra",
+    health: 50,
+    place: "The Dungeon of Doom",
+    items: "a rusty key, The Sword of Destiny, a piece of cheese"
+};
+
+console.log(player.name);
+console.log(player.name + " is in " + player.place);
+console.log(player.name + " has health " + player.health);
+console.log("Items: " + player.items);
+
+
+
+/* Further Adventures
+ *
+ * 1) Create a second player.
+ *
+ * 2) Log their details to the console.
+ *
+ * Notice how storing the items as a string
+ * isn't a great approach. If the player
+ * drops an item we'll have to manipulate
+ * the string to remove the item.
+ *
+ * JavaScript has a way of storing lists
+ * of items called an array. See Chapter 8.
+ *
+ */
+ ```

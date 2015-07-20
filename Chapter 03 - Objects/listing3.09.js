@@ -3,26 +3,29 @@
  * Concatenating string properties
  */
 
-var player1 = {
-    name: "Kandra",
-    location: "The Old Library"
+var book1;
+var book2;
+
+book1 = {
+    title: "The Hobbit",
+    author: "J. R. R. Tolkien"
 };
 
-var player2 = {
-    name: "Dax",
-    location: "The Dungeon of Doom"
+book2 = {
+    title: "Northern Lights",
+    author: "Philip Pullman"
 };
 
-console.log(player1.name + " is in " + player1.location);
-console.log(player2.name + " is in " + player2.location);
+console.log(book1.title + " by " + book1.author);
+console.log(book2.title + " by " + book2.author);
 
 
 
 /* Further Adventures
  *
- * 1) Add a third player.
+ * 1) Add a third book.
  *
- * 2) Log their details to the console.
+ * 2) Log its details to the console.
  *
  * 3) Add a third property.
  *

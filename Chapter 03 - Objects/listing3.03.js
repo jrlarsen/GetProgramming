@@ -1,25 +1,28 @@
 /* Adventures in JavaScript
  * Listing 3.03
- * A player as an object
+ * A book as an object
  */
 
-var player1 = {
-    name : "Kandra",
-    health : 50,
-    location : "The Old Library"
+var book;
+
+book = {
+    title : "The Hobbit",
+    author : "J. R. R. Tolkien",
+    published : 1937
 };
 
-console.log(player1);
+console.log(book);
 
 
 
 /* Further Adventures
  *
- * 1) Change the location of player1.
+ * 1) Change the title of book to
+ *    "The Hobbit, or There and Back Again".
  *    Run the program again.
  *
- * 2) Try creating a player2 object.
+ * 2) Try creating a book2 object.
  *
- * 3) Log player2 to the console.
+ * 3) Log book2 to the console.
  *
  */

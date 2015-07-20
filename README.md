@@ -21,7 +21,9 @@
 * 3.1 A need for organization
 * 3.2 Creating objects
 * 3.3 Accessing object properties
-* 3.4 Further examples
+* 3.4 Updating object properties
+* 3.5 Further examples
+* 3.6 The Adventure Game - a player object
 
 ### Chapter 4 – Functions: code on demand
 * 4.1 Noticing repetition

@@ -3,20 +3,21 @@
  * An object with a single property
  */
 
-var player1 = { name : "Kandra" };
+var book = { title : "The Hobbit" };
 
 
 
 /* Further Adventures
  *
- * 1) Log player1 to the console.
+ * 1) Log book to the console.
  *
- * 2) Create a second player.
+ * 2) Create a second book.
  *
- * 3) Log player2 to the console.
+ * 3) Log book2 to the console.
  *
- * 4) In the console tab, click after the blue arrow.
- *    Type 'player1' and press Enter.
- *    The player1 object should be displayed.
+ * 4) Run the program.
+ *    In the console tab, click after the prompt, >.
+ *    Type book and press Enter.
+ *    The book object should be displayed.
  *
  */
