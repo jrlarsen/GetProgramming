@@ -119,6 +119,9 @@ console.log(score);
  *
  * 4) Use console.log to display your variable on the console.
  *
+ * 5) Can you display the sum
+ *    of the two variables?
+ *
  */
 ```
 
@@ -232,7 +235,8 @@ console.log(playerName + " is in " + locationName);
  * Using a variable’s current value to set its new value
  */
 
-var score = 100;
+var score;
+score = 100;
 console.log("Your score was " + score);
 
 console.log("Great splat!!!");
@@ -258,3 +262,41 @@ console.log("Way to go!");
  *
  */
 ```
+
+
+### Valid and invalid variable names
+[jsbin: Listing 2.09](http://jsbin.com/biqawu/edit?js,console)
+```javascript
+/* Adventures in JavaScript
+ * Listing 2.09
+ * Valid and invalid variable names
+ */
+
+var thisIsFine;
+var $noProblemHere;
+var _underscore56;
+var StartWithCapital;
+var z5;
+
+var 999;
+var 39Steps;
+var &nope;
+var single words only;
+var yield;
+
+
+
+/* Further Adventures
+ *
+ * 1) Take a look at the errors in the
+ *    error section of jsBin below.
+ *
+ * 2) Click Run in the console
+ *    and see what errors appear there.
+ *
+ * 3) Delete the second block of variables
+ *    one by one from the code.
+ *    See how the errors change.
+ *
+ */
+ ```

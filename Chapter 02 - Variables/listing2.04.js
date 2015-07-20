@@ -23,4 +23,7 @@ console.log(score);
  *
  * 4) Use console.log to display your variable on the console.
  *
+ * 5) Can you display the sum
+ *    of the two variables?
+ *
  */

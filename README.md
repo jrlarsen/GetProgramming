@@ -15,7 +15,7 @@
 * 2.1 What is a variable?
 * 2.2 Declaring variables and assigning values
 * 2.3 Variable names
-* 2.4 Adventure Game - player variables
+* 2.4 The Adventure Game - player variables
 
 ### Chapter 3 – Objects: a way to group data
 * 3.1 A need for organization

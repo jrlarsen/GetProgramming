@@ -3,7 +3,8 @@
  * Using a variable’s current value to set its new value
  */
 
-var score = 100;
+var score;
+score = 100;
 console.log("Your score was " + score);
 
 console.log("Great splat!!!");
