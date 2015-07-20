@@ -6,8 +6,9 @@
 var number1 = 1000;
 var number2 = 66;
 var result;
+var findTotal;
 
-var findTotal = function () {
+findTotal = function () {
     result = number1 + number2;
 };
 

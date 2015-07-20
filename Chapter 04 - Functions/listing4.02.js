@@ -3,49 +3,54 @@
  * Displaying information from similar objects
  */
 
-var player1 = {
-    name: "Kandra",
-    location: "The Old Library",
-    health: 50
+var movie1;
+var movie2;
+var movie3;
+
+movie1 = {
+    title: "Inside Out",
+    actors: "Amy Poehler, Bill Hader",
+    directors: "Pete Doctor, Ronaldo Del Carmen"
 };
 
-var player2 = {
-    name: "Dax",
-    location: "The Dungeon of Doom",
-    health: 40
+movie2 = {
+    title: "Spectre",
+    actors: "Daniel Craig, Christoph Waltz",
+    directors: "Sam Mendes"
 };
 
-var player3 = {
-    name: "Blinky",
-    location: "The Maze",
-    health: 2000
+movie3 = {
+    title: "Star Wars: Episode VII - The Force Awakens",
+    actors: "Harrison Ford, Mark Hamill, Carrie Fisher",
+    directors: "J.J.Abrams"
 };
 
-console.log("Player information for " + player1.name);
+console.log("Movie information for " + movie1.title);
 console.log("------------------------------");
-console.log(player1.name + " is in " + player1.location);
-console.log(player1.name + " has health " + player1.health);
-console.log("------------------------------");
-
-console.log("Player information for " + player2.name);
-console.log("------------------------------");
-console.log(player2.name + " is in " + player2.location);
-console.log(player2.name + " has health " + player2.health);
+console.log("Actors: " + movie1.actors);
+console.log("Directors: " + movie1.directors);
 console.log("------------------------------");
 
-console.log("Player information for " + player3.name);
+console.log("Movie information for " + movie2.title);
 console.log("------------------------------");
-console.log(player3.name + " is in " + player3.location);
-console.log(player3.name + " has health " + player3.health);
+console.log("Actors: " + movie2.actors);
+console.log("Directors: " + movie2.directors);
+console.log("------------------------------");
+
+console.log("Movie information for " + movie3.title);
+console.log("------------------------------");
+console.log("Actors: " + movie3.actors);
+console.log("Directors: " + movie3.directors);
 console.log("------------------------------");
 
 
 
 /* Further Adventures
  *
- * 1) Add a fourth player and display their info
+ * 1) Add a fourth movie and display its info
  *
- * 2) All the player info is in one big block on the console. Change the code to space out the different players
+ * 2) All the movie info is in one big block on the console.
+ *    Change the code to space out the different movies.
  *
  * 3) Create objects to represent three calendar events
  *

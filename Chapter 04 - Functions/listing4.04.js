@@ -3,7 +3,9 @@
  * A simple function definition and assignment
  */
 
-var sayHello = function () {
+var sayHello;
+
+sayHello = function () {
     console.log("Hello World!");
 };
 

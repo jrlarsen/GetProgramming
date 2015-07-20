@@ -1,34 +1,46 @@
 /* Adventures in JavaScript
  * Listing 4.10
- * Calling the showPlayerInfo function
+ * Calling the showMovieInfo function
  */
 
-var player1 = {
-    name: "Kandra",
-    location: "The Old Library",
-    health: 50
+var movie1;
+var showMovieInfo;
+var movie;
+
+movie1 = {
+    title: "Inside Out",
+    actors: "Amy Poehler, Bill Hader",
+    directors: "Pete Doctor, Ronaldo Del Carmen"
 };
 
-var showPlayerInfo = function () {
-    console.log("Player information for " + player.name);
+showMovieInfo = function () {
+    console.log("Movie information for " + movie.title);
     console.log("------------------------------");
-    console.log(player.name + " is in " + player.location);
-    console.log(player.name + " has health " + player.health);
+    console.log("Actors: " + movie.actors);
+    console.log("Directors: " + movie.directors);
     console.log("------------------------------");
 };
 
-var player = player1;
+movie = movie1;
 
-showPlayerInfo();
+showMovieInfo();
 
 
 
 /* Further Adventures
  *
- * 1) Without creating a player2, assign player2 to the player variable. What happens when you call showPlayerInfo?
+ * 1) Without declaring a movie2 variable,
+ *    assign movie2 to the movie variable
+ *    instead of movie1.
+ *    i.e. movie = movie2;
+ *    What happens when you call showMovieInfo?
  *
- * 2) Create an empty object and assign it to a player2 variable. What happens when you call showPlayerInfo now?
+ * 2) Create an empty object and
+ *    assign it to a movie2 variable.
+ *    What happens when you call showMovieInfo now?
  *
- * 3) Fill out player2 with the properties needed by showPlayerInfo. What happens when you call showPlayerInfo now?
+ * 3) Fill out movie2 with the properties
+ *    needed by showMovieInfo.
+ *    What happens when you call showMovieInfo now?
  *
  */

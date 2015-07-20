@@ -3,53 +3,61 @@
  * Using the same function with multiple objects
  */
 
-var player1 = {
-    name: "Kandra",
-    location: "The Old Library",
-    health: 50
+var movie1;
+var movie2;
+var movie3;
+var movie;
+var showMovieInfo;
+
+movie1 = {
+    title: "Inside Out",
+    actors: "Amy Poehler, Bill Hader",
+    directors: "Pete Doctor, Ronaldo Del Carmen"
 };
 
-var player2 = {
-    name: "Dax",
-    location: "The Dungeon of Doom",
-    health: 40
+movie2 = {
+    title: "Spectre",
+    actors: "Daniel Craig, Christoph Waltz",
+    directors: "Sam Mendes"
 };
 
-var player3 = {
-    name: "Blinky",
-    location: "The Maze",
-    health: 2000
+movie3 = {
+    title: "Star Wars: Episode VII - The Force Awakens",
+    actors: "Harrison Ford, Mark Hamill, Carrie Fisher",
+    directors: "J.J.Abrams"
 };
 
-var player;
-
-var showPlayerInfo = function () {
-    console.log("Player information for " + player.name);
+showMovieInfo = function () {
+    console.log("Movie information for " + movie.title);
     console.log("------------------------------");
-    console.log(player.name + " is in " + player.location);
-    console.log(player.name + " has health " + player.health);
+    console.log("Actors: " + movie.actors);
+    console.log("Directors: " + movie.directors);
     console.log("------------------------------");
 };
 
-player = player1;
-showPlayerInfo();
+movie = movie1;
+showMovieInfo();
 
-player = player2;
-showPlayerInfo();
+movie = movie2;
+showMovieInfo();
 
-player = player3;
-showPlayerInfo();
+movie = movie3;
+showMovieInfo();
 
 
 
 /* Further Adventures
  *
- * 1) Create an object to represent a multiple choice quiz question
+ * 1) Create an object to represent
+ *    a multiple choice quiz question.
  *
- * 2) Create two more quiz question objects
+ * 2) Create two more quiz question objects.
  *
- * 3) Create a function to show the question and answer options
+ * 3) Create a function to show
+ *    the question and answer options.
  *
- * 4) Use the same variable assignment technique as above to display all three questions on the console
+ * 4) Use the same variable assignment technique
+ *    as above to display all three questions
+ *    on the console.
  *
  */

@@ -30,6 +30,7 @@
 * 4.2 Defining and calling functions
 * 4.3 Reducing repetition
 * 4.4 Making code easier to read and update
+* 4.5 The Adventure Game: displaying player information
 
 ### Chapter 5 – Arguments: passing data to functions
 * 5.1 Function reuse and versatility

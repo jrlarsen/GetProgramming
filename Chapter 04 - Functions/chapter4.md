@@ -1,4 +1,4 @@
-# Functions
+# Functions: code on demand
 
 ### Displaying an object’s properties on the console
 [jsbin: Listing 4.01](http://jsbin.com/besudi/edit?js,console)
@@ -8,30 +8,29 @@
  * Displaying an object's properties on the console
  */
 
-var player1 = {
-  name: "Kandra",
-  location: "The Old Library",
-  health: 50
+var movie1;
+
+movie1 = {
+  title: "Inside Out",
+  actors: "Amy Poehler, Bill Hader",
+  directors: "Pete Doctor, Ronaldo Del Carmen"
 };
 
-console.log("Player information for " + player1.name);
+console.log("Movie information for " + movie1.title);
 console.log("------------------------------");
-console.log(player1.name + " is in " + player1.location);
-console.log(player1.name + " has health " + player1.health);
+console.log("Actors: " + movie1.actors);
+console.log("Directors: " + movie1.directors);
 console.log("------------------------------");
 
 
 
 /* Further Adventures
  *
- * 1) Add a second player and display the same info for them
+ * 1) Add a second movie and display the same info for it.
  *
- * 2) Create an object to represent a blog post
+ * 2) Create an object to represent a blog post.
  *
- * 3) Write code to display info about the blog post
- *
- * 4) What happens if you try to display a property that doesn't exist?
- *    e.g. player1.nam
+ * 3) Write code to display info about the blog post.
  *
  */
 ```
@@ -44,49 +43,54 @@ console.log("------------------------------");
  * Displaying information from similar objects
  */
 
-var player1 = {
-  name: "Kandra",
-  location: "The Old Library",
-  health: 50
+var movie1;
+var movie2;
+var movie3;
+
+movie1 = {
+  title: "Inside Out",
+  actors: "Amy Poehler, Bill Hader",
+  directors: "Pete Doctor, Ronaldo Del Carmen"
 };
 
-var player2 = {
-  name: "Dax",
-  location: "The Dungeon of Doom",
-  health: 40
+movie2 = {
+  title: "Spectre",
+  actors: "Daniel Craig, Christoph Waltz",
+  directors: "Sam Mendes"
 };
 
-var player3 = {
-  name: "Blinky",
-  location: "The Maze",
-  health: 2000
+movie3 = {
+  title: "Star Wars: Episode VII - The Force Awakens",
+  actors: "Harrison Ford, Mark Hamill, Carrie Fisher",
+  directors: "J.J.Abrams"
 };
 
-console.log("Player information for " + player1.name);
+console.log("Movie information for " + movie1.title);
 console.log("------------------------------");
-console.log(player1.name + " is in " + player1.location);
-console.log(player1.name + " has health " + player1.health);
-console.log("------------------------------");
-
-console.log("Player information for " + player2.name);
-console.log("------------------------------");
-console.log(player2.name + " is in " + player2.location);
-console.log(player2.name + " has health " + player2.health);
+console.log("Actors: " + movie1.actors);
+console.log("Directors: " + movie1.directors);
 console.log("------------------------------");
 
-console.log("Player information for " + player3.name);
+console.log("Movie information for " + movie2.title);
 console.log("------------------------------");
-console.log(player3.name + " is in " + player3.location);
-console.log(player3.name + " has health " + player3.health);
+console.log("Actors: " + movie2.actors);
+console.log("Directors: " + movie2.directors);
+console.log("------------------------------");
+
+console.log("Movie information for " + movie3.title);
+console.log("------------------------------");
+console.log("Actors: " + movie3.actors);
+console.log("Directors: " + movie3.directors);
 console.log("------------------------------");
 
 
 
 /* Further Adventures
  *
- * 1) Add a fourth player and display their info
+ * 1) Add a fourth movie and display its info
  *
- * 2) All the player info is in one big block on the console. Change the code to space out the different players
+ * 2) All the movie info is in one big block on the console.
+ *    Change the code to space out the different movies.
  *
  * 3) Create objects to represent three calendar events
  *
@@ -97,47 +101,53 @@ console.log("------------------------------");
 
 ### Adding tax to find the total cost
 [jsbin: Listing 4.03](http://jsbin.com/kawocu/2/edit?js,console)
-```javascript
 /* Adventures in JavaScript
  * Listing 4.03
  * Adding tax to find the total cost
  */
 
-var sale1 = { price: 14, rate: 15 };
-var sale2 = { price: 40, rate: 10 };
-var sale3 = { price: 120, rate: 20 };
+var sale1;
+var sale2;
+var sale3;
 
-sale1.tax = sale1.price * sale1.rate / 100;
-sale2.tax = sale2.price * sale2.rate / 100;
-sale3.tax = sale3.price * sale3.rate / 100;
+sale1 = { price: 14, taxRate: 15 };
+sale2 = { price: 40, taxRate: 10 };
+sale3 = { price: 120, taxRate: 20 };
+
+sale1.tax = sale1.price * sale1.taxRate / 100;
+sale2.tax = sale2.price * sale2.taxRate / 100;
+sale3.tax = sale3.price * sale3.taxRate / 100;
 
 sale1.total = sale1.price + sale1.tax;
 sale2.total = sale2.price + sale2.tax;
 sale3.total = sale3.price + sale3.tax;
 
 console.log("price = $" + sale1.price.toFixed(2));
-console.log("tax @ " + sale1.rate + "% = $" + sale1.tax.toFixed(2));
+console.log("tax @ " + sale1.taxRate + "% = $" + sale1.tax.toFixed(2));
 console.log("total cost = $" + sale1.total.toFixed(2));
 
 console.log("price = $" + sale2.price.toFixed(2));
-console.log("tax @ " + sale2.rate + "% = $" + sale2.tax.toFixed(2));
+console.log("tax @ " + sale2.taxRate + "% = $" + sale2.tax.toFixed(2));
 console.log("total cost = $" + sale2.total.toFixed(2));
 
 console.log("price = $" + sale3.price.toFixed(2));
-console.log("tax @ " + sale3.rate + "% = $" + sale3.tax.toFixed(2));
+console.log("tax @ " + sale3.taxRate + "% = $" + sale3.tax.toFixed(2));
 console.log("total cost = $" + sale3.total.toFixed(2));
+
 
 
 
 /* Further Adventures
  *
- * 1) Add a fourth sale object
+ * 1) Add the details for a fouth sale.
  *
- * 2) Add lines to calculate the tax and total for the new object
+ * 2) Log the fourth sale to the console.
+ *    Use the same format as the others.
  *
- * 3) Display the sale info for the fourth object
+ * 3) Add code to separate out the different
+ *    sales on the console.
  *
- * 4) Alter the call to .toFixed to show values to the nearest dollar
+ * 4) Change the number of decimal places displayed.
  *
  */
 ```
@@ -151,8 +161,10 @@ console.log("total cost = $" + sale3.total.toFixed(2));
  * A simple function definition and assignment
  */
 
-var sayHello = function () {
-	console.log("Hello World!");
+var sayHello;
+
+sayHello = function () {
+    console.log("Hello World!");
 };
 
 sayHello();
@@ -181,6 +193,9 @@ sayHello();
  * Two more function definitions and assignments
  */
 
+var findTotal;
+var displayMenu;
+
 var findTotal = function () {
 	result = number1 + number2;
 };
@@ -196,15 +211,22 @@ var displayMenu = function () {
 
 /* Further Adventures
  *
- * 1) Declare number1, number2 and result variables
+ * How to run a function, also called calling
+ * or invoking the function, is explained in
+ * Section 4.2.2.
+ * If these exercises are too hard, you
+ * can always come back to them later.
  *
- * 2) Assign values to the variables
+ * 1) Declare number1, number2 and result variables.
  *
- * 3) Call the findTotal function
+ * 2) Assign values to the variables.
  *
- * 4) Display the result on the console
+ * 3) Run the findTotal function by writing its name
+ *    followed by round brackets: findTotal();
  *
- * 5) call the displayMenu function
+ * 4) Display the result on the console.
+ *
+ * 5) Run the displayMenu function.
  *
  */
 ```
@@ -218,7 +240,9 @@ var displayMenu = function () {
  * Calling the sayHello function three times
  */
 
-var sayHello = function () {
+var sayHello;
+
+sayHello = function () {
 	console.log("Hello World!");
 };
 
@@ -230,14 +254,16 @@ sayHello();
 
 /* Further Adventures
  *
- * 1) Change the message from the sayHello function
+ * 1) Change the message from the sayHello function.
  *
  * To add a line-break to a string, insert '\n'
  * e.g. "Line One\nLine Two"
  *
- * 2) Break the Hello World! message across two lines
+ * 2) Break the Hello World! message across two lines.
  *
- * 3) Create a function that prints the letters of "Hello World!" one by one down the page
+ * 3) Create a function that prints the letters
+ *    of "Hello World!" one by one down the page
+ *
  */
 ```
 
@@ -253,8 +279,9 @@ sayHello();
 var number1 = 1000;
 var number2 = 66;
 var result;
+var findTotal;
 
-var findTotal = function () {
+findTotal = function () {
 	result = number1 + number2;
 };
 
@@ -286,7 +313,9 @@ console.log(number1 + " + " + number2 + " = " + result);
  * Displaying a menu
  */
 
-var displayMenu = function () {
+var displayMenu;
+
+displayMenu = function () {
 	console.log("Please choose an option:");
 	console.log("(1) Print log");
 	console.log("(2) Upload file");
@@ -317,11 +346,13 @@ displayMenu();
  * Using a function to display object properties
  */
 
-var showPlayerInfo = function () {
-  console.log("Player information for " + player.name);
+var showMovieInfo;
+
+showMovieInfo = function () {
+  console.log("Movie information for " + movie.title);
   console.log("------------------------------");
-  console.log(player.name + " is in " + player.location);
-  console.log(player.name + " has health " + player.health);
+  console.log("Actors: " + movie.actors);
+  console.log("Directors: " + movie.directors);
   console.log("------------------------------");
 };
 
@@ -329,53 +360,73 @@ var showPlayerInfo = function () {
 
 /* Further Adventures
  *
- * 1) Add a call to showPlayerInfo and run the program. What happens?
+ * 1) Add a call to showMovieInfo and run the program.
+ *    What happens?
  *
- * 2) Declare a player variable but don't assign it a value. Run the program. What happens now?
+ * 2) Declare a movie variable
+ *    but don't assign it a value.
+ *    Run the program. What happens now?
  *
- * 3) Create an empty object and assign it to the player variable. Run the program again. Does the output change?
+ * 3) Create an empty object and
+ *    assign it to the movie variable.
+ *    Run the program again.
+ *    Does the output change?
  *
- * 4) Add name, location and health properties to the player object. Run one more time. Is the output as expected?
+ * 4) Add title, actors and directors properties
+ *    to the movie object. Run one more time.
+ *    Is the output as expected?
  *
  */
 ```
 
 
-### Calling the showPlayerInfo function
+### Calling the showMovieInfo function
 [jsbin: Listing 4.10](http://jsbin.com/menebu/edit?js,console)
 ```javascript
 /* Adventures in JavaScript
  * Listing 4.10
- * Calling the showPlayerInfo function
+ * Calling the showMovieInfo function
  */
 
-var player1 = {
-	name: "Kandra",
-	location: "The Old Library",
-	health: 50
+var movie1;
+var showMovieInfo;
+var movie;
+
+movie1 = {
+    title: "Inside Out",
+    actors: "Amy Poehler, Bill Hader",
+    directors: "Pete Doctor, Ronaldo Del Carmen"
 };
 
-var showPlayerInfo = function () {
-  console.log("Player information for " + player.name);
+showMovieInfo = function () {
+  console.log("Movie information for " + movie.title);
   console.log("------------------------------");
-  console.log(player.name + " is in " + player.location);
-  console.log(player.name + " has health " + player.health);
+  console.log("Actors: " + movie.actors);
+  console.log("Directors: " + movie.directors);
   console.log("------------------------------");
 };
 
-var player = player1;
+movie = movie1;
 
-showPlayerInfo();
+showMovieInfo();
 
 
 
 /* Further Adventures
  *
- * 1) Without creating a player2, assign player2 to the player variable. What happens when you call showPlayerInfo?
+ * 1) Without declaring a movie2 variable,
+ *    assign movie2 to the movie variable
+ *    instead of movie1.
+ *    i.e. movie = movie2;
+ *    What happens when you call showMovieInfo?
  *
- * 2) Create an empty object and assign it to a player2 variable. What happens when you call showPlayerInfo now?
+ * 2) Create an empty object and
+ *    assign it to a movie2 variable.
+ *    What happens when you call showMovieInfo now?
  *
- * 3) Fill out player2 with the properties needed by showPlayerInfo. What happens when you call showPlayerInfo now?
+ * 3) Fill out movie2 with the properties
+ *    needed by showMovieInfo.
+ *    What happens when you call showMovieInfo now?
  *
  */
 ```
@@ -389,54 +440,62 @@ showPlayerInfo();
  * Using the same function with multiple objects
  */
 
-var player1 = {
-  name: "Kandra",
-  location: "The Old Library",
-  health: 50
+var movie1;
+var movie2;
+var movie3;
+var movie;
+var showMovieInfo;
+
+movie1 = {
+    title: "Inside Out",
+    actors: "Amy Poehler, Bill Hader",
+    directors: "Pete Doctor, Ronaldo Del Carmen"
 };
 
-var player2 = {
-  name: "Dax",
-  location: "The Dungeon of Doom",
-  health: 40
+movie2 = {
+    title: "Spectre",
+    actors: "Daniel Craig, Christoph Waltz",
+    directors: "Sam Mendes"
 };
 
-var player3 = {
-  name: "Blinky",
-  location: "The Maze",
-  health: 2000
+movie3 = {
+    title: "Star Wars: Episode VII - The Force Awakens",
+    actors: "Harrison Ford, Mark Hamill, Carrie Fisher",
+    directors: "J.J.Abrams"
 };
 
-var player;
-
-var showPlayerInfo = function () {
-  console.log("Player information for " + player.name);
-  console.log("------------------------------");
-  console.log(player.name + " is in " + player.location);
-  console.log(player.name + " has health " + player.health);
-  console.log("------------------------------");
+showMovieInfo = function () {
+    console.log("Movie information for " + movie.title);
+    console.log("------------------------------");
+    console.log("Actors: " + movie.actors);
+    console.log("Directors: " + movie.directors);
+    console.log("------------------------------");
 };
 
-player = player1;
-showPlayerInfo();
+movie = movie1;
+showMovieInfo();
 
-player = player2;
-showPlayerInfo();
+movie = movie2;
+showMovieInfo();
 
-player = player3;
-showPlayerInfo();
+movie = movie3;
+showMovieInfo();
 
 
 
 /* Further Adventures
  *
- * 1) Create an object to represent a multiple choice quiz question
+ * 1) Create an object to represent
+ *    a multiple choice quiz question.
  *
- * 2) Create two more quiz question objects
+ * 2) Create two more quiz question objects.
  *
- * 3) Create a function to show the question and answer options
+ * 3) Create a function to show
+ *    the question and answer options.
  *
- * 4) Use the same variable assignment technique as above to display all three questions on the console
+ * 4) Use the same variable assignment technique
+ *    as above to display all three questions
+ *    on the console.
  *
  */
 ```
@@ -450,20 +509,25 @@ showPlayerInfo();
  * Using functions to add and display tax
  */
 
-var sale1 = { price: 14, rate: 15 };
-var sale2 = { price: 40, rate: 10 };
-var sale3 = { price: 120, rate: 20 };
-
+var sale1;
+var sale2;
+var sale3;
 var sale;
+var calculateTax;
+var displaySale;
 
-var calculateTax = function () {
-	sale.tax = sale.price * sale.rate / 100;
+sale1 = { price: 14, taxRate: 15 };
+sale2 = { price: 40, taxRate: 10 };
+sale3 = { price: 120, taxRate: 20 };
+
+calculateTax = function () {
+	sale.tax = sale.price * sale.taxRate / 100;
 	sale.total = sale.price + sale.tax;
 };
 
-var displaySale = function () { 
+displaySale = function () { 
   console.log("price = $" + sale.price.toFixed(2));
-  console.log("tax @ " + sale.rate + "% = $" + sale.tax.toFixed(2));
+  console.log("tax @ " + sale.taxRate + "% = $" + sale.tax.toFixed(2));
   console.log("total cost = $" + sale.total.toFixed(2));
 };
 
@@ -483,13 +547,18 @@ displaySale();
 
 /* Further Adventures
  *
- * 1) Add a fourth sale object
+ * 1) Add a fourth sale object.
  *
- * 2) Update the code so that tax is calculated and the sale is displayed
+ * 2) Update the code so that tax is calculated
+ *    and the new sale is displayed.
  *
- * Having two separate functions to calculate tax and display sales is good, each has a specific purpose. Having to call both functions for each sale object is not so good.
+ * Having two separate functions to calculate tax
+ * and display sales is good, each has a specific purpose.
+ * Having to call both functions
+ * for each sale object is not so good.
  *
- * 3) Can you change the code so that you don't have to call both functions for every sale?
+ * 3) Can you change the code so that you don't
+ *    have to call both functions for every sale?
  *
  */
 ```
@@ -503,33 +572,97 @@ displaySale();
  * Updating our display function to add a blank line
  */
 
-var player1 = {
-  name: "Kandra",
-  location: "The Old Library",
-  health: 50
+var movie1;
+var movie2;
+var movie3;
+var movie;
+var showMovieInfo;
+
+movie1 = {
+    title: "Inside Out",
+    actors: "Amy Poehler, Bill Hader",
+    directors: "Pete Doctor, Ronaldo Del Carmen"
 };
 
-var player2 = {
-  name: "Dax",
-  location: "The Dungeon of Doom",
-  health: 40
+movie2 = {
+    title: "Spectre",
+    actors: "Daniel Craig, Christoph Waltz",
+    directors: "Sam Mendes"
 };
 
-var player3 = {
-  name: "Blinky",
-  location: "The Maze",
-  health: 2000
+movie3 = {
+    title: "Star Wars: Episode VII - The Force Awakens",
+    actors: "Harrison Ford, Mark Hamill, Carrie Fisher",
+    directors: "J.J.Abrams"
 };
 
+showMovieInfo = function () {
+    console.log("Movie information for " + movie.title);
+    console.log("------------------------------");
+    console.log("Actors: " + movie.actors);
+    console.log("Directors: " + movie.directors);
+    console.log("------------------------------");
+    console.log("");
+};
+
+movie = movie1;
+showMovieInfo();
+
+movie = movie2;
+showMovieInfo();
+
+movie = movie3;
+showMovieInfo();
+
+
+
+/* Further Adventures
+ *
+ * 1) Create three objects to represent blog posts.
+ *
+ * 2) Create a function to display
+ *    the posts on the console.
+ *
+ * 3) Can you find your own way of visually
+ *    separating the different blog posts
+ *    on the console?
+ *
+ */
+```
+
+
+### A function to display player information
+[jsbin: Listing 4.14](http://jsbin.com/mafade/edit?js,console)
+```javascript
+/* Adventures in JavaScript
+ * Listing 4.14
+ * A function to display player information
+ */
+
+var player1;
+var player2;
 var player;
+var showPlayerInfo;
 
-var showPlayerInfo = function () {
-  console.log("Player information for " + player.name);
-  console.log("------------------------------");
-  console.log(player.name + " is in " + player.location);
-  console.log(player.name + " has health " + player.health);
-  console.log("------------------------------");
-  console.log("");
+player1 = {
+    name: "Kandra",
+    place: "The Dungeon of Doom",
+    health: 50
+};
+
+player2 = {
+    name: "Dax",
+    place: "The Old Library",
+    health: 40
+};
+
+showPlayerInfo = function () {
+    console.log(player.name);
+    console.log("------------------------------");
+    console.log(player.name + " is in " + player.place);
+    console.log(player.name + " has health " + player.health);
+    console.log("------------------------------");
+    console.log("");
 };
 
 player = player1;
@@ -538,18 +671,18 @@ showPlayerInfo();
 player = player2;
 showPlayerInfo();
 
-player = player3;
-showPlayerInfo();
-
 
 
 /* Further Adventures
  *
- * 1) Create three objects to represent blog posts
+ * 1) Write a function that just shows
+ *    where the player is.
  *
- * 2) Create a function to display the posts on the console
+ * 2) Write a function that just shows
+ *    the player's health.
  *
- * 3) Can you find your own way of visually separating the different blog posts on the console?
+ * 3) Change the showPlayerInfo function
+ *    to use your two functions.
  *
  */
 ```

@@ -3,29 +3,28 @@
  * Displaying an object's properties on the console
  */
 
-var player1 = {
-    name: "Kandra",
-    location: "The Old Library",
-    health: 50
+var movie1;
+
+movie1 = {
+    title: "Inside Out",
+    actors: "Amy Poehler, Bill Hader",
+    directors: "Pete Doctor, Ronaldo Del Carmen"
 };
 
-console.log("Player information for " + player1.name);
+console.log("Movie information for " + movie1.title);
 console.log("------------------------------");
-console.log(player1.name + " is in " + player1.location);
-console.log(player1.name + " has health " + player1.health);
+console.log("Actors: " + movie1.actors);
+console.log("Directors: " + movie1.directors);
 console.log("------------------------------");
 
 
 
 /* Further Adventures
  *
- * 1) Add a second player and display the same info for them
+ * 1) Add a second movie and display the same info for it.
  *
- * 2) Create an object to represent a blog post
+ * 2) Create an object to represent a blog post.
  *
- * 3) Write code to display info about the blog post
- *
- * 4) What happens if you try to display a property that doesn't exist?
- *    e.g. player1.nam
+ * 3) Write code to display info about the blog post.
  *
  */

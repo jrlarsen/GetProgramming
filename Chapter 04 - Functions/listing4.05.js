@@ -3,6 +3,9 @@
  * Two more function definitions and assignments
  */
 
+var findTotal;
+var displayMenu;
+
 var findTotal = function () {
     result = number1 + number2;
 };
@@ -18,14 +21,21 @@ var displayMenu = function () {
 
 /* Further Adventures
  *
- * 1) Declare number1, number2 and result variables
+ * How to run a function, also called calling
+ * or invoking the function, is explained in
+ * Section 4.2.2.
+ * If these exercises are too hard, you
+ * can always come back to them later.
  *
- * 2) Assign values to the variables
+ * 1) Declare number1, number2 and result variables.
  *
- * 3) Call the findTotal function
+ * 2) Assign values to the variables.
  *
- * 4) Display the result on the console
+ * 3) Run the findTotal function by writing its name
+ *    followed by round brackets: findTotal();
  *
- * 5) call the displayMenu function
+ * 4) Display the result on the console.
+ *
+ * 5) Run the displayMenu function.
  *
  */
