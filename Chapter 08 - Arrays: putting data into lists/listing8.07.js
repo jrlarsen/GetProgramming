@@ -6,7 +6,7 @@
 var items,
     showInfo;
 
-items = [ "a rusty key", "a piece of cheese", "the sword of doom" ];
+items = [ "The Pyramids", "The Grand Canyon", "Bondi Beach" ];
 
 showInfo = function (itemToShow) {
     console.log(itemToShow);

@@ -4,12 +4,12 @@
  */
 
 var items = [];
-var item = "a rusty key";
+var item = "The Pyramids";
 var removed;
 
 items.push(item);
-items.push("a piece of cheese");
-items.push("the sword of doom");
+items.push("The Grand Canyon");
+items.push("Bondi Beach");
 
 console.log(items);
 
@@ -27,7 +27,7 @@ console.log(items.join(" and "));
  * 2) Log the joined items.
  *
  * You can set an array element by using its index.
- * items[2] = "some honey"
+ * items[2] = "The Taj Mahal"
  *
  * 3) Set one of the items using square brackets.
  *

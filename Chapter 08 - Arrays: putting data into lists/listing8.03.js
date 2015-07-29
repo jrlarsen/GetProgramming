@@ -28,7 +28,7 @@ console.log("The fourth score is " + scores[3]);
  *    Use an expression involving scores.length
  *    as the index for the last element.
  *
- * 4) Add an extra score to the array and
+ * 4) Add an extra score to the array and 
  *    run the program again.
  *
  */

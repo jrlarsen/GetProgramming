@@ -3,21 +3,21 @@
  * Using existing objects in an array
  */
 
-var player1 = { name : "Kandra", health : 50 },
-    player2 = { name : "Dax",    health : 40 },
-    player3 = { name : "Blinky", health : 2000 },
+var place1 = { name : "The Pyramids", country : "Egypt" };
+var place2 = { name : "The Grand Canyon", country : "USA" };
+var place3 = { name : "Bondi Beach", country : "Australia" };
 
-    adventurePlayers = [ player1, player2 ],
-    mazePlayers = [ player3 ];
+var thisYear = [ place1, place2 ];
+var nextYear = [ place3 ];
 
-console.log(adventurePlayers);
-console.log(mazePlayers);
+console.log(thisYear);
+console.log(nextYear);
 
 
 
 /* Further Adventures
  *
- * 1) Add player1 to the mazePlayers array.
+ * 1) Add place1 to the nextYear array.
  *    Can it be in two arrays at once?
  *
  * 2) Run the program again to check if an

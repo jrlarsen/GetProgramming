@@ -9,8 +9,8 @@
  * Creating arrays
  */
 
-var scores,
-    names;
+var scores;
+var names;
 
 scores = [ 3, 1, 8, 2 ];
 names = [ "Kandra", "Dax", "Blinky" ];
@@ -43,21 +43,21 @@ console.log(names);
  * Using existing objects in an array
  */
 
-var player1 = { name : "Kandra", health : 50 },
-    player2 = { name : "Dax",    health : 40 },
-    player3 = { name : "Blinky", health : 2000 },
+var place1 = { name : "The Pyramids", country : "Egypt" };
+var place2 = { name : "The Grand Canyon", country : "USA" };
+var place3 = { name : "Bondi Beach", country : "Australia" };
 
-    adventurePlayers = [ player1, player2 ],
-    mazePlayers = [ player3 ];
+var thisYear = [ place1, place2 ];
+var nextYear = [ place3 ];
 
-console.log(adventurePlayers);
-console.log(mazePlayers);
+console.log(thisYear);
+console.log(nextYear);
 
 
 
 /* Further Adventures
  *
- * 1) Add player1 to the mazePlayers array.
+ * 1) Add place1 to the nextYear array.
  *    Can it be in two arrays at once?
  *
  * 2) Run the program again to check if an
@@ -199,12 +199,12 @@ console.log(report);
  */
 
 var items = [];
-var item = "a rusty key";
+var item = "The Pyramids";
 var removed;
 
 items.push(item);
-items.push("a piece of cheese");
-items.push("the sword of doom");
+items.push("The Grand Canyon");
+items.push("Bondi Beach");
 
 console.log(items);
 
@@ -222,7 +222,7 @@ console.log(items.join(" and "));
  * 2) Log the joined items.
  *
  * You can set an array element by using its index.
- * items[2] = "some honey"
+ * items[2] = "The Taj Mahal"
  *
  * 3) Set one of the items using square brackets.
  *
@@ -243,7 +243,7 @@ console.log(items.join(" and "));
 var items,
     showInfo;
 
-items = [ "a rusty key", "a piece of cheese", "the sword of doom" ];
+items = [ "The Pyramids", "The Grand Canyon", "Bondi Beach" ];
 
 showInfo = function (itemToShow) {
     console.log(itemToShow);
@@ -281,9 +281,9 @@ items.forEach(showInfo);
  * Calling forEach with an inline function
  */
 
-var items = [ "a rusty key", "a piece of cheese", "the sword of doom" ];
+var items = [ "The Pyramids", "The Grand Canyon", "Bondi Beach" ];
 
-console.log("Items currently held:");
+console.log("Dream destinations:");
 
 items.forEach(function (item) {
 	console.log(" – " + item);
@@ -294,7 +294,7 @@ items.forEach(function (item) {
 /* Further Adventures
  *
  * 1) Change the program to show the number of
- *    items currently held as well as the items themselves.
+ *    places to visit as well as the places themselves.
  *
  * 2) Wrap the display code in a function
  *    and assign it to the showItems variable.

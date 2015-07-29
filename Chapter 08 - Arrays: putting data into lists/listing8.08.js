@@ -3,9 +3,9 @@
  * Calling forEach with an inline function
  */
 
-var items = [ "a rusty key", "a piece of cheese", "the sword of doom" ];
+var items = [ "The Pyramids", "The Grand Canyon", "Bondi Beach" ];
 
-console.log("Items currently held:");
+console.log("Dream destinations:");
 
 items.forEach(function (item) {
     console.log(" – " + item);
@@ -16,7 +16,7 @@ items.forEach(function (item) {
 /* Further Adventures
  *
  * 1) Change the program to show the number of
- *    items currently held as well as the items themselves.
+ *    places to visit as well as the places themselves.
  *
  * 2) Wrap the display code in a function
  *    and assign it to the showItems variable.
