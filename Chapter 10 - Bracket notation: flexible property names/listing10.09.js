@@ -6,18 +6,18 @@
 var Place = function (title, description) {
     this.title = title;
     this.exits = {};
-};
 
-Place.prototype.addExit = function (direction, exit) {
-    this.exits[direction] = exit;
-};
+    this.addExit = function (direction, exit) {
+        this.exits[direction] = exit;
+    };
 
-Place.prototype.showExits = function () {
-    console.log("Exits from " + this.title + ":");
+    this.showExits = function () {
+        console.log("Exits from " + this.title + ":");
 
-    Object.keys(this.exits).forEach(function (key) {
-        console.log(key);
-    });
+        Object.keys(this.exits).forEach(function (key) {
+            console.log(key);
+        });
+    };
 };
 
 var library = new Place("The Old Library");

@@ -6,18 +6,18 @@
 var Place = function (title, description) {
     this.title = title;
     this.exits = {};
-};
 
-Place.prototype.addExit = function (direction, exit) {
-    this.exits[direction] = exit;
-};
+    this.addExit = function (direction, exit) {
+        this.exits[direction] = exit;
+    };
 
-Place.prototype.showExits = function () {
-    console.log("Exits from " + this.title + ":");
+    this.showExits = function () {
+        console.log("Exits from " + this.title + ":");
 
-    Object.keys(this.exits).forEach(function (key) {
-        console.log(key);
-    });
+        Object.keys(this.exits).forEach(function (key) {
+            console.log(key);
+        });
+    };
 };
 
 var library = new Place("The Old Library");
@@ -53,11 +53,11 @@ currentPlace.showExits();
  *    include an items array assigned as
  *    a property of the this object.
  *
- * 3) Add an addItem method to the prototype
+ * 3) Add an addItem method to the constructor
  *    that lets you add items to
  *    the items array.
  *
- * 4) Add a showItems method to the prototype
+ * 4) Add a showItems method to the constructor
  *    that displays the items in
  *    the items array.
  *

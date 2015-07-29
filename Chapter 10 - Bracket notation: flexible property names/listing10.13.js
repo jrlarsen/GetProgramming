@@ -11,31 +11,31 @@ var Player = function (name, health) {
     this.health = health;
     this.items = [];
     this.place = null;
-};
 
-Player.prototype.addItem = function (item) {
-    this.items.push(item);
-};
+    this.addItem = function (item) {
+        this.items.push(item);
+    };
 
-Player.prototype.showItems = function () {
-    console.log("Items:");
-    this.items.forEach(function (item, i) {
-        console.log("(" + i + ") " + item);
-    });
-};
+    this.showItems = function () {
+        console.log("Items:");
+        this.items.forEach(function (item, i) {
+            console.log("(" + i + ") " + item);
+        });
+    };
 
-Player.prototype.showPlace = function () {
-    this.place.showInfo();
-};
+    this.showPlace = function () {
+        this.place.showInfo();
+    };
 
-Player.prototype.showHealth = function () {
-    console.log(this.name + " has health " + this.health);
-};
+    this.showHealth = function () {
+        console.log(this.name + " has health " + this.health);
+    };
 
-Player.prototype.showInfo = function () {
-    console.log(this.name + ":");
-    this.showHealth();
-    this.showItems();
+    this.showInfo = function () {
+        console.log(this.name + ":");
+        this.showHealth();
+        this.showItems();
+    };
 };
 
 
@@ -46,36 +46,36 @@ var Place = function (title, description) {
     this.description = description;
     this.exits = {};
     this.items = [];
-};
 
-Place.prototype.addItem = function (item) {
-    this.items.push(item);
-};
+    this.addItem = function (item) {
+        this.items.push(item);
+    };
 
-Place.prototype.addExit = function (direction, exit) {
-    this.exits[direction] = exit;
-};
+    this.addExit = function (direction, exit) {
+        this.exits[direction] = exit;
+    };
 
-Place.prototype.showItems = function () {
-    console.log("Items in " + this.title + ":");
-    this.items.forEach(function (item, i) {
-        console.log("(" + i + ") " + item);
-    });
-};
+    this.showItems = function () {
+        console.log("Items in " + this.title + ":");
+        this.items.forEach(function (item, i) {
+            console.log("(" + i + ") " + item);
+        });
+    };
 
-Place.prototype.showExits = function () {
-    console.log("Exits from " + this.title + ":");
+    this.showExits = function () {
+        console.log("Exits from " + this.title + ":");
 
-    Object.keys(this.exits).forEach(function (key) {
-        console.log(key);
-    });
-};
+        Object.keys(this.exits).forEach(function (key) {
+            console.log(key);
+        });
+    };
 
-Place.prototype.showInfo = function () {
-    console.log(this.title);
-    console.log(this.description);
-    this.showItems();
-    this.showExits();
+    this.showInfo = function () {
+        console.log(this.title);
+        console.log(this.description);
+        this.showItems();
+        this.showExits();
+    };
 };
 
 
@@ -132,7 +132,7 @@ kandra.showPlace();
  *    out information about different
  *    objects: people, places, items, exits.
  *
- * In Chapter 9 we'll look at user interaction
+ * In Chapter 11 we'll look at user interaction
  * on the console. But, as a challenge:
  *
  * 3) Write a go function that accepts

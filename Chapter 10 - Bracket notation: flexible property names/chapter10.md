@@ -196,8 +196,8 @@ keys.forEach(function (key) {
 
 
 
-### 
-[jsbin: Listing 10.06]()
+### Counting words from tweets
+[jsbin: Listing 10.06](http://jsbin.com/figati/edit?js,console)
 ```javascript
 /* Adventures in JavaScript
  * Listing 10.06
@@ -378,18 +378,18 @@ showExits();
 var Place = function (title, description) {
     this.title = title;
     this.exits = {};
-};
 
-Place.prototype.addExit = function (direction, exit) {
-    this.exits[direction] = exit;
-};
+    this.addExit = function (direction, exit) {
+        this.exits[direction] = exit;
+    };
 
-Place.prototype.showExits = function () {  
-    console.log("Exits from " + this.title + ":");
-  
-    Object.keys(this.exits).forEach(function (key) {
-        console.log(key);
-    });
+    this.showExits = function () {
+        console.log("Exits from " + this.title + ":");
+
+        Object.keys(this.exits).forEach(function (key) {
+            console.log(key);
+        });
+    };
 };
 
 var library = new Place("The Old Library");
@@ -431,18 +431,18 @@ kitchen.showExits();
 var Place = function (title, description) {
     this.title = title;
     this.exits = {};
-};
 
-Place.prototype.addExit = function (direction, exit) {
-    this.exits[direction] = exit;
-};
+    this.addExit = function (direction, exit) {
+        this.exits[direction] = exit;
+    };
 
-Place.prototype.showExits = function () {  
-    console.log("Exits from " + this.title + ":");
-  
-    Object.keys(this.exits).forEach(function (key) {
-        console.log(key);
-    });
+    this.showExits = function () {
+        console.log("Exits from " + this.title + ":");
+
+        Object.keys(this.exits).forEach(function (key) {
+            console.log(key);
+        });
+    };
 };
 
 var library = new Place("The Old Library");
@@ -478,11 +478,11 @@ currentPlace.showExits();
  *    include an items array assigned as
  *    a property of the this object.
  *
- * 3) Add an addItem method to the prototype
+ * 3) Add an addItem method to the constructor
  *    that lets you add items to
  *    the items array.
  *
- * 4) Add a showItems method to the prototype
+ * 4) Add a showItems method to the constructor
  *    that displays the items in
  *    the items array.
  *
@@ -508,34 +508,33 @@ var Player = function (name, health) {
     this.health = health;
     this.items = [];
     this.place = null;
-};
 
-Player.prototype.addItem = function (item) {
-    this.items.push(item);
-};
+    this.addItem = function (item) {
+        this.items.push(item);
+    };
 
-Player.prototype.showItems = function () {
-    console.log("Items:");
-    this.items.forEach(function (item, i) {
-        console.log("(" + i + ") " + item);
-    });
-};
+    this.showItems = function () {
+        console.log("Items:");
+        this.items.forEach(function (item, i) {
+            console.log("(" + i + ") " + item);
+        });
+    };
 
-Player.prototype.showPlace = function () {
-    console.log(this.name + " is in " + this.place.title);
-};
+    this.showPlace = function () {
+        console.log(this.name + " is in " + this.place.title);
+    };
 
-Player.prototype.showHealth = function () {
-    console.log(this.name + " has health " + this.health);
-};
+    this.showHealth = function () {
+        console.log(this.name + " has health " + this.health);
+    };
 
-Player.prototype.showInfo = function () {
-    console.log(this.name + ":");
-    this.showPlace();
-    this.showHealth();
-    this.showItems();
+    this.showInfo = function () {
+        console.log(this.name + ":");
+        this.showPlace();
+        this.showHealth();
+        this.showItems();
+    };
 };
-
 
 
 /* Further Adventures
@@ -568,36 +567,36 @@ var Place = function (title, description) {
     this.description = description;
     this.exits = {};
     this.items = [];
-};
 
-Place.prototype.addItem = function (item) {
-    this.items.push(item);
-};
+    this.addItem = function (item) {
+        this.items.push(item);
+    };
 
-Place.prototype.addExit = function (direction, exit) {
-    this.exits[direction] = exit;
-};
+    this.addExit = function (direction, exit) {
+        this.exits[direction] = exit;
+    };
 
-Place.prototype.showItems = function () {
-    console.log("Items:");
-    this.items.forEach(function (item, i) {
-        console.log("(" + i + ") " + item);
-    });
-};
+    this.showItems = function () {
+        console.log("Items:");
+        this.items.forEach(function (item, i) {
+            console.log("(" + i + ") " + item);
+        });
+    };
 
-Place.prototype.showExits = function () {
-    console.log("Exits from " + this.title + ":");
-  
-    Object.keys(this.exits).forEach(function (key) {
-        console.log(key);
-    });
-};
+    this.showExits = function () {
+        console.log("Exits from " + this.title + ":");
 
-Place.prototype.showInfo = function () {
-    console.log(this.title);
-    console.log(this.description);
-    this.showItems();
-    this.showExits();
+        Object.keys(this.exits).forEach(function (key) {
+            console.log(key);
+        });
+    };
+
+    this.showInfo = function () {
+        console.log(this.title);
+        console.log(this.description);
+        this.showItems();
+        this.showExits();
+    };
 };
 
 
@@ -636,31 +635,31 @@ var Player = function (name, health) {
     this.health = health;
     this.items = [];
     this.place = null;
-};
 
-Player.prototype.addItem = function (item) {
-    this.items.push(item);
-};
+    this.addItem = function (item) {
+        this.items.push(item);
+    };
 
-Player.prototype.showItems = function () {
-    console.log("Items:");
-    this.items.forEach(function (item, i) {
-        console.log("(" + i + ") " + item);
-    });
-};
+    this.showItems = function () {
+        console.log("Items:");
+        this.items.forEach(function (item, i) {
+            console.log("(" + i + ") " + item);
+        });
+    };
 
-Player.prototype.showPlace = function () {
-    this.place.showInfo();
-};
+    this.showPlace = function () {
+        this.place.showInfo();
+    };
 
-Player.prototype.showHealth = function () {
-    console.log(this.name + " has health " + this.health);
-};
+    this.showHealth = function () {
+        console.log(this.name + " has health " + this.health);
+    };
 
-Player.prototype.showInfo = function () {
-    console.log(this.name + ":");
-    this.showHealth();
-    this.showItems();
+    this.showInfo = function () {
+        console.log(this.name + ":");
+        this.showHealth();
+        this.showItems();
+    };
 };
 
 
@@ -671,36 +670,36 @@ var Place = function (title, description) {
     this.description = description;
     this.exits = {};
     this.items = [];
-};
 
-Place.prototype.addItem = function (item) {
-    this.items.push(item);
-};
+    this.addItem = function (item) {
+        this.items.push(item);
+    };
 
-Place.prototype.addExit = function (direction, exit) {
-    this.exits[direction] = exit;
-};
+    this.addExit = function (direction, exit) {
+        this.exits[direction] = exit;
+    };
 
-Place.prototype.showItems = function () {
-    console.log("Items in " + this.title + ":");
-    this.items.forEach(function (item, i) {
-        console.log("(" + i + ") " + item);
-    });
-};
+    this.showItems = function () {
+        console.log("Items in " + this.title + ":");
+        this.items.forEach(function (item, i) {
+            console.log("(" + i + ") " + item);
+        });
+    };
 
-Place.prototype.showExits = function () {
-    console.log("Exits from " + this.title + ":");
-  
-    Object.keys(this.exits).forEach(function (key) {
-        console.log(key);
-    });
-};
+    this.showExits = function () {
+        console.log("Exits from " + this.title + ":");
 
-Place.prototype.showInfo = function () {
-    console.log(this.title);
-    console.log(this.description);
-    this.showItems();
-    this.showExits();
+        Object.keys(this.exits).forEach(function (key) {
+            console.log(key);
+        });
+    };
+
+    this.showInfo = function () {
+        console.log(this.title);
+        console.log(this.description);
+        this.showItems();
+        this.showExits();
+    };
 };
 
 
@@ -757,7 +756,7 @@ kandra.showPlace();
  *    out information about different
  *    objects: people, places, items, exits.
  *
- * In Chapter 9 we'll look at user interaction
+ * In Chapter 11 we'll look at user interaction
  * on the console. But, as a challenge:
  *
  * 3) Write a go function that accepts

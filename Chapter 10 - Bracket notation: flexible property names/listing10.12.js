@@ -8,36 +8,36 @@ var Place = function (title, description) {
     this.description = description;
     this.exits = {};
     this.items = [];
-};
 
-Place.prototype.addItem = function (item) {
-    this.items.push(item);
-};
+    this.addItem = function (item) {
+        this.items.push(item);
+    };
 
-Place.prototype.addExit = function (direction, exit) {
-    this.exits[direction] = exit;
-};
+    this.addExit = function (direction, exit) {
+        this.exits[direction] = exit;
+    };
 
-Place.prototype.showItems = function () {
-    console.log("Items:");
-    this.items.forEach(function (item, i) {
-        console.log("(" + i + ") " + item);
-    });
-};
+    this.showItems = function () {
+        console.log("Items:");
+        this.items.forEach(function (item, i) {
+            console.log("(" + i + ") " + item);
+        });
+    };
 
-Place.prototype.showExits = function () {
-    console.log("Exits from " + this.title + ":");
+    this.showExits = function () {
+        console.log("Exits from " + this.title + ":");
 
-    Object.keys(this.exits).forEach(function (key) {
-        console.log(key);
-    });
-};
+        Object.keys(this.exits).forEach(function (key) {
+            console.log(key);
+        });
+    };
 
-Place.prototype.showInfo = function () {
-    console.log(this.title);
-    console.log(this.description);
-    this.showItems();
-    this.showExits();
+    this.showInfo = function () {
+        console.log(this.title);
+        console.log(this.description);
+        this.showItems();
+        this.showExits();
+    };
 };
 
 
