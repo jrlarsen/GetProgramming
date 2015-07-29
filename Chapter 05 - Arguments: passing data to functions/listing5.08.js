@@ -1,29 +1,40 @@
 /* Adventures in JavaScript
  * Listing 5.08
- * Returning the sum of two numbers
+ * Displaying a player's name via an object property
  */
 
-var sum = function (number1, number2) {
-    var total = number1 + number2;
+var player1;
+var player2;
+var showPlayerName;
 
-    return total;
+showPlayerName = function (playerName) {
+    console.log(playerName);
 };
 
-var result = sum(10, 35);
+player1 = {
+    name: "Kandra",
+    place: "The Dungeon of Doom",
+    health: 50
+};
 
-console.log(result);
+player2 = {
+    name: "Dax",
+    place: "The Old Library",
+    health: 40
+};
+
+showPlayerName(player1.name);
+showPlayerName(player2.name);
 
 
 
 /* Further Adventures
  *
- * 1) Find and display the sum of a different pair of numbers
+ * 1) In the showPlayerName function,
+ *    change playerName to playerName.toUpperCase().
+ *    Run the function.
  *
- * 2) Change the call to console.log so that the display on the console reads: 'The sum of 10 and 35 is 45' using the sum function to generate the answer
- *
- * 3) Can you use the sum function as it is to add more than two numbers?
- *    Hint: You can nest calls to sum
- *
- * 4) Create a function to find the sum of three numbers given as arguments
+ * 2) Change the function to show the player's
+ *    name in lower case.
  *
  */

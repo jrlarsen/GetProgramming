@@ -1,35 +1,29 @@
 /* Adventures in JavaScript
  * Listing 5.06
- * Passing an object as an argument to a function
+ * A function with two arguments
  */
 
-var player1 = {
-    name: "Kandra",
-    location: "The Old Library",
-    health: 50
+var showSum;
+
+showSum = function (number1, number2) {
+    var total = number1 + number2;
+    console.log("The sum is " + total);
 };
 
-var showPlayerInfo = function (player) {
-    console.log("Player information for " + player.name);
-    console.log("------------------------------");
-    console.log(player.name + " is in " + player.location);
-    console.log(player.name + " has health " + player.health);
-    console.log("------------------------------");
-    console.log("");
-};
-
-showPlayerInfo(player1);
+showSum(30, 23);
+showSum(2.8, -5);
 
 
 
 /* Further Adventures
  *
- * 1) Create a second player object
+ * 1) Use the showSum function to add 56 and 74.
  *
- * 2) Add a second call to showPlayerInfo so both players' info is displayed
+ * 2) Create a showProduct function to multiply two numbers.
  *
- * 3) Create an object to represent a book with at least author and title properties
+ * 3) Use your function to multiply three pairs of numbers.
  *
- * 4) Create a function to display the details of a book object passed to the function
+ * 4) What about showDifference and showQuotient
+ *    for subtraction and division?
  *
  */

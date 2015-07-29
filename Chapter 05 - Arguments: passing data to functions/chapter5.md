@@ -1,4 +1,4 @@
-# Chapter 05 - Passing data to and from functions
+# Chapter 05 - Arguments: passing data to functions
 
 
 ### Relying on a variable outside of the function
@@ -9,9 +9,12 @@
  * Relying on a variable outside of the function
  */
 
-var message = "Hello World!";
+var message;
+var showMessage;
 
-var showMessage = function () {
+message = "It's full of stars!";
+
+showMessage = function () {
 	console.log(message);
 };
 
@@ -21,27 +24,29 @@ showMessage();
 
 /* Further Adventures
  *
- * 1) Change the message and run the program
+ * 1) Change the message and run the program.
  *
- * 2) Only declare the message variable on line 6, don't assign it a value: 'var message;' What happens when you run the program?
- *
- * 3) Delete line 6 so no message variable is declared. What happens when you run the program now?
+ * 2) Create a showMessageLength function
+ *    that logs the length of the message.
  *
  */
 ```
 
 
 ### Breaking a function by changing a variable name
-[jsBin Listing 5.02] (http://jsbin.com/yaresa/edit?js,console)
+[jsbin: Listing 5.02](http://jsbin.com/yaresa/edit?js,console)
 ```javascript
 /* Adventures in JavaScript
  * Listing 5.02
  * Breaking a function by changing a variable name
  */
 
-var msg = "Hello World!";
+var msg;
+var showMessage;
 
-var showMessage = function () {
+msg = "It's full of stars!";
+
+showMessage = function () {
 	console.log(message);
 };
 
@@ -51,89 +56,148 @@ showMessage();
 
 /* Further Adventures
  *
- * 1) Update the console.log argument so the program works
+ * 1) Update the console.log so the program works.
  *
- * 2) Declare another message variable and assign it a value
+ * 2) Declare another message variable
+ *    and assign it a value.
  *
- * 3) Display the new message as well as the old one
+ * 3) Display the new message as well as the old one.
  *
- * 4) Display a single message created by joining the two strings
+ * 4) Display a single message created by joining
+ *    the two strings.
  *
  */
 ```
 
 
 ### Passing information to a function
-[jsBin Listing 5.03] (http://jsbin.com/xucemu/edit?js,console)
+[jsbin: Listing 5.03](http://jsbin.com/xucemu/edit?js,console)
 ```javascript
 /* Adventures in JavaScript
  * Listing 5.03
  * Passing information to a function
  */
 
-var showMessage = function (message) {
+var showMessage;
+
+showMessage = function (message) {
 	console.log("The message is: " + message);
 };
 
-showMessage("Hello World!");
+showMessage("It's full of stars!");
 
 
 
 /* Further Adventures
  *
- * 1) Change the message in the brackets when showMessage is called on line 10
+ * 1) Change the message in the brackets
+ *    when showMessage is called on line 12.
  *
- * The value in the brackets when showMessage is run is called an argument. "Hello World!" was the original argument on line 10
+ * The value in the brackets when showMessage is called
+ * is an argument. "It's full of stars!" was the
+ * original argument on line 12.
  *
- * 2) Add two more calls to the showMessage function with different arguments each time
+ * 2) Add two more calls to the showMessage function
+ *    with different arguments each time.
  *
- * 3) Change the showMessage function itself. Make it add some extra text after the message passed in
+ * 3) Change the showMessage function itself.
+ *    Make it add some extra text after the
+ *    message passed in.
  *
  */
 ```
 
 
 ### Calling the same function with different arguments
-[jsBin Listing 5.04] (http://jsbin.com/zavavo/edit?js,console)
+[jsbin: Listing 5.04](http://jsbin.com/zavavo/edit?js,console)
 ```javascript
 /* Adventures in JavaScript
  * Listing 5.04
  * Calling the same function with different arguments
  */
 
-var showMessage = function (message) {
+var showMessage;
+
+showMessage = function (message) {
 	console.log("The message is: " + message);
 };
 
-var myMessage = "Hello to Jason Isaacs";
-
-showMessage("Hello World!");
-showMessage(myMessage);
-showMessage(myMessage + " and Stephen Fry");
+showMessage("It's full of stars!");
+showMessage("Hello to Jason Isaacs");
+showMessage("Hello to Jason Isaacs and Stephen Fry");
 
 
 
 /* Further Adventures
  *
- * 1) Change the value assigned to myMessage and run the program
+ * 1) Change the value assigned to message
+ *    and run the program.
  *
- * 2) Add a couple more calls to showMessage with different arguments
+ * 2) Add a couple more calls to showMessage
+ *    with different arguments.
  *
- * 3) Change the extra text added in the showMessage function
+ * 3) Change the extra text added
+ *    in the showMessage function.
+ *
+ */
+```
+
+
+### Using the square function
+[jsbin: Listing 5.05](http://jsbin.com/vequpi/edit?js,console)
+```javascript
+/* Adventures in JavaScript
+ * Listing 5.05
+ * Using the square function
+ */
+
+var square;
+
+square = function (numberToSquare) {
+    var result;
+    result = numberToSquare * numberToSquare;
+    console.log(numberToSquare + " * " + numberToSquare + " = " + result);
+};
+
+square(10);
+square(-2);
+square(1111);
+square(0.5);
+
+
+
+/* Further Adventures
+ *
+ * 1) Define a cube function that cubes
+ *    any number passed in as an argument.
+ *
+ * 2) Call your cube function four times
+ *    with different arguments to test it.
+ *
+ * Math.sqrt is a built-in function to find
+ * the square root of a number.
+ * e.g. Math.sqrt(9) finds the square root of 9.
+ *
+ * 3) Define and test a squareRoot function
+ *    to find square roots and display
+ *    them on the console.
+ *    e.g. The square root of 9 is 3.
  *
  */
 ```
 
 
 ### A function with two arguments
-[jsBin Listing 5.05] (http://jsbin.com/siyelu/edit?js,console)
+[jsbin: Listing 5.06](http://jsbin.com/siyelu/edit?js,console)
 ```javascript
 /* Adventures in JavaScript
- * Listing 5.05
+ * Listing 5.06
  * A function with two arguments
  */
 
-var showSum = function (number1, number2) {
+var showSum;
+
+showSum = function (number1, number2) {
 	var total = number1 + number2;
 	console.log("The sum is " + total);
 };
@@ -145,159 +209,412 @@ showSum(2.8, -5);
 
 /* Further Adventures
  *
- * 1) Use the showSum function to add 56 and 74
+ * 1) Use the showSum function to add 56 and 74.
  *
- * 2) Create a showProduct function to multiply two numbers
+ * 2) Create a showProduct function to multiply two numbers.
  *
- * 3) Use your function to multiply three pairs of numbers
+ * 3) Use your function to multiply three pairs of numbers.
  *
- * 4) What about showDifference and showQuotient for subtraction and division?
- *
- */
-```
-
-
-### Passing an object as an argument to a function
-[jsBin Listing 5.06] (http://jsbin.com/yotimic/edit?js,console)
-```javascript
-/* Adventures in JavaScript
- * Listing 5.06
- * Passing an object as an argument to a function
- */
-
-var player1 = {
-  name: "Kandra",
-  location: "The Old Library",
-  health: 50
-};
-
-var showPlayerInfo = function (player) {
-console.log("Player information for " + player.name);
-console.log("------------------------------");
-console.log(player.name + " is in " + player.location);
-console.log(player.name + " has health " + player.health);
-console.log("------------------------------");
-console.log("");
-};
-
-showPlayerInfo(player1);
-
-
-
-/* Further Adventures
- *
- * 1) Create a second player object
- *
- * 2) Add a second call to showPlayerInfo so both players' info is displayed
- *
- * 3) Create an object to represent a book with at least author and title properties
- *
- * 4) Create a function to display the details of a book object passed to the function
+ * 4) What about showDifference and showQuotient
+ *    for subtraction and division?
  *
  */
 ```
 
 
-### A function that adds properties to an object
-[jsBin Listing 5.07] (http://jsbin.com/qevodu/edit?js,console)
+### Displaying a player's name
+[jsbin: Listing 5.07](http://jsbin.com/yubahi/edit?js,console)
 ```javascript
 /* Adventures in JavaScript
  * Listing 5.07
- * A function that adds properties to an object
+ * Displaying a player's name
  */
 
-var sale1 = { price: 14, rate: 15 };
+var showPlayerName;
 
-var calculateTax = function (sale) {
-	sale.tax = sale.price * sale.rate / 100;
-	sale.total = sale.price + sale.tax;
+showPlayerName = function (playerName) {
+    console.log(playerName);
 };
 
-var displaySale = function (sale) { 
-  console.log("price = $" + sale.price.toFixed(2));
-  console.log("tax @ " + sale.rate + "% = $" + sale.tax.toFixed(2));
-  console.log("total cost = $" + sale.total.toFixed(2));
-};
-
-calculateTax(sale1);
-displaySale(sale1);
+showPlayerName("Kandra");
+showPlayerName("Dax");
 
 
 
 /* Further Adventures
  *
- * 1) Change the rate property of the sale1 object and run the program
+ * 1) Update the text logged so that it is
+ *    of the form:
+ *    The player's name is Kandra
  *
- * 2) Add a second sale object, sale2
- *
- * 3) Add calls to calculateTax and displaySale to display sale info for sale2
- *
- * 4) Can you find a way to combine the calls to calculateTax and displaySale ?
+ * 2) Make the function show the number
+ *    of letters in the player's name.
  *
  */
 ```
 
 
-### Returning the sum of two numbers
-[jsBin Listing 5.08] (http://jsbin.com/haqapu/edit?js,console)
+### Displaying a player's name via an object property
+[jsbin: Listing 5.08](http://jsbin.com/juhewi/edit?js,console)
 ```javascript
 /* Adventures in JavaScript
  * Listing 5.08
- * Returning the sum of two numbers
+ * Displaying a player's name via an object property
  */
 
-var sum = function (number1, number2) {
-	var total = number1 + number2;
+var player1;
+var player2;
+var showPlayerName;
 
-	return total;
+showPlayerName = function (playerName) {
+    console.log(playerName);
 };
 
-var result = sum(10, 35);
+player1 = {
+    name: "Kandra",
+    place: "The Dungeon of Doom",
+    health: 50
+};
 
-console.log(result);
+player2 = {
+    name: "Dax",
+    place: "The Old Library",
+    health: 40
+};
+
+showPlayerName(player1.name);
+showPlayerName(player2.name);
 
 
 
 /* Further Adventures
  *
- * 1) Find and display the sum of a different pair of numbers
+ * 1) In the showPlayerName function,
+ *    change playerName to playerName.toUpperCase().
+ *    Run the function.
  *
- * 2) Change the call to console.log so that the display on the console reads: 'The sum of 10 and 35 is 45' using the sum function to generate the answer
- *
- * 3) Can you use the sum function as it is to add more than two numbers?
- *    Hint: You can nest calls to sum
- *
- * 4) Create a function to find the sum of three numbers given as arguments
+ * 2) Change the function to show the player's
+ *    name in lower case.
  *
  */
 ```
 
 
-### A function with three arguments
-[jsBin Listing 5.09] (http://jsbin.com/jedigi/edit?js,console)
+### Displaying a player's health
+[jsbin: Listing 5.09](http://jsbin.com/nomija/edit?js,console)
 ```javascript
 /* Adventures in JavaScript
  * Listing 5.09
- * A function with three arguments
+ * Displaying a player's health
  */
 
-var totalCost = function (callOutCharge, costPerHour, numberOfHours) {
-	return callOutCharge + costPerHour * numberOfHours;
+var showPlayerHealth;
+
+showPlayerHealth = function (playerName, playerHealth) {
+    console.log(playerName + " has health " + playerHealth);
 };
 
-console.log("$" + totalCost(30, 40, 3));
+showPlayerHealth("Kandra", 50);
+showPlayerHealth("Dax", 40);
 
 
 
 /* Further Adventures
  *
- * 1) What is the cost for 12 hours work?
+ * 1) Change the showPlayerHealth function
+ *    so it shows information of the form:
+ *    KANDRA: health 50.
  *
- * 2) The plumber sometimes issues discount coupons. Add a fourth parameter to the totalCost function definition to account for discounts
+ * 2) Change the function so that it uses
+ *    a variable called healthInfo that
+ *    is the only thing logged to the console.
+ *    i.e. console.log(healthInfo);
  *
- * 3) Update the function to subtract the discount from the total before returning it
+ */
+```
+
+
+### Displaying a player's health via object properties
+[jsbin: Listing 5.10](http://jsbin.com/zufoxi/edit?js,console)
+```javascript
+/* Adventures in JavaScript
+ * Listing 5.10
+ * Displaying a player's health via object properties
+ */
+
+var player1;
+var player2;
+var showPlayerHealth;
+
+showPlayerHealth = function (playerName, playerHealth) {
+    console.log(playerName + " has health " + playerHealth);
+};
+
+player1 = {
+    name: "Kandra",
+    place: "The Dungeon of Doom",
+    health: 50
+};
+
+player2 = {
+    name: "Dax",
+    place: "The Old Library",
+    health: 40
+};
+
+showPlayerHealth(player1.name, player1.health);
+showPlayerHealth(player2.name, player2.health);
+
+
+
+/* Further Adventures
  *
- * 4) If a customer has a $20 off coupon, update line 10 to display the total cost. [It should now be $130]
+ * 1) Add a new property to the player objects
+ *    called healthMultiplier.
+ *
+ * 2) Add a third parameter to the definition
+ *    of the showPlayerHealth function
+ *    called playerHealthMultiplier
+ *
+ * 3) Update the function so that the health
+ *    displayed is first multiplied by
+ *    the health multiplier.
+ *
+ * 4) Add the player's healthMultiplier property
+ *    as a third argument to the two calls
+ *    to the showPlayerHealth function.
+ *
+ */
+```
+
+
+### Displaying a player's location
+[jsbin: Listing 5.11](http://jsbin.com/yifahe/edit?js,console)
+```javascript
+/* Adventures in JavaScript
+ * Listing 5.11
+ * Displaying a player's location
+ */
+
+var showPlayerPlace;
+
+showPlayerPlace = function (playerName, playerPlace) {
+    console.log(playerName[3] + " is in " + playerPlace);
+};
+
+showPlayerPlace("Kandra", "The Dungeon of Doom");
+showPlayerPlace("Dax", "The Old Library");
+
+
+
+/* Further Adventures
+ *
+ * 1) Inside the console.log brackets,
+ *    change playerName to playerName[0]
+ *    Run the program.
+ *    What effect do the brackets have?
+ *
+ * 2) Change the number in the brackets to 1.
+ *
+ * 3) What happens when you change the
+ *    number to 3? Why?
+ *
+ */
+```
+
+
+### Displaying a player's location via object properties
+[jsbin: Listing 5.12](http://jsbin.com/mejuki/edit?js,console)
+```javascript
+/* Adventures in JavaScript
+ * Listing 5.12
+ * Displaying a player's location via object properties
+ */
+
+var player1;
+var player2;
+var showPlayerPlace;
+
+showPlayerPlace = function (playerName, playerPlace) {
+    console.log(playerName + " is in " + playerPlace);
+};
+
+player1 = {
+    name: "Kandra",
+    place: "The Dungeon of Doom",
+    health: 50
+};
+
+player2 = {
+    name: "Dax",
+    place: "The Old Library",
+    health: 40
+};
+
+showPlayerPlace(player1.name, player1.place);
+showPlayerPlace(player2.name, player2.place);
+
+
+
+/* Further Adventures
+ *
+ * 1) In the console.log brackets, change
+ *    playerName to playerName.substring(0, 1)
+ *    Run the program. What do you think
+ *    the substring function does?
+ *
+ * 2) Change the arguments to the substring
+ *    function to (0, 2), then (0, 3) and so on.
+ *
+ * 3) Change the arguments to
+ *    (1, 2), then (1, 3) and so on.
+ *
+ * 4) What role do you think the two arguments
+ *    to the substring function have?
+ *
+ */
+```
+
+
+### Displaying a player's information
+[jsbin: Listing 5.13](http://jsbin.com/likafe/edit?js,console)
+```javascript
+/* Adventures in JavaScript
+ * Listing 5.13
+ * Displaying a player's information
+ */
+
+var showPlayerInfo;
+var showPlayerName;
+var showPlayerHealth;
+var showPlayerPlace;
+
+showPlayerName = function (playerName) {
+    console.log(playerName);
+};
+
+showPlayerHealth = function (playerName, playerHealth) {
+    console.log(playerName + " has health " + playerHealth);
+};
+
+showPlayerPlace = function (playerName, playerPlace) {
+    console.log(playerName + " is in " + playerPlace);
+};
+
+showPlayerInfo = function (playerName, playerPlace, playerHealth) {
+    console.log("");
+
+    showPlayerName(playerName);
+
+    console.log("----------------------------");
+
+    showPlayerPlace(playerName, playerPlace);
+    showPlayerHealth(playerName, playerHealth);
+
+    console.log("----------------------------");
+    console.log("");
+};
+
+showPlayerInfo("Kandra", "The Dungeon of Doom", 50);
+showPlayerInfo("Dax", "The Old Library", 40);
+
+
+
+/* Further Adventures
+ *
+ * 1) Create a function called showLine
+ *    that logs a line of dashes to the console.
+ *    ----------------------------
+ *
+ * 2) Update the showPlayerInfo function to
+ *    use the showLine function rather than
+ *    logging dashes to the console directly.
+ *
+ * 3) Create and use a showBlankLine function
+ *    for logging a blank line to the console.
+ *
+ */
+```
+
+
+### Displaying a player's information using properties
+[jsbin: Listing 5.14](http://jsbin.com/loteti/edit?js,console)
+```javascript
+/* Adventures in JavaScript
+ * Listing 5.14
+ * Displaying a player's information using properties
+ */
+
+var showPlayerName = function (playerName) {
+    console.log(playerName);
+};
+
+var showPlayerHealth = function (playerName, playerHealth) {
+    console.log(playerName + " has health " + playerHealth);
+};
+
+var showPlayerPlace = function (playerName, playerPlace) {
+    console.log(playerName + " is in " + playerPlace);
+};
+
+var showPlayerInfo = function (playerName, playerPlace, playerHealth) {
+    console.log("");
+
+    showPlayerName(playerName);
+
+    console.log("----------------------------");
+
+    showPlayerPlace(playerName, playerPlace);
+    showPlayerHealth(playerName, playerHealth);
+
+    console.log("----------------------------");
+    console.log("");
+};
+
+var player1 = {
+    name: "Kandra",
+    place: "The Dungeon of Doom",
+    health: 50
+};
+
+var player2 = {
+    name: "Dax",
+    place: "The Old Library",
+    health: 40
+};
+
+showPlayerInfo(player1.name, player1.place, player1.health);
+showPlayerInfo(player2.name, player2.place, player2.health);
+
+
+
+/* Further Adventures
+ *
+ * 1) Define a showLine function with a parameter
+ *    for the length of line.
+ *    e.g. showLine(5) should output
+ *    -----
+ *    showLine(20) should output
+ *    --------------------
+ *
+ *    Hints:
+ *    a) In the function body declare a line variable
+ *       and assign it a long string of dashes.
+ *    b) Use the substring function to grab
+ *       a line of the correct length.
+ *       line.substring(0, 10) would have length 10.
+ *
+ * 2) Use your showLine function to display the
+ *    player's name in a box.
+ *    ----------
+ *    - Kandra -
+ *    __________
+ *
+ * 3) Update your showLine function to use
+ *    asterisks rather than dashes.
+ *    **********
+ *    * Kandra *
+ *    **********
  *
  */
 ```

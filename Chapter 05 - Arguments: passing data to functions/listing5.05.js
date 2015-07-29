@@ -1,26 +1,38 @@
 /* Adventures in JavaScript
  * Listing 5.05
- * A function with two arguments
+ * Using the square function
  */
 
-var showSum = function (number1, number2) {
-    var total = number1 + number2;
-    console.log("The sum is " + total);
+var square;
+
+square = function (numberToSquare) {
+    var result;
+    result = numberToSquare * numberToSquare;
+    console.log(numberToSquare + " * " + numberToSquare + " = " + result);
 };
 
-showSum(30, 23);
-showSum(2.8, -5);
+square(10);
+square(-2);
+square(1111);
+square(0.5);
 
 
 
 /* Further Adventures
  *
- * 1) Use the showSum function to add 56 and 74
+ * 1) Define a cube function that cubes
+ *    any number passed in as an argument.
  *
- * 2) Create a showProduct function to multiply two numbers
+ * 2) Call your cube function four times
+ *    with different arguments to test it.
  *
- * 3) Use your function to multiply three pairs of numbers
+ * Math.sqrt is a built-in function to find
+ * the square root of a number.
+ * e.g. Math.sqrt(9) finds the square root of 9.
  *
- * 4) What about showDifference and showQuotient for subtraction and division?
+ * 3) Define and test a squareRoot function
+ *    to find square roots and display
+ *    them on the console.
+ *    e.g. The square root of 9 is 3.
  *
  */
