@@ -101,6 +101,7 @@ console.log("------------------------------");
 
 ### Adding tax to find the total cost
 [jsbin: Listing 4.03](http://jsbin.com/kawocu/2/edit?js,console)
+```javascript
 /* Adventures in JavaScript
  * Listing 4.03
  * Adding tax to find the total cost
