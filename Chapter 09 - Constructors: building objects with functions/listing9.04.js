@@ -1,34 +1,33 @@
 /* Adventures in JavaScript
  * Listing 9.04
- * A Place constructor
+ * A Planet constructor
  */
 
-var Place = function (title, description) {
-    this.title = title;
-    this.description = description;
+var Planet = function (name, position, type) {
+    this.name = name;
+    this.position = position;
+    this.type = type;
 
-    this.showInfo = function () {
-        console.log(this.title);
-        console.log(this.description);
+    this.showPlanet = function () {
+        var info = this.name + ": planet " + this.position;
+        info +=  " - " + this.type;
+        console.log(info);
     };
 };
 
-var library = new Place(
-    "The Old Library",
-    "You are in a library. Dusty books line the walls."
-);
+var planet = new Planet( "Jupiter", 5, "Gas Giant" );
 
-library.showInfo();
+planet.showPlanet();
 
 
 
 /* Further Adventures
  *
- * 1) Use the Place constructor function
- *    to create a second place.
+ * 1) Use the Planet constructor function
+ *    to create a second planet.
  *    Don't forget the 'new' keyword.
  *
- * 2) Call the showInfo method on your
- *    newly created place.
+ * 2) Call the showPlanet method on your
+ *    newly created planet.
  *
  */

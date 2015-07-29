@@ -3,48 +3,41 @@
  * An array of constructed objects
  */
 
-var buildPlace = function (title, description) {
-    var place = {};
+var buildPlanet = function (name, position, type) {
+    var planet = {};
 
-    place.title = title;
-    place.description = description;
+    planet.name = name;
+    planet.position = position;
+    planet.type = type;
 
-    place.showInfo = function () {
-        console.log(place.title);
-        console.log(place.description);
+    planet.showPlanet = function () {
+        var info = planet.name + ": planet " + planet.position;
+        info += " - " + planet.type;
+        console.log(info);
     };
 
-    return place;
+    return planet;
 };
 
-var places = [
-    buildPlace(
-        "The Old Library",
-        "You are in a library. Dusty books line the walls."
-    ),
-    buildPlace(
-        "The Kitchen",
-        "You are in the kitchen. There is a disturbing smell."
-    ),
-    buildPlace(
-        "The Dungeon",
-        "You are in The Dungeon. It is dark. And dank. And deep."
-    )
+var planets = [
+    buildPlanet( "Jupiter", 5, "Gas Giant" ),
+    buildPlanet( "Neptune", 8, "Ice Giant" ),
+    buildPlanet( "Mercury", 1, "Terrestrial" )
 ];
 
-places.forEach(function (place) {
-    place.showInfo();
+planets.forEach(function (planet) {
+    planet.showPlanet();
 });
 
 
 
 /* Further Adventures
  *
- * 1) Add two more places to the places array.
+ * 1) Add two more planets to the planets array.
  *
  * 2) Run the program to display them.
  *
- * 3) Update the showInfo method to visually
- *    separate each place in the console output.
+ * 3) Add code to visually separate each planet
+ *    from the next.
  *
  */

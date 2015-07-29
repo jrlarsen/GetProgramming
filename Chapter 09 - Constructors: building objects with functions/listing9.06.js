@@ -1,63 +1,53 @@
 /* Adventures in JavaScript
  * Listing 9.06
- * Creating multiple Places with our constructor
+ * Creating multiple Planets with our constructor
  */
 
-var library, kitchen, dungeon;
+var Planet = function (name, position, type) {
+    this.name = name;
+    this.position = position;
+    this.type = type;
+    this.moons = [];
 
-var Place = function (title, description) {
-    this.title = title;
-    this.description = description;
-    this.items = [];
-
-    this.showInfo = function () {
-        console.log(this.title);
-        console.log(this.description);
-        console.log("Items: " + this.items.join(', ') + ".");
+    this.showPlanet = function () {
+        console.log(this.name);
+        console.log("Planet " + this.position + " - " + this.type);
+        console.log("Moons: " + this.moons.join(', ') + ".");
     };
 
-    this.addItem = function (item) {
-        this.items.unshift(item);
+    this.addMoon = function (moon) {
+        this.moons.unshift(moon);
     };
 };
 
-library = new Place(
-    "The Old Library",
-    "You are in an ancient library. Dusty books line the walls."
-);
-library.addItem("a zombie");
-library.addItem("a faded map");
+var planet1 = new Planet("Jupiter", 5, "Gas Giant");
+planet1.addMoon("Io");
+planet1.addMoon("Europa");
 
-kitchen = new Place(
-    "The Kitchen",
-    "You are in the kitchen. There is a disturbing smell."
-);
-kitchen.addItem("a piece of cheese");
+var planet2 = new Planet("Neptune", 8, "Ice Giant");
+planet2.addMoon("Triton");
 
-dungeon = new Place(
-    "The Dungeon",
-    "You are in the dungeon. It is dark. And dank. And deep."
-);
+var planet3 = new Planet("Mercury", 1, "Terrestrial");
 
-[ library, kitchen, dungeon ].forEach(function (place) {
-    place.showInfo();
+[ planet1, planet2, planet3 ].forEach(function (planet) {
+    planet.showPlanet();
 });
 
 
 
 /* Further Adventures
  *
- * 1) Add a new item to each place.
+ * 1) Add a new moon to each place.
  *
- * 2) Call showInfo for each place.
+ * 2) Call showPlanet for each place.
  *
  * unshift is an array method that adds a
  * new element at the start of the array.
  * shift is an array method that removes
  * an item from the start of an array.
  *
- * 3) Create a removeItem method that
- *    removes and item from the start
- *    of the items array.
+ * 3) Create a removeMoon method that
+ *    removes a moon from the start
+ *    of the moons array.
  *
  */

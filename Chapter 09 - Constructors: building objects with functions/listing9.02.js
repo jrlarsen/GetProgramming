@@ -3,35 +3,38 @@
  * Adding methods to our constructed object
  */
 
-var buildPlace = function (title, description) {
-    var place = {};
+var buildPlanet = function (name, position, type) {
+    var planet = {};
 
-    place.title = title;
-    place.description = description;
+    planet.name = name;
+    planet.position = position;
+    planet.type = type;
 
-    place.showInfo = function () {
-        console.log(place.title);
-        console.log(place.description);
+    planet.showPlanet = function () {
+        var info = planet.name + ": planet " + planet.position;
+        info += " - " + planet.type;
+        console.log(info);
     };
 
-    return place;
+    return planet;
 };
 
-var library = buildPlace(
-    "The Old Library",
-    "You are in a library. Dusty books line the walls."
+var planet1 = buildPlanet(
+    "Jupiter",
+    5,
+    "Gas Giant"
 );
 
-library.showInfo();
+planet1.showPlanet();
 
 
 
 /* Further Adventures
  *
- * 1) Build a second place.
- *    Use the buildPlace function.
+ * 1) Create a second planet.
+ *    Use the buildPlanet function.
  *
- * 2) Call the showInfo method on your
- *    new place.
+ * 2) Call the showPlanet method on your
+ *    new planet.
  *
  */

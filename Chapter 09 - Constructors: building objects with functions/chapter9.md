@@ -9,39 +9,34 @@
  * Using a function to create an object
  */
 
-var buildPlace = function (title, description) {
-    var place = {};
-  
-    place.title = title;
-    place.description = description;
-  
-    return place;
+var buildPlanet = function (name, position, type) {
+    var planet = {};
+
+    planet.name = name;
+    planet.position = position;
+    planet.type = type;
+
+    return planet;
 };
 
-var library = buildPlace(
-    "The Old Library",
-    "You are in a library. Dusty books line the walls."
+var planet1 = buildPlanet(
+    "Jupiter",
+    5,
+    "Gas Giant"
 );
 
-console.log(library.title);
-console.log(library.description);
+console.log(planet1.name);
+console.log(planet1.position);
+console.log(planet1.type);
 
 
 
 /* Further Adventures
  *
- * 1) Build a second place, using the buildPlace function.
+ * 1) Build a second planet,
+ *    using the buildPlanet function.
  *
- * 2) Log its title and description.
- *
- * 3) Add a numberOfExits parameter to the buildPlace function.
- *
- * 4) Assign numberOfExits to the place object.
- *
- * 5) Update the call to buildPlace for the library.
- *    Include the number of exits as an argument.
- *
- * 6) Log the number of exits.
+ * 2) Log its name and type.
  *
  */
 ```
@@ -55,36 +50,39 @@ console.log(library.description);
  * Adding methods to our constructed object
  */
 
-var buildPlace = function (title, description) {
-    var place = {};
-  
-    place.title = title;
-    place.description = description;
-  
-    place.showInfo = function () {
-        console.log(place.title);
-        console.log(place.description);          
+var buildPlanet = function (name, position, type) {
+    var planet = {};
+
+    planet.name = name;
+    planet.position = position;
+    planet.type = type;
+
+    planet.showPlanet = function () {
+        var info = planet.name + ": planet " + planet.position;
+        info += " - " + planet.type;
+        console.log(info);
     };
-  
-    return place;
+
+    return planet;
 };
 
-var library = buildPlace(
-    "The Old Library",
-    "You are in a library. Dusty books line the walls."
+var planet1 = buildPlanet(
+    "Jupiter",
+    5,
+    "Gas Giant"
 );
 
-library.showInfo();
+planet1.showPlanet();
 
 
 
 /* Further Adventures
  *
- * 1) Build a second place.
- *    Use the buildPlace function.
+ * 1) Create a second planet.
+ *    Use the buildPlanet function.
  *
- * 2) Call the showInfo method on your
- *    new place.
+ * 2) Call the showPlanet method on your
+ *    new planet.
  *
  */
 ```
@@ -98,211 +96,193 @@ library.showInfo();
  * An array of constructed objects
  */
 
-var buildPlace = function (title, description) {
-    var place = {};
-  
-    place.title = title;
-    place.description = description;
-  
-    place.showInfo = function () {
-        console.log(place.title);
-        console.log(place.description);          
-    };
-  
-    return place;
+var buildPlanet = function (name, position, type) {
+    var planet = {};
+
+    planet.name = name;
+    planet.position = position;
+    planet.type = type;
+
+    planet.showPlanet = function () {
+        var info = planet.name + ": planet " + planet.position;
+        info += " - " + planet.type;
+        console.log(info);
+      };
+
+    return planet;
 };
 
-var places = [
-    buildPlace(
-        "The Old Library",
-        "You are in a library. Dusty books line the walls."
-    ),
-    buildPlace(
-        "The Kitchen",
-        "You are in the kitchen. There is a disturbing smell."
-    ),
-    buildPlace(
-        "The Dungeon",
-        "You are in The Dungeon. It is dark. And dank. And deep."
-    )
+var planets = [
+    buildPlanet( "Jupiter", 5, "Gas Giant" ),
+    buildPlanet( "Neptune", 8, "Ice Giant" ),
+    buildPlanet( "Mercury", 1, "Terrestrial" )
 ];
 
-places.forEach(function (place) {
-    place.showInfo();
+planets.forEach(function (planet) {
+    planet.showPlanet();
 });
 
 
 
 /* Further Adventures
  *
- * 1) Add two more places to the places array.
+ * 1) Add two more planets to the planets array.
  *
  * 2) Run the program to display them.
  *
- * 3) Update the showInfo method to visually
- *    separate each place in the console output.
+ * 3) Add code to visually separate each planet
+ *    from the next.
  *
  */
 ```
 
 
-### A Place constructor
+### A Planet constructor
 [jsbin: Listing 9.04](http://jsbin.com/bixico/edit?js,console)
 ```javascript
 /* Adventures in JavaScript
  * Listing 9.04
- * A Place constructor
+ * A Planet constructor
  */
 
-var Place = function (title, description) {
-    this.title = title;
-    this.description = description;
-  
-    this.showInfo = function () {
-        console.log(this.title);
-        console.log(this.description);          
+var Planet = function (name, position, type) {
+    this.name = name;
+    this.position = position;
+    this.type = type;
+
+    this.showPlanet = function () {
+        var info = this.name + ": planet " + this.position;
+        info +=  " - " + this.type;
+        console.log(info);
     };
 };
 
-var library = new Place(
-    "The Old Library",
-    "You are in a library. Dusty books line the walls."
-);
+var planet = new Planet( "Jupiter", 5, "Gas Giant" );
 
-library.showInfo();
+planet.showPlanet();
 
 
 
 /* Further Adventures
  *
- * 1) Use the Place constructor function
- *    to create a second place.
+ * 1) Use the Planet constructor function
+ *    to create a second planet.
  *    Don't forget the 'new' keyword.
  *
- * 2) Call the showInfo method on your
- *    newly created place.
+ * 2) Call the showPlanet method on your
+ *    newly created planet.
  *
  */
 ```
 
 
-### Including an items array in our Place constructor
+### Including an moons array in our Planet constructor
 [jsbin: Listing 9.05](http://jsbin.com/wiguya/edit?js,console)
 ```javascript
 /* Adventures in JavaScript
  * Listing 9.05
- * Including an items array in our Place constructor
+ * Including a moons array in our Planet constructor
  */
 
-var Place = function (title, description) {
-    this.title = title;
-    this.description = description;
-    this.items = [];
-  
-    this.showInfo = function () {
-        console.log(this.title);
-        console.log(this.description);
-        console.log("Items: " + this.items.join(', ') + ".");
+var Planet = function (name, position, type) {
+    this.name = name;
+    this.position = position;
+    this.type = type;
+    this.moons = [];
+
+    this.showPlanet = function () {
+        var info = this.name + ": planet " + this.position;
+        info +=  " - " + this.type;
+        console.log(info);
+        console.log("Moons: " + this.moons.join(', ') + ".");
     };
-  
-    this.addItem = function (item) {
-        this.items.push(item);  
+
+    this.addMoon = function (moon) {
+        this.moons.push(moon);
     };
 };
 
-var library = new Place(
-    "The Old Library",
-    "You are in a library. Dusty books line the walls."
-);
+var planet = new Planet( "Jupiter", 5, "Gas Giant" );
 
-library.addItem("a zombie");
-library.addItem("a faded map");
+planet.addMoon("Io");
+planet.addMoon("Europa");
 
-library.showInfo();
+planet.showPlanet();
 
 
 
 /* Further Adventures
  *
- * 1) Create a second place.
+ * 1) Create a second planet.
+ *    Make one up if you like.
  *
- * 2) Add three items to the second place.
+ * 2) Add three moons to the second planet.
  *
- * 3) Call the showInfo method
- *    on the second place.
+ * 3) Call the showPlanet method
+ *    on the second planet.
  *
- * 4) Add a removeItem method
- *    that removes the last item
- *    from the items array.
+ * 4) Add a removeMoon method
+ *    that removes the last moon
+ *    from the moons array.
  *
  */
 ```
 
 
-### Creating multiple Places with our constructor
+### Creating multiple Planets with our constructor
 [jsbin: Listing 9.06](http://jsbin.com/wewewe/edit?js,console)
 ```javascript
 /* Adventures in JavaScript
  * Listing 9.06
- * Creating multiple Places with our constructor
+ * Creating multiple Planets with our constructor
  */
 
-var library, kitchen, dungeon;
+var Planet = function (name, position, type) {
+    this.name = name;
+    this.position = position;
+    this.type = type;
+    this.moons = [];
 
-var Place = function (title, description) {
-    this.title = title;
-    this.description = description;
-    this.items = [];
-  
-    this.showInfo = function () {
-        console.log(this.title);
-        console.log(this.description);
-        console.log("Items: " + this.items.join(', ') + ".");
+    this.showPlanet = function () {
+        console.log(this.name);
+        console.log("Planet " + this.position + " - " + this.type);
+        console.log("Moons: " + this.moons.join(', ') + ".");
     };
-  
-    this.addItem = function (item) {
-        this.items.unshift(item);
+
+    this.addMoon = function (moon) {
+        this.moons.unshift(moon);
     };
 };
 
-library = new Place(
-    "The Old Library",
-    "You are in an ancient library. Dusty books line the walls."
-);
-library.addItem("a zombie");
-library.addItem("a faded map");
+var planet1 = new Planet("Jupiter", 5, "Gas Giant");
+planet1.addMoon("Io");
+planet1.addMoon("Europa");
 
-kitchen = new Place(
-    "The Kitchen",
-    "You are in the kitchen. There is a disturbing smell."
-);
-kitchen.addItem("a piece of cheese");
+var planet2 = new Planet("Neptune", 8, "Ice Giant");
+planet2.addMoon("Triton");
 
-dungeon = new Place(
-    "The Dungeon",
-    "You are in the dungeon. It is dark. And dank. And deep."
-);
+var planet3 = new Planet("Mercury", 1, "Terrestrial");
 
-[ library, kitchen, dungeon ].forEach(function (place) {
-    place.showInfo();
+[ planet1, planet2, planet3 ].forEach(function (planet) {
+    planet.showPlanet();
 });
 
 
 
 /* Further Adventures
  *
- * 1) Add a new item to each place.
+ * 1) Add a new moon to each place.
  *
- * 2) Call showInfo for each place.
+ * 2) Call showPlanet for each place.
  *
  * unshift is an array method that adds a
  * new element at the start of the array.
  * shift is an array method that removes
  * an item from the start of an array.
  *
- * 3) Create a removeItem method that
- *    removes and item from the start
- *    of the items array.
+ * 3) Create a removeMoon method that
+ *    removes a moon from the start
+ *    of the moons array.
  *
  */
 ```
@@ -419,104 +399,193 @@ calEvent.showEvent();
 ```
 
 
-### Sharing functions with the Place prototype
-[jsbin: Listing 9.09](http://jsbin.com/cibuji/edit?js,console)
+### A Place constructor part 1
+[jsbin: Listing 9.09](http://jsbin.com/pogive/edit?js,console)
 ```javascript
 /* Adventures in JavaScript
  * Listing 9.09
- * Sharing functions with the Place prototype
+ * A Place constructor part 1
  */
-
-var library, kitchen;
 
 var Place = function (title, description) {
     this.title = title;
     this.description = description;
+
+    this.showInfo = function () {
+        console.log(this.title);
+        console.log(this.description);
+    };
 };
 
-Place.prototype.showInfo = function () {
-    console.log(this.title);
-    console.log(this.description);
-};
-
-library = new Place("The Old Library", "You are in an ancient library.");
-kitchen = new Place("The Kitchen", "You are in the kitchen.");
+var library = new Place(
+    "The Old Library",
+    "You are in a library. Dusty books line the walls."
+);
 
 library.showInfo();
-kitchen.showInfo();
 
 
 
 /* Further Adventures
  *
- * 1) Add an items property to the this object
- *    in the Place constructor.
- *    Assign it an empty array.
+ * 1) Add a second place.
  *
- * 2) Add an addItem method to Place.prototype
- *    that adds a new item to the items array.
- *
- * 3) Update the showInfo method to also
- *    display the items in the items array.
- *
- * 4) Add items to the library and kitchen.
- *
- * 5) Call the showInfo method on the
- *    library and the kitchen.
+ * 2) Call the showInfo method on your
+ *    new place event.
  *
  */
 ```
 
 
-### Updating a property on the prototype
-[jsbin: Listing 9.10](http://jsbin.com/wekaho/edit?js,console)
+### A Place constructor part 2
+[jsbin: Listing 9.10](http://jsbin.com/qemica/edit?js,console)
 ```javascript
 /* Adventures in JavaScript
  * Listing 9.10
- * Updating a property on the prototype
+ * A Place constructor part 2
  */
 
-var GuardPost = function (postName) {
-    this.postName = postName;
+var Place = function (title, description) {
+    this.title = title;
+    this.description = description;
+    this.items = [];
+
+    this.showItems = function () {
+        console.log("Items: ");
+        this.items.forEach(function (item, i) {
+            console.log("(" + i + ") " + item);
+        });
+    };
+
+    this.showInfo = function () {
+        console.log(this.title);
+        console.log(this.description);
+        this.showItems();
+    };
+
+    this.addItem = function (item) {
+        this.items.push(item);
+    };
 };
 
-GuardPost.prototype.status = "All clear";
+var library = new Place(
+    "The Old Library",
+    "You are in a library. Dusty books line the walls."
+);
 
-GuardPost.prototype.tripAlarm = function () {
-    console.log(this.postName + ": Intruder Alert!");
-    GuardPost.prototype.status = "I am on the look out!";
-};
+library.addItem("a rusty key");
 
-var posts = [
-    new GuardPost("The Main Gate"),
-    new GuardPost("The Stables"),
-    new GuardPost("The Patio")
-];
-
-posts.forEach(function (post) {
-    console.log(post.postName + ": " + post.status);
-});
-
-posts[0].tripAlarm();
-
-posts.forEach(function (post) {
-    console.log(post.postName + ": " + post.status);
-});
+library.showInfo();
 
 
 
 /* Further Adventures
  *
- * 1) Add a couple more guardposts.
+ * 1) Add a second place and some items.
  *
- * 2) Add a clearAlarm method to
- *    GuardPost.prototype that
- *    resets the status to "All clear"
+ * 2) Call the showInfo method on your
+ *    new place event.
  *
- * 3) Test out your clearAlarm method.
- *    One guard should trip the alarm and
- *    another should clear it.
+ * The indexOf array method returns the index
+ * of an item in an array.
+ * this.items.indexOf("a rusty key");
+ *
+ * 3) Test indexOf on the console with
+ *    library.items.indexOf("a rusty key");
+ *
+ * An item can be removed from an array with
+ * the splice method.
+ * this.items.splice(indexOfItem, 1);
+ *
+ * 4) Test splice on the console with
+ *    library.items.splice(0, 1);
+ *    library.showInfo();
+ *
+ * 5) Add a removeItem method to the constructor
+ *    function that removes a specified item.
+ *    e.g. library.removeItem("a rusty key");
  *
  */
 ```
 
+
+### A Place constructor part 3
+[jsbin: Listing 9.11](http://jsbin.com/parale/edit?js,console)
+```javascript
+/* Adventures in JavaScript
+ * Listing 9.11
+ * A Place constructor part 3
+ */
+
+var Place = function (title, description) {
+    this.title = title;
+    this.description = description;
+    this.items = [];
+    this.exits = [];
+
+    this.showItems = function () {
+        console.log("Items:");
+        this.items.forEach(function (item, i) {
+            console.log("(" + i + ") " + item);
+        });
+    };
+
+    this.showExits = function () {
+        console.log("Exits from " + this.title + ":");
+        this.exits.forEach(function (exit, i) {
+            console.log("(" + i + ") " + exit.title);
+        });
+    };
+
+    this.showInfo = function () {
+        console.log(this.title);
+        console.log(this.description);
+        this.showItems();
+        this.showExits();
+    };
+
+    this.addItem = function (item) {
+        this.items.push(item);
+    };
+
+    this.addExit = function (exit) {
+        this.exits.push(exit);
+    };
+};
+
+var library = new Place(
+    "The Old Library",
+    "You are in a library. Dusty books line the walls."
+);
+
+var kitchen = new Place(
+    "The Kitchen",
+    "You are in the kitchen. There is a disturbing smell."
+);
+
+var hall = new Place(
+    "The Main Hall",
+    "You are in a large hall. It is strangely empty."
+);
+
+library.addItem("a rusty key");
+library.addExit(kitchen);
+library.addExit(hall);
+
+library.showInfo();
+
+
+
+/* Further Adventures
+ *
+ * 1) Add a fourth place.
+ *
+ * 2) Add some items to your new place.
+ *
+ * 3) Add some exits to your new place.
+ *
+ * 4) Use showInfo to display info
+ *    about your new place.
+ *
+ */
+```

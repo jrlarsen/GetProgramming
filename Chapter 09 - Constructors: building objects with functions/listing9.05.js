@@ -1,47 +1,47 @@
 /* Adventures in JavaScript
  * Listing 9.05
- * Including an items array in our Place constructor
+ * Including a moons array in our Planet constructor
  */
 
-var Place = function (title, description) {
-    this.title = title;
-    this.description = description;
-    this.items = [];
+var Planet = function (name, position, type) {
+    this.name = name;
+    this.position = position;
+    this.type = type;
+    this.moons = [];
 
-    this.showInfo = function () {
-        console.log(this.title);
-        console.log(this.description);
-        console.log("Items: " + this.items.join(', ') + ".");
+    this.showPlanet = function () {
+        var info = this.name + ": planet " + this.position;
+        info +=  " - " + this.type;
+        console.log(info);
+        console.log("Moons: " + this.moons.join(', ') + ".");
     };
 
-    this.addItem = function (item) {
-        this.items.push(item);
+    this.addMoon = function (moon) {
+        this.moons.push(moon);
     };
 };
 
-var library = new Place(
-    "The Old Library",
-    "You are in a library. Dusty books line the walls."
-);
+var planet = new Planet( "Jupiter", 5, "Gas Giant" );
 
-library.addItem("a zombie");
-library.addItem("a faded map");
+planet.addMoon("Io");
+planet.addMoon("Europa");
 
-library.showInfo();
+planet.showPlanet();
 
 
 
 /* Further Adventures
  *
- * 1) Create a second place.
+ * 1) Create a second planet.
+ *    Make one up if you like.
  *
- * 2) Add three items to the second place.
+ * 2) Add three moons to the second planet.
  *
- * 3) Call the showInfo method
- *    on the second place.
+ * 3) Call the showPlanet method
+ *    on the second planet.
  *
- * 4) Add a removeItem method
- *    that removes the last item
- *    from the items array.
+ * 4) Add a removeMoon method
+ *    that removes the last moon
+ *    from the moons array.
  *
  */

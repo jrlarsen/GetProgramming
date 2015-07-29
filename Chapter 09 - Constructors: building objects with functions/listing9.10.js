@@ -1,47 +1,66 @@
 /* Adventures in JavaScript
  * Listing 9.10
- * Updating a property on the prototype
+ * A Place constructor part 2
  */
 
-var GuardPost = function (postName) {
-    this.postName = postName;
+var Place = function (title, description) {
+    this.title = title;
+    this.description = description;
+    this.items = [];
+
+    this.showItems = function () {
+        console.log("Items: ");
+        this.items.forEach(function (item, i) {
+            console.log("(" + i + ") " + item);
+        });
+    };
+
+    this.showInfo = function () {
+        console.log(this.title);
+        console.log(this.description);
+        this.showItems();
+    };
+
+    this.addItem = function (item) {
+        this.items.push(item);
+    };
 };
 
-GuardPost.prototype.status = "All clear";
+var library = new Place(
+    "The Old Library",
+    "You are in a library. Dusty books line the walls."
+);
 
-GuardPost.prototype.tripAlarm = function () {
-    console.log(this.postName + ": Intruder Alert!");
-    GuardPost.prototype.status = "I am on the look out!";
-};
+library.addItem("a rusty key");
 
-var posts = [
-    new GuardPost("The Main Gate"),
-    new GuardPost("The Stables"),
-    new GuardPost("The Patio")
-];
-
-posts.forEach(function (post) {
-    console.log(post.postName + ": " + post.status);
-});
-
-posts[0].tripAlarm();
-
-posts.forEach(function (post) {
-    console.log(post.postName + ": " + post.status);
-});
+library.showInfo();
 
 
 
 /* Further Adventures
  *
- * 1) Add a couple more guardposts.
+ * 1) Add a second place and some items.
  *
- * 2) Add a clearAlarm method to
- *    GuardPost.prototype that
- *    resets the status to "All clear"
+ * 2) Call the showInfo method on your
+ *    new place event.
  *
- * 3) Test out your clearAlarm method.
- *    One guard should trip the alarm and
- *    another should clear it.
+ * The indexOf array method returns the index
+ * of an item in an array.
+ * this.items.indexOf("a rusty key");
+ *
+ * 3) Test indexOf on the console with
+ *    library.items.indexOf("a rusty key");
+ *
+ * An item can be removed from an array with
+ * the splice method.
+ * this.items.splice(indexOfItem, 1);
+ *
+ * 4) Test splice on the console with
+ *    library.items.splice(0, 1);
+ *    library.showInfo();
+ *
+ * 5) Add a removeItem method to the constructor
+ *    function that removes a specified item.
+ *    e.g. library.removeItem("a rusty key");
  *
  */
