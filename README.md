@@ -5,11 +5,11 @@
 ## Part 1 – Core concepts on the console
 
 ### Chapter 1 – Programming, JavaScript and jsBin
-* 1.1 Programming, patterns and practice  
+* 1.1 Programming
 * 1.2 JavaScript
-* 1.3 Hands-on with the jsBin sandbox  
-* 1.4 A text adventure: our running example
-* 1.5 Further examples: depth through breadth
+* 1.3 jsBin
+* 1.4 JavaScript consoles in the browser
+* 1.5 A text adventure: our running example
 
 ### Chapter 2 – Variables: storing data in your programs
 * 2.1 What is a variable?
@@ -30,31 +30,39 @@
 * 4.2 Defining and calling functions
 * 4.3 Reducing repetition
 * 4.4 Making code easier to read and update
-* 4.5 The Adventure Game: displaying player information
+* 4.5 The Adventure Game - displaying player information
 
 ### Chapter 5 – Arguments: passing data to functions
 * 5.1 Function reuse and versatility
-* 5.2 Passing data to functions
+* 5.2 Passing information to functions
+* 5.3 The Adventure Game - displaying player information
 
 ### Chapter 6 - Return values: getting data from functions
 * 6.1 Returning data from functions
+* 6.2 Some string functions provided by JavaScript
+* 6.3 The Adventure Game - building player information strings
 
 ### Chapter 7 - Object arguments: functions working with objects
 * 7.1 Using objects as arguments
+* 7.2 Returning objects from functions
+* 7.3 Setting functions as properties of objects
+* 7.4 The Adventure Game - player objects as arguments
 
 ### Chapter 8 – Arrays: putting data into lists
 * 8.1 Creating arrays and accessing elements
 * 8.2 Array methods
-* 8.3 The Adventure Game: Our player object
+* 8.3 The Adventure Game - a player items array
 
 ### Chapter 9 – Constructors: building objects with functions
 * 9.1 Creating similar objects with a function
 * 9.2 Constructor functions, this and new
 * 9.3 Two examples of constructors
+* 9.4 The Adventure Game - places to explore
 
 ### Chapter 10 – Bracket notation: flexible property names
 * 10.1 Square brackets instead of dots
-* 10.2 The Adventure Game: players and places
+* 10.2 The Adventure Game - exit names
+* 10.3 The Adventure Game - players and places
 
 
 ## Part 2 – Organizing our programs
