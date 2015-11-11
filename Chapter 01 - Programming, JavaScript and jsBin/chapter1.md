@@ -3,7 +3,7 @@
 ### Using console.log
 [jsbin: Listing 1.01](http://jsbin.com/mujepu/edit?js,console)
 ```javascript
-/* Adventures in JavaScript
+/* Get Programming with JavaScript
  * Listing 1.01
  * Using console.log
  */
