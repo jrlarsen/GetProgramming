@@ -1,4 +1,4 @@
-/* Adventures in JavaScript
+/* Get Programming with JavaScript
  * Listing 1.01
  * Using console.log
  */
