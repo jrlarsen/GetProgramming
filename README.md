@@ -1,4 +1,4 @@
-# Adventures In JavaScript
+# Get Programming with JavaScript
 
 
 
@@ -7,15 +7,16 @@
 ### Chapter 1 – Programming, JavaScript and jsBin
 * 1.1 Programming
 * 1.2 JavaScript
-* 1.3 jsBin
-* 1.4 JavaScript consoles in the browser
+* 1.3 Learning by doing and thinking
+* 1.4 JS Bin
 * 1.5 A text adventure: our running example
+* 1.6 Further examples and practice
 
-### Chapter 2 – Variables: storing data in your programs
+### Chapter 2 – Variables: storing data in your program
 * 2.1 What is a variable?
 * 2.2 Declaring variables and assigning values
 * 2.3 Variable names
-* 2.4 The Adventure Game - player variables
+* 2.4 The Crypt - player variables
 
 ### Chapter 3 – Objects: a way to group data
 * 3.1 A need for organization
@@ -23,7 +24,7 @@
 * 3.3 Accessing object properties
 * 3.4 Updating object properties
 * 3.5 Further examples
-* 3.6 The Adventure Game - a player object
+* 3.6 The Crypt - a player object
 
 ### Chapter 4 – Functions: code on demand
 * 4.1 Noticing repetition
