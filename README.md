@@ -40,13 +40,13 @@
 
 ### Chapter 6 - Return values: getting data from functions
 * 6.1 Returning data from functions
-* 6.2 Some string functions provided by JavaScript
+* 6.2 Experimenting at the console prompt
 * 6.3 The Crypt - building player information strings
 
 ### Chapter 7 - Object arguments: functions working with objects
 * 7.1 Using objects as arguments
 * 7.2 Returning objects from functions
-* 7.3 Setting functions as properties of objects
+* 7.3 Methods: setting functions as properties of objects
 * 7.4 The Crypt - player objects as arguments
 
 ### Chapter 8 – Arrays: putting data into lists
