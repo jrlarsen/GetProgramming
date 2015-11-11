@@ -1,4 +1,4 @@
-/* Adventures in JavaScript
+/* Get Programming with JavaScript
  * Listing 3.02
  * Using prefixes to tell book variables apart
  */
