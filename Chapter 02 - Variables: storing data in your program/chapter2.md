@@ -1,7 +1,7 @@
 # Variables
 
 ### Declaring a variable
-[jsbin: Listing 2.01](http://jsbin.com/kugubobevo/edit?js,console)
+[jsbin: Listing 2.01](http://jsbin.com/potazo/edit?js,console)
 ```javascript
 /* Get Programming with JavaScript
  * Listing 2.01
