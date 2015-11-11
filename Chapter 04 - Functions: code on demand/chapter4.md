@@ -1,7 +1,7 @@
 # Functions: code on demand
 
 ### Displaying an object’s properties on the console
-[jsbin: Listing 4.01](http://jsbin.com/besudi/edit?js,console)
+[JS Bin: Listing 4.01](http://jsbin.com/besudi/edit?js,console)
 ```javascript
 /* Get Programming with JavaScript
  * Listing 4.01
@@ -36,7 +36,7 @@ console.log("------------------------------");
 ```
 
 ### Displaying information from similar objects
-[jsbin: Listing 4.02](http://jsbin.com/gewegi/edit?js,console)
+[JS Bin: Listing 4.02](http://jsbin.com/gewegi/edit?js,console)
 ```javascript
 /* Get Programming with JavaScript
  * Listing 4.02
@@ -100,7 +100,7 @@ console.log("------------------------------");
 ```
 
 ### Adding tax to find the total cost
-[jsbin: Listing 4.03](http://jsbin.com/kawocu/2/edit?js,console)
+[JS Bin: Listing 4.03](http://jsbin.com/kawocu/edit?js,console)
 ```javascript
 /* Get Programming with JavaScript
  * Listing 4.03
@@ -155,7 +155,7 @@ console.log("total cost = $" + sale3.total.toFixed(2));
 
 
 ### A simple function definition and assignment
-[jsbin: Listing 4.04](http://jsbin.com/tehixo/edit?js,console)
+[JS Bin: Listing 4.04](http://jsbin.com/tehixo/edit?js,console)
 ```javascript
 /* Get Programming with JavaScript
  * Listing 4.04
@@ -187,7 +187,7 @@ sayHello();
 
 
 ### Two more function definitions and assignments
-[jsbin: Listing 4.05](http://jsbin.com/xezani/edit?js,console)
+[JS Bin: Listing 4.05](http://jsbin.com/xezani/edit?js,console)
 ```javascript
 /* Get Programming with JavaScript
  * Listing 4.05
@@ -234,7 +234,7 @@ var displayMenu = function () {
 
 
 ### Calling the sayHello function three times
-[jsbin: Listing 4.06](http://jsbin.com/vozuxa/edit?js,console)
+[JS Bin: Listing 4.06](http://jsbin.com/vozuxa/edit?js,console)
 ```javascript
 /* Get Programming with JavaScript
  * Listing 4.06
@@ -270,7 +270,7 @@ sayHello();
 
 
 ### Using the findTotal function to display a calculation
-[jsbin: Listing 4.07](http://jsbin.com/hefuwa/edit?js,console)
+[JS Bin: Listing 4.07](http://jsbin.com/hefuwa/edit?js,console)
 ```javascript
 /* Get Programming with JavaScript
  * Listing 4.07
@@ -307,7 +307,7 @@ console.log(number1 + " + " + number2 + " = " + result);
 
 
 ### Displaying a menu
-[jsbin: Listing 4.08](http://jsbin.com/cujozo/edit?js,console)
+[JS Bin: Listing 4.08](http://jsbin.com/cujozo/edit?js,console)
 ```javascript
 /* Get Programming with JavaScript
  * Listing 4.08
@@ -340,7 +340,7 @@ displayMenu();
 
 
 ### Using a function to display object properties
-[jsbin: Listing 4.09](http://jsbin.com/toqopo/2/edit?js,console)
+[JS Bin: Listing 4.09](http://jsbin.com/toqopo/edit?js,console)
 ```javascript
 /* Get Programming with JavaScript
  * Listing 4.09
@@ -382,7 +382,7 @@ showMovieInfo = function () {
 
 
 ### Calling the showMovieInfo function
-[jsbin: Listing 4.10](http://jsbin.com/menebu/edit?js,console)
+[JS Bin: Listing 4.10](http://jsbin.com/menebu/edit?js,console)
 ```javascript
 /* Get Programming with JavaScript
  * Listing 4.10
@@ -434,7 +434,7 @@ showMovieInfo();
 
 
 ### Using the same function with multiple objects
-[jsbin: Listing 4.11](http://jsbin.com/mavutu/edit?js,console)
+[JS Bin: Listing 4.11](http://jsbin.com/mavutu/edit?js,console)
 ```javascript
 /* Get Programming with JavaScript
  * Listing 4.11
@@ -503,7 +503,7 @@ showMovieInfo();
 
 
 ### Using functions to add and display tax
-[jsbin: Listing 4.12](http://jsbin.com/raqiri/edit?js,console)
+[JS Bin: Listing 4.12](http://jsbin.com/raqiri/edit?js,console)
 ```javascript
 /* Get Programming with JavaScript
  * Listing 4.12
@@ -566,7 +566,7 @@ displaySale();
 
 
 ### Updating our display function to add a blank line
-[jsbin: Listing 4.13](http://jsbin.com/cijini/edit?js,console)
+[JS Bin: Listing 4.13](http://jsbin.com/cijini/edit?js,console)
 ```javascript
 /* Get Programming with JavaScript
  * Listing 4.13
@@ -633,7 +633,7 @@ showMovieInfo();
 
 
 ### A function to display player information
-[jsbin: Listing 4.14](http://jsbin.com/mafade/edit?js,console)
+[JS Bin: Listing 4.14](http://jsbin.com/mafade/edit?js,console)
 ```javascript
 /* Get Programming with JavaScript
  * Listing 4.14
