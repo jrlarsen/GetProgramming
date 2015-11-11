@@ -3,7 +3,7 @@
 ### Declaring a variable
 [jsbin: Listing 2.01](http://jsbin.com/kugubobevo/edit?js,console)
 ```javascript
-/* Adventures in JavaScript
+/* Get Programming with JavaScript
  * Listing 2.01
  * Declaring a variable
  */
@@ -30,7 +30,7 @@ var score;
 ### Assigning a value to a variable
 [jsbin: Listing 2.02](http://jsbin.com/yuvoju/edit?js,console)
 ```javascript
-/* Adventures in JavaScript
+/* Get Programming with JavaScript
  * Listing 2.02
  * Assigning a value to a variable
  */
@@ -65,7 +65,7 @@ score = 100;
 ### Using a variable
 [jsbin: Listing 2.03](http://jsbin.com/huvime/edit?js,console)
 ```javascript
-/* Adventures in JavaScript
+/* Get Programming with JavaScript
  * Listing 2.03
  * Using a variable
  */
@@ -94,7 +94,7 @@ console.log(score);
 ### Variables vary
 [jsbin: Listing 2.04](http://jsbin.com/jasafa/edit?js,console)
 ```javascript
-/* Adventures in JavaScript
+/* Get Programming with JavaScript
  * Listing 2.04
  * Variables vary
  */
@@ -129,7 +129,7 @@ console.log(score);
 ### Assigning text to variables
 [jsbin: Listing 2.05](http://jsbin.com/hobiqo/edit?js,console)
 ```javascript
-/* Adventures in JavaScript
+/* Get Programming with JavaScript
  * Listing 2.05
  * Assigning text to variables
  */
@@ -165,7 +165,7 @@ console.log(message);
 ### Declaring and assigning in two steps
 [jsbin: Listing 2.06](http://jsbin.com/vegoja/edit?js,console)
 ```javascript
-/* Adventures in JavaScript
+/* Get Programming with JavaScript
  * Listing 2.06
  * Declaring and assigning in two steps
  */
@@ -197,7 +197,7 @@ console.log(playerName + " is in " + locationName);
 ### Declaring and assigning in one step
 [jsbin: Listing 2.07](http://jsbin.com/dorane/edit?js,console)
 ```javascript
-/* Adventures in JavaScript
+/* Get Programming with JavaScript
  * Listing 2.07
  * Declaring and assigning in one step
  */
@@ -230,7 +230,7 @@ console.log(playerName + " is in " + locationName);
 ### Using a variable’s current value to set its new value
 [jsbin: Listing 2.08](http://jsbin.com/kijuce/edit?js,console)
 ```javascript
-/* Adventures in JavaScript
+/* Get Programming with JavaScript
  * Listing 2.08
  * Using a variable’s current value to set its new value
  */
@@ -267,7 +267,7 @@ console.log("Way to go!");
 ### Valid and invalid variable names
 [jsbin: Listing 2.09](http://jsbin.com/biqawu/edit?js,console)
 ```javascript
-/* Adventures in JavaScript
+/* Get Programming with JavaScript
  * Listing 2.09
  * Valid and invalid variable names
  */
