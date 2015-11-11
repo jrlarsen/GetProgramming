@@ -3,7 +3,7 @@
 ### Using variables to represent a book
 [jsbin: Listing 3.01](http://jsbin.com/fucuxah/edit?js,console)
 ```javascript
-/* Adventures in JavaScript
+/* Get Programmimg with JavaScript
  * Listing 3.01
  * Using variables to represent a book
  */
@@ -37,7 +37,7 @@ console.log(bookTitle + " by " + bookAuthor);
 ### Using prefixes to tell book variables apart
 [jsbin: Listing 3.02](http://jsbin.com/qowagi/edit?js,console)
 ```javascript
-/* Adventures in JavaScript
+/* Get Programmimg with JavaScript
  * Listing 3.02
  * Using prefixes to tell book variables apart
  */
@@ -71,7 +71,7 @@ console.log(book3Title);
 ### A book as an object
 [jsbin: Listing 3.03](http://jsbin.com/ruruko/edit?js,console)
 ```javascript
-/* Adventures in JavaScript
+/* Get Programmimg with JavaScript
  * Listing 3.03
  * A book as an object
  */
@@ -105,7 +105,7 @@ console.log(book);
 ### Creating an empty object
 [jsbin: Listing 3.04](http://jsbin.com/kaqatu/edit?js,console)
 ```javascript
-/* Adventures in JavaScript
+/* Get Programmimg with JavaScript
  * Listing 3.04
  * Creating an empty object
  */
@@ -137,7 +137,7 @@ book = {};
 ### An object with a single property
 [jsbin: Listing 3.05](http://jsbin.com/robupi/edit?js,console)
 ```javascript
-/* Adventures in JavaScript
+/* Get Programmimg with JavaScript
  * Listing 3.05
  * An object with a single property
  */
@@ -166,7 +166,7 @@ var book = { title : "The Hobbit" };
 ### Using line breaks to aid readability
 [jsbin: Listing 3.06](http://jsbin.com/bafige/edit?js,console)
 ```javascript
-/* Adventures in JavaScript
+/* Get Programmimg with JavaScript
  * Listing 3.06
  * Using line breaks to aid readability
  */
@@ -195,7 +195,7 @@ book = {
 ### Objects with multiple properties
 [jsbin: Listing 3.07](http://jsbin.com/bawiqev/edit?js,console)
 ```javascript
-/* Adventures in JavaScript
+/* Get Programmimg with JavaScript
  * Listing 3.07
  * Objects with multiple properties
  */
@@ -235,7 +235,7 @@ book2 = {
 ### Using dot notation to access property values
 [jsbin: Listing 3.08](http://jsbin.com/funiyu/edit?js,console)
 ```javascript
-/* Adventures in JavaScript
+/* Get Programmimg with JavaScript
  * Listing 3.08
  * Using dot notation to access property values
  */
@@ -273,7 +273,7 @@ console.log(book.author);
 ### Concatenating string properties
 [jsbin: Listing 3.09](http://jsbin.com/yoweti/edit?js,console)
 ```javascript
-/* Adventures in JavaScript
+/* Get Programmimg with JavaScript
  * Listing 3.09
  * Concatenating string properties
  */
@@ -314,7 +314,7 @@ console.log(book2.title + " by " + book2.author);
 ### Using dot notation to update a property
 [jsbin: Listing 3.10](http://jsbin.com/mulimi/edit?js,console)
 ```javascript
-/* Adventures in JavaScript
+/* Get Programmimg with JavaScript
  * Listing 3.10
  * Using dot notation to update a property
  */
@@ -351,7 +351,7 @@ player1.score = 50;
 ### Using a property in a calculation
 [jsbin: Listing 3.11](http://jsbin.com/cuboko/edit?js,console)
 ```javascript
-/* Adventures in JavaScript
+/* Get Programmimg with JavaScript
  * Listing 3.11
  * Using a property in a calculation
  */
@@ -389,7 +389,7 @@ console.log(player1.name + " has scored " + player1.score);
 ### A blog post
 [jsbin: Listing 3.12](http://jsbin.com/jiculu/edit?js,console)
 ```javascript
-/* Adventures in JavaScript
+/* Get Programmimg with JavaScript
  * Listing 3.12
  * A blog post
  */
@@ -413,7 +413,7 @@ var post = {
  *
  * We'd like to be able to display posts only if
  * the approved property is true.
- * Part 2 of Adventures in JavaScript will
+ * Part 2 of Get Programming with JavaScript will
  * investigate choices and conditions.
  *
  */
@@ -423,7 +423,7 @@ var post = {
 ### A calendar event
 [jsbin: Listing 3.13](http://jsbin.com/viroho/edit?js,console)
 ```javascript
-/* Adventures in JavaScript
+/* Get Programmimg with JavaScript
  * Listing 3.13
  * A calendar event
  */
@@ -461,7 +461,7 @@ var event = {
 ### Location for a weather app
 [jsbin: Listing 3.14](http://jsbin.com/diguhe/edit?js,console)
 ```javascript
-/* Adventures in JavaScript
+/* Get Programmimg with JavaScript
  * Listing 3.14
  * Location for a weather app
  */
@@ -511,7 +511,7 @@ var location = {
 ### A question and answer for a quiz app
 [jsbin: Listing 3.15](http://jsbin.com/damoto/edit?js,console)
 ```javascript
-/* Adventures in JavaScript
+/* Get Programmimg with JavaScript
  * Listing 3.15
  * A question and answer for a quiz app
  */
@@ -540,7 +540,7 @@ var questionAndAnswer = {
 ### A player object
 [jsbin: Listing 3.15](http://jsbin.com/qelene/edit?js,console)
 ```javascript
-/* Adventures in JavaScript
+/* Get Programmimg with JavaScript
  * Listing 3.16
  * A player object
  */
