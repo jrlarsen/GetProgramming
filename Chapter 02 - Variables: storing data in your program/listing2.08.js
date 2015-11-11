@@ -1,4 +1,4 @@
-/* Adventures in JavaScript
+/* Get Programming with JavaScript
  * Listing 2.08
  * Using a variable’s current value to set its new value
  */
