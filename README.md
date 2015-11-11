@@ -68,24 +68,28 @@
 
 ## Part 2 – Organizing our programs
 
-### Chapter 11 – User interaction via the console
-* 11.1 Global variables and scope 
-* 11.2 Inspecting global variables with the console
-* 11.3 Avoiding global variables
-* 11.4 Making functions available to the user
+### Chapter 11 – Scope: hiding information
+* 11.1 The dangers of global variables 
+* 11.2 The benefits of local variables
+* 11.3 Interfaces – controlling access and providing functionality
+* 11.4 Creating a quick quiz app
+* 11.5 The Crypt - hiding player info
+* 11.6 The Crypt - hiding place info
+* 11.7 The Crypt - user interaction
 
-### Chapter 12 – Checking values and coping with errors
-* 12.1 Don’t trust user input
-* 12.2 Checking arguments and setting default values
-* 12.3 Once more with feedback
-* 12.4 Throwing errors 
+### Chapter 12 – Conditions: choosing code to run
+* 12.1 Conditional execution of code
+* 12.2 Generating random numbers with Math.random()
+* 12.3 Further conditions with else if
+* 12.4 Checking answers in the quiz app
+* 12.5 The Crypt - checking user input
 
-### Chapter 13 – Managing multiple scripts
-* 13.1 Divide and conquer: breaking a program up
-* 13.2 Using script tags on jsBin
-* 13.3 Protecting our variables when loading scripts
-* 13.4 Using the loaded scripts
-* 13.5 Loading data with scripts
+### Chapter 13 – Modules: breaking a program into pieces
+* 13.1 Importing scripts on JS Bin
+* 13.2 The spacer namespace
+* 13.3 Collisions – when imported code overwrites your variables
+* 13.4 Immediately invoked function expressions (IIFE)
+* 13.5 Separating data from the view
 
 ### Chapter 14 – Refactoring and testing
 * 14.1 Completing the adventure - overcoming challenges
