@@ -1,4 +1,4 @@
-/* Adventures in JavaScript
+/* Get Programming with JavaScript
  * Listing 3.11
  * Using a property in a calculation
  */
