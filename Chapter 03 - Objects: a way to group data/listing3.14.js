@@ -1,4 +1,4 @@
-/* Adventures in JavaScript
+/* Get Programming with JavaScript
  * Listing 3.14
  * Location for a weather app
  */
@@ -31,7 +31,7 @@ var location = {
  * Okay, that's definitely not our location object.
  *
  * This is an example of a variable collision.
- * Browsers (and jsBin) are programs themselves and
+ * Browsers (and JS Bin) are programs themselves and
  * create their own variables.
  * Other code, not ours, has declared its own
  * location variable, over-writing ours.
