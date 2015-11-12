@@ -1,11 +1,11 @@
-/* Adventures in JavaScript
+/* Get Programming with JavaScript
  * Listing 9.02
  * Adding methods to our constructed object
  */
 
 var buildPlanet = function (name, position, type) {
     var planet = {};
-
+  
     planet.name = name;
     planet.position = position;
     planet.type = type;
@@ -15,7 +15,7 @@ var buildPlanet = function (name, position, type) {
         info += " - " + planet.type;
         console.log(info);
     };
-
+  
     return planet;
 };
 
