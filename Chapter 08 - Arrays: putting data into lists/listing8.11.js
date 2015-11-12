@@ -1,52 +1,40 @@
-/* Adventures in JavaScript
+/* Get Programming with JavaScript
  * Listing 8.11
- * A player object
+ * Finding the total shopping bill
  */
 
-var showPlayerInfo = function (player) {
-    console.log("**********************");
-    console.log(player.name + ":");
-    console.log(" - Health: " + player.health);
-    console.log(" – Items:");
+var getTotalBill = function (itemCosts, itemCounts) {
+	var total = 0;
 
-    player.items.forEach(function (item) {
-        console.log("   - " + item);
-    });
+	itemCosts.forEach(function (cost, i) {
+		total += cost * itemCounts[i];
+	});
 
-    console.log("**********************");
+	return total;
 };
 
-var player1 = {
-    name : "Kandra",
-    health : 50,
-    items : ["a trusty lamp"]
-};
+var costs = [ 1.99, 4.95, 2.50, 9.87 ];
+var numOfEach = [ 2, 1, 5, 2 ];
 
-showPlayerInfo(player1);
-
-player1.items.push("a rusty key");
-
-showPlayerInfo(player1);
+console.log("The total cost is $" + getTotalBill(costs, numOfEach));
 
 
 
 /* Further Adventures
  *
- * 1) Add and remove items at the prompt
- *    using push and pop. Notice what is displayed
- *    when push and pop are called.
+ * 1) Add an extra item to the shopping trip.
  *
- * 2) Use the index argument for forEach
- *    to number the items displayed. Make
- *    the numbers start at 1.
+ * 2) Change the function so that forEach iterates
+ *    over itemCounts instead of itemCosts.
+ *    Can you make it work?
  *
- * 3) Write a showItem function that accepts
- *    a player and an itemNumber as arguments
- *    and displays the specified player item.
+ * 3) Create a single array of objects with
+ *    cost and numberBought properties.
  *
- * 4) Write an addItem function that accepts
- *    a player and an item title as arguments
- *    and adds the item title to the player's
- *    item array.
+ *    items = [ { cost: 1.99, numberBought: 2 },
+ *              { cost: 4.95, numberBought: 1 } ];
+ *
+ * 4) Update getTotalBill to accept a single array
+ *    of items.
  *
  */
