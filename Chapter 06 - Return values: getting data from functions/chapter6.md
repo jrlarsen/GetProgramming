@@ -203,7 +203,7 @@ console.log("$" + totalCost(30, 40, 3));
 ```
 
 
-### Getting a separator line
+### A collection of functions that return values
 [JS Bin: Listing 6.06](http://jsbin.com/lijufo/edit?js,console)
 ```javascript
 /* Get Programming with JavaScript
