@@ -2,9 +2,9 @@
 
 
 ### Passing a function an object as an argument
-[jsbin: Listing 7.01](http://jsbin.com/tafopo/edit?js,console)
+[JS Bin: Listing 7.01](http://jsbin.com/tafopo/edit?js,console)
 ```javascript
-/* Adventures in JavaScript
+/* Get Programming with JavaScript
  * Listing 7.01
  * Passing a function an object as an argument
  */
@@ -44,56 +44,50 @@ console.log(getPlanetInfo(planet1));
 
 
 ### A function that adds properties to an object
-[jsbin: Listing 7.02](http://jsbin.com/qevodu/edit?js,console)
+[JS Bin: Listing 7.02](http://jsbin.com/qevodu/edit?js,console)
 ```javascript
-/* Adventures in JavaScript
+/* Get Programming with JavaScript
  * Listing 7.02
  * A function that adds properties to an object
  */
 
-var sale1;
-var calculateTax;
-var displaySale;
+var planet1 = { name: "Jupiter", radius: 69911 };
 
-sale1 = { price: 14, taxRate: 15 };
-
-calculateTax = function (sale) {
-	sale.tax = sale.price * sale.taxRate / 100;
-	sale.total = sale.price + sale.tax;
+var calculateSizes = function (planet) {
+    var r = planet.radius;
+    planet.area = 4 * 3.142 * r * r;
+    planet.volume = 4 * 3.142 * r * r * r / 3;
 };
 
-displaySale = function (sale) {
-  console.log("price = $" + sale.price.toFixed(2));
-  console.log("tax @ " + sale.taxRate + "% = $" + sale.tax.toFixed(2));
-  console.log("total cost = $" + sale.total.toFixed(2));
+var displaySizes = function (planet) {
+    console.log(planet.name);
+    console.log("surface area = " + planet.area + " square km");
+    console.log("volume = " + planet.volume + " cubic km");
 };
 
-calculateTax(sale1);
-displaySale(sale1);
-
+calculateSizes(planet1);
+displaySizes(planet1);                                                  
+                                                  
 
 
 /* Further Adventures
  *
- * 1) Change the taxRate property of the sale1 object
- *    and run the program.
+ * The diameter of a planet is double its radius.
  *
- * 2) Add a second sale object, sale2.
+ * 1) Update the calculateSizes function so it also
+ *    adds a diameter property to the planet.
  *
- * 3) Add calls to calculateTax and displaySale
- *    to display sale info for sale2.
- *
- * 4) Can you find a way to combine the calls
- *    to calculateTax and displaySale?
+ * 2) Update the displaySizes function so it also
+ *    displays the diameter on the console.
  *
  */
 ```
 
 
 ###
-[jsbin: Listing 7.03]()
+[JS Bin: Listing 7.03](http://jsbin.com/coyeta/edit?js,console)
 ```javascript
-/* Adventures in JavaScript
+/* Get Programming with JavaScript
  * Listing 7.03
  * A function to create planets
  */
@@ -135,9 +129,9 @@ console.log(getPlanetInfo(planet2));
 
 
 ### Moving a point in 2D
-[jsbin: Listing 7.04](http://jsbin.com/baxuvi/edit?js,console)
+[JS Bin: Listing 7.04](http://jsbin.com/baxuvi/edit?js,console)
 ```javascript
-/* Adventures in JavaScript
+/* Get Programming with JavaScript
  * Listing 7.04
  * Moving a point in 2D
  */
@@ -185,11 +179,108 @@ showPoint(point2);
 ```
 
 
-### Using Math.min and Math.max
-[jsbin: Listing 7.05](http://jsbin.com/moyoti/edit?js,console)
+### Converting a string to upper case
+[JS Bin Listing 7.05](http://jsbin.com/jizaqu/edit?js,console)
+```javascript
+/* Get Programming with JavaScript
+ * Listing 7.05
+ * Converting a string to upper case
+ */
+
+var planet = "Jupiter";
+var bigPlanet = planet.toUpperCase();
+
+console.log(planet + " becomes " + bigPlanet);
+
+
+
+/* Further Adventures
+ *
+ * 1) Create a getBig function that accepts a
+ *    string as an argument and returns it
+ *    converted to upper case.
+ *
+ * There is also a toLowerCase string method.
+ *
+ * 2) Create a getSmall function that accepts a
+ *    string as an argument and returns it
+ *    converted to lower case.
+ *
+ */
+```
+
+
+### Finding substrings
+[JS Bin Listing 7.06](http://jsbin.com/mesisi/edit?js,console)
 ```javascript
 /* Adventures in JavaScript
- * Listing 7.05
+ * Listing 7.06
+ * Finding substrings
+ */
+
+var message = "We choose to go to the Moon!";
+
+console.log(message.substr(3, 12));
+
+
+
+/* Further Adventures
+ *
+ * 1) Use substr to log the following parts of
+ *    the message string to the console:
+ *
+ *    > Moon!
+ *    > go to the
+ *    > We choose
+ *
+ * 2) Investigate what happens if you omit the
+ *    second argument when calling substr.
+ *
+ * 3) What happens if you use negative numbers
+ *    as arguments?
+ *
+ */
+```
+
+
+### Finding a character with indexOf
+[JS Bin Listing 7.07](http://jsbin.com/bidabi/edit?js,console)
+```javascript
+/* Get Programming with JavaScript
+ * Listing 7.07
+ * Finding a character with indexOf
+ */
+
+var message = "We choose to go to the Moon!";
+
+var charIndex = message.indexOf("M");
+
+console.log(message.substr(charIndex, 3));
+
+
+
+/* Further Adventures
+ *
+ * 1) Use indexOf to find the index of where the
+ *    word 'go' starts in the message string.
+ *
+ * 2) Use indexOf and substr to display the word
+ *    'choose' from the message string.
+ *
+ * There is also a lastIndexOf string method.
+ *
+ * 3) Use lastIndexOf to find the index of the
+ *    'oo' in the word 'Moon' of the message string.
+ *
+ */
+```
+
+
+### Using Math.min and Math.max
+[JS Bin Listing 7.08](http://jsbin.com/moyoti/edit?js,console)
+```javascript
+/* Get Programming with JavaScript
+ * Listing 7.08
  * Using Math.min and Math.max
  */
 
@@ -212,32 +303,32 @@ showSmaller(-10, 3);
  * 2) Write a showLarger function.
  *
  * 3) Write a showSmallest function that takes
- *    three arguments and displays the
+ *    three arguments and displays the smallest
+ *    of the three.
  *
  */
 ```
 
 
+
 ### Using Math.min and Math.max to constrain an argument
-[jsbin: Listing 7.06](http://jsbin.com/qiziyo/edit?js,console)
+[JS Bin: Listing 7.09](http://jsbin.com/qiziyo/edit?js,console)
 ```javascript
-/* Adventures in JavaScript
- * Listing 7.06
+/* Get Programming with JavaScript
+ * Listing 7.09
  * Using Math.min and Math.max to constrain an argument
  */
 
-var Spacer = {
-    line: function (lineLength) {
-        var line = "========================================";
-        lineLength = Math.max(0, lineLength);
-        lineLength = Math.min(40, lineLength);
-        return line.substr(0, lineLength);
-    }
+var line = function (lineLength) {
+  var line = "========================================";
+  lineLength = Math.max(0, lineLength);
+  lineLength = Math.min(40, lineLength);
+  return line.substr(0, lineLength);
 };
 
-console.log(Spacer.line(30));
-console.log(Spacer.line(40));
-console.log(Spacer.line(50));
+console.log(line(30));
+console.log(line(40));
+console.log(line(50));
 
 
 
@@ -246,11 +337,16 @@ console.log(Spacer.line(50));
  * 1) Test line lengths from -20 to 60
  *    in steps of 10.
  *
- * 2) Add an emptyBox function to the Spacer
- *    object that draws an empty box of specified
+ * 2) Define a spaces function that returns a string
+ *    made up of a specified number of space characters.
+ *    The line of spaces returned can have a length
+ *    between 0 and 40.
+ *
+ * 3) Add an emptyBox function
+ *    that draws an empty box of specified
  *    width and height 5.
  *
- *    Spacer.emptyBox(12);
+ *    emptyBox(12);
  *
  *    > ============
  *    > =          =
@@ -263,35 +359,53 @@ console.log(Spacer.line(50));
 
 
 ### Organizing functions as object properties
-[jsbin: Listing 7.07](http://jsbin.com/kayono/edit?js,console)
+[JS Bin: Listing 7.10](http://jsbin.com/kayono/edit?js,console)
 ```javascript
-/* Adventures in JavaScript
- * Listing 7.07
+/* Get Programming with JavaScript
+ * Listing 7.10
  * Organizing functions as object properties
  */
 
-var Spacer = {
-    line: function (length) {
-        var line = "========================================";
-        length = Math.max(0, length);
-        length = Math.min(40, length);
-        return line.substr(0, length);
-    },
+var spacer = {
+  blank: function () {
+    return "";
+  },
 
-    title: function (text, pad) {
-        return Spacer.line(pad) + " " + text + " " + Spacer.line(pad);
-    },
+  newLine: function () {
+    return "\n";
+  },
 
-    box: function (text) {
-        var boxText = "\n" + Spacer.line(text.length + 4) + "\n";
-        boxText += Spacer.title(text, 1) + "\n";
-        boxText += Spacer.line(text.length + 4) + "\n";
-        return boxText;
-    }
+  line: function (length, character) {
+    var longString = "****************************************";
+    longString += "----------------------------------------";
+    longString += "========================================";
+    longString += "++++++++++++++++++++++++++++++++++++++++";
+    longString += "                                        ";
+
+    length = Math.max(0, length);
+    length = Math.min(40, length);
+    return longString.substr(longString.indexOf(character), length);
+  },
+  
+  wrap : function (text, length, character) {
+    var padLength = length - text.length - 3;
+    var wrapText = character + " " + text;      
+    wrapText += spacer.line(padLength, " ");
+    wrapText += character;
+    return wrapText;
+  },
+
+  box: function (text, length, character) {
+    var boxText = spacer.newLine();
+    boxText += spacer.line(length, character) + spacer.newLine();
+    boxText += spacer.wrap(text, length, character) + spacer.newLine(); 
+    boxText += spacer.line(length, character) + spacer.newLine();
+    return boxText;
+  }
 };
 
-console.log(Spacer.box("Mercury"));
-console.log(Spacer.box("Mars"));
+console.log(spacer.box("Mercury", 11, "="));
+console.log(spacer.box("Mars", 11, "*"));
 
 
 
@@ -313,86 +427,92 @@ console.log(Spacer.box("Mars"));
 
 
 ### Displaying player information using objects
-[jsbin: Listing 7.08](http://jsbin.com/beqabe/edit?js,console)
+[JS Bin: Listing 7.11](http://jsbin.com/beqabe/edit?js,console)
 ```javascript
-/* Adventures in JavaScript
- * Listing 7.08
+/* Get Programming with JavaScript
+ * Listing 7.11
  * Displaying player information using objects
  */
 
+var spacer = {
+  blank: function () {
+    return "";
+  },
+
+  newLine: function () {
+    return "\n";
+  },
+
+  line: function (length, character) {
+    var longString = "****************************************";
+    longString += "----------------------------------------";
+    longString += "========================================";
+    longString += "++++++++++++++++++++++++++++++++++++++++";
+    longString += "                                        ";
+
+    length = Math.max(0, length);
+    length = Math.min(40, length);
+    return longString.substr(longString.indexOf(character), length);
+  },
+  
+  wrap : function (text, length, character) {
+    var padLength = length - text.length - 3;
+    var wrapText = character + " " + text;      
+    wrapText += spacer.line(padLength, " ");
+    wrapText += character;
+    return wrapText;
+  },
+
+  box: function (text, length, character) {
+    var boxText = spacer.newLine();
+    boxText += spacer.line(length, character) + spacer.newLine();
+    boxText += spacer.wrap(text, length, character) + spacer.newLine(); 
+    boxText += spacer.line(length, character) + spacer.newLine();
+    return boxText;
+  }
+};
+
 var getPlayerName = function (player) {
-    return player.name;
+  return player.name;
 };
 
 var getPlayerHealth = function (player) {
-    return player.name + " has health " + player.health;
+  return player.name + " has health " + player.health;
 };
 
 var getPlayerPlace = function (player) {
-    return player.name + " is in " + player.place;
+  return player.name + " is in " + player.place;
 };
 
-var Spacer = {
-    getLine : function (lineLength, character) {
-        lineLength = Math.max(0, lineLength);
-        lineLength = Math.min(40, lineLength);
+var getPlayerInfo = function (player, character) {  
+  var place = getPlayerPlace(player);
+  var health = getPlayerHealth(player);
+  var longest = Math.max(place.length, health.length) + 4;
 
-        var line = "****************************************";
-        line += "----------------------------------------";
-        line += "========================================";
-        line += "++++++++++++++++++++++++++++++++++++++++";
-        line += "                                        ";
+  var info = spacer.box(getPlayerName(player), longest, character);
+  info += spacer.wrap(place, longest, character);
+  info += spacer.newLine() + spacer.wrap(health, longest, character);
+  info += spacer.newLine() + spacer.line(longest, character);
+  info += spacer.newLine();
 
-        return line.substr(line.indexOf(character), lineLength);
-    },
-
-    wrap : function (text, character, length) {
-        var wrapText = character + " " + text;
-        wrapText += Spacer.getLine(length - text.length - 3, " ");
-        wrapText += character;
-
-        return wrapText;
-    },
-
-    box : function (text, character, length) {
-        var boxText = "\n";
-
-        boxText += Spacer.getLine(length, character) + "\n";
-        boxText += Spacer.wrap(text, character, length) + "\n";
-        boxText += Spacer.getLine(length, character) + "\n";
-
-        return boxText;
-    }
-};
-
-var getPlayerInfo = function (player, character) {
-    var playerPlace = getPlayerPlace(player);
-    var playerHealth = getPlayerHealth(player);
-    var longest = Math.max(playerPlace.length, playerHealth.length) + 4;
-
-    var playerInfo = Spacer.box(getPlayerName(player), character, longest);
-    playerInfo += Spacer.wrap(playerPlace, character, longest);
-    playerInfo += "\n" + Spacer.wrap(playerHealth, character, longest);
-    playerInfo += "\n" + Spacer.getLine(longest, character);
-    playerInfo += "\n";
-
-    return playerInfo;
+  return info;
 };
 
 var player1 = {
-    name: "Kandra",
-    place: "The Dungeon of Doom",
-    health: 50
+  name: "Kandra",
+  place: "The Dungeon of Doom",
+  health: 50
 };
 
 var player2 = {
-    name: "Dax",
-    place: "Limbo",
-    health: 40
+  name: "Dax",
+  place: "Limbo",
+  health: 40
 };
 
 console.log(getPlayerInfo(player1, "="));
 console.log(getPlayerInfo(player2, "+"));
+
 
 
 
