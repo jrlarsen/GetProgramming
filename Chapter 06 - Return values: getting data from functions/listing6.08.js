@@ -21,15 +21,17 @@ console.log(getPlayerPlace("Kandra", "The Dungeon of Doom"));
 
 /* Further Adventures
  *
- * 1) Change the two functions so they only
- *    show the first three letters of a
- *    player's name as part of the returned string.
- *    e.g. Kan... health 50
- *    e.g. Kan... in The Dungeon of Doom
+ * 1) Create a getPlayerInfo function with three
+ *    parameters, playerName, playerHealth and
+ *    playerPlace.
  *
- * 2) Further change them so they also
- *    transform the names to upper case.
- *    e.g. KAN... health 50
- *    e.g. KAN... in The Dungeon of Doom
+ * 2) Call getPlayerHealth and getPlayerPlace
+ *    from your new getPlayerInfo function.
+ *
+ *    e.g. getPlayerInfo("Dax", 50, "The Bath")
+ *    should produce the output
+ *
+ *    Dax has health 50
+ *    Dax is in The Bath
  *
  */
