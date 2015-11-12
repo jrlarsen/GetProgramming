@@ -2,7 +2,7 @@
 
 
 ### Relying on a variable outside of the function
-[jsbin: Listing 5.01](http://jsbin.com/taqusi/edit?js,console)
+[JS Bin: Listing 5.01](http://jsbin.com/taqusi/edit?js,console)
 ```javascript
 /* Get Programming with JavaScript
  * Listing 5.01
@@ -42,7 +42,7 @@ showMessage();
 
 
 ### Breaking a function by changing a variable name
-[jsbin: Listing 5.02](http://jsbin.com/yaresa/edit?js,console)
+[JS Bin: Listing 5.02](http://jsbin.com/yaresa/edit?js,console)
 ```javascript
 /* Get Programming with JavaScript
  * Listing 5.02
@@ -79,7 +79,7 @@ showMessage();
 
 
 ### Passing information to a function
-[jsbin: Listing 5.03](http://jsbin.com/xucemu/edit?js,console)
+[JS Bin: Listing 5.03](http://jsbin.com/xucemu/edit?js,console)
 ```javascript
 /* Get Programming with JavaScript
  * Listing 5.03
@@ -117,7 +117,7 @@ showMessage("It's full of stars!");
 
 
 ### Calling the same function with different arguments
-[jsbin: Listing 5.04](http://jsbin.com/zavavo/edit?js,console)
+[JS Bin: Listing 5.04](http://jsbin.com/zavavo/edit?js,console)
 ```javascript
 /* Get Programming with JavaScript
  * Listing 5.04
@@ -152,7 +152,7 @@ showMessage("Hello to Jason Isaacs and Stephen Fry");
 
 
 ### Using the square function
-[jsbin: Listing 5.05](http://jsbin.com/vequpi/edit?js,console)
+[JS Bin: Listing 5.05](http://jsbin.com/vequpi/edit?js,console)
 ```javascript
 /* Get Programming with JavaScript
  * Listing 5.05
@@ -196,7 +196,7 @@ square(0.5);
 
 
 ### A function with two arguments
-[jsbin: Listing 5.06](http://jsbin.com/siyelu/edit?js,console)
+[JS Bin: Listing 5.06](http://jsbin.com/siyelu/edit?js,console)
 ```javascript
 /* Get Programming with JavaScript
  * Listing 5.06
@@ -231,7 +231,7 @@ showSum(2.8, -5);
 
 
 ### Displaying a player's name
-[jsbin: Listing 5.07](http://jsbin.com/yubahi/edit?js,console)
+[JS Bin: Listing 5.07](http://jsbin.com/yubahi/edit?js,console)
 ```javascript
 /* Get Programming with JavaScript
  * Listing 5.07
@@ -263,7 +263,7 @@ showPlayerName("Dax");
 
 
 ### Displaying a player's name via an object property
-[jsbin: Listing 5.08](http://jsbin.com/juhewi/edit?js,console)
+[JS Bin: Listing 5.08](http://jsbin.com/juhewi/edit?js,console)
 ```javascript
 /* Get Programming with JavaScript
  * Listing 5.08
@@ -309,7 +309,7 @@ showPlayerName(player2.name);
 
 
 ### Displaying a player's health
-[jsbin: Listing 5.09](http://jsbin.com/nomija/edit?js,console)
+[JS Bin: Listing 5.09](http://jsbin.com/nomija/edit?js,console)
 ```javascript
 /* Get Programming with JavaScript
  * Listing 5.09
@@ -354,7 +354,7 @@ showPlayerHealth("Dax", 40);
 
 
 ### Displaying a player's health via object properties
-[jsbin: Listing 5.10](http://jsbin.com/zufoxi/edit?js,console)
+[JS Bin: Listing 5.10](http://jsbin.com/zufoxi/edit?js,console)
 ```javascript
 /* Get Programming with JavaScript
  * Listing 5.10
@@ -408,7 +408,7 @@ showPlayerHealth(player2.name, player2.health);
 
 
 ### Displaying a player's location
-[jsbin: Listing 5.11](http://jsbin.com/yifahe/edit?js,console)
+[JS Bin: Listing 5.11](http://jsbin.com/yifahe/edit?js,console)
 ```javascript
 /* Get Programming with JavaScript
  * Listing 5.11
@@ -443,7 +443,7 @@ showPlayerPlace("Dax", "The Old Library");
 
 
 ### Displaying a player's location via object properties
-[jsbin: Listing 5.12](http://jsbin.com/mejuki/edit?js,console)
+[JS Bin: Listing 5.12](http://jsbin.com/mejuki/edit?js,console)
 ```javascript
 /* Get Programming with JavaScript
  * Listing 5.12
@@ -496,7 +496,7 @@ showPlayerPlace(player2.name, player2.place);
 
 
 ### Displaying a player's information
-[jsbin: Listing 5.13](http://jsbin.com/likafe/edit?js,console)
+[JS Bin: Listing 5.13](http://jsbin.com/likafe/edit?js,console)
 ```javascript
 /* Get Programming with JavaScript
  * Listing 5.13
@@ -557,7 +557,7 @@ showPlayerInfo("Dax", "The Old Library", 40);
 
 
 ### Displaying a player's information using properties
-[jsbin: Listing 5.14](http://jsbin.com/loteti/edit?js,console)
+[JS Bin: Listing 5.14](http://jsbin.com/loteti/edit?js,console)
 ```javascript
 /* Get Programming with JavaScript
  * Listing 5.14
