@@ -1,10 +1,10 @@
 # Chapter 10 - Bracket notation: flexible property names
 
 
-### 
-[jsbin: Listing 10.01](http://jsbin.com/kipedu/edit?js,console)
+### Bracket notation for object properties
+[JS Bin: Listing 10.01](http://jsbin.com/kipedu/edit?js,console)
 ```javascript
-/* Adventures in JavaScript
+/* Get Programming with JavaScript
  * Listing 10.01
  * Bracket notation for object properties
  */
@@ -33,9 +33,9 @@ console.log(ages.Dax);
 
 
 ### Longer strings as keys
-[jsbin: Listing 10.02](http://jsbin.com/toviya/edit?js,console)
+[JS Bin: Listing 10.02](http://jsbin.com/toviya/edit?js,console)
 ```javascript
-/* Adventures in JavaScript
+/* Get Programming with JavaScript
  * Listing 10.02
  * Longer strings as keys
  */
@@ -67,9 +67,9 @@ console.log(ages["Dax Aniaku"]);
 
 
 ### Using a function to add ages
-[jsbin: Listing 10.03](http://jsbin.com/pipuva/edit?js,console)
+[JS Bin: Listing 10.03](http://jsbin.com/pipuva/edit?js,console)
 ```javascript
-/* Adventures in JavaScript
+/* Get Programming with JavaScript
  * Listing 10.03
  * Using a function to add ages
  */
@@ -112,16 +112,16 @@ console.log(ages["Dax Aniaku"]);
 
 
 ### Using Object.keys
-[jsbin: Listing 10.04](http://jsbin.com/mehuno/edit?js,console)
+[JS Bin: Listing 10.04](http://jsbin.com/mehuno/edit?js,console)
 ```javascript
-/* Adventures in JavaScript
+/* Get Programming with JavaScript
  * Listing 10.04
  * Using Object.keys
  */
 
 var ages = {
     "Kandra Smith" : 56,
-    "Dax Aniaku"   : 21,
+    "Dax Aniaku"   : 210,
     "Blinky"       : 36
 };
 
@@ -153,9 +153,9 @@ console.log(keys);
 
 
 ### Iterating over Object.keys with forEach
-[jsbin: Listing 10.05](http://jsbin.com/seteco/edit?js,console)
+[JS Bin: Listing 10.05](http://jsbin.com/seteco/edit?js,console)
 ```javascript
-/* Adventures in JavaScript
+/* Get Programming with JavaScript
  * Listing 10.05
  * Iterating over Object.keys with forEach
  */
@@ -190,16 +190,16 @@ keys.forEach(function (key) {
  *    shows the person's name along with
  *    the length of their name.
  *    e.g. Blinky: 6
- *
+ 
  */
 ```
 
 
 
 ### Counting words from tweets
-[jsbin: Listing 10.06](http://jsbin.com/figati/edit?js,console)
+[JS Bin: Listing 10.06](http://jsbin.com/figati/edit?js,console)
 ```javascript
-/* Adventures in JavaScript
+/* Get Programming with JavaScript
  * Listing 10.06
  * Counting words from tweets
  */
@@ -257,9 +257,9 @@ console.log(words);
 
 
 ### An exits object
-[jsbin: Listing 10.07](http://jsbin.com/daqato/edit?js,console)
+[JS Bin: Listing 10.07](http://jsbin.com/daqato/edit?js,console)
 ```javascript
-/* Adventures in JavaScript
+/* Get Programming with JavaScript
  * Listing 10.07
  * An exits object
  */
@@ -311,9 +311,9 @@ keys.forEach(function (key) {
 
 
 ### Functions to add and show exits
-[jsbin: Listing 10.08](http://jsbin.com/mibube/edit?js,console)
+[JS Bin: Listing 10.08](http://jsbin.com/mibube/edit?js,console)
 ```javascript
-/* Adventures in JavaScript
+/* Get Programming with JavaScript
  * Listing 10.08
  * Functions to add and show exits
  */
@@ -368,9 +368,9 @@ showExits();
 
 
 ### An exits object in the Place constructor
-[jsbin: Listing 10.09](http://jsbin.com/foboka/edit?js,console)
+[JS Bin: Listing 10.09](http://jsbin.com/foboka/edit?js,console)
 ```javascript
-/* Adventures in JavaScript
+/* Get Programming with JavaScript
  * Listing 10.09
  * An exits object in the Place constructor
  */
@@ -383,9 +383,9 @@ var Place = function (title, description) {
         this.exits[direction] = exit;
     };
 
-    this.showExits = function () {
+    this.showExits = function () {  
         console.log("Exits from " + this.title + ":");
-
+  
         Object.keys(this.exits).forEach(function (key) {
             console.log(key);
         });
@@ -421,9 +421,9 @@ kitchen.showExits();
 
 
 ### A map with four locations
-[jsbin: Listing 10.10](http://jsbin.com/bufico/edit?js,console)
+[JS Bin: Listing 10.10](http://jsbin.com/bufico/edit?js,console)
 ```javascript
-/* Adventures in JavaScript
+/* Get Programming with JavaScript
  * Listing 10.10
  * A map with four locations
  */
@@ -436,9 +436,9 @@ var Place = function (title, description) {
         this.exits[direction] = exit;
     };
 
-    this.showExits = function () {
+    this.showExits = function () {  
         console.log("Exits from " + this.title + ":");
-
+  
         Object.keys(this.exits).forEach(function (key) {
             console.log(key);
         });
@@ -496,9 +496,9 @@ currentPlace.showExits();
 
 
 ### A Player constructor function
-[jsbin: Listing 10.11](http://jsbin.com/leqahi/edit?js,console)
+[JS Bin: Listing 10.11](http://jsbin.com/leqahi/edit?js,console)
 ```javascript
-/* Adventures in JavaScript
+/* Get Programming with JavaScript
  * Listing 10.11
  * A Player constructor function
  */
@@ -555,9 +555,9 @@ var Player = function (name, health) {
 
 
 ### A Place constructor function
-[jsbin: Listing 10.12](http://jsbin.com/zozule/edit?js,console)
+[JS Bin: Listing 10.12](http://jsbin.com/zozule/edit?js,console)
 ```javascript
-/* Adventures in JavaScript
+/* Get Programming with JavaScript
  * Listing 10.12
  * A Place constructor function
  */
@@ -585,7 +585,7 @@ var Place = function (title, description) {
 
     this.showExits = function () {
         console.log("Exits from " + this.title + ":");
-
+  
         Object.keys(this.exits).forEach(function (key) {
             console.log(key);
         });
@@ -620,9 +620,9 @@ var Place = function (title, description) {
 
 
 ### Putting a player on the map
-[jsbin: Listing 10.13](http://jsbin.com/sezayo/edit?js,console)
+[JS Bin: Listing 10.13](http://jsbin.com/sezayo/edit?js,console)
 ```javascript
-/* Adventures in JavaScript
+/* Get Programming with JavaScript
  * Listing 10.13
  * Putting a player on the map
  */
@@ -688,7 +688,7 @@ var Place = function (title, description) {
 
     this.showExits = function () {
         console.log("Exits from " + this.title + ":");
-
+  
         Object.keys(this.exits).forEach(function (key) {
             console.log(key);
         });
@@ -767,4 +767,3 @@ kandra.showPlace();
  *
  */
 ```
-
