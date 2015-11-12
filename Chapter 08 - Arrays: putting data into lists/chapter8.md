@@ -108,9 +108,9 @@ console.log("The fourth score is " + scores[3]);
 
 
 ### Using a variable as an index
-[jsbin: Listing 8.04](http://jsbin.com/veyexa/edit?js,console)
+[JS Bin: Listing 8.04](http://jsbin.com/veyexa/edit?js,console)
 ```javascript
-/* Adventures in JavaScript
+/* Get Programming with JavaScript
  * Listing 8.04
  * Using a variable as an index
  */
@@ -141,9 +141,9 @@ console.log( days[dayInWeek - 1] );
 
 
 ### Passing an array to a function
-[jsbin: Listing 8.05](http://jsbin.com/bewebi/edit?js,console)
+[JS Bin: Listing 8.05](http://jsbin.com/bewebi/edit?js,console)
 ```javascript
-/* Adventures in JavaScript
+/* Get Programming with JavaScript
  * Listing 8.05
  * Passing an array to a function
  */
