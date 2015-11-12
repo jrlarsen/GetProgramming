@@ -1,17 +1,17 @@
-/* Adventures in JavaScript
+/* Get Programming with JavaScript
  * Listing 8.05
  * Passing an array to a function
  */
 
 var getVisitorReport = function (visitorArray, dayInWeek) {
-    var days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
-    var index = dayInWeek - 1;
-    var visitorReport;
+	var days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
+	var index = dayInWeek - 1;
+	var visitorReport;
 
-    visitorReport = "There were " + visitorArray[index] + " visitors ";
-    visitorReport += "on " + days[index];
+	visitorReport = "There were " + visitorArray[index] + " visitors ";
+	visitorReport += "on " + days[index];
 
-    return visitorReport;
+	return visitorReport;
 };
 
 var visitors = [ 354, 132, 210, 221, 481 ];
