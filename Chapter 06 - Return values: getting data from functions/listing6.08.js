@@ -1,4 +1,4 @@
-/* Adventures in JavaScript
+/* Get Programming with JavaScript
  * Listing 6.08
  * Getting strings for a player’s health and location
  */
