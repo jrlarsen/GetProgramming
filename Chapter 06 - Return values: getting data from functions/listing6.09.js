@@ -45,30 +45,15 @@ console.log(getPlayerInfo("Kandra", "The Dungeon of Doom", 50));
 
 /* Further Adventures
  *
- * There is a JavaScript function to return the
- * smaller of two numbers.
- * e.g. Math.min(3, 8) returns 3
- * e.g. Math.min(45, 40) returns 40
+ * 1) Add a second call to getPlayerInfo with
+ *    different player information. Log the
+ *    returned string to the console.
  *
- * There is another function to return the
- * larger of two numbers.
- * e.g. Math.max(3, 8) returns 8
- * e.g. Math.max(45, 40) returns 40
+ * 2) Call getPlayerInfo at the console prompt.
  *
- * In the getLine function, you want the
- * lineLength to be between 0 and 40.
+ * 3) What happens if you call getPlayerInfo
+ *    without any arguments?
  *
- * 1) In the getLine function, before the return statement,
- *    add these two lines:
- *    lineLength = Math.max(0, lineLength);
- *    lineLength = Math.min(40, lineLength);
- *
- *    They will make sure lineLength is between 0 and 40.
- *
- * 2) Update the getPlayerInfo function so that
- *    the line separators are the same length
- *    as the string returned by getPlayerPlace,
- *    up to a length of 40.
- *    You can declare new variables if required.
+ *    > getPlayerInfo()
  *
  */
