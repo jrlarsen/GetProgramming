@@ -1,4 +1,4 @@
-/* Adventures in JavaScript
+/* Get Programming with JavaScript
  * Listing 5.04
  * Calling the same function with different arguments
  */
@@ -6,7 +6,7 @@
 var showMessage;
 
 showMessage = function (message) {
-    console.log("The message is: " + message);
+	console.log("The message is: " + message);
 };
 
 showMessage("It's full of stars!");
