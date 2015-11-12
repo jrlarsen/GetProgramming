@@ -1,4 +1,4 @@
-/* Adventures in JavaScript
+/* Get Programming with JavaScript
  * Listing 9.08
  * A calendar event constructor
  */
@@ -8,7 +8,7 @@ var CalendarEvent = function (title, startDate, startTime, endTime) {
     this.startDate = startDate;
     this.startTime = startTime;
     this.endTime = endTime;
-
+  
     this.showEvent = function () {
         var dateString = [
             this.startDate,
@@ -17,7 +17,7 @@ var CalendarEvent = function (title, startDate, startTime, endTime) {
             " to ",
             this.endTime
         ].join("");
-
+      
         console.log(this.title);
         console.log(dateString);
     };
