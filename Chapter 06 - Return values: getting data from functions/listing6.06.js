@@ -1,50 +1,57 @@
-/* Adventures in JavaScript
+/* Get Programming with JavaScript
  * Listing 6.06
- * Getting a separator line
+ * A collection of functions that return values
  */
 
-var getLine;
+var getMessage;
+var getHelloTo;
+var sum;
+var totalCost;
 
-getLine = function (lineLength, character) {
-    var line;
-    var characterStartIndex;
-
-    line = "****************************************";
-    line += "----------------------------------------";
-    line += "========================================";
-    line += "++++++++++++++++++++++++++++++++++++++++";
-
-    characterStartIndex = line.indexOf(character);
-
-    return line.substr(characterStartIndex, lineLength);
+getMessage = function () {
+    return "I’m going on an adventure!"; 
 };
 
-console.log(getLine(10, "+"));
-console.log(getLine(3, "="));
+getHelloTo = function (name) {
+    return "Hello to " + name;
+};
+
+sum = function (number1, number2) {
+    return number1 + number2;
+};
+
+totalCost = function (callOutCharge, costPerHour, numberOfHours) {
+    return callOutCharge + costPerHour * numberOfHours;
+};
 
 
 
 /* Further Adventures
  *
- * 1) Update the getLine function to include
- *    ~ as a possible separator option. (tilde)
+ * 1) Run the program.
  *
- * This one could be a bit of a challenge!
+ * There is nothing logged to the console.
+ * However, the functions will now be
+ * available for calling.
  *
- * 2) Write a getBox function that accepts
- *    some text and a character to use as
- *    a border. The function should return
- *    the text surrounded by a border made
- *    of the specified character.
- *    e.g. getBox("To Infinity!", "+") should return
+ * 2) At the console prompt, type
+ *    getMessage()
+ *    and press enter.
  *
- *    ++++++++++++++++
- *    + To Infinity! +
- *    ++++++++++++++++
+ * The return value of the function is
+ * logged to the console.
  *
- *    You can use the getLine function.
+ * 3) At the console prompt, type
+ *    getHelloTo("Dax")
+ *    and press enter.
  *
- * To add a new line in your string, use \n.
- * All strings have a length property.
+ * The argument, "Dax", forms part of the
+ * return value.
+ *
+ * 4) Call the getHelloTo function
+ *    with different arguments.
+ *
+ * 5) Call the sum and totalCost functions,
+ *    using different arguments each time.
  *
  */
