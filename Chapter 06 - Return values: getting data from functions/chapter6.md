@@ -262,9 +262,9 @@ totalCost = function (callOutCharge, costPerHour, numberOfHours) {
 
 
 ### Getting a string for a player’s name
-[jsbin: Listing 6.07](http://jsbin.com/hijeli/edit?js,console)
+[JS Bin: Listing 6.07](http://jsbin.com/hijeli/edit?js,console)
 ```javascript
-/* Adventures in JavaScript
+/* Get Programming with JavaScript
  * Listing 6.07
  * Getting a string for a player’s name
  */
@@ -298,7 +298,7 @@ console.log(getPlayerName("Kandra"));
 
 
 ### Getting strings for a player’s health and location
-[jsbin: Listing 6.08](http://jsbin.com/pemore/edit?js,console)
+[JS Bin: Listing 6.08](http://jsbin.com/pemore/edit?js,console)
 ```javascript
 /* Adventures in JavaScript
  * Listing 6.08
