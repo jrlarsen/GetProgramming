@@ -1,4 +1,4 @@
-/* Adventures in JavaScript
+/* Get Programming with JavaScript
  * Listing 10.05
  * Iterating over Object.keys with forEach
  */
@@ -33,5 +33,5 @@ keys.forEach(function (key) {
  *    shows the person's name along with
  *    the length of their name.
  *    e.g. Blinky: 6
- *
+ 
  */
