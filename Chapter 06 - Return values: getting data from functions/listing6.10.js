@@ -1,4 +1,4 @@
-/* Adventures in JavaScript
+/* Get Programming with JavaScript
  * Listing 6.10
  * Displaying player information using objects
  */
@@ -15,28 +15,18 @@ var getPlayerPlace = function (playerName, playerPlace) {
     return playerName + " is in " + playerPlace;
 };
 
-var getLine = function (lineLength, character) {
-    var line;
-    var characterStartIndex;
-
-    line = "****************************************";
-    line += "----------------------------------------";
-    line += "========================================";
-    line += "++++++++++++++++++++++++++++++++++++++++";
-
-    characterStartIndex = line.indexOf(character);
-
-    return line.substr(characterStartIndex, lineLength);
+var getBorder = function () {
+    return "================================";
 };
 
 var getPlayerInfo = function (playerName, playerPlace, playerHealth) {
     var playerInfo;
 
     playerInfo = "\n" + getPlayerName(playerName);
-    playerInfo += "\n" + getLine(32, "=");
+    playerInfo += "\n" + getBorder();
     playerInfo += "\n" + getPlayerPlace(playerName, playerPlace);
     playerInfo += "\n" + getPlayerHealth(playerName, playerHealth);
-    playerInfo += "\n" + getLine(32, "=");
+    playerInfo += "\n" + getBorder();
     playerInfo += "\n";
 
     return playerInfo;
