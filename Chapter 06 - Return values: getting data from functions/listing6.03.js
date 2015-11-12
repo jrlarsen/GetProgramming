@@ -1,4 +1,4 @@
-/* Adventures in JavaScript
+/* Get Programming with JavaScript
  * Listing 6.03
  * Using the return value as an argument
  */
@@ -10,7 +10,7 @@ getHelloTo = function (name) {
 };
 
 console.log(getHelloTo("Kandra"));
-console.log(getHelloTo("Dax"));
+console.log(getHelloTo("Dax"));                                         
 
 
 
