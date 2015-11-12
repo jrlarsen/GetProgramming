@@ -1,44 +1,27 @@
-/* Adventures in JavaScript
+/* Get Programming with JavaScript
  * Listing 7.07
- * Organizing functions as object properties
+ * Finding a character with indexOf
  */
 
-var Spacer = {
-    line: function (length) {
-        var line = "========================================";
-        length = Math.max(0, length);
-        length = Math.min(40, length);
-        return line.substr(0, length);
-    },
+var message = "We choose to go to the Moon!";
 
-    title: function (text, pad) {
-        return Spacer.line(pad) + " " + text + " " + Spacer.line(pad);
-    },
+var charIndex = message.indexOf("M");
 
-    box: function (text) {
-        var boxText = "\n" + Spacer.line(text.length + 4) + "\n";
-        boxText += Spacer.title(text, 1) + "\n";
-        boxText += Spacer.line(text.length + 4) + "\n";
-        return boxText;
-    }
-};
-
-console.log(Spacer.box("Mercury"));
-console.log(Spacer.box("Mars"));
+console.log(message.substr(charIndex, 3));
 
 
 
 /* Further Adventures
  *
- * 1) Change the Spacer.box function so that
- *    the box is 5 lines high.
+ * 1) Use indexOf to find the index of where the
+ *    word 'go' starts in the message string.
  *
- *    Spacer.box("Earth");
+ * 2) Use indexOf and substr to display the word
+ *    'choose' from the message string.
  *
- *    > =========
- *    > =       =
- *    > = Earth =
- *    > =       =
- *    > =========
+ * There is also a lastIndexOf string method.
+ *
+ * 3) Use lastIndexOf to find the index of the
+ *    'oo' in the word 'Moon' of the message string.
  *
  */
