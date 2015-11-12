@@ -346,7 +346,7 @@ players.forEach(showArguments);
 
 
 ### Using the arguments passed by forEach - compact
-[JS Bin Listing 8.10](
+[JS Bin Listing 8.10](http://jsbin.com/pagahe/edit?js,console)
 ```javascript
 /* Get Programming with JavaScript
  * Listing 8.10
