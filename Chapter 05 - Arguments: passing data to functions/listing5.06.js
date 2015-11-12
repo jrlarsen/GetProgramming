@@ -1,4 +1,4 @@
-/* Adventures in JavaScript
+/* Get Programming with JavaScript
  * Listing 5.06
  * A function with two arguments
  */
@@ -6,8 +6,8 @@
 var showSum;
 
 showSum = function (number1, number2) {
-    var total = number1 + number2;
-    console.log("The sum is " + total);
+	var total = number1 + number2;
+	console.log("The sum is " + total);
 };
 
 showSum(30, 23);
