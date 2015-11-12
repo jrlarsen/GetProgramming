@@ -1,4 +1,4 @@
-/* Adventures in JavaScript
+/* Get Programming with JavaScript
  * Listing 10.13
  * Putting a player on the map
  */
@@ -64,7 +64,7 @@ var Place = function (title, description) {
 
     this.showExits = function () {
         console.log("Exits from " + this.title + ":");
-
+  
         Object.keys(this.exits).forEach(function (key) {
             console.log(key);
         });
