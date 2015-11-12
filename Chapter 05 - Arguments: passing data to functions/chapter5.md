@@ -44,7 +44,7 @@ showMessage();
 ### Breaking a function by changing a variable name
 [jsbin: Listing 5.02](http://jsbin.com/yaresa/edit?js,console)
 ```javascript
-/* Adventures in JavaScript
+/* Get Programming with JavaScript
  * Listing 5.02
  * Breaking a function by changing a variable name
  */
@@ -81,7 +81,7 @@ showMessage();
 ### Passing information to a function
 [jsbin: Listing 5.03](http://jsbin.com/xucemu/edit?js,console)
 ```javascript
-/* Adventures in JavaScript
+/* Get Programming with JavaScript
  * Listing 5.03
  * Passing information to a function
  */
@@ -119,7 +119,7 @@ showMessage("It's full of stars!");
 ### Calling the same function with different arguments
 [jsbin: Listing 5.04](http://jsbin.com/zavavo/edit?js,console)
 ```javascript
-/* Adventures in JavaScript
+/* Get Programming with JavaScript
  * Listing 5.04
  * Calling the same function with different arguments
  */
@@ -154,7 +154,7 @@ showMessage("Hello to Jason Isaacs and Stephen Fry");
 ### Using the square function
 [jsbin: Listing 5.05](http://jsbin.com/vequpi/edit?js,console)
 ```javascript
-/* Adventures in JavaScript
+/* Get Programming with JavaScript
  * Listing 5.05
  * Using the square function
  */
@@ -162,9 +162,9 @@ showMessage("Hello to Jason Isaacs and Stephen Fry");
 var square;
 
 square = function (numberToSquare) {
-    var result;
-    result = numberToSquare * numberToSquare;
-    console.log(numberToSquare + " * " + numberToSquare + " = " + result);
+  var result;
+  result = numberToSquare * numberToSquare;
+  console.log(numberToSquare + " * " + numberToSquare + " = " + result);
 };
 
 square(10);
