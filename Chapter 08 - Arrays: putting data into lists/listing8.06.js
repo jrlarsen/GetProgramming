@@ -1,4 +1,4 @@
-/* Adventures in JavaScript
+/* Get Programming with JavaScript
  * Listing 8.06
  * Manipulating arrays with push, pop and join
  */
