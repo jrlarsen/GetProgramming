@@ -1,4 +1,4 @@
-/* Adventures in JavaScript
+/* Get Programming with JavaScript
  * Listing 5.02
  * Breaking a function by changing a variable name
  */
@@ -9,7 +9,7 @@ var showMessage;
 msg = "It's full of stars!";
 
 showMessage = function () {
-    console.log(message);
+	console.log(message);
 };
 
 showMessage();
