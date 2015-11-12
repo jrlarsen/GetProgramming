@@ -2,20 +2,20 @@
 
 
 ### Using a function to create an object
-[jsbin: Listing 9.01](http://jsbin.com/jiroyo/edit?js,console)
+[JS Bin: Listing 9.01](http://jsbin.com/jiroyo/edit?js,console)
 ```javascript
-/* Adventures in JavaScript
+/* Get Programming with JavaScript
  * Listing 9.01
  * Using a function to create an object
  */
 
 var buildPlanet = function (name, position, type) {
     var planet = {};
-
+  
     planet.name = name;
     planet.position = position;
     planet.type = type;
-
+  
     return planet;
 };
 
@@ -43,16 +43,16 @@ console.log(planet1.type);
 
 
 ### Adding methods to our constructed object
-[jsbin: Listing 9.02](http://jsbin.com/zogure/edit?js,console)
+[JS Bin: Listing 9.02](http://jsbin.com/zogure/edit?js,console)
 ```javascript
-/* Adventures in JavaScript
+/* Get Programming with JavaScript
  * Listing 9.02
  * Adding methods to our constructed object
  */
 
 var buildPlanet = function (name, position, type) {
     var planet = {};
-
+  
     planet.name = name;
     planet.position = position;
     planet.type = type;
@@ -62,7 +62,7 @@ var buildPlanet = function (name, position, type) {
         info += " - " + planet.type;
         console.log(info);
     };
-
+  
     return planet;
 };
 
@@ -89,16 +89,16 @@ planet1.showPlanet();
 
 
 ### An array of constructed objects
-[jsbin: Listing 9.03](http://jsbin.com/jiweze/edit?js,console)
+[JS Bin: Listing 9.03](http://jsbin.com/jiweze/edit?js,console)
 ```javascript
-/* Adventures in JavaScript
+/* Get Programming with JavaScript
  * Listing 9.03
  * An array of constructed objects
  */
 
 var buildPlanet = function (name, position, type) {
     var planet = {};
-
+  
     planet.name = name;
     planet.position = position;
     planet.type = type;
@@ -138,9 +138,9 @@ planets.forEach(function (planet) {
 
 
 ### A Planet constructor
-[jsbin: Listing 9.04](http://jsbin.com/bixico/edit?js,console)
+[JS Bin: Listing 9.04](http://jsbin.com/bixico/edit?js,console)
 ```javascript
-/* Adventures in JavaScript
+/* Get Programming with JavaScript
  * Listing 9.04
  * A Planet constructor
  */
@@ -149,7 +149,7 @@ var Planet = function (name, position, type) {
     this.name = name;
     this.position = position;
     this.type = type;
-
+  
     this.showPlanet = function () {
         var info = this.name + ": planet " + this.position;
         info +=  " - " + this.type;
@@ -176,10 +176,10 @@ planet.showPlanet();
 ```
 
 
-### Including an moons array in our Planet constructor
-[jsbin: Listing 9.05](http://jsbin.com/wiguya/edit?js,console)
+### Including a moons array in our Planet constructor
+[JS Bin: Listing 9.05](http://jsbin.com/wiguya/edit?js,console)
 ```javascript
-/* Adventures in JavaScript
+/* Get Programming with JavaScript
  * Listing 9.05
  * Including a moons array in our Planet constructor
  */
@@ -189,14 +189,14 @@ var Planet = function (name, position, type) {
     this.position = position;
     this.type = type;
     this.moons = [];
-
+  
     this.showPlanet = function () {
         var info = this.name + ": planet " + this.position;
         info +=  " - " + this.type;
         console.log(info);
         console.log("Moons: " + this.moons.join(', ') + ".");
     };
-
+  
     this.addMoon = function (moon) {
         this.moons.push(moon);
     };
@@ -230,9 +230,9 @@ planet.showPlanet();
 
 
 ### Creating multiple Planets with our constructor
-[jsbin: Listing 9.06](http://jsbin.com/wewewe/edit?js,console)
+[JS Bin: Listing 9.06](http://jsbin.com/wewewe/edit?js,console)
 ```javascript
-/* Adventures in JavaScript
+/* Get Programming with JavaScript
  * Listing 9.06
  * Creating multiple Planets with our constructor
  */
@@ -242,13 +242,13 @@ var Planet = function (name, position, type) {
     this.position = position;
     this.type = type;
     this.moons = [];
-
+  
     this.showPlanet = function () {
         console.log(this.name);
         console.log("Planet " + this.position + " - " + this.type);
         console.log("Moons: " + this.moons.join(', ') + ".");
     };
-
+  
     this.addMoon = function (moon) {
         this.moons.unshift(moon);
     };
@@ -289,9 +289,9 @@ var planet3 = new Planet("Mercury", 1, "Terrestrial");
 
 
 ### A quiz question constructor
-[jsbin: Listing 9.07](http://jsbin.com/vuyesi/edit?js,console)
+[JS Bin: Listing 9.07](http://jsbin.com/vuyesi/edit?js,console)
 ```javascript
-/* Adventures in JavaScript
+/* Get Programming with JavaScript
  * Listing 9.07
  * A quiz question constructor
  */
@@ -346,9 +346,9 @@ question1.showQuestion();
 
 
 ### A calendar event constructor
-[jsbin: Listing 9.08](http://jsbin.com/gemiyu/edit?js,console)
+[JS Bin: Listing 9.08](http://jsbin.com/gemiyu/edit?js,console)
 ```javascript
-/* Adventures in JavaScript
+/* Get Programming with JavaScript
  * Listing 9.08
  * A calendar event constructor
  */
@@ -400,9 +400,9 @@ calEvent.showEvent();
 
 
 ### A Place constructor part 1
-[jsbin: Listing 9.09](http://jsbin.com/pogive/edit?js,console)
+[JS Bin: Listing 9.09](http://jsbin.com/pogive/edit?js,console)
 ```javascript
-/* Adventures in JavaScript
+/* Get Programming with JavaScript
  * Listing 9.09
  * A Place constructor part 1
  */
@@ -438,9 +438,9 @@ library.showInfo();
 
 
 ### A Place constructor part 2
-[jsbin: Listing 9.10](http://jsbin.com/qemica/edit?js,console)
+[JS Bin: Listing 9.10](http://jsbin.com/qemica/edit?js,console)
 ```javascript
-/* Adventures in JavaScript
+/* Get Programming with JavaScript
  * Listing 9.10
  * A Place constructor part 2
  */
@@ -449,12 +449,12 @@ var Place = function (title, description) {
     this.title = title;
     this.description = description;
     this.items = [];
-
+  
     this.showItems = function () {
         console.log("Items: ");
         this.items.forEach(function (item, i) {
             console.log("(" + i + ") " + item);
-        });
+        });        
     };
 
     this.showInfo = function () {
@@ -510,9 +510,9 @@ library.showInfo();
 
 
 ### A Place constructor part 3
-[jsbin: Listing 9.11](http://jsbin.com/parale/edit?js,console)
+[JS Bin: Listing 9.11](http://jsbin.com/parale/edit?js,console)
 ```javascript
-/* Adventures in JavaScript
+/* Get Programming with JavaScript
  * Listing 9.11
  * A Place constructor part 3
  */
@@ -522,14 +522,14 @@ var Place = function (title, description) {
     this.description = description;
     this.items = [];
     this.exits = [];
-
+  
     this.showItems = function () {
         console.log("Items:");
         this.items.forEach(function (item, i) {
             console.log("(" + i + ") " + item);
         });
     };
-
+  
     this.showExits = function () {
         console.log("Exits from " + this.title + ":");
         this.exits.forEach(function (exit, i) {
@@ -547,7 +547,7 @@ var Place = function (title, description) {
     this.addItem = function (item) {
         this.items.push(item);
     };
-
+  
     this.addExit = function (exit) {
         this.exits.push(exit);
     };
