@@ -22,10 +22,15 @@ console.log(response);
  *    that returns a message of
  *    your choosing.
  *
- * 2) Write a getLength function
- *    that returns the length of
- *    a string passed in as an argument.
- *    e.g. it should report
- *    "There and back again" has length 20
+ * We can call functions at the console prompt.
+ *
+ * 2) Call getMessage at the prompt.
+ *    
+ *    > getMessage()
+ *
+ * When a function is called at the prompt,
+ * its return value is displayed.
+ *
+ * 3) Call getMyMessage at the prompt.
  *
  */
