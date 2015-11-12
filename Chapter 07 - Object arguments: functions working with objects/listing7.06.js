@@ -1,38 +1,27 @@
 /* Adventures in JavaScript
  * Listing 7.06
- * Using Math.min and Math.max to constrain an argument
+ * Finding substrings
  */
 
-var Spacer = {
-    line: function (lineLength) {
-        var line = "========================================";
-        lineLength = Math.max(0, lineLength);
-        lineLength = Math.min(40, lineLength);
-        return line.substr(0, lineLength);
-    }
-};
+var message = "We choose to go to the Moon!";
 
-console.log(Spacer.line(30));
-console.log(Spacer.line(40));
-console.log(Spacer.line(50));
+console.log(message.substr(3, 12));
 
 
 
 /* Further Adventures
  *
- * 1) Test line lengths from -20 to 60
- *    in steps of 10.
+ * 1) Use substr to log the following parts of
+ *    the message string to the console:
  *
- * 2) Add an emptyBox function to the Spacer
- *    object that draws an empty box of specified
- *    width and height 5.
+ *    > Moon!
+ *    > go to the
+ *    > We choose
  *
- *    Spacer.emptyBox(12);
+ * 2) Investigate what happens if you omit the
+ *    second argument when calling substr.
  *
- *    > ============
- *    > =          =
- *    > =          =
- *    > =          =
- *    > ============
+ * 3) What happens if you use negative numbers
+ *    as arguments?
  *
  */
