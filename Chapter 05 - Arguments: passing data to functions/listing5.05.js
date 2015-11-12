@@ -1,4 +1,4 @@
-/* Adventures in JavaScript
+/* Get Programming with JavaScript
  * Listing 5.05
  * Using the square function
  */
@@ -6,9 +6,9 @@
 var square;
 
 square = function (numberToSquare) {
-    var result;
-    result = numberToSquare * numberToSquare;
-    console.log(numberToSquare + " * " + numberToSquare + " = " + result);
+  var result;
+  result = numberToSquare * numberToSquare;
+  console.log(numberToSquare + " * " + numberToSquare + " = " + result);
 };
 
 square(10);
