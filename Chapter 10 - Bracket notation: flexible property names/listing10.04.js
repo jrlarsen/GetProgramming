@@ -1,11 +1,11 @@
-/* Adventures in JavaScript
+/* Get Programming with JavaScript
  * Listing 10.04
  * Using Object.keys
  */
 
 var ages = {
     "Kandra Smith" : 56,
-    "Dax Aniaku"   : 21,
+    "Dax Aniaku"   : 210,
     "Blinky"       : 36
 };
 
