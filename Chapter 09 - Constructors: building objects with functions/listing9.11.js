@@ -1,4 +1,4 @@
-/* Adventures in JavaScript
+/* Get Programming with JavaScript
  * Listing 9.11
  * A Place constructor part 3
  */
@@ -8,14 +8,14 @@ var Place = function (title, description) {
     this.description = description;
     this.items = [];
     this.exits = [];
-
+  
     this.showItems = function () {
         console.log("Items:");
         this.items.forEach(function (item, i) {
             console.log("(" + i + ") " + item);
         });
     };
-
+  
     this.showExits = function () {
         console.log("Exits from " + this.title + ":");
         this.exits.forEach(function (exit, i) {
@@ -33,7 +33,7 @@ var Place = function (title, description) {
     this.addItem = function (item) {
         this.items.push(item);
     };
-
+  
     this.addExit = function (exit) {
         this.exits.push(exit);
     };
