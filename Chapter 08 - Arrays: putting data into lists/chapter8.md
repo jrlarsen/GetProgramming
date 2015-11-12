@@ -191,9 +191,9 @@ console.log(report);
 
 
 ### Manipulating arrays with push, pop and join
-[jsbin: Listing 8.06](http://jsbin.com/faqabu/edit?js,console)
+[JS Bin: Listing 8.06](http://jsbin.com/faqabu/edit?js,console)
 ```javascript
-/* Adventures in JavaScript
+/* Get Programming with JavaScript
  * Listing 8.06
  * Manipulating arrays with push, pop and join
  */
@@ -233,9 +233,9 @@ console.log(items.join(" and "));
 
 
 ### Iterating over an array with forEach
-[jsbin: Listing 8.07](http://jsbin.com/sokosi/edit?js,console)
+[JS Bin: Listing 8.07](http://jsbin.com/sokosi/edit?js,console)
 ```javascript
-/* Adventures in JavaScript
+/* Get Programming with JavaScript
  * Listing 8.07
  * Iterating over an array with forEach
  */
@@ -274,9 +274,9 @@ items.forEach(showInfo);
 
 
 ### Calling forEach with an inline function
-[jsbin: Listing 8.08](http://jsbin.com/yapecu/edit?js,console)
+[JS Bin: Listing 8.08](http://jsbin.com/yapecu/edit?js,console)
 ```javascript
-/* Adventures in JavaScript
+/* Get Programming with JavaScript
  * Listing 8.08
  * Calling forEach with an inline function
  */
@@ -314,11 +314,66 @@ items.forEach(function (item) {
 ```
 
 
-### Finding the total shopping bill
-[jsbin: Listing 8.09](http://jsbin.com/zizixu/edit?js,console)
+### Using the arguments passed by forEach
+[JS Bin Listing 8.09](http://jsbin.com/suvegi/edit?js,console)
 ```javascript
-/* Adventures in JavaScript
+/* Get Programming with JavaScript
  * Listing 8.09
+ * Using the arguments passed by forEach
+ */
+
+var players;
+var showArguments;
+
+players = [ "Dax", "Jahver", "Kandra" ];
+
+showArguments = function (item, index, wholeArray) {
+  console.log("Item: " + item);
+  console.log("Index: " + index);
+  console.log("Array: " + wholeArray);
+};
+
+players.forEach(showArguments);
+
+
+
+/* Further Adventures
+ *
+ * 1)
+ *
+ */
+```
+
+
+### Using the arguments passed by forEach - compact
+[JS Bin Listing 8.10](
+```javascript
+/* Get Programming with JavaScript
+ * Listing 8.10
+ * Using the arguments passed by forEach - compact
+ */
+
+[ "Dax", "Jahver", "Kandra" ].forEach(function (item, index, wholeArray) {
+  console.log("Item: " + item);
+  console.log("Index: " + index);
+  console.log("Array: " + wholeArray);
+});
+
+
+
+/* Further Adventures
+ *
+ * 1)
+ *
+ */
+```
+
+
+### Finding the total shopping bill
+[JS Bin: Listing 8.11](http://jsbin.com/zizixu/edit?js,console)
+```javascript
+/* Get Programming with JavaScript
+ * Listing 8.11
  * Finding the total shopping bill
  */
 
@@ -361,10 +416,10 @@ console.log("The total cost is $" + getTotalBill(costs, numOfEach));
 
 
 ### Displaying a multiple choice question
-[jsbin: Listing 8.10](http://jsbin.com/lobahu/edit?js,console)
+[JS Bin: Listing 8.12](http://jsbin.com/lobahu/edit?js,console)
 ```javascript
-/* Adventures in JavaScript
- * Listing 8.10
+/* Get Programming with JavaScript
+ * Listing 8.12
  * Displaying a multiple choice question
  */
 
@@ -409,10 +464,10 @@ displayQuestion(question1);
 
 
 ### A player object
-[jsbin: Listing 8.11](http://jsbin.com/mecude/edit?js,console)
+[JS Bin: Listing 8.13](http://jsbin.com/mecude/edit?js,console)
 ```javascript
-/* Adventures in JavaScript
- * Listing 8.11
+/* Get Programming with JavaScript
+ * Listing 8.13
  * A player object
  */
 
