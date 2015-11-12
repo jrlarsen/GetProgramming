@@ -1,4 +1,4 @@
-/* Adventures in JavaScript
+/* Get Programming with JavaScript
  * Listing 9.04
  * A Planet constructor
  */
@@ -7,7 +7,7 @@ var Planet = function (name, position, type) {
     this.name = name;
     this.position = position;
     this.type = type;
-
+  
     this.showPlanet = function () {
         var info = this.name + ": planet " + this.position;
         info +=  " - " + this.type;
