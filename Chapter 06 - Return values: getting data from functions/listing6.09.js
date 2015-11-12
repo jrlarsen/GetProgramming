@@ -1,4 +1,4 @@
-/* Adventures in JavaScript
+/* Get Programming with JavaScript
  * Listing 6.09
  * Getting a string for a player’s information
  */
@@ -7,7 +7,7 @@ var getPlayerName;
 var getPlayerHealth;
 var getPlayerPlace;
 var getPlayerInfo;
-var getLine;
+var getBorder;
 
 getPlayerName = function (playerName) {
     return playerName;
@@ -21,34 +21,25 @@ getPlayerPlace = function (playerName, playerPlace) {
     return playerName + " is in " + playerPlace;
 };
 
-getLine = function (lineLength, character) {
-    var line;
-    var characterStartIndex;
-
-    line = "****************************************";
-    line += "----------------------------------------";
-    line += "========================================";
-    line += "++++++++++++++++++++++++++++++++++++++++";
-
-    characterStartIndex = line.indexOf(character);
-
-    return line.substr(characterStartIndex, lineLength);
+getBorder = function () {
+    return "********************";
 };
 
 getPlayerInfo = function (playerName, playerPlace, playerHealth) {
     var playerInfo;
 
     playerInfo = "\n" + getPlayerName(playerName);
-    playerInfo += "\n" + getLine(20, "*");
+    playerInfo += "\n" + getBorder();
     playerInfo += "\n" + getPlayerPlace(playerName, playerPlace);
     playerInfo += "\n" + getPlayerHealth(playerName, playerHealth);
-    playerInfo += "\n" + getLine(20, "*");
+    playerInfo += "\n" + getBorder();
     playerInfo += "\n";
 
     return playerInfo;
 };
 
 console.log(getPlayerInfo("Kandra", "The Dungeon of Doom", 50));
+
 
 
 
