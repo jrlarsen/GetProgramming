@@ -213,7 +213,7 @@ console.log(planet + " becomes " + bigPlanet);
 ### Finding substrings
 [JS Bin Listing 7.06](http://jsbin.com/mesisi/edit?js,console)
 ```javascript
-/* Adventures in JavaScript
+/* Get Programming with JavaScript
  * Listing 7.06
  * Finding substrings
  */
