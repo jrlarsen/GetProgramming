@@ -2,9 +2,9 @@
 
 
 ### Creating arrays
-[jsbin: Listing 8.01](http://jsbin.com/cevodu/edit?js,console)
+[JS Bin: Listing 8.01](http://jsbin.com/cevodu/edit?js,console)
 ```javascript
-/* Adventures in JavaScript
+/* Get Programming with JavaScript
  * Listing 8.01
  * Creating arrays
  */
@@ -36,9 +36,9 @@ console.log(names);
 
 
 ### Using existing objects in an array
-[jsbin: Listing 8.02](http://jsbin.com/gizulu/edit?js,console)
+[JS Bin: Listing 8.02](http://jsbin.com/gizulu/edit?js,console)
 ```javascript
-/* Adventures in JavaScript
+/* Get Programming with JavaScript
  * Listing 8.02
  * Using existing objects in an array
  */
@@ -68,9 +68,9 @@ console.log(nextYear);
 
 
 ### Accessing array elements
-[jsbin: Listing 8.03](http://jsbin.com/qemufe/edit?js,console)
+[JS Bin: Listing 8.03](http://jsbin.com/qemufe/edit?js,console)
 ```javascript
-/* Adventures in JavaScript
+/* Get Programming with JavaScript
  * Listing 8.03
  * Accessing array elements
  */
