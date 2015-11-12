@@ -1,4 +1,4 @@
-/* Adventures in JavaScript
+/* Get Programming with JavaScript
  * Listing 5.11
  * Displaying a player's location
  */
@@ -6,7 +6,7 @@
 var showPlayerPlace;
 
 showPlayerPlace = function (playerName, playerPlace) {
-    console.log(playerName[3] + " is in " + playerPlace);
+    console.log(playerName + " is in " + playerPlace);
 };
 
 showPlayerPlace("Kandra", "The Dungeon of Doom");
