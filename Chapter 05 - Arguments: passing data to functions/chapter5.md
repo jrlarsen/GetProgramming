@@ -198,7 +198,7 @@ square(0.5);
 ### A function with two arguments
 [jsbin: Listing 5.06](http://jsbin.com/siyelu/edit?js,console)
 ```javascript
-/* Adventures in JavaScript
+/* Get Programming with JavaScript
  * Listing 5.06
  * A function with two arguments
  */
@@ -233,7 +233,7 @@ showSum(2.8, -5);
 ### Displaying a player's name
 [jsbin: Listing 5.07](http://jsbin.com/yubahi/edit?js,console)
 ```javascript
-/* Adventures in JavaScript
+/* Get Programming with JavaScript
  * Listing 5.07
  * Displaying a player's name
  */
@@ -265,7 +265,7 @@ showPlayerName("Dax");
 ### Displaying a player's name via an object property
 [jsbin: Listing 5.08](http://jsbin.com/juhewi/edit?js,console)
 ```javascript
-/* Adventures in JavaScript
+/* Get Programming with JavaScript
  * Listing 5.08
  * Displaying a player's name via an object property
  */
@@ -311,7 +311,7 @@ showPlayerName(player2.name);
 ### Displaying a player's health
 [jsbin: Listing 5.09](http://jsbin.com/nomija/edit?js,console)
 ```javascript
-/* Adventures in JavaScript
+/* Get Programming with JavaScript
  * Listing 5.09
  * Displaying a player's health
  */
@@ -331,12 +331,23 @@ showPlayerHealth("Dax", 40);
  *
  * 1) Change the showPlayerHealth function
  *    so it shows information of the form:
- *    KANDRA: health 50.
+ *    Kandra: health 50.
  *
- * 2) Change the function so that it uses
- *    a variable called healthInfo that
- *    is the only thing logged to the console.
- *    i.e. console.log(healthInfo);
+ * 2) Call the showPlayerHealth function
+ *    using your own arguments.
+ *
+ * 3) Declare a variable called healthInfo
+ *    inside the showPlayerHealth function.
+ *
+ *    var healthInfo;
+ *
+ * 4) Assign healthInfo the string that
+ *    will be displayed.
+ *
+ *    healthInfo = playerName + ": health " + playerHealth;
+ *
+ * 5) Change the call to console.log so that
+ *    it uses the healthInfo variable.
  *
  */
 ```
@@ -345,7 +356,7 @@ showPlayerHealth("Dax", 40);
 ### Displaying a player's health via object properties
 [jsbin: Listing 5.10](http://jsbin.com/zufoxi/edit?js,console)
 ```javascript
-/* Adventures in JavaScript
+/* Get Programming with JavaScript
  * Listing 5.10
  * Displaying a player's health via object properties
  */
@@ -399,7 +410,7 @@ showPlayerHealth(player2.name, player2.health);
 ### Displaying a player's location
 [jsbin: Listing 5.11](http://jsbin.com/yifahe/edit?js,console)
 ```javascript
-/* Adventures in JavaScript
+/* Get Programming with JavaScript
  * Listing 5.11
  * Displaying a player's location
  */
@@ -407,7 +418,7 @@ showPlayerHealth(player2.name, player2.health);
 var showPlayerPlace;
 
 showPlayerPlace = function (playerName, playerPlace) {
-    console.log(playerName[3] + " is in " + playerPlace);
+    console.log(playerName + " is in " + playerPlace);
 };
 
 showPlayerPlace("Kandra", "The Dungeon of Doom");
@@ -434,7 +445,7 @@ showPlayerPlace("Dax", "The Old Library");
 ### Displaying a player's location via object properties
 [jsbin: Listing 5.12](http://jsbin.com/mejuki/edit?js,console)
 ```javascript
-/* Adventures in JavaScript
+/* Get Programming with JavaScript
  * Listing 5.12
  * Displaying a player's location via object properties
  */
@@ -487,7 +498,7 @@ showPlayerPlace(player2.name, player2.place);
 ### Displaying a player's information
 [jsbin: Listing 5.13](http://jsbin.com/likafe/edit?js,console)
 ```javascript
-/* Adventures in JavaScript
+/* Get Programming with JavaScript
  * Listing 5.13
  * Displaying a player's information
  */
@@ -548,7 +559,7 @@ showPlayerInfo("Dax", "The Old Library", 40);
 ### Displaying a player's information using properties
 [jsbin: Listing 5.14](http://jsbin.com/loteti/edit?js,console)
 ```javascript
-/* Adventures in JavaScript
+/* Get Programming with JavaScript
  * Listing 5.14
  * Displaying a player's information using properties
  */
@@ -593,6 +604,7 @@ var player2 = {
 
 showPlayerInfo(player1.name, player1.place, player1.health);
 showPlayerInfo(player2.name, player2.place, player2.health);
+
 
 
 
