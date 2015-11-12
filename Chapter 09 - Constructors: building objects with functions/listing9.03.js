@@ -1,11 +1,11 @@
-/* Adventures in JavaScript
+/* Get Programming with JavaScript
  * Listing 9.03
  * An array of constructed objects
  */
 
 var buildPlanet = function (name, position, type) {
     var planet = {};
-
+  
     planet.name = name;
     planet.position = position;
     planet.type = type;
@@ -14,7 +14,7 @@ var buildPlanet = function (name, position, type) {
         var info = planet.name + ": planet " + planet.position;
         info += " - " + planet.type;
         console.log(info);
-    };
+      };
 
     return planet;
 };
