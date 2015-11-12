@@ -1,10 +1,10 @@
-/* Adventures in JavaScript
+/* Get Programming with JavaScript
  * Listing 10.07
  * An exits object
  */
 
 var Place = function (title) {
-    this.title = title;
+    this.title = title;  
 };
 
 var kitchen = new Place("The Kitchen");
