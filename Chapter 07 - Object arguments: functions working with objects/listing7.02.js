@@ -1,41 +1,35 @@
-/* Adventures in JavaScript
+/* Get Programming with JavaScript
  * Listing 7.02
  * A function that adds properties to an object
  */
 
-var sale1;
-var calculateTax;
-var displaySale;
+var planet1 = { name: "Jupiter", radius: 69911 };
 
-sale1 = { price: 14, taxRate: 15 };
-
-calculateTax = function (sale) {
-    sale.tax = sale.price * sale.taxRate / 100;
-    sale.total = sale.price + sale.tax;
+var calculateSizes = function (planet) {
+    var r = planet.radius;
+    planet.area = 4 * 3.142 * r * r;
+    planet.volume = 4 * 3.142 * r * r * r / 3;
 };
 
-displaySale = function (sale) {
-    console.log("price = $" + sale.price.toFixed(2));
-    console.log("tax @ " + sale.taxRate + "% = $" + sale.tax.toFixed(2));
-    console.log("total cost = $" + sale.total.toFixed(2));
+var displaySizes = function (planet) {
+    console.log(planet.name);
+    console.log("surface area = " + planet.area + " square km");
+    console.log("volume = " + planet.volume + " cubic km");
 };
 
-calculateTax(sale1);
-displaySale(sale1);
-
+calculateSizes(planet1);
+displaySizes(planet1);                                                  
+                                                  
 
 
 /* Further Adventures
  *
- * 1) Change the taxRate property of the sale1 object
- *    and run the program.
+ * The diameter of a planet is double its radius.
  *
- * 2) Add a second sale object, sale2.
+ * 1) Update the calculateSizes function so it also
+ *    adds a diameter property to the planet.
  *
- * 3) Add calls to calculateTax and displaySale
- *    to display sale info for sale2.
- *
- * 4) Can you find a way to combine the calls
- *    to calculateTax and displaySale?
+ * 2) Update the displaySizes function so it also
+ *    displays the diameter on the console.
  *
  */
