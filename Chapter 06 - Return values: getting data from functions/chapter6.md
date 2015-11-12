@@ -300,7 +300,7 @@ console.log(getPlayerName("Kandra"));
 ### Getting strings for a player’s health and location
 [JS Bin: Listing 6.08](http://jsbin.com/pemore/edit?js,console)
 ```javascript
-/* Adventures in JavaScript
+/* Get Programming with JavaScript
  * Listing 6.08
  * Getting strings for a player’s health and location
  */
@@ -339,9 +339,9 @@ console.log(getPlayerPlace("Kandra", "The Dungeon of Doom"));
 
 
 ### Getting a string for a player’s information
-[jsbin: Listing 6.09](http://jsbin.com/javuxe/edit?js,console)
+[JS Bin: Listing 6.09](http://jsbin.com/javuxe/edit?js,console)
 ```javascript
-/* Adventures in JavaScript
+/* Get Programming with JavaScript
  * Listing 6.09
  * Getting a string for a player’s information
  */
@@ -350,7 +350,7 @@ var getPlayerName;
 var getPlayerHealth;
 var getPlayerPlace;
 var getPlayerInfo;
-var getLine;
+var getBorder;
 
 getPlayerName = function (playerName) {
     return playerName;
@@ -364,34 +364,25 @@ getPlayerPlace = function (playerName, playerPlace) {
     return playerName + " is in " + playerPlace;
 };
 
-getLine = function (lineLength, character) {
-    var line;
-    var characterStartIndex;
-
-    line = "****************************************";
-    line += "----------------------------------------";
-    line += "========================================";
-    line += "++++++++++++++++++++++++++++++++++++++++";
-
-    characterStartIndex = line.indexOf(character);
-
-    return line.substr(characterStartIndex, lineLength);
+getBorder = function () {
+    return "********************";
 };
 
 getPlayerInfo = function (playerName, playerPlace, playerHealth) {
     var playerInfo;
 
     playerInfo = "\n" + getPlayerName(playerName);
-    playerInfo += "\n" + getLine(20, "*");
+    playerInfo += "\n" + getBorder();
     playerInfo += "\n" + getPlayerPlace(playerName, playerPlace);
     playerInfo += "\n" + getPlayerHealth(playerName, playerHealth);
-    playerInfo += "\n" + getLine(20, "*");
+    playerInfo += "\n" + getBorder();
     playerInfo += "\n";
 
     return playerInfo;
 };
 
 console.log(getPlayerInfo("Kandra", "The Dungeon of Doom", 50));
+
 
 
 
@@ -428,9 +419,9 @@ console.log(getPlayerInfo("Kandra", "The Dungeon of Doom", 50));
 
 
 ### Displaying player information using objects
-[jsbin: Listing 6.10](http://jsbin.com/puteki/edit?js,console)
+[JS Bin: Listing 6.10](http://jsbin.com/puteki/edit?js,console)
 ```javascript
-/* Adventures in JavaScript
+/* Get Programming with JavaScript
  * Listing 6.10
  * Displaying player information using objects
  */
@@ -447,28 +438,18 @@ var getPlayerPlace = function (playerName, playerPlace) {
     return playerName + " is in " + playerPlace;
 };
 
-var getLine = function (lineLength, character) {
-    var line;
-    var characterStartIndex;
-
-    line = "****************************************";
-    line += "----------------------------------------";
-    line += "========================================";
-    line += "++++++++++++++++++++++++++++++++++++++++";
-
-    characterStartIndex = line.indexOf(character);
-
-    return line.substr(characterStartIndex, lineLength);
+var getBorder = function () {
+    return "================================";
 };
 
 var getPlayerInfo = function (playerName, playerPlace, playerHealth) {
     var playerInfo;
 
     playerInfo = "\n" + getPlayerName(playerName);
-    playerInfo += "\n" + getLine(32, "=");
+    playerInfo += "\n" + getBorder();
     playerInfo += "\n" + getPlayerPlace(playerName, playerPlace);
     playerInfo += "\n" + getPlayerHealth(playerName, playerHealth);
-    playerInfo += "\n" + getLine(32, "=");
+    playerInfo += "\n" + getBorder();
     playerInfo += "\n";
 
     return playerInfo;
