@@ -1,4 +1,4 @@
-/* Adventures in JavaScript
+/* Get Programming with JavaScript
  * Listing 6.05
  * A function with three arguments
  */
@@ -6,7 +6,7 @@
 var totalCost;
 
 totalCost = function (callOutCharge, costPerHour, numberOfHours) {
-    return callOutCharge + costPerHour * numberOfHours;
+	return callOutCharge + costPerHour * numberOfHours;
 };
 
 console.log("$" + totalCost(30, 40, 3));
