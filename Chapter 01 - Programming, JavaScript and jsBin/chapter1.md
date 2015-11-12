@@ -1,7 +1,7 @@
 # Programming, JavaScript and jsBin
 
 ### Using console.log
-[jsbin: Listing 1.01](http://jsbin.com/mujepu/edit?js,console)
+[JS Bin: Listing 1.01](http://jsbin.com/mujepu/edit?js,console) - potazo
 ```javascript
 /* Get Programming with JavaScript
  * Listing 1.01
