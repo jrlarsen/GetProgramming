@@ -1,4 +1,4 @@
-/* Adventures in JavaScript
+/* Get Programming with JavaScript
  * Listing 6.04
  * Returning the sum of two numbers
  */
@@ -6,9 +6,9 @@
 var sum;
 
 sum = function (number1, number2) {
-    var total = number1 + number2;
+	var total = number1 + number2;
 
-    return total;
+	return total;
 };
 
 var result = sum(10, 35);
