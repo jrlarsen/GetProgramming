@@ -1,4 +1,4 @@
-/* Adventures in JavaScript
+/* Get Programming with JavaScript
  * Listing 8.08
  * Calling forEach with an inline function
  */
@@ -8,7 +8,7 @@ var items = [ "The Pyramids", "The Grand Canyon", "Bondi Beach" ];
 console.log("Dream destinations:");
 
 items.forEach(function (item) {
-    console.log(" – " + item);
+	console.log(" – " + item);
 });
 
 
