@@ -1,15 +1,15 @@
-/* Adventures in JavaScript
+/* Get Programming with JavaScript
  * Listing 9.01
  * Using a function to create an object
  */
 
 var buildPlanet = function (name, position, type) {
     var planet = {};
-
+  
     planet.name = name;
     planet.position = position;
     planet.type = type;
-
+  
     return planet;
 };
 
