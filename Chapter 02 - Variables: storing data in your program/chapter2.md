@@ -1,7 +1,7 @@
 # Variables
 
 ### Declaring a variable
-[jsbin: Listing 2.01](http://jsbin.com/potazo/edit?js,console)
+[JS Bin: Listing 2.01](http://jsbin.com/potazo/edit?js,console) - potazo
 ```javascript
 /* Get Programming with JavaScript
  * Listing 2.01
@@ -28,7 +28,7 @@ var score;
 
 
 ### Assigning a value to a variable
-[jsbin: Listing 2.02](http://jsbin.com/yuvoju/edit?js,console)
+[JS Bin: Listing 2.02](http://jsbin.com/yuvoju/edit?js,console) - yuvoju
 ```javascript
 /* Get Programming with JavaScript
  * Listing 2.02
@@ -63,7 +63,7 @@ score = 100;
 
 
 ### Using a variable
-[jsbin: Listing 2.03](http://jsbin.com/huvime/edit?js,console)
+[JS Bin: Listing 2.03](http://jsbin.com/huvime/edit?js,console) - huvime
 ```javascript
 /* Get Programming with JavaScript
  * Listing 2.03
@@ -92,7 +92,7 @@ console.log(score);
 
 
 ### Variables vary
-[jsbin: Listing 2.04](http://jsbin.com/jasafa/edit?js,console)
+[JS Bin: Listing 2.04](http://jsbin.com/jasafa/edit?js,console) - jasafa
 ```javascript
 /* Get Programming with JavaScript
  * Listing 2.04
@@ -127,7 +127,7 @@ console.log(score);
 
 
 ### Assigning text to variables
-[jsbin: Listing 2.05](http://jsbin.com/hobiqo/edit?js,console)
+[JS Bin: Listing 2.05](http://jsbin.com/hobiqo/edit?js,console) - hobiqo
 ```javascript
 /* Get Programming with JavaScript
  * Listing 2.05
@@ -163,7 +163,7 @@ console.log(message);
 
 
 ### Declaring and assigning in two steps
-[jsbin: Listing 2.06](http://jsbin.com/vegoja/edit?js,console)
+[JS Bin: Listing 2.06](http://jsbin.com/vegoja/edit?js,console) - vegoja
 ```javascript
 /* Get Programming with JavaScript
  * Listing 2.06
@@ -195,7 +195,7 @@ console.log(playerName + " is in " + locationName);
 
 
 ### Declaring and assigning in one step
-[jsbin: Listing 2.07](http://jsbin.com/dorane/edit?js,console)
+[JS Bin: Listing 2.07](http://jsbin.com/dorane/edit?js,console) - dorane
 ```javascript
 /* Get Programming with JavaScript
  * Listing 2.07
@@ -228,7 +228,7 @@ console.log(playerName + " is in " + locationName);
 
 
 ### Using a variable’s current value to set its new value
-[jsbin: Listing 2.08](http://jsbin.com/kijuce/edit?js,console)
+[JS Bin: Listing 2.08](http://jsbin.com/kijuce/edit?js,console) - kijuce
 ```javascript
 /* Get Programming with JavaScript
  * Listing 2.08
@@ -265,7 +265,7 @@ console.log("Way to go!");
 
 
 ### Valid and invalid variable names
-[jsbin: Listing 2.09](http://jsbin.com/biqawu/edit?js,console)
+[JS Bin: Listing 2.09](http://jsbin.com/biqawu/edit?js,console) - biqawu
 ```javascript
 /* Get Programming with JavaScript
  * Listing 2.09
