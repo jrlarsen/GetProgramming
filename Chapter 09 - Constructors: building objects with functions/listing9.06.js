@@ -1,4 +1,4 @@
-/* Adventures in JavaScript
+/* Get Programming with JavaScript
  * Listing 9.06
  * Creating multiple Planets with our constructor
  */
@@ -8,13 +8,13 @@ var Planet = function (name, position, type) {
     this.position = position;
     this.type = type;
     this.moons = [];
-
+  
     this.showPlanet = function () {
         console.log(this.name);
         console.log("Planet " + this.position + " - " + this.type);
         console.log("Moons: " + this.moons.join(', ') + ".");
     };
-
+  
     this.addMoon = function (moon) {
         this.moons.unshift(moon);
     };
