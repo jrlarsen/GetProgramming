@@ -4,7 +4,7 @@
 
 ## Part 1 – Core concepts on the console
 
-### Chapter 1 – Programming, JavaScript and jsBin
+### Chapter 1 – Programming, JavaScript and JS Bin
 * 1.1 Programming
 * 1.2 JavaScript
 * 1.3 Learning by doing and thinking
