@@ -2,7 +2,7 @@
 
 
 ### Passing a function an object as an argument
-[JS Bin: Listing 7.01](http://jsbin.com/tafopo/edit?js,console)
+[JS Bin: Listing 7.01](http://jsbin.com/tafopo/edit?js,console) - tafopo
 ```javascript
 /* Get Programming with JavaScript
  * Listing 7.01
@@ -44,7 +44,7 @@ console.log(getPlanetInfo(planet1));
 
 
 ### A function that adds properties to an object
-[JS Bin: Listing 7.02](http://jsbin.com/qevodu/edit?js,console)
+[JS Bin: Listing 7.02](http://jsbin.com/qevodu/edit?js,console) - qevodu
 ```javascript
 /* Get Programming with JavaScript
  * Listing 7.02
@@ -85,7 +85,7 @@ displaySizes(planet1);
 
 
 ###
-[JS Bin: Listing 7.03](http://jsbin.com/coyeta/edit?js,console)
+[JS Bin: Listing 7.03](http://jsbin.com/coyeta/edit?js,console) - coyeta
 ```javascript
 /* Get Programming with JavaScript
  * Listing 7.03
@@ -129,7 +129,7 @@ console.log(getPlanetInfo(planet2));
 
 
 ### Moving a point in 2D
-[JS Bin: Listing 7.04](http://jsbin.com/baxuvi/edit?js,console)
+[JS Bin: Listing 7.04](http://jsbin.com/baxuvi/edit?js,console) - baxuvi
 ```javascript
 /* Get Programming with JavaScript
  * Listing 7.04
@@ -180,7 +180,7 @@ showPoint(point2);
 
 
 ### Converting a string to upper case
-[JS Bin Listing 7.05](http://jsbin.com/jizaqu/edit?js,console)
+[JS Bin Listing 7.05](http://jsbin.com/jizaqu/edit?js,console) - jizaqu
 ```javascript
 /* Get Programming with JavaScript
  * Listing 7.05
@@ -211,7 +211,7 @@ console.log(planet + " becomes " + bigPlanet);
 
 
 ### Finding substrings
-[JS Bin Listing 7.06](http://jsbin.com/mesisi/edit?js,console)
+[JS Bin Listing 7.06](http://jsbin.com/mesisi/edit?js,console) - mesisi
 ```javascript
 /* Get Programming with JavaScript
  * Listing 7.06
@@ -244,7 +244,7 @@ console.log(message.substr(3, 12));
 
 
 ### Finding a character with indexOf
-[JS Bin Listing 7.07](http://jsbin.com/bidabi/edit?js,console)
+[JS Bin Listing 7.07](http://jsbin.com/bidabi/edit?js,console) - bidabi
 ```javascript
 /* Get Programming with JavaScript
  * Listing 7.07
@@ -277,7 +277,7 @@ console.log(message.substr(charIndex, 3));
 
 
 ### Using Math.min and Math.max
-[JS Bin Listing 7.08](http://jsbin.com/moyoti/edit?js,console)
+[JS Bin Listing 7.08](http://jsbin.com/moyoti/edit?js,console) - moyoti
 ```javascript
 /* Get Programming with JavaScript
  * Listing 7.08
@@ -312,7 +312,7 @@ showSmaller(-10, 3);
 
 
 ### Using Math.min and Math.max to constrain an argument
-[JS Bin: Listing 7.09](http://jsbin.com/qiziyo/edit?js,console)
+[JS Bin: Listing 7.09](http://jsbin.com/qiziyo/edit?js,console) - qiziyo
 ```javascript
 /* Get Programming with JavaScript
  * Listing 7.09
@@ -359,7 +359,7 @@ console.log(line(50));
 
 
 ### Organizing functions as object properties
-[JS Bin: Listing 7.10](http://jsbin.com/kayono/edit?js,console)
+[JS Bin: Listing 7.10](http://jsbin.com/kayono/edit?js,console) - kayono
 ```javascript
 /* Get Programming with JavaScript
  * Listing 7.10
@@ -427,7 +427,7 @@ console.log(spacer.box("Mars", 11, "*"));
 
 
 ### Displaying player information using objects
-[JS Bin: Listing 7.11](http://jsbin.com/beqabe/edit?js,console)
+[JS Bin: Listing 7.11](http://jsbin.com/beqabe/edit?js,console) - beqabe
 ```javascript
 /* Get Programming with JavaScript
  * Listing 7.11
