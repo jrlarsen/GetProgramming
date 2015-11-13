@@ -1,7 +1,7 @@
 # Objects: a way to group data
 
 ### Using variables to represent a book
-[jsbin: Listing 3.01](http://jsbin.com/fucuxah/edit?js,console)
+[JS Bin: Listing 3.01](http://jsbin.com/fucuxah/edit?js,console) - fucuxah
 ```javascript
 /* Get Programmimg with JavaScript
  * Listing 3.01
@@ -35,7 +35,7 @@ console.log(bookTitle + " by " + bookAuthor);
 
 
 ### Using prefixes to tell book variables apart
-[jsbin: Listing 3.02](http://jsbin.com/qowagi/edit?js,console)
+[JS Bin: Listing 3.02](http://jsbin.com/qowagi/edit?js,console) - qowagi
 ```javascript
 /* Get Programmimg with JavaScript
  * Listing 3.02
@@ -69,7 +69,7 @@ console.log(book3Title);
 
 
 ### A book as an object
-[jsbin: Listing 3.03](http://jsbin.com/ruruko/edit?js,console)
+[JS Bin: Listing 3.03](http://jsbin.com/ruruko/edit?js,console) - ruruko
 ```javascript
 /* Get Programmimg with JavaScript
  * Listing 3.03
@@ -103,7 +103,7 @@ console.log(book);
 
 
 ### Creating an empty object
-[jsbin: Listing 3.04](http://jsbin.com/kaqatu/edit?js,console)
+[JS Bin: Listing 3.04](http://jsbin.com/kaqatu/edit?js,console) - kaqatu
 ```javascript
 /* Get Programmimg with JavaScript
  * Listing 3.04
@@ -135,7 +135,7 @@ book = {};
 
 
 ### An object with a single property
-[jsbin: Listing 3.05](http://jsbin.com/robupi/edit?js,console)
+[JS Bin: Listing 3.05](http://jsbin.com/robupi/edit?js,console) - robupi
 ```javascript
 /* Get Programmimg with JavaScript
  * Listing 3.05
@@ -164,7 +164,7 @@ var book = { title : "The Hobbit" };
 
 
 ### Using line breaks to aid readability
-[jsbin: Listing 3.06](http://jsbin.com/bafige/edit?js,console)
+[JS Bin: Listing 3.06](http://jsbin.com/bafige/edit?js,console) - bafige
 ```javascript
 /* Get Programmimg with JavaScript
  * Listing 3.06
@@ -193,7 +193,7 @@ book = {
 
 
 ### Objects with multiple properties
-[jsbin: Listing 3.07](http://jsbin.com/bawiqev/edit?js,console)
+[JS Bin: Listing 3.07](http://jsbin.com/bawiqev/edit?js,console) - bawiqev
 ```javascript
 /* Get Programmimg with JavaScript
  * Listing 3.07
@@ -233,7 +233,7 @@ book2 = {
 
 
 ### Using dot notation to access property values
-[jsbin: Listing 3.08](http://jsbin.com/funiyu/edit?js,console)
+[JS Bin: Listing 3.08](http://jsbin.com/funiyu/edit?js,console) - funiyu
 ```javascript
 /* Get Programmimg with JavaScript
  * Listing 3.08
@@ -271,7 +271,7 @@ console.log(book.author);
 
 
 ### Concatenating string properties
-[jsbin: Listing 3.09](http://jsbin.com/yoweti/edit?js,console)
+[JS Bin: Listing 3.09](http://jsbin.com/yoweti/edit?js,console) - yoweti
 ```javascript
 /* Get Programmimg with JavaScript
  * Listing 3.09
@@ -312,7 +312,7 @@ console.log(book2.title + " by " + book2.author);
 
 
 ### Using dot notation to update a property
-[jsbin: Listing 3.10](http://jsbin.com/mulimi/edit?js,console)
+[JS Bin: Listing 3.10](http://jsbin.com/mulimi/edit?js,console) - mulimi
 ```javascript
 /* Get Programmimg with JavaScript
  * Listing 3.10
@@ -349,7 +349,7 @@ player1.score = 50;
 
 
 ### Using a property in a calculation
-[jsbin: Listing 3.11](http://jsbin.com/cuboko/edit?js,console)
+[JS Bin: Listing 3.11](http://jsbin.com/cuboko/edit?js,console) - cuboko
 ```javascript
 /* Get Programmimg with JavaScript
  * Listing 3.11
@@ -387,7 +387,7 @@ console.log(player1.name + " has scored " + player1.score);
 
 
 ### A blog post
-[jsbin: Listing 3.12](http://jsbin.com/jiculu/edit?js,console)
+[JS Bin: Listing 3.12](http://jsbin.com/jiculu/edit?js,console) - jiculu
 ```javascript
 /* Get Programmimg with JavaScript
  * Listing 3.12
@@ -421,7 +421,7 @@ var post = {
 
 
 ### A calendar event
-[jsbin: Listing 3.13](http://jsbin.com/viroho/edit?js,console)
+[JS Bin: Listing 3.13](http://jsbin.com/viroho/edit?js,console) - viroho
 ```javascript
 /* Get Programmimg with JavaScript
  * Listing 3.13
