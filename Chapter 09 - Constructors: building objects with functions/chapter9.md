@@ -2,7 +2,7 @@
 
 
 ### Using a function to create an object
-[JS Bin: Listing 9.01](http://jsbin.com/jiroyo/edit?js,console)
+[JS Bin: Listing 9.01](http://jsbin.com/jiroyo/edit?js,console) - jiroyo
 ```javascript
 /* Get Programming with JavaScript
  * Listing 9.01
@@ -43,7 +43,7 @@ console.log(planet1.type);
 
 
 ### Adding methods to our constructed object
-[JS Bin: Listing 9.02](http://jsbin.com/zogure/edit?js,console)
+[JS Bin: Listing 9.02](http://jsbin.com/zogure/edit?js,console) - zogure
 ```javascript
 /* Get Programming with JavaScript
  * Listing 9.02
@@ -89,7 +89,7 @@ planet1.showPlanet();
 
 
 ### An array of constructed objects
-[JS Bin: Listing 9.03](http://jsbin.com/jiweze/edit?js,console)
+[JS Bin: Listing 9.03](http://jsbin.com/jiweze/edit?js,console) - jiweze
 ```javascript
 /* Get Programming with JavaScript
  * Listing 9.03
@@ -138,7 +138,7 @@ planets.forEach(function (planet) {
 
 
 ### A Planet constructor
-[JS Bin: Listing 9.04](http://jsbin.com/bixico/edit?js,console)
+[JS Bin: Listing 9.04](http://jsbin.com/bixico/edit?js,console) - bixico
 ```javascript
 /* Get Programming with JavaScript
  * Listing 9.04
@@ -177,7 +177,7 @@ planet.showPlanet();
 
 
 ### Including a moons array in our Planet constructor
-[JS Bin: Listing 9.05](http://jsbin.com/wiguya/edit?js,console)
+[JS Bin: Listing 9.05](http://jsbin.com/wiguya/edit?js,console) - wiguya
 ```javascript
 /* Get Programming with JavaScript
  * Listing 9.05
@@ -230,7 +230,7 @@ planet.showPlanet();
 
 
 ### Creating multiple Planets with our constructor
-[JS Bin: Listing 9.06](http://jsbin.com/wewewe/edit?js,console)
+[JS Bin: Listing 9.06](http://jsbin.com/wewewe/edit?js,console) - wewewe
 ```javascript
 /* Get Programming with JavaScript
  * Listing 9.06
@@ -289,7 +289,7 @@ var planet3 = new Planet("Mercury", 1, "Terrestrial");
 
 
 ### A quiz question constructor
-[JS Bin: Listing 9.07](http://jsbin.com/vuyesi/edit?js,console)
+[JS Bin: Listing 9.07](http://jsbin.com/vuyesi/edit?js,console) - vuyesi
 ```javascript
 /* Get Programming with JavaScript
  * Listing 9.07
@@ -346,7 +346,7 @@ question1.showQuestion();
 
 
 ### A calendar event constructor
-[JS Bin: Listing 9.08](http://jsbin.com/gemiyu/edit?js,console)
+[JS Bin: Listing 9.08](http://jsbin.com/gemiyu/edit?js,console) - gemiyu
 ```javascript
 /* Get Programming with JavaScript
  * Listing 9.08
@@ -400,7 +400,7 @@ calEvent.showEvent();
 
 
 ### A Place constructor part 1
-[JS Bin: Listing 9.09](http://jsbin.com/pogive/edit?js,console)
+[JS Bin: Listing 9.09](http://jsbin.com/pogive/edit?js,console) - pogive
 ```javascript
 /* Get Programming with JavaScript
  * Listing 9.09
@@ -438,7 +438,7 @@ library.showInfo();
 
 
 ### A Place constructor part 2
-[JS Bin: Listing 9.10](http://jsbin.com/qemica/edit?js,console)
+[JS Bin: Listing 9.10](http://jsbin.com/qemica/edit?js,console) - qemica
 ```javascript
 /* Get Programming with JavaScript
  * Listing 9.10
@@ -510,7 +510,7 @@ library.showInfo();
 
 
 ### A Place constructor part 3
-[JS Bin: Listing 9.11](http://jsbin.com/parale/edit?js,console)
+[JS Bin: Listing 9.11](http://jsbin.com/parale/edit?js,console) - parale
 ```javascript
 /* Get Programming with JavaScript
  * Listing 9.11
