@@ -2,7 +2,7 @@
 
 
 ### Bracket notation for object properties
-[JS Bin: Listing 10.01](http://jsbin.com/kipedu/edit?js,console)
+[JS Bin: Listing 10.01](http://jsbin.com/kipedu/edit?js,console)  - kipedu
 ```javascript
 /* Get Programming with JavaScript
  * Listing 10.01
@@ -33,7 +33,7 @@ console.log(ages.Dax);
 
 
 ### Longer strings as keys
-[JS Bin: Listing 10.02](http://jsbin.com/toviya/edit?js,console)
+[JS Bin: Listing 10.02](http://jsbin.com/toviya/edit?js,console) - toviya
 ```javascript
 /* Get Programming with JavaScript
  * Listing 10.02
@@ -67,7 +67,7 @@ console.log(ages["Dax Aniaku"]);
 
 
 ### Using a function to add ages
-[JS Bin: Listing 10.03](http://jsbin.com/pipuva/edit?js,console)
+[JS Bin: Listing 10.03](http://jsbin.com/pipuva/edit?js,console) - pipuva
 ```javascript
 /* Get Programming with JavaScript
  * Listing 10.03
@@ -112,7 +112,7 @@ console.log(ages["Dax Aniaku"]);
 
 
 ### Using Object.keys
-[JS Bin: Listing 10.04](http://jsbin.com/mehuno/edit?js,console)
+[JS Bin: Listing 10.04](http://jsbin.com/mehuno/edit?js,console) - mehuno
 ```javascript
 /* Get Programming with JavaScript
  * Listing 10.04
@@ -153,7 +153,7 @@ console.log(keys);
 
 
 ### Iterating over Object.keys with forEach
-[JS Bin: Listing 10.05](http://jsbin.com/seteco/edit?js,console)
+[JS Bin: Listing 10.05](http://jsbin.com/seteco/edit?js,console) - seteco
 ```javascript
 /* Get Programming with JavaScript
  * Listing 10.05
@@ -197,7 +197,7 @@ keys.forEach(function (key) {
 
 
 ### Counting words from tweets
-[JS Bin: Listing 10.06](http://jsbin.com/figati/edit?js,console)
+[JS Bin: Listing 10.06](http://jsbin.com/figati/edit?js,console) - figati
 ```javascript
 /* Get Programming with JavaScript
  * Listing 10.06
@@ -257,7 +257,7 @@ console.log(words);
 
 
 ### An exits object
-[JS Bin: Listing 10.07](http://jsbin.com/daqato/edit?js,console)
+[JS Bin: Listing 10.07](http://jsbin.com/daqato/edit?js,console) - daqato
 ```javascript
 /* Get Programming with JavaScript
  * Listing 10.07
@@ -311,7 +311,7 @@ keys.forEach(function (key) {
 
 
 ### Functions to add and show exits
-[JS Bin: Listing 10.08](http://jsbin.com/mibube/edit?js,console)
+[JS Bin: Listing 10.08](http://jsbin.com/mibube/edit?js,console) - mibube
 ```javascript
 /* Get Programming with JavaScript
  * Listing 10.08
@@ -368,7 +368,7 @@ showExits();
 
 
 ### An exits object in the Place constructor
-[JS Bin: Listing 10.09](http://jsbin.com/foboka/edit?js,console)
+[JS Bin: Listing 10.09](http://jsbin.com/foboka/edit?js,console) - foboka
 ```javascript
 /* Get Programming with JavaScript
  * Listing 10.09
@@ -421,7 +421,7 @@ kitchen.showExits();
 
 
 ### A map with four locations
-[JS Bin: Listing 10.10](http://jsbin.com/bufico/edit?js,console)
+[JS Bin: Listing 10.10](http://jsbin.com/bufico/edit?js,console) - bufico
 ```javascript
 /* Get Programming with JavaScript
  * Listing 10.10
@@ -496,7 +496,7 @@ currentPlace.showExits();
 
 
 ### A Player constructor function
-[JS Bin: Listing 10.11](http://jsbin.com/leqahi/edit?js,console)
+[JS Bin: Listing 10.11](http://jsbin.com/leqahi/edit?js,console) - leqahi
 ```javascript
 /* Get Programming with JavaScript
  * Listing 10.11
@@ -555,7 +555,7 @@ var Player = function (name, health) {
 
 
 ### A Place constructor function
-[JS Bin: Listing 10.12](http://jsbin.com/zozule/edit?js,console)
+[JS Bin: Listing 10.12](http://jsbin.com/zozule/edit?js,console) - zozule
 ```javascript
 /* Get Programming with JavaScript
  * Listing 10.12
@@ -620,7 +620,7 @@ var Place = function (title, description) {
 
 
 ### Putting a player on the map
-[JS Bin: Listing 10.13](http://jsbin.com/sezayo/edit?js,console)
+[JS Bin: Listing 10.13](http://jsbin.com/sezayo/edit?js,console) - sezayo
 ```javascript
 /* Get Programming with JavaScript
  * Listing 10.13
