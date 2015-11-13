@@ -459,7 +459,7 @@ var event = {
 
 
 ### Location for a weather app
-[jsbin: Listing 3.14](http://jsbin.com/diguhe/edit?js,console)
+[JS Bin: Listing 3.14](http://jsbin.com/diguhe/edit?js,console) - diguhe
 ```javascript
 /* Get Programmimg with JavaScript
  * Listing 3.14
@@ -509,7 +509,7 @@ var location = {
 
 
 ### A question and answer for a quiz app
-[jsbin: Listing 3.15](http://jsbin.com/damoto/edit?js,console)
+[JS Bin: Listing 3.15](http://jsbin.com/damoto/edit?js,console) - damoto
 ```javascript
 /* Get Programmimg with JavaScript
  * Listing 3.15
@@ -538,7 +538,7 @@ var questionAndAnswer = {
 
 
 ### A player object
-[jsbin: Listing 3.15](http://jsbin.com/qelene/edit?js,console)
+[JS Bin: Listing 3.16](http://jsbin.com/qelene/edit?js,console) - qelene
 ```javascript
 /* Get Programmimg with JavaScript
  * Listing 3.16
