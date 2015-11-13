@@ -2,7 +2,7 @@
 
 
 ### Creating arrays
-[JS Bin: Listing 8.01](http://jsbin.com/cevodu/edit?js,console)
+[JS Bin: Listing 8.01](http://jsbin.com/cevodu/edit?js,console) - cevodu
 ```javascript
 /* Get Programming with JavaScript
  * Listing 8.01
@@ -36,7 +36,7 @@ console.log(names);
 
 
 ### Using existing objects in an array
-[JS Bin: Listing 8.02](http://jsbin.com/gizulu/edit?js,console)
+[JS Bin: Listing 8.02](http://jsbin.com/gizulu/edit?js,console) - gizulu
 ```javascript
 /* Get Programming with JavaScript
  * Listing 8.02
@@ -68,7 +68,7 @@ console.log(nextYear);
 
 
 ### Accessing array elements
-[JS Bin: Listing 8.03](http://jsbin.com/qemufe/edit?js,console)
+[JS Bin: Listing 8.03](http://jsbin.com/qemufe/edit?js,console) - qemufe
 ```javascript
 /* Get Programming with JavaScript
  * Listing 8.03
@@ -108,7 +108,7 @@ console.log("The fourth score is " + scores[3]);
 
 
 ### Using a variable as an index
-[JS Bin: Listing 8.04](http://jsbin.com/veyexa/edit?js,console)
+[JS Bin: Listing 8.04](http://jsbin.com/veyexa/edit?js,console) - veyexa
 ```javascript
 /* Get Programming with JavaScript
  * Listing 8.04
@@ -141,7 +141,7 @@ console.log( days[dayInWeek - 1] );
 
 
 ### Passing an array to a function
-[JS Bin: Listing 8.05](http://jsbin.com/bewebi/edit?js,console)
+[JS Bin: Listing 8.05](http://jsbin.com/bewebi/edit?js,console) - bewebi
 ```javascript
 /* Get Programming with JavaScript
  * Listing 8.05
@@ -191,7 +191,7 @@ console.log(report);
 
 
 ### Manipulating arrays with push, pop and join
-[JS Bin: Listing 8.06](http://jsbin.com/faqabu/edit?js,console)
+[JS Bin: Listing 8.06](http://jsbin.com/faqabu/edit?js,console) - faqabu
 ```javascript
 /* Get Programming with JavaScript
  * Listing 8.06
@@ -233,7 +233,7 @@ console.log(items.join(" and "));
 
 
 ### Iterating over an array with forEach
-[JS Bin: Listing 8.07](http://jsbin.com/sokosi/edit?js,console)
+[JS Bin: Listing 8.07](http://jsbin.com/sokosi/edit?js,console) - sokosi
 ```javascript
 /* Get Programming with JavaScript
  * Listing 8.07
@@ -274,7 +274,7 @@ items.forEach(showInfo);
 
 
 ### Calling forEach with an inline function
-[JS Bin: Listing 8.08](http://jsbin.com/yapecu/edit?js,console)
+[JS Bin: Listing 8.08](http://jsbin.com/yapecu/edit?js,console) - yapecu
 ```javascript
 /* Get Programming with JavaScript
  * Listing 8.08
@@ -315,7 +315,7 @@ items.forEach(function (item) {
 
 
 ### Using the arguments passed by forEach
-[JS Bin Listing 8.09](http://jsbin.com/suvegi/edit?js,console)
+[JS Bin Listing 8.09](http://jsbin.com/suvegi/edit?js,console) - suvegi
 ```javascript
 /* Get Programming with JavaScript
  * Listing 8.09
@@ -346,7 +346,7 @@ players.forEach(showArguments);
 
 
 ### Using the arguments passed by forEach - compact
-[JS Bin Listing 8.10](http://jsbin.com/pagahe/edit?js,console)
+[JS Bin Listing 8.10](http://jsbin.com/pagahe/edit?js,console) - pagahe
 ```javascript
 /* Get Programming with JavaScript
  * Listing 8.10
@@ -370,7 +370,7 @@ players.forEach(showArguments);
 
 
 ### Finding the total shopping bill
-[JS Bin: Listing 8.11](http://jsbin.com/zizixu/edit?js,console)
+[JS Bin: Listing 8.11](http://jsbin.com/zizixu/edit?js,console) - zizixu
 ```javascript
 /* Get Programming with JavaScript
  * Listing 8.11
@@ -416,7 +416,7 @@ console.log("The total cost is $" + getTotalBill(costs, numOfEach));
 
 
 ### Displaying a multiple choice question
-[JS Bin: Listing 8.12](http://jsbin.com/lobahu/edit?js,console)
+[JS Bin: Listing 8.12](http://jsbin.com/lobahu/edit?js,console) - lobahu
 ```javascript
 /* Get Programming with JavaScript
  * Listing 8.12
@@ -464,7 +464,7 @@ displayQuestion(question1);
 
 
 ### A player object
-[JS Bin: Listing 8.13](http://jsbin.com/mecude/edit?js,console)
+[JS Bin: Listing 8.13](http://jsbin.com/mecude/edit?js,console) - mecude
 ```javascript
 /* Get Programming with JavaScript
  * Listing 8.13
