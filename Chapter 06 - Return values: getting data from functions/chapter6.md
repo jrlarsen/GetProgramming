@@ -2,7 +2,7 @@
 
 
 ### Returning a value from a function
-[JS Bin: Listing 6.01](http://jsbin.com/yucate/edit?js,console)
+[JS Bin: Listing 6.01](http://jsbin.com/yucate/edit?js,console) - yucate
 ```javascript
 /* Get Programming with JavaScript
  * Listing 6.01
@@ -44,7 +44,7 @@ console.log(response);
 
 
 ### Using an argument to determine the return value
-[JS Bin: Listing 6.02](http://jsbin.com/nijijo/edit?js,console)
+[JS Bin: Listing 6.02](http://jsbin.com/nijijo/edit?js,console) - nijijo
 ```javascript
 /* Get Programming with JavaScript
  * Listing 6.02
@@ -77,7 +77,7 @@ console.log(fullMessage);
 
 
 ### Using the return value as an argument
-[JS Bin: Listing 6.03](http://jsbin.com/yapic/edit?js,console)
+[JS Bin: Listing 6.03](http://jsbin.com/yapic/edit?js,console) - yapic
 ```javascript
 /* Get Programming with JavaScript
  * Listing 6.03
@@ -123,7 +123,7 @@ console.log(getHelloTo("Dax"));
 
 
 ### Returning the sum of two numbers
-[JS Bin: Listing 6.04](http://jsbin.com/haqapu/edit?js,console)
+[JS Bin: Listing 6.04](http://jsbin.com/haqapu/edit?js,console) - haqapu
 ```javascript
 /* Get Programming with JavaScript
  * Listing 6.04
@@ -166,7 +166,7 @@ console.log(result);
 
 
 ### A function with three arguments
-[JS Bin: Listing 6.05](http://jsbin.com/jedigi/edit?js,console)
+[JS Bin: Listing 6.05](http://jsbin.com/jedigi/edit?js,console) - jedigi
 ```javascript
 /* Get Programming with JavaScript
  * Listing 6.05
@@ -204,7 +204,7 @@ console.log("$" + totalCost(30, 40, 3));
 
 
 ### A collection of functions that return values
-[JS Bin: Listing 6.06](http://jsbin.com/lijufo/edit?js,console)
+[JS Bin: Listing 6.06](http://jsbin.com/lijufo/edit?js,console) - lijufo
 ```javascript
 /* Get Programming with JavaScript
  * Listing 6.06
@@ -267,7 +267,7 @@ totalCost = function (callOutCharge, costPerHour, numberOfHours) {
 
 
 ### Getting a string for a player’s name
-[JS Bin: Listing 6.07](http://jsbin.com/hijeli/edit?js,console)
+[JS Bin: Listing 6.07](http://jsbin.com/hijeli/edit?js,console) - hijeli
 ```javascript
 /* Get Programming with JavaScript
  * Listing 6.07
@@ -313,7 +313,7 @@ console.log(getPlayerName("Kandra"));
 
 
 ### Getting strings for a player’s health and location
-[JS Bin: Listing 6.08](http://jsbin.com/pemore/edit?js,console)
+[JS Bin: Listing 6.08](http://jsbin.com/pemore/edit?js,console) - pemore
 ```javascript
 /* Get Programming with JavaScript
 /* Get Programming with JavaScript
@@ -357,7 +357,7 @@ console.log(getPlayerPlace("Kandra", "The Dungeon of Doom"));
 
 
 ### Getting a string for a player’s information
-[JS Bin: Listing 6.09](http://jsbin.com/javuxe/edit?js,console)
+[JS Bin: Listing 6.09](http://jsbin.com/javuxe/edit?js,console) - javuxe
 ```javascript
 /* Get Programming with JavaScript
  * Listing 6.09
@@ -422,7 +422,7 @@ console.log(getPlayerInfo("Kandra", "The Dungeon of Doom", 50));
 
 
 ### Displaying player information using objects
-[JS Bin: Listing 6.10](http://jsbin.com/puteki/edit?js,console)
+[JS Bin: Listing 6.10](http://jsbin.com/puteki/edit?js,console) - puteki
 ```javascript
 /* Get Programming with JavaScript
  * Listing 6.10
