@@ -514,8 +514,6 @@ console.log(getPlayerInfo(player1, "="));
 console.log(getPlayerInfo(player2, "+"));
 
 
-
-
 /* Further Adventures
  *
  * 1) Add an items property to each player.
@@ -524,7 +522,7 @@ console.log(getPlayerInfo(player2, "+"));
  * 2) Write a getPlayerItems function to return
  *    a string for a player's items.
  *
- * 3) Update the getPlayerInfo functions so it
+ * 3) Update the getPlayerInfo function so it
  *    also includes the items info.
  *    Take the items info string into account
  *    when working out the longest string.
