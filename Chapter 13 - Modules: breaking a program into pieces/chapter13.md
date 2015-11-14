@@ -1,4 +1,4 @@
-# Chapter 13 - Modules: breaking your program into pieces
+# Chapter 13 - Modules: breaking a program into pieces
 
 
 ### Some JavaScript to load into another page
@@ -41,7 +41,7 @@ console.log(message1);
 
 ```
 
-### 
+### Loading JavaScript with a script tag (HTML)
 [JS Bin Listing 13.02](http://jsbin.com/fihinol/edit?html) - fihinol
 ```html
 <script src="http://output.jsbin.com/sokewu.js"></script>
@@ -180,7 +180,7 @@ var spacer = {
 ```
 
 
-### Using spacer
+### Using spacer (HTML)
 [JS Bin Listing 13.05](http://jsbin.com/mosaho/edit?html) - mosaho
 ```html
 <script src="http://jsbin.com/juneqo.js"></script>
@@ -192,7 +192,7 @@ var spacer = {
 ```javascript
 /* Get Programming with JavaScript
  * Listings 13.05 and 13.06
- * Using spacer
+ * Using the spacer namespace
  */
 
 console.log(spacer.box("It's like magic!", 20, "*"));
@@ -360,12 +360,12 @@ var secret = (function () {
 ```
 
 
-### Returning an interface from an IIFE
+### Using an extra variable rather than an IIFE
 [JS Bin Listing 13.10](http://jsbin.com/velewo/edit?js,console) - velewo
 ```javascript
 /* Get Programming with JavaScript
  * Listing 13.10
- * Returning an interface from an IIFE
+ * Using an extra variable rather than an IIFE
  */
 
 var getSecretInterface = function () {
@@ -475,12 +475,12 @@ var postsData = [
 ```
 
 
-### View code
+### The view code for posts
 [JS Bin Listing 13.12](http://jsbin.com/tesunud/edit?js,console) - tesunud
 ```javascript
 /* Get Programming with JavaScript
  * Listing 13.12
- * View code
+ * The view code for posts
  */
 
 var view = (function () {
@@ -548,7 +548,7 @@ var view = (function () {
 ```
 
 
-### View and posts data to import
+### Importing and using view and postsData (HTML)
 [JS Bin Listing 13.13](http://jsbin.com/yexito/edit?html) - yexito
 ```html
 <script src="http://jsbin.com/dusacos.js"></script>
@@ -588,12 +588,12 @@ view.render(postsData);
 ```
 
 
-### Another view
+### Another view for posts
 [JS Bin Listing 13.15](http://jsbin.com/vubaped/edit?js,console) - vubaped
 ```javascript
 /* Get Programming with JavaScript
  * Listing 13.15
- * Another view
+ * Another view for posts
  */
 
 var view = (function () {
@@ -648,7 +648,7 @@ var view = (function () {
 ```
 
 
-### Importing spacer
+### Importing spacer along with view and postsData (HTML)
 [JS Bin Listing 13.16](http://jsbin.com/zofiro/edit?html,js,console) - zofiro
 ```html
 <script src="http://jsbin.com/juneqo.js"></script>
