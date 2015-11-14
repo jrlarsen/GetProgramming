@@ -17,9 +17,16 @@ showArguments = function (item, index, wholeArray) {
 players.forEach(showArguments);
 
 
-
 /* Further Adventures
  *
- * 1)
+ * 1) Add two more names to the players array.
+ *
+ * 2) Run the program.
+ *
+ * 3) Change the first console.log so
+ *    it uses wholeArray and index
+ *    to display the current item in
+ *    the array. Don't use the item
+ *    parameter.
  *
  */
