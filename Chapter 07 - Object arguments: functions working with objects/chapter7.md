@@ -84,7 +84,7 @@ displaySizes(planet1);
 ```
 
 
-###
+### A function to create planets
 [JS Bin: Listing 7.03](http://jsbin.com/coyeta/edit?js,console) - coyeta
 ```javascript
 /* Get Programming with JavaScript
