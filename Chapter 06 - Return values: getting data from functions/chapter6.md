@@ -316,7 +316,6 @@ console.log(getPlayerName("Kandra"));
 [JS Bin: Listing 6.08](http://jsbin.com/pemore/edit?js,console) - pemore
 ```javascript
 /* Get Programming with JavaScript
-/* Get Programming with JavaScript
  * Listing 6.08
  * Getting strings for a player’s health and location
  */
