@@ -829,15 +829,17 @@ var Place = function (title, description) {
 };
   
 
-
-
 /* Further Adventures
  *
- * 1) Play the game, Using the three public methods:
+ * 1) Add a method that lets users
+ *    remove an item using its name.
  *
- *   > game.me()
- *   > game.here()
- *   > game.go("north")
+ *    kitchen.removeItem("a smelly cheese");
+ *
+ * 2) Add a method that lets users
+ *    remove an item using its index.
+ *
+ *    kitchen.removeItemAt(2);
  *
  */
 ```
