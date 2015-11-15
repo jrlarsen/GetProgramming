@@ -42,7 +42,7 @@ var guess = getGuesser();
  *
  * 5) Swap the first and second conditions so
  *    the second condition uses the strict
- *    inequality operator.
+ *    equality operator.
  *
  * 6) Update the messages to match the
  *    new condition.
