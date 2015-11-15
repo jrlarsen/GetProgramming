@@ -132,8 +132,7 @@ kandra.showPlace();
  *    out information about different
  *    objects: people, places, items, exits.
  *
- * In Chapter 11 we'll look at user interaction
- * on the console. But, as a challenge:
+ * Challenge:
  *
  * 3) Write a go function that accepts
  *    a direction as an argument and
