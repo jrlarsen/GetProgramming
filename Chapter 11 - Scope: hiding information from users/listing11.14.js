@@ -43,14 +43,26 @@ var Player = function (name, health) {
 };
   
 
-
-
 /* Further Adventures
  *
- * 1) Play the game, Using the three public methods:
+ * 1) Use the constructor to create
+ *    a player.
  *
- *   > game.me()
- *   > game.here()
- *   > game.go("north")
+ *    var dax = new Player("Dax", 50);
+ *
+ * 2) Run the program.
+ *
+ * 3) At the console, try to access
+ *    player properties.
+ *
+ *    > dax.name
+ *    > dax.health
+ *    > dax.items
+ *
+ * Those properties don't exist!
+ * name, health and items are variables
+ * local to the constructor function;
+ * they were not set as properties
+ * of the special 'this' object.
  *
  */
