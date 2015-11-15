@@ -37,14 +37,26 @@ var Player = function (name, health) {
 };
   
 
-
-
 /* Further Adventures
  *
- * 1) Play the game, Using the three public methods:
+ * 1) Use the constructor to create
+ *    a player.
  *
- *   > game.me()
- *   > game.here()
- *   > game.go("north")
+ *    var dax = new Player("Dax", 50);
+ *
+ * 2) Run the program.
+ *
+ * 3) At the prompt, access the
+ *    player's properties.
+ *
+ *    > dax.name
+ *    > dax.health
+ *
+ * All the properties are accessible.
+ *
+ * 4) Change some properties.
+ *
+ *    > dax.health = 1000
+ *    > dax.items = "Was an array"
  *
  */
