@@ -37,17 +37,23 @@ var planet3 = new Planet("Mercury", 1, "Terrestrial");
 
 /* Further Adventures
  *
- * 1) Add a new moon to each place.
+ * 1) Add a new moon to each planet.
  *
- * 2) Call showPlanet for each place.
+ * 2) Create a showMoons method in the
+ *    Planet constructor. It should
+ *    show the moons with their index.
  *
- * unshift is an array method that adds a
- * new element at the start of the array.
- * shift is an array method that removes
- * an item from the start of an array.
+ *    (0) Io
+ *    (1) Europa
  *
- * 3) Create a removeMoon method that
- *    removes a moon from the start
- *    of the moons array.
+ * 3) Update showPlanet to use showMoons
+ *    rather than join for the moons.
+ *
+ * 4) Create a getMoon method that
+ *    returns the moon at a given
+ *    index.
+ *
+ *    > planet1.getMoon(1)
+ *      Europa
  *
  */
