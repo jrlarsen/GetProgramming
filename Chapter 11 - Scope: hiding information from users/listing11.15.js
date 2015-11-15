@@ -42,14 +42,30 @@ var Place = function (title, description) {
 };
   
 
-
-
 /* Further Adventures
  *
- * 1) Play the game, Using the three public methods:
+ * 1) Run the program.
  *
- *   > game.me()
- *   > game.here()
- *   > game.go("north")
+ * You can enter commands at the prompt
+ * over more than one line.
+ * Press shift + Enter to move to
+ * a new line.
+ *
+ * 2) At the prompt, create a
+ *    new place, using the constructor.
+ *
+ *    > var hall = new Place(
+ *        "The Hall",
+ *        "You are in a spacious hall."
+ *      )
+ *
+ * 3) Add items to the place.
+ *    Use the addItem method.
+ *
+ * 4) Use showItems to display the items.
+ *
+ * 5) Access the items directly.
+ *
+ *    > hall.items
  *
  */
