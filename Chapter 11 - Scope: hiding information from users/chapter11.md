@@ -956,15 +956,23 @@ library.addExit("north", kitchen);
 var kandra = new Player("Kandra", 50);
 kandra.addItem("The Sword of Doom");
 
-kandra.place = kitchen;
+kandra.setPlace(kitchen);
 kandra.showInfo();
 kandra.showPlace();
 
 
-
 /* Further Adventures
  *
- * 1) 
+ * 1) Run the program.
+ *
+ * 2) At the prompt, type these commands:
+ *
+ *    > kandra
+ *    > var place = kandra.getPlace()
+ *    > place.showInfo()
+ *    > var exit = place.getExit("south")
+ *    > exit.showInfo()
+ *    > exit.title
  *
  */
 ```
