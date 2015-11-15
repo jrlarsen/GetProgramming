@@ -649,7 +649,7 @@ var view = (function () {
 
 
 ### Importing spacer along with view and postsData (HTML)
-[JS Bin Listing 13.16](http://jsbin.com/zofiro/edit?html,js,console) - zofiro
+[JS Bin Listing 13.16](http://jsbin.com/zoviro/edit?html,js,console) - zoviro
 ```html
 <script src="http://jsbin.com/juneqo.js"></script>
 <script src="http://jsbin.com/dusacos.js"></script>
