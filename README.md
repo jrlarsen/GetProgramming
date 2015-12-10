@@ -90,35 +90,50 @@
 * 13.3 Collisions – when imported code overwrites your variables
 * 13.4 Immediately invoked function expressions (IIFE)
 * 13.5 Separating data from the view
+* 13.6 The Crypt - separating map data from the game
 
-### Chapter 14 – Refactoring and testing
-* 14.1 Completing the adventure - overcoming challenges
-* 14.2 Adding a new feature: refactoring
-* 14.3 Complicated decisions: logic operators
-* 14.4 Playing the adventure game
-* 14.5 Trying to break the game: testing
+### Chapter 14 – The Crypt: linking models and views with a controller
+* 14.1 Creating models and views for players
+* 14.2 Creating models and views for places
+* 14.3 Talking to players - a message view
+* 14.4 A game controller
+* 14.5 Running the game
+
+### Chapter 15 - Updates: making changes without breaking existing code
+* 15.1 Challenges
 
 ## Part 3 - JavaScript in the browser
 
-### Chapter 15 - User interfaces and events
-* 15.1 Using a web page as a user interface
-* 15.2 Browser alerts and prompts
-* 15.4 HTML elements: h1, p, input and button
-* 15.3 Responding to events with handlers
-* 15.5 Updating elements using ids
+### Chapter 16 - HTML: building web pages
+* 16.1 HTML - a very short introduction
+* 16.2 Adding content to a web page with JavaScript
+* 16.3 Displaying data from an array
+* 16.4 The Crypt - displaying players and places with web views
 
-### Chapter 16 – Templates
-* 16.1 String concatenation is messy
-* 16.2 Using arrays to build strings
-* 16.3 Templates and placeholders
-* 16.4 Data and presentation
+### Chapter 17 - Events: text boxes and buttons
+* 17.1 Buttons - responding to clicks
+* 17.2 User input with text boxes
+* 17.3 The Crypt - player commands via a text box
 
-### Chapter 17 – Loading data via APIs
-* 17.1 We don't need to load all the data at once
-* 17.2 APIs on the web
-* 17.3 Introducing the Adventure API
-* 17.4 JSON
-* 17.5 Ajax and the XHR object
+### Chapter 18 – Templates: replacing placeholders with data
+* 18.1 Replacing one string with another
+* 18.2 While loops - replacing a string multiple times
+* 18.3 Simple templates
+* 18.4 A template constructor
+* 18.5 Keeping templates with the HTML
+* 18.6 The Crypt - improving the views
+
+### Chapter 19 - XHR: loading data
+* 19.1 Loading web pages - clients and servers
+* 19.2 Requesting data with the XMLHttpRequest object
+* 19.3 JSON - a simple data format
+* 19.4 Building a calendar widget with templates and xhr
+* 19.5 The Crypt - loading a map on demand
+
+### Chapter 20 - Get programming with JavaScript
+* 20.1 Working locally with files
+* 20.2 Getting help
+* 20.3 What next?
 
 
 ## Part 4 – The server, Node, Express and Socket.io (online extras)
