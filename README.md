@@ -138,17 +138,17 @@
 
 ## Part 4 – The server, Node, Express and Socket.io (online extras)
 
-### Chapter 18 – Building an API with Node and Express
-* 18.1 JavaScript on the server
-* 18.2 Installing Node and using npm
-* 18.3 Modules and require
-* 18.4 Express
-* 18.5 Loading our map JSON files and responding to API requests
-* 18.6 Saving game state on the server
+### Chapter 21 – Building an API with Node and Express
+* 21.1 JavaScript on the server
+* 21.2 Installing Node and using npm
+* 21.3 Modules and require
+* 21.4 Express
+* 21.5 Loading our map JSON files and responding to API requests
+* 21.6 Saving game state on the server
 
-### Chapter 19 – Real-time messaging with Socket.io
-* 19.1 Real-time updates
-* 19.2 Using socket.io on the server and the browser
-* 19.3 Sending and receiving game messages
-* 19.4 Bumping into other characters
-* 19.5 Swapping items
+### Chapter 22 – Real-time messaging with Socket.io
+* 22.1 Real-time updates
+* 22.2 Using socket.io on the server and the browser
+* 22.3 Sending and receiving game messages
+* 22.4 Bumping into other characters
+* 22.5 Swapping items
