@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>The Crypt</title>
+</head>
+<body>
+
+  <h1>The Crypt</h1>
+  
+  <div id="player"></div>
+  <div id="place"></div>
+  <div id="messages"></div>
+  
+  <input type="text" id="txtCommand">
+  <button id="btnCommand">Make it so</button>
+  
+  
+  
+  <!-- Templates -->
+  
+  <script type="text/x-template" id="itemTemplate">
+      <li>{{item}}</li>
+  </script>
+  
+  <script type="text/x-template" id="playerTemplate">
+      <h3>{{name}}</h3>
+      <p>{{name}} has health {{health}}</p>
+      
+      <h4>Items:</h4>
+      <ol id="playerItems"></ol>
+  </script>
+  
+  <script type="text/x-template" id="placeTemplate">
+      <h3>{{title}}</h3>
+      <p>{{description}}</p>
+      
+      <h4>Items:</h4>
+      <ol id="placeItems"></ol>
+      
+      <h4>Exits:</h4>
+      <ol id="placeExits"></ol>
+  </script>
+  
+  <script type="text/x-template" id="messageTemplate">
+      <p>*** {{message}} ***</p>
+  </script>
+  
+  
+  <!-- Modules -->
+  
+  <!-- Map Data -->
+  <script src="http://output.jsbin.com/raciki.js"></script>
+
+  <!-- Map Builder -->
+  <script src="http://output.jsbin.com/xopusa.js"></script>
+
+  <!-- Template Constructor -->
+  <script src="http://output.jsbin.com/pugase.js"></script>
+
+  <!-- Player Constructor -->
+  <script src="http://output.jsbin.com/voveta.js"></script>
+
+  <!-- Place Constructor -->
+  <script src="http://output.jsbin.com/dizenu.js"></script>
+
+  <!-- Player View -->
+  <script src="http://output.jsbin.com/suyona.js"></script>
+
+  <!-- Place View -->
+  <script src="http://output.jsbin.com/yoquna.js"></script>
+
+  <!-- Message View -->
+  <script src="http://output.jsbin.com/jojeyo.js"></script>
+
+  <!-- Game Controller -->
+  <script src="http://output.jsbin.com/dugawu.js"></script>
+
+  <!-- Command Module -->
+  <script src="http://output.jsbin.com/qedubi.js"></script>
+</body>
+</html>
