@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Loading just data</title>
+</head>
+<body>
+
+  <article>
+    <h1>Loading just data</h1>
+    <p>Adventures in The Crypt can involve exploring ancient tombs, sprawling spaceships and mysterious forests. Each adventure may cover dozens of locations with little chance of completion in a single sitting. Rather than loading the whole map at the start of a game, it might make more sense to load places only as they are visited. The JSON data for each place will be stored in a separate file and we’ll use XMLHttpRequest to load the files when needed.</p>
+    <p>As a map is explored, a player will visit the same locations many times. We don’t want to keep loading the same data across the Internet. Whenever a new place is created from loaded data, the place will be stored in a cache, using the place’s id as the key. Further requests for a place can be given the stored place directly.</p>
+  </article>
+  
+  <aside>
+    <h2>Calendar</h2>
+    <ol id="calEvents">
+      <li>
+        <h3>Sword Sharpening</h3>
+        <p>Mon 3 June</p>
+        <p>The Crypt</p>
+      </li>
+      <li>
+        <h3>Team Work Session</h3>
+        <p>Mon 17 June</p>
+        <p>The Crypt</p>
+      </li>
+      <li>
+        <h3>Cooking with Cheese</h3>
+        <p>Wed 20 June</p>
+        <p>The Kitchen</p>
+      </li>
+    </ol>
+    <p>
+      <a href="zopipiz" id="loadEvents" data-code="siwusi">Next</a>
+    </p>
+  </aside>
+  
+  
+  <script type="text/template" id="calTemplate">
+    <li>
+      <h3>{{title}}</h3>
+      <p>{{date}}</p>
+      <p>{{location}}</p>
+    </li>
+  </script>
+  
+  <!-- Template Constructor -->
+  <script src="http://output.jsbin.com/fubayi.js"></script>
+</body>
+</html>
+
+
+<!-- Further Adventures
+
+1) Change the template so that each
+   field has a label.
+
+   e.g. <h3>Title: {{title}}</h3>
+
+2) Run the program.
+
+3) Click next under the calendar widget.
+
+-->
