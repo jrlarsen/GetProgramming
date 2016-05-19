@@ -3,7 +3,11 @@
  * An object with a single property
  */
 
-var book = { title : "The Hobbit" };
+var book;
+
+book = {
+    title : "The Hobbit"
+};
 
 
 

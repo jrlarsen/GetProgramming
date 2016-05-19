@@ -18,7 +18,7 @@ var event = {
  *
  * 1) Remove the backslash from the notes property.
  *
- * 2) Take a look at the errors reported by jsBin.
+ * 2) Take a look at the errors reported by JS Bin.
  *
  * 3) Put the backslash back.
  *

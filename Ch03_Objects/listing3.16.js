@@ -27,7 +27,7 @@ console.log("Items: " + player.items);
  *
  * Notice how storing the items as a string
  * isn't a great approach. If the player
- * drops an item we'll have to manipulate
+ * drops an item you'll have to manipulate
  * the string to remove the item.
  *
  * JavaScript has a way of storing lists

@@ -43,18 +43,18 @@ console.log(bookTitle + " by " + bookAuthor);
  */
 
 var book1Title = "The Hobbit";
-var book1Authors = "J.R.R.Tolkien";
+var book1Author = "J.R.R.Tolkien";
 
 var book2Title = "Northern Lights";
-var book2Authors = "Philip Pullman";
+var book2Author = "Philip Pullman";
 
 var book3Title = "The Adventures of Tom Sawyer";
-var book3Authors = "Mark Twain";
+var book3Author = "Mark Twain";
 
 console.log("There are three books so far...");
-console.log(book1Title);
-console.log(book2Title);
-console.log(book3Title);
+console.log(book1Title + " by " + book1Author);
+console.log(book2Title + " by " + book2Author);
+console.log(book3Title + " by " + book3Author);
 
 
 
@@ -122,7 +122,7 @@ book = {};
  *
  * 2) Place your cursor between the curly braces
  *    in the code above and press enter.
- *    jsBin should add an empty line between
+ *    JS Bin should add an empty line between
  *    the braces. You can add more empty lines.
  *
  * 3) Run the program again, logging book
@@ -142,7 +142,11 @@ book = {};
  * An object with a single property
  */
 
-var book = { title : "The Hobbit" };
+var book;
+
+book = {
+    title : "The Hobbit"
+};
 
 
 
@@ -163,30 +167,38 @@ var book = { title : "The Hobbit" };
 ```
 
 
-### Using line breaks to aid readability
+### Using a variable as a property value
 [JS Bin: Listing 3.06](http://jsbin.com/bafige/edit?js,console) - bafige
 ```javascript
-/* Get Programmimg with JavaScript
+/* Get Programming with JavaScript
  * Listing 3.06
- * Using line breaks to aid readability
+ * Using a variable as a property value
  */
 
 var book;
+var bookName;
+
+bookName = "The Adventures of Tom Sawyer";
 
 book = {
-	title : "The Hobbit"
+    title : bookName
 };
 
 
 
 /* Further Adventures
  *
- * 1) Create a second book.
+ * 1) Run the program.
  *
- * 2) Try adding new properties to each book.
- *    If error messages appear, see if you can make
- *    sense of them. Do they help you to
- *    fix the problem?
+ * 2) At the console prompt, type 'book'
+ *    and press enter.
+ *
+ * The book object should be displayed on the console.
+ * Its title property should have the same
+ * value as the bookName variable.
+ *
+ * 3) Change the value of the bookName variable
+ *    and try steps 1 and 2 again.
  *
  */
 ```
@@ -203,7 +215,10 @@ book = {
 var book1;
 var book2;
 
-book1 = { title : "The Hobbit" , author : "J. R. R. Tolkien" };
+book1 = {
+    title : "The Hobbit",
+    author : "J. R. R. Tolkien"
+};
 
 book2 = {
 	title : "Northern Lights",
@@ -217,16 +232,9 @@ book2 = {
  * 1) Add a third property to each book.
  *    Don't forget the commas.
  *
- * The linear format for book1 is okay for
- * objects with few properties but becomes
- * unwieldy as more properties are added.
+ * 2) Add spaces so that the colons line up.
  *
- * 2) Add spaces to book2 properties so that
- *    the colons line up.
- *    Do you prefer the objects formatted that way?
- *
- * 3) Reformat book1 so that it has the same
- *    layout as book2.
+ * 3) Log both objects to the console.
  *
  */
 ```
@@ -322,8 +330,8 @@ console.log(book2.title + " by " + book2.author);
 var player1;
 
 player1 = {
-	  name: "Max",
-	  attempted: 0,
+    name: "Max",
+    attempted: 0,
     correct: 0
 };
 
@@ -399,7 +407,6 @@ var post = {
 	title : "My Crazy Space Adventure",
 	author : "Philae",
 	created : "2015-06-21",
-	approved : true,
 	body : "You will not believe where I just woke up!! Only on a comet..."
 };
 
@@ -410,11 +417,6 @@ var post = {
  * 1) Display some of the properties.
  *
  * 2) Add a second post.
- *
- * We'd like to be able to display posts only if
- * the approved property is true.
- * Part 2 of Get Programming with JavaScript will
- * investigate choices and conditions.
  *
  */
 ```
@@ -443,7 +445,7 @@ var event = {
  *
  * 1) Remove the backslash from the notes property.
  *
- * 2) Take a look at the errors reported by jsBin.
+ * 2) Take a look at the errors reported by JS Bin.
  *
  * 3) Put the backslash back.
  *
@@ -569,7 +571,7 @@ console.log("Items: " + player.items);
  *
  * Notice how storing the items as a string
  * isn't a great approach. If the player
- * drops an item we'll have to manipulate
+ * drops an item you'll have to manipulate
  * the string to remove the item.
  *
  * JavaScript has a way of storing lists

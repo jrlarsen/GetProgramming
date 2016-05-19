@@ -15,7 +15,7 @@ book = {};
  *
  * 2) Place your cursor between the curly braces
  *    in the code above and press enter.
- *    jsBin should add an empty line between
+ *    JS Bin should add an empty line between
  *    the braces. You can add more empty lines.
  *
  * 3) Run the program again, logging book
