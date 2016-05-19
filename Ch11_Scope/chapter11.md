@@ -1,4 +1,4 @@
-# Chapter 11 - Scope: hiding information from users
+# Chapter 11 - Scope: hiding information
 
 
 ### Declare, assign and use a variable

@@ -1,4 +1,4 @@
-# Functions: code on demand
+# Functions: code-on-demand
 
 ### Displaying an object’s properties on the console
 [JS Bin: Listing 4.01](http://jsbin.com/besudi/edit?js,console) - besudi

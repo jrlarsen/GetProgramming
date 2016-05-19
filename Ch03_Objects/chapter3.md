@@ -1,4 +1,4 @@
-# Objects: a way to group data
+# Objects: grouping your data
 
 ### Using variables to represent a book
 [JS Bin: Listing 3.01](http://jsbin.com/fucuxah/edit?js,console) - fucuxah

@@ -1,4 +1,4 @@
-# Variables
+# Chapter 2 - Variables: storing data in your programs
 
 ### Declaring a variable
 [JS Bin: Listing 2.01](http://jsbin.com/potazo/edit?js,console) - potazo
