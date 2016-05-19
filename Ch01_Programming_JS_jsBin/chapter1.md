@@ -5,7 +5,7 @@
 ```javascript
 /* Get Programming with JavaScript
  * Listing 1.01
- * Using console.log
+ * Using console.log to display information
  */
 
 console.log("Hello World!");
@@ -14,7 +14,7 @@ console.log("Hello World!");
 
 /* Further Adventures
  *
- * 1) Change the text between the brackets.
+ * 1) Change the text between the parentheses.
  *
  * 2) Click Run on the console to run the
  *    program again.
