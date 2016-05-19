@@ -20,7 +20,7 @@ var yield;
 /* Further Adventures
  *
  * 1) Take a look at the errors in the
- *    error section of jsBin below.
+ *    error section of JS Bin below.
  *
  * 2) Click Run in the console
  *    and see what errors appear there.

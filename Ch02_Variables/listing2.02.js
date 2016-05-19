@@ -10,7 +10,7 @@ score = 100;
 
 /* Further Adventures
  *
- * 1) Click Run on the jsBin Console tab.
+ * 1) Click Run on the JS Bin Console panel.
  *    Nothing will be displayed on the console
  *    but the program will have run,
  *    creating the score variable.

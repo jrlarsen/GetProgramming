@@ -15,7 +15,7 @@ var score;
 /* Further Adventures
  *
  * 1) Delete the semicolon at after the word score.
- *    jsBin should complain and show an error message.
+ *    JS Bin should complain and show an error message.
  *    Take a look at the message.
  *
  * 2) Add the semicolon back after the word score.
@@ -42,7 +42,7 @@ score = 100;
 
 /* Further Adventures
  *
- * 1) Click Run on the jsBin Console tab.
+ * 1) Click Run on the JS Bin Console panel.
  *    Nothing will be displayed on the console
  *    but the program will have run,
  *    creating the score variable.
@@ -117,10 +117,15 @@ console.log(score);
  *
  * 3) Assign your variable a value.
  *
- * 4) Use console.log to display your variable on the console.
+ * 4) Use console.log to display your
+ *    variable on the console.
  *
- * 5) Can you display the sum
- *    of the two variables?
+ * 5) Add a new line of code to alter the
+ *    value of your variable after it
+ *    has been displayed on the console.
+ *
+ * 6) Add a new line of code to display
+ *    the new value of your variable.
  *
  */
 ```
@@ -289,7 +294,7 @@ var yield;
 /* Further Adventures
  *
  * 1) Take a look at the errors in the
- *    error section of jsBin below.
+ *    error section of JS Bin below.
  *
  * 2) Click Run in the console
  *    and see what errors appear there.
