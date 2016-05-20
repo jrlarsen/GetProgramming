@@ -18,10 +18,12 @@ displayMenu();
 
 /* Further Adventures
  *
- * 1) Add two more options to the displayMenu function and run the program
+ * 1) Add two more options to the displayMenu
+ *    function and run the program.
  *
- * 2) Create your own displayMyMenu function
+ * 2) Create your own displayMyMenu function.
  *
- * 3) Add a line to call your function as well. Run the program
+ * 3) Add a line to call your function as well.
+ *    Run the program
  *
  */

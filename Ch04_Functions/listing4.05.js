@@ -6,11 +6,11 @@
 var findTotal;
 var displayMenu;
 
-var findTotal = function () {
+findTotal = function () {
     result = number1 + number2;
 };
 
-var displayMenu = function () {
+displayMenu = function () {
     console.log("Please choose an option:");
     console.log("(1) Print log");
     console.log("(2) Upload file");
@@ -23,7 +23,7 @@ var displayMenu = function () {
  *
  * How to run a function, also called calling
  * or invoking the function, is explained in
- * Section 4.2.2.
+ * Section 4.2.3.
  * If these exercises are too hard, you
  * can always come back to them later.
  *
@@ -32,7 +32,7 @@ var displayMenu = function () {
  * 2) Assign values to the variables.
  *
  * 3) Run the findTotal function by writing its name
- *    followed by round brackets: findTotal();
+ *    followed by parentheses: findTotal();
  *
  * 4) Display the result on the console.
  *

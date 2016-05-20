@@ -10,7 +10,7 @@ var sale;
 var calculateTax;
 var displaySale;
 
-sale1 = { price: 14, taxRate: 15 };
+sale1 = { price: 140, taxRate: 15 };
 sale2 = { price: 40, taxRate: 10 };
 sale3 = { price: 120, taxRate: 20 };
 
@@ -20,9 +20,9 @@ calculateTax = function () {
 };
 
 displaySale = function () {
-    console.log("price = $" + sale.price.toFixed(2));
-    console.log("tax @ " + sale.taxRate + "% = $" + sale.tax.toFixed(2));
-    console.log("total cost = $" + sale.total.toFixed(2));
+    console.log("price = $" + sale.price);
+    console.log("tax @ " + sale.taxRate + "% = $" + sale.tax);
+    console.log("total cost = $" + sale.total);
 };
 
 sale = sale1;

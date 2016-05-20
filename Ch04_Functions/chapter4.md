@@ -111,7 +111,7 @@ var sale1;
 var sale2;
 var sale3;
 
-sale1 = { price: 14, taxRate: 15 };
+sale1 = { price: 140, taxRate: 15 };
 sale2 = { price: 40, taxRate: 10 };
 sale3 = { price: 120, taxRate: 20 };
 
@@ -123,32 +123,30 @@ sale1.total = sale1.price + sale1.tax;
 sale2.total = sale2.price + sale2.tax;
 sale3.total = sale3.price + sale3.tax;
 
-console.log("price = $" + sale1.price.toFixed(2));
-console.log("tax @ " + sale1.taxRate + "% = $" + sale1.tax.toFixed(2));
-console.log("total cost = $" + sale1.total.toFixed(2));
+console.log("price = $" + sale1.price);
+console.log("tax @ " + sale1.taxRate + "% = $" + sale1.tax);
+console.log("total cost = $" + sale1.total);
 
-console.log("price = $" + sale2.price.toFixed(2));
-console.log("tax @ " + sale2.taxRate + "% = $" + sale2.tax.toFixed(2));
-console.log("total cost = $" + sale2.total.toFixed(2));
+console.log("price = $" + sale2.price);
+console.log("tax @ " + sale2.taxRate + "% = $" + sale2.tax);
+console.log("total cost = $" + sale2.total);
 
-console.log("price = $" + sale3.price.toFixed(2));
-console.log("tax @ " + sale3.taxRate + "% = $" + sale3.tax.toFixed(2));
-console.log("total cost = $" + sale3.total.toFixed(2));
+console.log("price = $" + sale3.price);
+console.log("tax @ " + sale3.taxRate + "% = $" + sale3.tax);
+console.log("total cost = $" + sale3.total);
 
 
 
 
 /* Further Adventures
  *
- * 1) Add the details for a fouth sale.
+ * 1) Add the details for a fourth sale.
  *
  * 2) Log the fourth sale to the console.
  *    Use the same format as the others.
  *
  * 3) Add code to separate out the different
  *    sales on the console.
- *
- * 4) Change the number of decimal places displayed.
  *
  */
 ```
@@ -168,19 +166,27 @@ sayHello = function () {
     console.log("Hello World!");
 };
 
-sayHello();
-
 
 
 /* Further Adventures
  *
- * 1) Add a second sayHello(); on a new line. Run the program
+ * 1) Run the program.
  *
- * 2) Change the message from the sayHello function
+ * Nothing will appear on the console.
+ * You have defined a function.
+ * You have assigned the function to a variable.
+ * You have not yet made the function run.
  *
- * 3) Create a sayGoodbye function
+ * You can make the function run by
+ * typing the name of the variable it has been
+ * assigned to, followed by parentheses.
  *
- * 4) Make the program say goodbye ten times
+ * sayHello();
+ *
+ * 3) At the end of the program, add code to
+ *    make the function run.
+ *
+ * 4) Run the program.
  *
  */
 ```
@@ -197,11 +203,11 @@ sayHello();
 var findTotal;
 var displayMenu;
 
-var findTotal = function () {
+findTotal = function () {
 	result = number1 + number2;
 };
 
-var displayMenu = function () {
+displayMenu = function () {
 	console.log("Please choose an option:");
 	console.log("(1) Print log");
 	console.log("(2) Upload file");
@@ -214,7 +220,7 @@ var displayMenu = function () {
  *
  * How to run a function, also called calling
  * or invoking the function, is explained in
- * Section 4.2.2.
+ * Section 4.2.3.
  * If these exercises are too hard, you
  * can always come back to them later.
  *
@@ -223,7 +229,7 @@ var displayMenu = function () {
  * 2) Assign values to the variables.
  *
  * 3) Run the findTotal function by writing its name
- *    followed by round brackets: findTotal();
+ *    followed by parentheses: findTotal();
  *
  * 4) Display the result on the console.
  *
@@ -329,11 +335,13 @@ displayMenu();
 
 /* Further Adventures
  *
- * 1) Add two more options to the displayMenu function and run the program
+ * 1) Add two more options to the displayMenu
+ *    function and run the program.
  *
- * 2) Create your own displayMyMenu function
+ * 2) Create your own displayMyMenu function.
  *
- * 3) Add a line to call your function as well. Run the program
+ * 3) Add a line to call your function as well.
+ *    Run the program
  *
  */
 ```
@@ -517,7 +525,7 @@ var sale;
 var calculateTax;
 var displaySale;
 
-sale1 = { price: 14, taxRate: 15 };
+sale1 = { price: 140, taxRate: 15 };
 sale2 = { price: 40, taxRate: 10 };
 sale3 = { price: 120, taxRate: 20 };
 
@@ -526,10 +534,10 @@ calculateTax = function () {
 	sale.total = sale.price + sale.tax;
 };
 
-displaySale = function () { 
-  console.log("price = $" + sale.price.toFixed(2));
-  console.log("tax @ " + sale.taxRate + "% = $" + sale.tax.toFixed(2));
-  console.log("total cost = $" + sale.total.toFixed(2));
+displaySale = function () {
+  console.log("price = $" + sale.price);
+  console.log("tax @ " + sale.taxRate + "% = $" + sale.tax);
+  console.log("total cost = $" + sale.total);
 };
 
 sale = sale1;
