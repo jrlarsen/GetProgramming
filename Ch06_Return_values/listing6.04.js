@@ -3,17 +3,17 @@
  * Returning the sum of two numbers
  */
 
-var sum;
+var add;
 
-sum = function (number1, number2) {
+add = function (number1, number2) {
 	var total = number1 + number2;
 
 	return total;
 };
 
-var result = sum(10, 35);
+var sum = add(50, 23);
 
-console.log(result);
+console.log(sum);
 
 
 
@@ -24,12 +24,12 @@ console.log(result);
  *
  * 2) Change the call to console.log so that
  *    the display on the console reads:
- *    'The sum of 10 and 35 is 45'
- *    using the sum function to generate the answer.
+ *    'The sum of 50 and 23 is 73'
+ *    using the add function to generate the answer.
  *
- * 3) Can you use the sum function as it is
+ * 3) Can you use the add function as it is
  *    to add more than two numbers?
- *    Hint: You can nest calls to sum.
+ *    Hint: You can nest calls to add.
  *
  * 4) Create a function to return the sum of
  *    three numbers given as arguments.

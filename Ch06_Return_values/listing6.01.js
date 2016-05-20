@@ -23,6 +23,8 @@ console.log(response);
  *    your choosing.
  *
  * We can call functions at the console prompt.
+ * Run the program, then click in the Console panel
+ * and enter commands after the prompt, >
  *
  * 2) Call getMessage at the prompt.
  *    

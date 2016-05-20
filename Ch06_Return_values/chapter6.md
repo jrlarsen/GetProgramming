@@ -29,6 +29,8 @@ console.log(response);
  *    your choosing.
  *
  * We can call functions at the console prompt.
+ * Run the program, then click in the Console panel
+ * and enter commands after the prompt, >
  *
  * 2) Call getMessage at the prompt.
  *    
@@ -130,17 +132,17 @@ console.log(getHelloTo("Dax"));
  * Returning the sum of two numbers
  */
 
-var sum;
+var add;
 
-sum = function (number1, number2) {
+add = function (number1, number2) {
 	var total = number1 + number2;
 
 	return total;
 };
 
-var result = sum(10, 35);
+var sum = add(50, 23);
 
-console.log(result);
+console.log(sum);
 
 
 
@@ -151,12 +153,12 @@ console.log(result);
  *
  * 2) Change the call to console.log so that
  *    the display on the console reads:
- *    'The sum of 10 and 35 is 45'
- *    using the sum function to generate the answer.
+ *    'The sum of 50 and 23 is 73'
+ *    using the add function to generate the answer.
  *
- * 3) Can you use the sum function as it is
+ * 3) Can you use the add function as it is
  *    to add more than two numbers?
- *    Hint: You can nest calls to sum.
+ *    Hint: You can nest calls to add.
  *
  * 4) Create a function to return the sum of
  *    three numbers given as arguments.
@@ -308,6 +310,16 @@ console.log(getPlayerName("Kandra"));
  *    | Jahver
  *    |
  *
+ * Note: to add a new-line character to a
+ * string, use the escape sequence '\n'
+ *
+ * var msg = "\na\nb\n";
+ * console.log(msg) would display:
+ * "
+ * a
+ * b
+ * "
+ *
  */
 ```
 
@@ -338,14 +350,14 @@ console.log(getPlayerPlace("Kandra", "The Dungeon of Doom"));
 
 /* Further Adventures
  *
- * 1) Create a getPlayerInfo function with three
+ * 1) Create a showPlayerInfo function with three
  *    parameters, playerName, playerHealth and
  *    playerPlace.
  *
  * 2) Call getPlayerHealth and getPlayerPlace
- *    from your new getPlayerInfo function.
+ *    from your new showPlayerInfo function.
  *
- *    e.g. getPlayerInfo("Dax", 50, "The Bath")
+ *    e.g. showPlayerInfo("Dax", 50, "The Bath")
  *    should produce the output
  *
  *    Dax has health 50

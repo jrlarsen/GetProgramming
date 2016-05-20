@@ -37,4 +37,14 @@ console.log(getPlayerName("Kandra"));
  *    | Jahver
  *    |
  *
+ * Note: to add a new-line character to a
+ * string, use the escape sequence '\n'
+ *
+ * var msg = "\na\nb\n";
+ * console.log(msg) would display:
+ * "
+ * a
+ * b
+ * "
+ *
  */
