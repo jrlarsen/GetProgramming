@@ -17,13 +17,14 @@ showMessage("Hello to Jason Isaacs and Stephen Fry");
 
 /* Further Adventures
  *
- * 1) Change the value assigned to message
- *    and run the program.
+ * 1) Change the showMessage function to
+ *    display its prefixed text on a
+ *    separate line to the message.
  *
- * 2) Add a couple more calls to showMessage
- *    with different arguments.
+ * 2) Declare a myMessage variable and
+ *    assign it a string value.
  *
- * 3) Change the extra text added
- *    in the showMessage function.
+ * 3) Call the showMessage function with
+ *    myMessage as the argument.
  *
  */

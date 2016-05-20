@@ -98,10 +98,10 @@ showMessage("It's full of stars!");
 
 /* Further Adventures
  *
- * 1) Change the message in the brackets
+ * 1) Change the message in the parentheses
  *    when showMessage is called on line 12.
  *
- * The value in the brackets when showMessage is called
+ * The value in the parentheses when showMessage is called
  * is an argument. "It's full of stars!" was the
  * original argument on line 12.
  *
@@ -138,14 +138,15 @@ showMessage("Hello to Jason Isaacs and Stephen Fry");
 
 /* Further Adventures
  *
- * 1) Change the value assigned to message
- *    and run the program.
+ * 1) Change the showMessage function to
+ *    display its prefixed text on a
+ *    separate line to the message.
  *
- * 2) Add a couple more calls to showMessage
- *    with different arguments.
+ * 2) Declare a myMessage variable and
+ *    assign it a string value.
  *
- * 3) Change the extra text added
- *    in the showMessage function.
+ * 3) Call the showMessage function with
+ *    myMessage as the argument.
  *
  */
 ```
@@ -219,9 +220,15 @@ showSum(2.8, -5);
  *
  * 1) Use the showSum function to add 56 and 74.
  *
+ * To multiply two numbers, use the * symbol.
+ * e.g. 3 * 5 is 3 multiplied by 5.
+ *
  * 2) Create a showProduct function to multiply two numbers.
  *
  * 3) Use your function to multiply three pairs of numbers.
+ *
+ * To divide one number by another, use /.
+ * e.g. 10 / 2 is 10 divided by 2.
  *
  * 4) What about showDifference and showQuotient
  *    for subtraction and division?
@@ -254,6 +261,10 @@ showPlayerName("Dax");
  * 1) Update the text logged so that it is
  *    of the form:
  *    The player's name is Kandra
+ *
+ * Strings have a length property that gives
+ * the number of characters in the string.
+ * e.g. playerName.length.
  *
  * 2) Make the function show the number
  *    of letters in the player's name.
@@ -477,7 +488,7 @@ showPlayerPlace(player2.name, player2.place);
 
 /* Further Adventures
  *
- * 1) In the console.log brackets, change
+ * 1) In the console.log parentheses, change
  *    playerName to playerName.substring(0, 1)
  *    Run the program. What do you think
  *    the substring function does?

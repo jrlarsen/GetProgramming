@@ -15,10 +15,10 @@ showMessage("It's full of stars!");
 
 /* Further Adventures
  *
- * 1) Change the message in the brackets
+ * 1) Change the message in the parentheses
  *    when showMessage is called on line 12.
  *
- * The value in the brackets when showMessage is called
+ * The value in the parentheses when showMessage is called
  * is an argument. "It's full of stars!" was the
  * original argument on line 12.
  *

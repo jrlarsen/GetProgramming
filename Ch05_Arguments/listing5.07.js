@@ -20,6 +20,10 @@ showPlayerName("Dax");
  *    of the form:
  *    The player's name is Kandra
  *
+ * Strings have a length property that gives
+ * the number of characters in the string.
+ * e.g. playerName.length.
+ *
  * 2) Make the function show the number
  *    of letters in the player's name.
  *

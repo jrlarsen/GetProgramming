@@ -30,7 +30,7 @@ showPlayerPlace(player2.name, player2.place);
 
 /* Further Adventures
  *
- * 1) In the console.log brackets, change
+ * 1) In the console.log parentheses, change
  *    playerName to playerName.substring(0, 1)
  *    Run the program. What do you think
  *    the substring function does?
