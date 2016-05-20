@@ -18,8 +18,8 @@ var displaySizes = function (planet) {
 };
 
 calculateSizes(planet1);
-displaySizes(planet1);                                                  
-                                                  
+displaySizes(planet1);
+
 
 
 /* Further Adventures
