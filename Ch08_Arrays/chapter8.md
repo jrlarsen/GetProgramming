@@ -149,11 +149,19 @@ console.log( days[dayInWeek - 1] );
  */
 
 var getVisitorReport = function (visitorArray, dayInWeek) {
-	var days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
+	var days = [
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday"
+  ];
 	var index = dayInWeek - 1;
 	var visitorReport;
 
-	visitorReport = "There were " + visitorArray[index] + " visitors ";
+	visitorReport = "There were ";
+  visitorReport += visitorArray[index];
+  visitorReport += " visitors ";
 	visitorReport += "on " + days[index];
 
 	return visitorReport;
@@ -240,10 +248,14 @@ console.log(items.join(" and "));
  * Iterating over an array with forEach
  */
 
-var items,
-    showInfo;
+var items;
+var showInfo;
 
-items = [ "The Pyramids", "The Grand Canyon", "Bondi Beach" ];
+items = [
+  "The Pyramids",
+  "The Grand Canyon",
+  "Bondi Beach"
+];
 
 showInfo = function (itemToShow) {
     console.log(itemToShow);
@@ -364,36 +376,28 @@ players.forEach(showArguments);
   console.log("Item: " + item);
   console.log("Index: " + index);
   console.log("Array: " + wholeArray);
-  wholeArray.shift();
 });
 
 
 
 /* Further Adventures
  *
- * 1) Add two more names to the players array.
+ * 1) Create an array of rectangle objects.
+ *    Each rectangle should have a length
+ *    property and a width property.
  *
- * 2) Run the program.
+ * 2) Define an assignArea function that
+ *    takes a rectangle as an argument and
+ *    assigns an area property holding
+ *    the area of the rectangle.
  *
- * We can remove the first element in
- * an array with the shift method.
+ * 3) Define a showInfo function that
+ *    takes a rectangle as an argument and
+ *    displays its properties on the console.
  *
- * 3) After the calls to console.log
- *    in the function passed to
- *    forEach, add a statement to
- *    remove the first item in
- *    the array.
- *
- *    wholeArray.shift();
- *
- * 4) Run the program.
- *
- * Is the output what you expected?
- *
- * It's best not to add or remove
- * elements in an array while
- * iterating over it. At least be
- * very careful!
+ * 4) Use forEach and your two functions
+ *    to display info about each of
+ *    the rectangles in the array.
  *
  */
 ```
@@ -458,9 +462,11 @@ var displayQuestion = function (questionAndAnswer) {
   
   console.log(questionAndAnswer.question);
   
-  questionAndAnswer.answers.forEach(function (answer, i) {
-    console.log(options[i] + " - " + answer);
-  });
+  questionAndAnswer.answers.forEach(
+    function (answer, i) {
+      console.log(options[i] + " - " + answer);
+    }
+  );
 };
 
 var question1 = {
@@ -498,33 +504,114 @@ displayQuestion(question1);
 ```javascript
 /* Get Programming with JavaScript
  * Listing 8.13
- * A player object
+ * Displaying player items
  */
 
-var showPlayerInfo = function (player) {
-    console.log("**********************");
-    console.log(player.name + ":");
-    console.log(" - Health: " + player.health);
-    console.log(" – Items:");
-    
-    player.items.forEach(function (item) {
-        console.log("   - " + item);
-    });
+// The spacer namespace
 
-    console.log("**********************");
+var spacer = {
+  blank: function () {
+    return "";
+  },
+
+  newLine: function () {
+    return "\n";
+  },
+
+  line: function (length, character) {
+    var longString = "****************************************";
+    longString += "----------------------------------------";
+    longString += "========================================";
+    longString += "++++++++++++++++++++++++++++++++++++++++";
+    longString += "                                        ";
+
+    length = Math.max(0, length);
+    length = Math.min(40, length);
+    return longString.substr(longString.indexOf(character), length);
+  },
+
+  wrap : function (text, length, character) {
+    var padLength = length - text.length - 3;
+    var wrapText = character + " " + text;
+    wrapText += spacer.line(padLength, " ");
+    wrapText += character;
+    return wrapText;
+  },
+
+  box: function (text, length, character) {
+    var boxText = spacer.newLine();
+    boxText += spacer.line(length, character) + spacer.newLine();
+    boxText += spacer.wrap(text, length, character) + spacer.newLine();
+    boxText += spacer.line(length, character) + spacer.newLine();
+    return boxText;
+  }
 };
+
+
+// Player display code
+
+var getPlayerName = function (player) {
+  return player.name;
+};
+
+var getPlayerHealth = function (player) {
+  return player.name + " has health " + player.health;
+};
+
+var getPlayerPlace = function (player) {
+  return player.name + " is in " + player.place;
+};
+
+var getPlayerItems = function (player) {
+  var itemsString = "Items:" + spacer.newLine();
+
+  player.items.forEach(function (item) {
+    itemsString += "   - " + item + spacer.newLine();
+  });
+
+  return itemsString;
+};
+
+var getPlayerInfo = function (player, character) {
+  var place = getPlayerPlace(player);
+  var health = getPlayerHealth(player);
+  var longest = Math.max(place.length, health.length) + 4;
+
+  var info = spacer.box(getPlayerName(player), longest, character);
+  info += spacer.wrap(place, longest, character);
+  info += spacer.newLine() + spacer.wrap(health, longest, character);
+  info += spacer.newLine() + spacer.line(longest, character);
+
+  info += spacer.newLine();
+  info += "  " + getPlayerItems(player);
+  info += spacer.newLine();
+  info += spacer.line(longest, character);
+
+  info += spacer.newLine();
+
+  return info;
+};
+
+var showPlayerInfo = function (player, character) {
+  console.log(getPlayerInfo(player, character));
+};
+
+
+// Create a player
 
 var player1 = {
-    name : "Kandra",
-    health : 50,
-    items : ["a trusty lamp"]
+  name: "Kandra",
+  place: "The Dungeon of Doom",
+  health: 50,
+  items : ["a trusty lamp"]
 };
 
-showPlayerInfo(player1);
+showPlayerInfo(player1, "=");
 
 player1.items.push("a rusty key");
 
-showPlayerInfo(player1);
+showPlayerInfo(player1, "*");
+
 
 
 

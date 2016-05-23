@@ -3,10 +3,14 @@
  * Iterating over an array with forEach
  */
 
-var items,
-    showInfo;
+var items;
+var showInfo;
 
-items = [ "The Pyramids", "The Grand Canyon", "Bondi Beach" ];
+items = [
+    "The Pyramids",
+    "The Grand Canyon",
+    "Bondi Beach"
+];
 
 showInfo = function (itemToShow) {
     console.log(itemToShow);

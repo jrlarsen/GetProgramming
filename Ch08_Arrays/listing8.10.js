@@ -7,35 +7,27 @@
   console.log("Item: " + item);
   console.log("Index: " + index);
   console.log("Array: " + wholeArray);
-  wholeArray.shift();
 });
 
 
 
 /* Further Adventures
  *
- * 1) Add two more names to the players array.
+ * 1) Create an array of rectangle objects.
+ *    Each rectangle should have a length
+ *    property and a width property.
  *
- * 2) Run the program.
+ * 2) Define an assignArea function that
+ *    takes a rectangle as an argument and
+ *    assigns an area property holding
+ *    the area of the rectangle.
  *
- * We can remove the first element in
- * an array with the shift method.
+ * 3) Define a showInfo function that
+ *    takes a rectangle as an argument and
+ *    displays its properties on the console.
  *
- * 3) After the calls to console.log
- *    in the function passed to
- *    forEach, add a statement to
- *    remove the first item in
- *    the array.
- *
- *    wholeArray.shift();
- *
- * 4) Run the program.
- *
- * Is the output what you expected?
- *
- * It's best not to add or remove
- * elements in an array while
- * iterating over it. At least be
- * very careful!
+ * 4) Use forEach and your two functions
+ *    to display info about each of
+ *    the rectangles in the array.
  *
  */

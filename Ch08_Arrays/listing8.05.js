@@ -4,11 +4,19 @@
  */
 
 var getVisitorReport = function (visitorArray, dayInWeek) {
-	var days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
+	var days = [
+		"Monday",
+		"Tuesday",
+		"Wednesday",
+		"Thursday",
+		"Friday"
+	];
 	var index = dayInWeek - 1;
 	var visitorReport;
 
-	visitorReport = "There were " + visitorArray[index] + " visitors ";
+	visitorReport = "There were ";
+	visitorReport += visitorArray[index];
+	visitorReport += " visitors ";
 	visitorReport += "on " + days[index];
 
 	return visitorReport;
