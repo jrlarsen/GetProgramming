@@ -23,10 +23,10 @@ var spacer = {
     length = Math.min(40, length);
     return longString.substr(longString.indexOf(character), length);
   },
-  
+
   wrap : function (text, length, character) {
     var padLength = length - text.length - 3;
-    var wrapText = character + " " + text;      
+    var wrapText = character + " " + text;
     wrapText += spacer.line(padLength, " ");
     wrapText += character;
     return wrapText;
@@ -35,7 +35,7 @@ var spacer = {
   box: function (text, length, character) {
     var boxText = spacer.newLine();
     boxText += spacer.line(length, character) + spacer.newLine();
-    boxText += spacer.wrap(text, length, character) + spacer.newLine(); 
+    boxText += spacer.wrap(text, length, character) + spacer.newLine();
     boxText += spacer.line(length, character) + spacer.newLine();
     return boxText;
   }
@@ -53,7 +53,7 @@ var getPlayerPlace = function (player) {
   return player.name + " is in " + player.place;
 };
 
-var getPlayerInfo = function (player, character) {  
+var getPlayerInfo = function (player, character) {
   var place = getPlayerPlace(player);
   var health = getPlayerHealth(player);
   var longest = Math.max(place.length, health.length) + 4;

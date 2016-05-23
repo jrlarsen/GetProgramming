@@ -1,25 +1,28 @@
 /* Get Programming with JavaScript
  * Listing 7.05
- * Converting a string to upper case
+ * Using Math.min and Math.max
  */
 
-var planet = "Jupiter";
-var bigPlanet = planet.toUpperCase();
+var showSmaller = function (num1, num2) {
+    var smaller = Math.min(num1, num2);
+    var larger = Math.max(num1, num2);
 
-console.log(planet + " becomes " + bigPlanet);
+    console.log(smaller + " is smaller than " + larger);
+};
+
+showSmaller(12, 3);
+showSmaller(-10, 3);
 
 
 
 /* Further Adventures
  *
- * 1) Create a getBig function that accepts a
- *    string as an argument and returns it
- *    converted to upper case.
+ * 1) Try out some different arguments.
  *
- * There is also a toLowerCase string method.
+ * 2) Write a showLarger function.
  *
- * 2) Create a getSmall function that accepts a
- *    string as an argument and returns it
- *    converted to lower case.
+ * 3) Write a showSmallest function that takes
+ *    three arguments and displays the smallest
+ *    of the three.
  *
  */

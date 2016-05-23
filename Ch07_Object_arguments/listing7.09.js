@@ -1,41 +1,27 @@
 /* Get Programming with JavaScript
  * Listing 7.09
- * Using Math.min and Math.max to constrain an argument
+ * Finding a character with indexOf
  */
 
-var line = function (lineLength) {
-  var line = "========================================";
-  lineLength = Math.max(0, lineLength);
-  lineLength = Math.min(40, lineLength);
-  return line.substr(0, lineLength);
-};
+var message = "We choose to go to the Moon!";
 
-console.log(line(30));
-console.log(line(40));
-console.log(line(50));
+var charIndex = message.indexOf("M");
+
+console.log(message.substr(charIndex, 3));
 
 
 
 /* Further Adventures
  *
- * 1) Test line lengths from -20 to 60
- *    in steps of 10.
+ * 1) Use indexOf to find the index of where the
+ *    word 'go' starts in the message string.
  *
- * 2) Define a spaces function that returns a string
- *    made up of a specified number of space characters.
- *    The line of spaces returned can have a length
- *    between 0 and 40.
+ * 2) Use indexOf and substr to display the word
+ *    'choose' from the message string.
  *
- * 3) Add an emptyBox function
- *    that draws an empty box of specified
- *    width and height 5.
+ * There is also a lastIndexOf string method.
  *
- *    emptyBox(12);
- *
- *    > ============
- *    > =          =
- *    > =          =
- *    > =          =
- *    > ============
+ * 3) Use lastIndexOf to find the index of the
+ *    'oo' in the word 'Moon' of the message string.
  *
  */

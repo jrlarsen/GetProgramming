@@ -1,27 +1,25 @@
 /* Get Programming with JavaScript
  * Listing 7.07
- * Finding a character with indexOf
+ * Converting a string to upper case
  */
 
-var message = "We choose to go to the Moon!";
+var planet = "Jupiter";
+var bigPlanet = planet.toUpperCase();
 
-var charIndex = message.indexOf("M");
-
-console.log(message.substr(charIndex, 3));
+console.log(planet + " becomes " + bigPlanet);
 
 
 
 /* Further Adventures
  *
- * 1) Use indexOf to find the index of where the
- *    word 'go' starts in the message string.
+ * 1) Create a getBig function that accepts a
+ *    string as an argument and returns it
+ *    converted to upper case.
  *
- * 2) Use indexOf and substr to display the word
- *    'choose' from the message string.
+ * There is also a toLowerCase string method.
  *
- * There is also a lastIndexOf string method.
- *
- * 3) Use lastIndexOf to find the index of the
- *    'oo' in the word 'Moon' of the message string.
+ * 2) Create a getSmall function that accepts a
+ *    string as an argument and returns it
+ *    converted to lower case.
  *
  */

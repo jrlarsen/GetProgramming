@@ -179,108 +179,11 @@ showPoint(point2);
 ```
 
 
-### Converting a string to upper case
-[JS Bin Listing 7.05](http://jsbin.com/jizaqu/edit?js,console) - jizaqu
+### Using Math.min and Math.max
+[JS Bin Listing 7.05](http://jsbin.com/moyoti/edit?js,console) - moyoti
 ```javascript
 /* Get Programming with JavaScript
  * Listing 7.05
- * Converting a string to upper case
- */
-
-var planet = "Jupiter";
-var bigPlanet = planet.toUpperCase();
-
-console.log(planet + " becomes " + bigPlanet);
-
-
-
-/* Further Adventures
- *
- * 1) Create a getBig function that accepts a
- *    string as an argument and returns it
- *    converted to upper case.
- *
- * There is also a toLowerCase string method.
- *
- * 2) Create a getSmall function that accepts a
- *    string as an argument and returns it
- *    converted to lower case.
- *
- */
-```
-
-
-### Finding substrings
-[JS Bin Listing 7.06](http://jsbin.com/mesisi/edit?js,console) - mesisi
-```javascript
-/* Get Programming with JavaScript
- * Listing 7.06
- * Finding substrings
- */
-
-var message = "We choose to go to the Moon!";
-
-console.log(message.substr(3, 12));
-
-
-
-/* Further Adventures
- *
- * 1) Use substr to log the following parts of
- *    the message string to the console:
- *
- *    > Moon!
- *    > go to the
- *    > We choose
- *
- * 2) Investigate what happens if you omit the
- *    second argument when calling substr.
- *
- * 3) What happens if you use negative numbers
- *    as arguments?
- *
- */
-```
-
-
-### Finding a character with indexOf
-[JS Bin Listing 7.07](http://jsbin.com/bidabi/edit?js,console) - bidabi
-```javascript
-/* Get Programming with JavaScript
- * Listing 7.07
- * Finding a character with indexOf
- */
-
-var message = "We choose to go to the Moon!";
-
-var charIndex = message.indexOf("M");
-
-console.log(message.substr(charIndex, 3));
-
-
-
-/* Further Adventures
- *
- * 1) Use indexOf to find the index of where the
- *    word 'go' starts in the message string.
- *
- * 2) Use indexOf and substr to display the word
- *    'choose' from the message string.
- *
- * There is also a lastIndexOf string method.
- *
- * 3) Use lastIndexOf to find the index of the
- *    'oo' in the word 'Moon' of the message string.
- *
- */
-```
-
-
-### Using Math.min and Math.max
-[JS Bin Listing 7.08](http://jsbin.com/moyoti/edit?js,console) - moyoti
-```javascript
-/* Get Programming with JavaScript
- * Listing 7.08
  * Using Math.min and Math.max
  */
 
@@ -310,12 +213,11 @@ showSmaller(-10, 3);
 ```
 
 
-
 ### Using Math.min and Math.max to constrain an argument
-[JS Bin: Listing 7.09](http://jsbin.com/qiziyo/edit?js,console) - qiziyo
+[JS Bin Listing 7.06](http://jsbin.com/qiziyo/edit?js,console) - qiziyo
 ```javascript
 /* Get Programming with JavaScript
- * Listing 7.09
+ * Listing 7.06
  * Using Math.min and Math.max to constrain an argument
  */
 
@@ -353,6 +255,104 @@ console.log(line(50));
  *    > =          =
  *    > =          =
  *    > ============
+ *
+ */
+```
+
+
+### Converting a string to upper case
+[JS Bin Listing 7.07](http://jsbin.com/jizaqu/edit?js,console) - jizaqu
+```javascript
+/* Get Programming with JavaScript
+ * Listing 7.07
+ * Converting a string to upper case
+ */
+
+var planet = "Jupiter";
+var bigPlanet = planet.toUpperCase();
+
+console.log(planet + " becomes " + bigPlanet);
+
+
+
+/* Further Adventures
+ *
+ * 1) Create a getBig function that accepts a
+ *    string as an argument and returns it
+ *    converted to upper case.
+ *
+ * There is also a toLowerCase string method.
+ *
+ * 2) Create a getSmall function that accepts a
+ *    string as an argument and returns it
+ *    converted to lower case.
+ *
+ */
+```
+
+
+### Finding substrings
+[JS Bin Listing 7.08](http://jsbin.com/mesisi/edit?js,console) - mesisi
+```javascript
+/* Get Programming with JavaScript
+ * Listing 7.08
+ * Finding substrings
+ */
+
+var message = "We choose to go to the Moon!";
+
+console.log(message.substr(3, 12));
+
+
+
+/* Further Adventures
+ *
+ * 1) Use substr to log the following parts of
+ *    the message string to the console:
+ *
+ *    > Moon!
+ *    > go to the
+ *    > We choose
+ *
+ * 2) Investigate what happens if you omit the
+ *    second argument when calling substr.
+ *
+ * 3) What happens if you use negative numbers
+ *    as arguments?
+ *
+ */
+```
+
+
+
+### Finding a character with indexOf
+[JS Bin: Listing 7.09](http://jsbin.com/bidabi/edit?js,console) - bidabi
+```javascript
+/* Get Programming with JavaScript
+ * Listing 7.09
+ * Finding a character with indexOf
+ */
+
+var message = "We choose to go to the Moon!";
+
+var charIndex = message.indexOf("M");
+
+console.log(message.substr(charIndex, 3));
+
+
+
+/* Further Adventures
+ *
+ * 1) Use indexOf to find the index of where the
+ *    word 'go' starts in the message string.
+ *
+ * 2) Use indexOf and substr to display the word
+ *    'choose' from the message string.
+ *
+ * There is also a lastIndexOf string method.
+ *
+ * 3) Use lastIndexOf to find the index of the
+ *    'oo' in the word 'Moon' of the message string.
  *
  */
 ```
@@ -512,6 +512,8 @@ var player2 = {
 
 console.log(getPlayerInfo(player1, "="));
 console.log(getPlayerInfo(player2, "+"));
+
+
 
 
 /* Further Adventures

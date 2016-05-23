@@ -1,28 +1,27 @@
 /* Get Programming with JavaScript
  * Listing 7.08
- * Using Math.min and Math.max
+ * Finding substrings
  */
 
-var showSmaller = function (num1, num2) {
-    var smaller = Math.min(num1, num2);
-    var larger = Math.max(num1, num2);
+var message = "We choose to go to the Moon!";
 
-    console.log(smaller + " is smaller than " + larger);
-};
-
-showSmaller(12, 3);
-showSmaller(-10, 3);
+console.log(message.substr(3, 12));
 
 
 
 /* Further Adventures
  *
- * 1) Try out some different arguments.
+ * 1) Use substr to log the following parts of
+ *    the message string to the console:
  *
- * 2) Write a showLarger function.
+ *    > Moon!
+ *    > go to the
+ *    > We choose
  *
- * 3) Write a showSmallest function that takes
- *    three arguments and displays the smallest
- *    of the three.
+ * 2) Investigate what happens if you omit the
+ *    second argument when calling substr.
+ *
+ * 3) What happens if you use negative numbers
+ *    as arguments?
  *
  */
