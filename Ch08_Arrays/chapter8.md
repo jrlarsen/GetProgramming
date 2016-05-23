@@ -499,7 +499,7 @@ displayQuestion(question1);
 ```
 
 
-### A player object
+### Displaying player items
 [JS Bin: Listing 8.13](http://jsbin.com/mecude/edit?js,console) - mecude
 ```javascript
 /* Get Programming with JavaScript
