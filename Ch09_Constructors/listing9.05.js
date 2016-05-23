@@ -8,14 +8,14 @@ var Planet = function (name, position, type) {
     this.position = position;
     this.type = type;
     this.moons = [];
-  
+
     this.showPlanet = function () {
         var info = this.name + ": planet " + this.position;
         info +=  " - " + this.type;
         console.log(info);
         console.log("Moons: " + this.moons.join(', ') + ".");
     };
-  
+
     this.addMoon = function (moon) {
         this.moons.push(moon);
     };

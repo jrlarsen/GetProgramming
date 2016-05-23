@@ -5,16 +5,17 @@
 
 var buildPlanet = function (name, position, type) {
     var planet = {};
-  
+
     planet.name = name;
     planet.position = position;
     planet.type = type;
 
     planet.showPlanet = function () {
-        var info = planet.name + ": planet " + planet.position;
+        var info = planet.name;
+        info += ": planet " + planet.position;
         info += " - " + planet.type;
         console.log(info);
-      };
+    };
 
     return planet;
 };

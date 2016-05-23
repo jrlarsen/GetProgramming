@@ -7,9 +7,10 @@ var Place = function (title, description) {
     this.title = title;
     this.description = description;
 
-    this.showInfo = function () {
-        console.log(this.title);
-        console.log(this.description);
+    this.getInfo = function () {
+        var infoString = this.title + "\n";
+        infoString += this.description + "\n";
+        return infoString;
     };
 };
 
@@ -18,7 +19,7 @@ var library = new Place(
     "You are in a library. Dusty books line the walls."
 );
 
-library.showInfo();
+console.log(library.getInfo());
 
 
 
@@ -26,7 +27,7 @@ library.showInfo();
  *
  * 1) Add a second place.
  *
- * 2) Call the showInfo method on your
- *    new place event.
+ * 2) Call the getInfo method on your
+ *    new place.
  *
  */

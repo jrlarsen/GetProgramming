@@ -5,11 +5,11 @@
 
 var buildPlanet = function (name, position, type) {
     var planet = {};
-  
+
     planet.name = name;
     planet.position = position;
     planet.type = type;
-  
+
     return planet;
 };
 

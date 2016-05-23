@@ -1,6 +1,6 @@
 /* Get Programming with JavaScript
- * Listing 9.11
- * A Place constructor part 3
+ * Listing 9.12
+ * A Player constructor function
  */
 
 // The spacer namespace
@@ -108,40 +108,93 @@ var Place = function (title, description) {
 };
 
 
-// Test the Place constructor
+// The Player constructor
+
+var Player = function (name, health) {
+    var newLine = spacer.newLine();
+
+    this.name = name;
+    this.health = health;
+    this.items = [];
+    this.place = null;
+
+    this.addItem = function (item) {
+        this.items.push(item);
+    };
+
+    this.getNameInfo = function () {
+        return this.name;
+    };
+
+    this.getHealthInfo = function () {
+        return this.name + " has health " + this.health;
+    };
+
+    this.getPlaceInfo = function () {
+        return this.name + " is in " + this.place.title;
+    };
+
+    this.getItemsInfo = function () {
+        var itemsString = "Items:" + newLine;
+
+        this.items.forEach(function (item, i) {
+            itemsString += "   - " + item + newLine;
+        });
+
+        return itemsString;
+    };
+
+    this.getInfo = function (character) {
+        var place = this.getPlaceInfo();
+        var health = this.getHealthInfo();
+        var longest = Math.max(place.length, health.length) + 4;
+
+        var info = spacer.box(this.getNameInfo(), longest, character);
+        info += spacer.wrap(place, longest, character);
+        info += spacer.newLine() + spacer.wrap(health, longest, character);
+        info += newLine + spacer.line(longest, character);
+
+        info += newLine;
+        info += "  " + this.getItemsInfo();
+        info += newLine;
+        info += spacer.line(longest, character);
+        info += newLine;
+
+        return info;
+    };
+
+    this.showInfo = function (character) {
+        console.log(this.getInfo(character));
+    };
+};
+
+
+// Testing Player
 
 var library = new Place(
     "The Old Library",
     "You are in a library. Dusty books line the walls."
 );
 
-var kitchen = new Place(
-    "The Kitchen",
-    "You are in the kitchen. There is a disturbing smell."
-);
+var player1 = new Player("Kandra", 50);
+player1.place = library;
+player1.addItem("a rusty key");
+player1.addItem("The Sword of Doom");
 
-var hall = new Place(
-    "The Main Hall",
-    "You are in a large hall. It is strangely empty."
-);
-
-library.addItem("a rusty key");
-library.addExit(kitchen);
-library.addExit(hall);
-
-library.showInfo();
+player1.showInfo("=");
 
 
 
 /* Further Adventures
  *
- * 1) Add a fourth place.
+ * 1) Test out the constructor by
+ *    creating a couple of Player objects.
  *
- * 2) Add some items to your new place.
+ * 2) Add items for each player.
  *
- * 3) Add some exits to your new place.
+ * 3) Display each player's info.
  *
- * 4) Use showInfo to display info
- *    about your new place.
+ * 4) Write a method to drop the last
+ *    item in a player's items array.
  *
  */

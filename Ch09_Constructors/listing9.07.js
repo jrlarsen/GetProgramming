@@ -7,11 +7,11 @@ var QuizQuestion = function (question, answer) {
     this.question = question;
     this.answer = answer;
     this.options = [];
-  
+
     this.addOption = function (option) {
         this.options.push(option);
     };
-  
+
     this.showQuestion = function () {
         console.log(this.question);
         this.options.forEach(function (option, i) {
