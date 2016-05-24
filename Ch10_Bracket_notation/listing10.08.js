@@ -1,10 +1,10 @@
 /* Get Programming with JavaScript
  * Listing 10.08
- * Functions to add and show exits
+ * An exits object
  */
 
 var Place = function (title) {
-    this.title = title;  
+    this.title = title;
 };
 
 var kitchen = new Place("The Kitchen");
@@ -12,22 +12,14 @@ var dungeon = new Place("The Dungeon");
 
 var exits = {};
 
-var addExit = function (direction, place) {
-    exits[direction] = place;
-};
+exits["north"] = kitchen;
+exits["the trapdoor"] = dungeon;
 
-var showExits = function () {
-    var keys = Object.keys(exits);
+var keys = Object.keys(exits);
 
-    keys.forEach(function (key) {
-        console.log(key + " goes to " + exits[key].title);
-    });
-};
-
-addExit("north", kitchen);
-addExit("trapdoor", dungeon);
-
-showExits();
+keys.forEach(function (key) {
+    console.log(key + " goes to " + exits[key].title);
+});
 
 
 
@@ -35,16 +27,21 @@ showExits();
  *
  * 1) Add a couple more places.
  *
- * 2) Use the addExit function to add
- *    exits to your new places.
+ * 2) Add a couple more exits.
  *
- * 3) Update the showExits function so
- *    it only shows the directions, not
- *    the destinations.
+ * 3) At the console prompt,
+ *    type 'exits' to see the exits object.
+ *    It has a number of keys with the
+ *    corresponding values being place objects.
  *
- * 4) Write a showDestination function
- *    that shows the destination when
- *    a direction is passed to it as
- *    an argument.
+ * 4) Access one of the exits like this:
+ *    > exits["north"];
+ *    A single object will be displayed.
+ *
+ * 5) Access the title property:
+ *    > exits["north"].title;
+ *
+ * 6) Or use square brackets:
+ *    > exits["north"]["title"]
  *
  */

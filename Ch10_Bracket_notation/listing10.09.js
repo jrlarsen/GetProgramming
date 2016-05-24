@@ -1,46 +1,50 @@
 /* Get Programming with JavaScript
  * Listing 10.09
- * An exits object in the Place constructor
+ * Functions to add and show exits
  */
 
-var Place = function (title, description) {
+var Place = function (title) {
     this.title = title;
-    this.exits = {};
-
-    this.addExit = function (direction, exit) {
-        this.exits[direction] = exit;
-    };
-
-    this.showExits = function () {  
-        console.log("Exits from " + this.title + ":");
-  
-        Object.keys(this.exits).forEach(function (key) {
-            console.log(key);
-        });
-    };
 };
 
-var library = new Place("The Old Library");
 var kitchen = new Place("The Kitchen");
-var garden = new Place("The Kitchen Garden");
+var dungeon = new Place("The Dungeon");
 
-kitchen.addExit("south", library);
-kitchen.addExit("west", garden);
+var exits = {};
 
-kitchen.showExits();
+var addExit = function (direction, place) {
+    exits[direction] = place;
+};
+
+var showExits = function () {
+    var keys = Object.keys(exits);
+
+    keys.forEach(function (key) {
+        console.log(key + " goes to " + exits[key].title);
+    });
+};
+
+addExit("north", kitchen);
+addExit("the trapdoor", dungeon);
+
+showExits();
 
 
 
 /* Further Adventures
  *
- * 1) Add an exit from the library to the kitchen.
+ * 1) Add a couple more places.
  *
- * 2) Add an exit from the garden to the kitchen.
+ * 2) Use the addExit function to add
+ *    exits to your new places.
  *
- * 3) Show the exits for the library
- *    and the garden.
+ * 3) Update the showExits function so
+ *    it only shows the directions, not
+ *    the destinations.
  *
- * 4) Add a couple more places and link
- *    them into the map.
+ * 4) Write a showDestination function
+ *    that shows the destination when
+ *    a direction is passed to it as
+ *    an argument.
  *
  */

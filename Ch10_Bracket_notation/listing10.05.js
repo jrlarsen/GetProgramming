@@ -33,5 +33,5 @@ keys.forEach(function (key) {
  *    shows the person's name along with
  *    the length of their name.
  *    e.g. Blinky: 6
- 
+
  */

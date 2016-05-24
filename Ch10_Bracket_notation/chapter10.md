@@ -169,7 +169,7 @@ var ages = {
 var keys = Object.keys(ages);
 
 keys.forEach(function (key) {
-    console.log(key);
+  console.log(key);
 });
 
 
@@ -255,17 +255,66 @@ console.log(words);
 ```
 
 
-
-### An exits object
-[JS Bin: Listing 10.07](http://jsbin.com/daqato/edit?js,console) - daqato
+### Counting letters from tweets
+[JS Bin: Listing 10.07](http://jsbin.com/rusufi/edit?js,console) - rusufi
 ```javascript
 /* Get Programming with JavaScript
  * Listing 10.07
+ * Counting letters from tweets
+ */
+
+var tweets = [
+  "Education is showing business the way by using technology to share information. How do we so so safely?",
+  "Enjoy a free muffin & coffee with Post Plus, our new loyalty club exclusive to subscribers!",
+  "We're LIVE on Periscope right now answering all your #pet questions - tweet us yours now!",
+  "Saw an unfinished print of M:I5 yesterday and it is my great pleasure to report it is rather splendid.",
+  "Downloading the beta of OS X El Capitan. This is going to gooch my mac for sure, but it will probably look pretty",
+  "Mud pies and muscle: H.G. Wells weighs in on #STEMeducation in an automated age",
+  "UK Space Agency brings astronaut’s mission to children across the UK #ESA #ESERO",
+  "Trying to find an old tweet that I didn't favourite at the time is…a fools game. #continuesDigging",
+  "A robot has just passed a classic test of self-awareness. What does that mean?",
+  "It was a great event. Very important to learn how to communicate about science and engineering effectively"
+];
+
+var letters = {};
+var tweetText = tweets.join("");
+var tweetLetters = tweetText.split("");
+
+tweetLetters.forEach(function (letter) {
+    letters[letter.toLowerCase()] = 0;
+});
+
+tweetLetters.forEach(function (letter) {
+    letters[letter.toLowerCase()] += 1;
+});
+
+console.log(letters);
+
+
+
+/* Further Adventures
+ *
+ * 1) Add more tweets to the tweets array
+ *    and run the program again.
+ *    They don't have to be tweets,
+ *    any text will do.
+ *
+ * 2) Can you change the keys to upper case?
+ *
+ */
+```
+
+
+### An exits object
+[JS Bin: Listing 10.08](http://jsbin.com/daqato/edit?js,console) - daqato
+```javascript
+/* Get Programming with JavaScript
+ * Listing 10.08
  * An exits object
  */
 
 var Place = function (title) {
-    this.title = title;  
+    this.title = title;
 };
 
 var kitchen = new Place("The Kitchen");
@@ -274,7 +323,7 @@ var dungeon = new Place("The Dungeon");
 var exits = {};
 
 exits["north"] = kitchen;
-exits["trapdoor"] = dungeon;
+exits["the trapdoor"] = dungeon;
 
 var keys = Object.keys(exits);
 
@@ -311,15 +360,15 @@ keys.forEach(function (key) {
 
 
 ### Functions to add and show exits
-[JS Bin: Listing 10.08](http://jsbin.com/mibube/edit?js,console) - mibube
+[JS Bin: Listing 10.09](http://jsbin.com/mibube/edit?js,console) - mibube
 ```javascript
 /* Get Programming with JavaScript
- * Listing 10.08
+ * Listing 10.09
  * Functions to add and show exits
  */
 
 var Place = function (title) {
-    this.title = title;  
+    this.title = title;
 };
 
 var kitchen = new Place("The Kitchen");
@@ -340,7 +389,7 @@ var showExits = function () {
 };
 
 addExit("north", kitchen);
-addExit("trapdoor", dungeon);
+addExit("the trapdoor", dungeon);
 
 showExits();
 
@@ -368,10 +417,10 @@ showExits();
 
 
 ### An exits object in the Place constructor
-[JS Bin: Listing 10.09](http://jsbin.com/foboka/edit?js,console) - foboka
+[JS Bin: Listing 10.10](http://jsbin.com/foboka/edit?js,console) - foboka
 ```javascript
 /* Get Programming with JavaScript
- * Listing 10.09
+ * Listing 10.10
  * An exits object in the Place constructor
  */
 
@@ -421,152 +470,173 @@ kitchen.showExits();
 
 
 ### A map with four locations
-[JS Bin: Listing 10.10](http://jsbin.com/bufico/edit?js,console) - bufico
+[JS Bin: Listing 10.11](http://jsbin.com/bufico/edit?js,console) - bufico
 ```javascript
-/* Get Programming with JavaScript
- * Listing 10.10
- * A map with four locations
- */
+//* Get Programming with JavaScript
+  * Listing 10.11
+  * A map with four locations
+  */
 
-var Place = function (title, description) {
-    this.title = title;
-    this.exits = {};
+ var Place = function (title, description) {
+     this.title = title;
+     this.exits = {};
 
-    this.addExit = function (direction, exit) {
-        this.exits[direction] = exit;
-    };
+     this.addExit = function (direction, exit) {
+         this.exits[direction] = exit;
+     };
 
-    this.showExits = function () {  
-        console.log("Exits from " + this.title + ":");
-  
-        Object.keys(this.exits).forEach(function (key) {
-            console.log(key);
-        });
-    };
-};
+     this.showExits = function () {
+         console.log("Exits from " + this.title + ":");
 
-var library = new Place("The Old Library");
-var kitchen = new Place("The Kitchen");
-var garden = new Place("The Kitchen Garden");
-var cupboard = new Place("The Kitchen Cupboard");
+         Object.keys(this.exits).forEach(function (key) {
+             console.log(key);
+         });
+     };
+ };
 
-library.addExit("north", kitchen);
-garden.addExit("east", kitchen);
-cupboard.addExit("west", kitchen);
+ var library = new Place("The Old Library");
+ var kitchen = new Place("The Kitchen");
+ var garden = new Place("The Kitchen Garden");
+ var cupboard = new Place("The Kitchen Cupboard");
 
-kitchen.addExit("south", library);
-kitchen.addExit("west", garden);
-kitchen.addExit("east", cupboard);
+ library.addExit("north", kitchen);
+ garden.addExit("east", kitchen);
+ cupboard.addExit("west", kitchen);
 
-var currentPlace;
+ kitchen.addExit("south", library);
+ kitchen.addExit("west", garden);
+ kitchen.addExit("east", cupboard);
 
-currentPlace = library;
-currentPlace.showExits();
-
-currentPlace = kitchen;
-currentPlace.showExits();
+ library.showExits();
+ kitchen.showExits();
 
 
 
-/* Further Adventures
- *
- * 1) Switch the currentPlace to the
- *    other two places in turn and show
- *    their exits.
- *
- * 2) Update the Place constructor to
- *    include an items array assigned as
- *    a property of the this object.
- *
- * 3) Add an addItem method to the constructor
- *    that lets you add items to
- *    the items array.
- *
- * 4) Add a showItems method to the constructor
- *    that displays the items in
- *    the items array.
- *
- * 5) Test your work by adding items
- *    to the different locations and
- *    displaying the items on the console.
- *
- */
-```
-
-
-
-### A Player constructor function
-[JS Bin: Listing 10.11](http://jsbin.com/leqahi/edit?js,console) - leqahi
-```javascript
-/* Get Programming with JavaScript
- * Listing 10.11
- * A Player constructor function
- */
-
-var Player = function (name, health) {
-    this.name = name;
-    this.health = health;
-    this.items = [];
-    this.place = null;
-
-    this.addItem = function (item) {
-        this.items.push(item);
-    };
-
-    this.showItems = function () {
-        console.log("Items:");
-        this.items.forEach(function (item, i) {
-            console.log("(" + i + ") " + item);
-        });
-    };
-
-    this.showPlace = function () {
-        console.log(this.name + " is in " + this.place.title);
-    };
-
-    this.showHealth = function () {
-        console.log(this.name + " has health " + this.health);
-    };
-
-    this.showInfo = function () {
-        console.log(this.name + ":");
-        this.showPlace();
-        this.showHealth();
-        this.showItems();
-    };
-};
-
-
-/* Further Adventures
- *
- * 1) Test out the constructor by
- *    creating a couple of Player objects.
- *
- * 2) Add items for each player.
- *
- * 3) Display each player's info.
- *
- * 4) Write a method to drop the last
- *    item in a player's items array.
- *
- */
+ /* Further Adventures
+  *
+  * 1) Update the Place constructor to
+  *    include an items array assigned as
+  *    a property of the this object.
+  *
+  * 2) Add an addItem method to the constructor
+  *    that lets you add items to
+  *    the items array.
+  *
+  * 3) Add a showItems method to the constructor
+  *    that displays the items in
+  *    the items array.
+  *
+  * 4) Test your work by adding items
+  *    to the different locations and
+  *    displaying the items on the console.
+  *
+  */
 ```
 
 
 
 ### A Place constructor function
-[JS Bin: Listing 10.12](http://jsbin.com/zozule/edit?js,console) - zozule
+[JS Bin: Listings 10.12 and 10.13](http://jsbin.com/zozule/edit?js,console) - zozule
 ```javascript
 /* Get Programming with JavaScript
- * Listing 10.12
+ * Listings 10.12 and 10.13
  * A Place constructor function
  */
 
+// The spacer namespace
+
+var spacer = {
+  blank: function () {
+    return "";
+  },
+
+  newLine: function () {
+    return "\n";
+  },
+
+  line: function (length, character) {
+    var longString = "****************************************";
+    longString += "----------------------------------------";
+    longString += "========================================";
+    longString += "++++++++++++++++++++++++++++++++++++++++";
+    longString += "                                        ";
+
+    length = Math.max(0, length);
+    length = Math.min(40, length);
+    return longString.substr(longString.indexOf(character), length);
+  },
+
+  wrap : function (text, length, character) {
+    var padLength = length - text.length - 3;
+    var wrapText = character + " " + text;
+    wrapText += spacer.line(padLength, " ");
+    wrapText += character;
+    return wrapText;
+  },
+
+  box: function (text, length, character) {
+    var boxText = spacer.newLine();
+    boxText += spacer.line(length, character) + spacer.newLine();
+    boxText += spacer.wrap(text, length, character) + spacer.newLine();
+    boxText += spacer.line(length, character) + spacer.newLine();
+    return boxText;
+  }
+};
+
+
+// The Place constructor
+
 var Place = function (title, description) {
+    var newLine = spacer.newLine();
+
     this.title = title;
     this.description = description;
-    this.exits = {};
     this.items = [];
+    this.exits = {};
+
+    this.getItemsInfo = function () {
+        var itemsString = "Items: " + newLine;
+        this.items.forEach(function (item) {
+            itemsString += "   - " + item;
+            itemsString += newLine;
+        });
+        return itemsString;
+    };
+
+    this.getExitsInfo = function () {
+        var exitsString = "Exits from " + this.title;
+        exitsString += ":" + newLine;
+
+        Object.keys(this.exits).forEach(function (key) {
+            exitsString += "   - " + key;
+            exitsString += newLine;
+        });
+
+        return exitsString;
+    };
+
+    this.getTitleInfo = function () {
+        return spacer.box(
+            this.title,
+            this.title.length + 4,
+            "="
+        );
+    };
+
+    this.getInfo = function () {
+        var infoString = this.getTitleInfo();
+        infoString += this.description;
+        infoString += newLine + newLine;
+        infoString += this.getItemsInfo() + newLine;
+        infoString += this.getExitsInfo();
+        infoString += spacer.line(40, "=") + newLine;
+        return infoString;
+    };
+
+
+    this.showInfo = function () {
+        console.log(this.getInfo());
+    };
 
     this.addItem = function (item) {
         this.items.push(item);
@@ -575,101 +645,221 @@ var Place = function (title, description) {
     this.addExit = function (direction, exit) {
         this.exits[direction] = exit;
     };
-
-    this.showItems = function () {
-        console.log("Items:");
-        this.items.forEach(function (item, i) {
-            console.log("(" + i + ") " + item);
-        });
-    };
-
-    this.showExits = function () {
-        console.log("Exits from " + this.title + ":");
-  
-        Object.keys(this.exits).forEach(function (key) {
-            console.log(key);
-        });
-    };
-
-    this.showInfo = function () {
-        console.log(this.title);
-        console.log(this.description);
-        this.showItems();
-        this.showExits();
-    };
 };
+
+
+// Map
+
+var kitchen = new Place(
+    "The Kitchen",
+    "You are in a kitchen. There is a disturbing smell."
+);
+var library = new Place(
+    "The Old Library",
+    "You are in a library. Dusty books line the walls."
+);
+var garden = new Place(
+    "The Kitchen Garden",
+    "You are in a small, walled garden."
+);
+var cupboard = new Place(
+    "The Kitchen Cupboard",
+    "You are in a cupboard. It's surprisingly roomy."
+);
+
+kitchen.addItem("a piece of cheese");
+library.addItem("a rusty key");
+cupboard.addItem("a tin of spam");
+
+kitchen.addExit("south", library);
+kitchen.addExit("west", garden);
+kitchen.addExit("east", cupboard);
+
+library.addExit("north", kitchen);
+garden.addExit("east", kitchen);
+cupboard.addExit("west", kitchen);
+
+
+// Test
+
+kitchen.showInfo();
 
 
 
 /* Further Adventures
  *
- * 1) Test the constructor by creating three places.
+ * 1) Create an array of the four places.
  *
- * 2) Add items to your places.
- *
- * 3) Add exits to your places,
- *    linking them together.
- *
- * 4) Put your three places into an array.
- *    Use forEach with the array to call
+ * 2) Use forEach with the array to call
  *    showInfo for each place.
  *
  */
 ```
 
 
-
-### Putting a player on the map
-[JS Bin: Listing 10.13](http://jsbin.com/sezayo/edit?js,console) - sezayo
+### Playing the game
+[JS Bin: Listing 10.14](http://jsbin.com/sezayo/edit?js,console) - sezayo
 ```javascript
 /* Get Programming with JavaScript
- * Listing 10.13
- * Putting a player on the map
+ * Listing 10.14
+ * Playing the game
  */
 
+// The spacer namespace
 
-// Player Constructor
+var spacer = {
+  blank: function () {
+    return "";
+  },
 
-var Player = function (name, health) {
-    this.name = name;
-    this.health = health;
-    this.items = [];
-    this.place = null;
+  newLine: function () {
+    return "\n";
+  },
 
-    this.addItem = function (item) {
-        this.items.push(item);
-    };
+  line: function (length, character) {
+    var longString = "****************************************";
+    longString += "----------------------------------------";
+    longString += "========================================";
+    longString += "++++++++++++++++++++++++++++++++++++++++";
+    longString += "                                        ";
 
-    this.showItems = function () {
-        console.log("Items:");
-        this.items.forEach(function (item, i) {
-            console.log("(" + i + ") " + item);
-        });
-    };
+    length = Math.max(0, length);
+    length = Math.min(40, length);
+    return longString.substr(longString.indexOf(character), length);
+  },
 
-    this.showPlace = function () {
-        this.place.showInfo();
-    };
+  wrap : function (text, length, character) {
+    var padLength = length - text.length - 3;
+    var wrapText = character + " " + text;
+    wrapText += spacer.line(padLength, " ");
+    wrapText += character;
+    return wrapText;
+  },
 
-    this.showHealth = function () {
-        console.log(this.name + " has health " + this.health);
-    };
-
-    this.showInfo = function () {
-        console.log(this.name + ":");
-        this.showHealth();
-        this.showItems();
-    };
+  box: function (text, length, character) {
+    var boxText = spacer.newLine();
+    boxText += spacer.line(length, character) + spacer.newLine();
+    boxText += spacer.wrap(text, length, character) + spacer.newLine();
+    boxText += spacer.line(length, character) + spacer.newLine();
+    return boxText;
+  }
 };
 
 
-// Place Constructor
+// The Player Constructor
+
+var Player = function (name, health) {
+  var newLine = spacer.newLine();
+
+  this.name = name;
+  this.health = health;
+  this.items = [];
+  this.place = null;
+
+  this.addItem = function (item) {
+    this.items.push(item);
+  };
+
+  this.getNameInfo = function () {
+    return this.name;
+  };
+
+  this.getHealthInfo = function () {
+    return this.name + " has health " + this.health;
+  };
+
+  this.getPlaceInfo = function () {
+    return this.name + " is in " + this.place.title;
+  };
+
+  this.getItemsInfo = function () {
+    var itemsString = "Items:" + newLine;
+
+    this.items.forEach(function (item, i) {
+      itemsString += "   - " + item + newLine;
+    });
+
+    return itemsString;
+  };
+
+  this.getInfo = function (character) {
+    var place = this.getPlaceInfo();
+    var health = this.getHealthInfo();
+    var longest = Math.max(place.length, health.length) + 4;
+
+    var info = spacer.box(this.getNameInfo(), longest, character);
+    info += spacer.wrap(place, longest, character);
+    info += spacer.newLine() + spacer.wrap(health, longest, character);
+    info += newLine + spacer.line(longest, character);
+
+    info += newLine;
+    info += "  " + this.getItemsInfo();
+    info += newLine;
+    info += spacer.line(longest, character);
+    info += newLine;
+
+    return info;
+  };
+
+  this.showInfo = function (character) {
+    console.log(this.getInfo(character));
+  };
+};
+
+
+// The Place Constructor
 
 var Place = function (title, description) {
+    var newLine = spacer.newLine();
+
     this.title = title;
     this.description = description;
-    this.exits = {};
     this.items = [];
+    this.exits = {};
+
+    this.getItemsInfo = function () {
+        var itemsString = "Items: " + newLine;
+        this.items.forEach(function (item) {
+            itemsString += "   - " + item;
+            itemsString += newLine;
+        });
+        return itemsString;
+    };
+
+    this.getExitsInfo = function () {
+        var exitsString = "Exits from " + this.title;
+        exitsString += ":" + newLine;
+
+        Object.keys(this.exits).forEach(function (key) {
+            exitsString += "   - " + key;
+            exitsString += newLine;
+        });
+
+        return exitsString;
+    };
+
+    this.getTitleInfo = function () {
+        return spacer.box(
+            this.title,
+            this.title.length + 4,
+            "="
+        );
+    };
+
+    this.getInfo = function () {
+        var infoString = this.getTitleInfo();
+        infoString += this.description;
+        infoString += newLine + newLine;
+        infoString += this.getItemsInfo() + newLine;
+        infoString += this.getExitsInfo();
+        infoString += spacer.line(40, "=") + newLine;
+        return infoString;
+    };
+
+
+    this.showInfo = function () {
+        console.log(this.getInfo());
+    };
 
     this.addItem = function (item) {
         this.items.push(item);
@@ -677,28 +867,6 @@ var Place = function (title, description) {
 
     this.addExit = function (direction, exit) {
         this.exits[direction] = exit;
-    };
-
-    this.showItems = function () {
-        console.log("Items in " + this.title + ":");
-        this.items.forEach(function (item, i) {
-            console.log("(" + i + ") " + item);
-        });
-    };
-
-    this.showExits = function () {
-        console.log("Exits from " + this.title + ":");
-  
-        Object.keys(this.exits).forEach(function (key) {
-            console.log(key);
-        });
-    };
-
-    this.showInfo = function () {
-        console.log(this.title);
-        console.log(this.description);
-        this.showItems();
-        this.showExits();
     };
 };
 
@@ -737,32 +905,45 @@ cupboard.addExit("west", kitchen);
 
 // Game
 
-var kandra = new Player("Kandra", 50);
-kandra.addItem("The Sword of Doom");
+var render = function () {
+    console.clear();
+    player.place.showInfo();
+    player.showInfo("*");
+};
 
-kandra.place = kitchen;
-kandra.showInfo();
-kandra.showPlace();
+var go = function (direction) {
+    var place = player.place;
+    var destination = place.exits[direction];
+    player.place = destination;
+    render();
+    return "";
+};
+
+var get = function () {
+    var place = player.place;
+    var item = place.items.pop();
+    player.addItem(item);
+    render();
+    return "";
+};
+
+var player = new Player("Kandra", 50);
+player.addItem("The Sword of Doom");
+player.place = kitchen;
+
+render();
 
 
 
 /* Further Adventures
  *
- * 1) Move Kandra to a different place
- *    and display info about Kandra
- *    and the place.
+ * 1) Play the game!
  *
- * 2) Improve the output to space
- *    out information about different
- *    objects: people, places, items, exits.
- *
- * Challenge:
- *
- * 3) Write a go function that accepts
- *    a direction as an argument and
- *    moves the player to the place
- *    in that direction.
- *    e.g. > go("north");
+ * At the console prompt you can type
+ * > get()
+ * to collect an item or, for example,
+ * > go("east")
+ * to move east.
  *
  */
 ```

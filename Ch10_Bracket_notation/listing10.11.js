@@ -1,52 +1,59 @@
 /* Get Programming with JavaScript
  * Listing 10.11
- * A Player constructor function
+ * A map with four locations
  */
 
-var Player = function (name, health) {
-    this.name = name;
-    this.health = health;
-    this.items = [];
-    this.place = null;
+var Place = function (title, description) {
+    this.title = title;
+    this.exits = {};
 
-    this.addItem = function (item) {
-        this.items.push(item);
+    this.addExit = function (direction, exit) {
+        this.exits[direction] = exit;
     };
 
-    this.showItems = function () {
-        console.log("Items:");
-        this.items.forEach(function (item, i) {
-            console.log("(" + i + ") " + item);
+    this.showExits = function () {
+        console.log("Exits from " + this.title + ":");
+
+        Object.keys(this.exits).forEach(function (key) {
+            console.log(key);
         });
     };
-
-    this.showPlace = function () {
-        console.log(this.name + " is in " + this.place.title);
-    };
-
-    this.showHealth = function () {
-        console.log(this.name + " has health " + this.health);
-    };
-
-    this.showInfo = function () {
-        console.log(this.name + ":");
-        this.showPlace();
-        this.showHealth();
-        this.showItems();
-    };
 };
+
+var library = new Place("The Old Library");
+var kitchen = new Place("The Kitchen");
+var garden = new Place("The Kitchen Garden");
+var cupboard = new Place("The Kitchen Cupboard");
+
+library.addExit("north", kitchen);
+garden.addExit("east", kitchen);
+cupboard.addExit("west", kitchen);
+
+kitchen.addExit("south", library);
+kitchen.addExit("west", garden);
+kitchen.addExit("east", cupboard);
+
+library.showExits();
+kitchen.showExits();
+
 
 
 /* Further Adventures
  *
- * 1) Test out the constructor by
- *    creating a couple of Player objects.
+ * 1) Update the Place constructor to
+ *    include an items array assigned as
+ *    a property of the this object.
  *
- * 2) Add items for each player.
+ * 2) Add an addItem method to the constructor
+ *    that lets you add items to
+ *    the items array.
  *
- * 3) Display each player's info.
+ * 3) Add a showItems method to the constructor
+ *    that displays the items in
+ *    the items array.
  *
- * 4) Write a method to drop the last
- *    item in a player's items array.
+ * 4) Test your work by adding items
+ *    to the different locations and
+ *    displaying the items on the console.
  *
  */

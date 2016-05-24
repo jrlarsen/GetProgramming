@@ -19,13 +19,13 @@ var tweets = [
 var words = {};
 var tweetText = tweets.join(" ");
 var tweetWords = tweetText.split(" ");
-  
+
 tweetWords.forEach(function (word) {
-    words[word] = 0;
+  words[word] = 0;
 });
 
 tweetWords.forEach(function (word) {
-    words[word] = words[word] + 1;
+  words[word] = words[word] + 1;
 });
 
 console.log(words);

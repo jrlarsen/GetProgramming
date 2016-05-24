@@ -1,6 +1,6 @@
 /* Get Programming with JavaScript
  * Listing 10.10
- * A map with four locations
+ * An exits object in the Place constructor
  */
 
 var Place = function (title, description) {
@@ -11,9 +11,9 @@ var Place = function (title, description) {
         this.exits[direction] = exit;
     };
 
-    this.showExits = function () {  
+    this.showExits = function () {
         console.log("Exits from " + this.title + ":");
-  
+
         Object.keys(this.exits).forEach(function (key) {
             console.log(key);
         });
@@ -23,46 +23,24 @@ var Place = function (title, description) {
 var library = new Place("The Old Library");
 var kitchen = new Place("The Kitchen");
 var garden = new Place("The Kitchen Garden");
-var cupboard = new Place("The Kitchen Cupboard");
-
-library.addExit("north", kitchen);
-garden.addExit("east", kitchen);
-cupboard.addExit("west", kitchen);
 
 kitchen.addExit("south", library);
 kitchen.addExit("west", garden);
-kitchen.addExit("east", cupboard);
 
-var currentPlace;
-
-currentPlace = library;
-currentPlace.showExits();
-
-currentPlace = kitchen;
-currentPlace.showExits();
+kitchen.showExits();
 
 
 
 /* Further Adventures
  *
- * 1) Switch the currentPlace to the
- *    other two places in turn and show
- *    their exits.
+ * 1) Add an exit from the library to the kitchen.
  *
- * 2) Update the Place constructor to
- *    include an items array assigned as
- *    a property of the this object.
+ * 2) Add an exit from the garden to the kitchen.
  *
- * 3) Add an addItem method to the constructor
- *    that lets you add items to
- *    the items array.
+ * 3) Show the exits for the library
+ *    and the garden.
  *
- * 4) Add a showItems method to the constructor
- *    that displays the items in
- *    the items array.
- *
- * 5) Test your work by adding items
- *    to the different locations and
- *    displaying the items on the console.
+ * 4) Add a couple more places and link
+ *    them into the map.
  *
  */
