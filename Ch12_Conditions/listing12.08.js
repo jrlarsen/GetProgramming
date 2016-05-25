@@ -1,54 +1,150 @@
-/* Get Programming with JavaScript
+/* Adventures in JavaScript
  * Listing 12.08
  * Checking user input
  */
 
 
 var getGame = function () {
-  
-  // Player constructor
+
+  // The spacer namespace
+
+  var spacer = {
+    blank: function () {
+      return "";
+    },
+
+    newLine: function () {
+      return "\n";
+    },
+
+    line: function (length, character) {
+      var longString = "****************************************";
+      longString += "----------------------------------------";
+      longString += "========================================";
+      longString += "++++++++++++++++++++++++++++++++++++++++";
+      longString += "                                        ";
+
+      length = Math.max(0, length);
+      length = Math.min(40, length);
+      return longString.substr(longString.indexOf(character), length);
+    },
+
+    wrap : function (text, length, character) {
+      var padLength = length - text.length - 3;
+      var wrapText = character + " " + text;
+      wrapText += spacer.line(padLength, " ");
+      wrapText += character;
+      return wrapText;
+    },
+
+    box: function (text, length, character) {
+      var boxText = spacer.newLine();
+      boxText += spacer.line(length, character) + spacer.newLine();
+      boxText += spacer.wrap(text, length, character) + spacer.newLine();
+      boxText += spacer.line(length, character) + spacer.newLine();
+      return boxText;
+    }
+  };
+
+
+  // Constructors
+
   var Player = function (name, health) {
+    var newLine = spacer.newLine();
     var items = [];
     var place = null;
+
+    var getNameInfo = function () {
+      return name;
+    };
+
+    var getHealthInfo = function () {
+      return "(" + health + ")";
+    };
+
+    var getItemsInfo = function () {
+      var itemsString = "Items:" + newLine;
+
+      items.forEach(function (item, i) {
+        itemsString += "   - " + item + newLine;
+      });
+
+      return itemsString;
+    };
+
+    var getTitleInfo = function () {
+      return getNameInfo() + " " + getHealthInfo();
+    };
+
+    var getInfo = function () {
+      var info = spacer.box(getTitleInfo(), 40, "*");
+      info += "  " + getItemsInfo();
+      info += spacer.line(40, "*");
+      info += newLine;
+
+      return info;
+    };
 
     this.addItem = function (item) {
       items.push(item);
     };
 
-    this.showItems = function () {
-      console.log("Items:");
-      items.forEach(function (item, i) {
-        console.log("(" + i + ") " + item);
-      });
-    };
-  
     this.setPlace = function (destination) {
       place = destination;
     };
-    
+
     this.getPlace = function () {
       return place;
     };
 
-    this.showPlace = function () {
-      place.showInfo();
+    this.showInfo = function (character) {
+      console.log(getInfo(character));
+    };
+  };
+
+  var Place = function (title, description) {
+    var newLine = spacer.newLine();
+    var items = [];
+    var exits = {};
+
+    var getItemsInfo = function () {
+      var itemsString = "Items: " + newLine;
+      items.forEach(function (item) {
+        itemsString += "   - " + item;
+        itemsString += newLine;
+      });
+      return itemsString;
     };
 
-    this.showHealth = function () {
-      console.log(name + " has health " + health);
+    var getExitsInfo = function () {
+      var exitsString = "Exits from " + title;
+      exitsString += ":" + newLine;
+
+      Object.keys(exits).forEach(function (key) {
+        exitsString += "   - " + key;
+        exitsString += newLine;
+      });
+
+      return exitsString;
+    };
+
+    var getTitleInfo = function () {
+      return spacer.box(title, title.length + 4, "=");
+    };
+
+    var getInfo = function () {
+      var infoString = getTitleInfo();
+      infoString += description;
+      infoString += newLine + newLine;
+      infoString += getItemsInfo() + newLine;
+      infoString += getExitsInfo();
+      infoString += spacer.line(40, "=") + newLine;
+      return infoString;
     };
 
     this.showInfo = function () {
-      console.log(name + ":");
-      this.showHealth();
-      this.showItems();
+      console.log(getInfo());
     };
-  };
-  
-  // Place constructor
-  var Place = function (title, description) {
-    var exits = {};
-    var items = [];
 
     this.addItem = function (item) {
       items.push(item);
@@ -57,50 +153,39 @@ var getGame = function () {
     this.addExit = function (direction, exit) {
       exits[direction] = exit;
     };
-    
+
     this.getExit = function (direction) {
       return exits[direction];
     };
 
-    this.showItems = function () {
-      console.log("Items in " + title + ":");
-      items.forEach(function (item, i) {
-        console.log("(" + i + ") " + item);
-      });
-    };
-
-    this.showExits = function () {
-      console.log("Exits from " + title + ":");
-  
-      Object.keys(exits).forEach(function (key) {
-        console.log(key);
-      });
-    };
-
-    this.showInfo = function () {
-      console.log(title);
-      console.log(description);
-      this.showItems();
-      this.showExits();
+    this.getLastItem = function () {
+      return items.pop();
     };
   };
-  
+
+  // Console update function
+  var render = function () {
+    console.clear();
+    player.getPlace().showInfo();
+    player.showInfo();
+  };
+
   // Create some places
   var kitchen = new Place(
-    "The Kitchen",
-    "You are in a kitchen. There is a disturbing smell."
+      "The Kitchen",
+      "You are in a kitchen. There is a disturbing smell."
   );
   var library = new Place(
-    "The Old Library",
-    "You are in a library. Dusty books line the walls."
+      "The Old Library",
+      "You are in a library. Dusty books line the walls."
   );
   var garden = new Place(
-    "The Kitchen Garden",
-    "You are in a small, walled garden."
+      "The Kitchen Garden",
+      "You are in a small, walled garden."
   );
   var cupboard = new Place(
-    "The Kitchen Cupboard",
-    "You are in a cupboard. It's surprisingly roomy."
+      "The Kitchen Cupboard",
+      "You are in a cupboard. It's surprisingly roomy."
   );
 
   // Add items and exits to places
@@ -115,38 +200,43 @@ var getGame = function () {
   library.addExit("north", kitchen);
   garden.addExit("east", kitchen);
   cupboard.addExit("west", kitchen);
-  
-  // Create a player
+
+  // Game initialization
   var player = new Player("Kandra", 50);
   player.addItem("The Sword of Doom");
-
   player.setPlace(kitchen);
-  player.showInfo();
-  player.showPlace();
-  
+
+  render();
+
   // Return the public interface
   return {
-    me: function () {
-      player.showInfo();
-    },
-    
-    here: function () {
-      player.showPlace();
-    },
-    
     go: function (direction) {
       var place = player.getPlace();
       var destination = place.getExit(direction);
-      
+
       if (destination !== undefined) {
         player.setPlace(destination);
-        player.showPlace();
+        render();
+        return "";
       } else {
-        console.log("There is no exit in that direction");
+        return "*** There is no exit in that direction ***";
+      }
+    },
+
+    get: function () {
+      var place = player.getPlace();
+      var item = place.getLastItem();
+
+      if (item !== undefined) {
+        player.addItem(item);
+        render();
+        return "";
+      } else {
+        return "*** There is no item to get ***";
       }
     }
   };
-  
+
 };
 
 var game = getGame();
@@ -157,12 +247,10 @@ var game = getGame();
  *
  * 1) Play the game, Using the three public methods:
  *
- *    > game.me()
- *    > game.here()
- *    > game.go("north")
+ *   > game.get()
+ *   > game.go("north")
  *
- * 2) Try entering an invalid direction.
- *
- *    > game.go("snarf");
+ * 2) Try going in non-existent directions and
+ *    getting items when there are none.
  *
  */
