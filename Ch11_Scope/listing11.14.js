@@ -3,45 +3,105 @@
  * Hiding the Player implementation
  */
 
+// The spacer namespace
+
+var spacer = {
+  blank: function () {
+    return "";
+  },
+
+  newLine: function () {
+    return "\n";
+  },
+
+  line: function (length, character) {
+    var longString = "****************************************";
+    longString += "----------------------------------------";
+    longString += "========================================";
+    longString += "++++++++++++++++++++++++++++++++++++++++";
+    longString += "                                        ";
+
+    length = Math.max(0, length);
+    length = Math.min(40, length);
+    return longString.substr(longString.indexOf(character), length);
+  },
+
+  wrap : function (text, length, character) {
+    var padLength = length - text.length - 3;
+    var wrapText = character + " " + text;
+    wrapText += spacer.line(padLength, " ");
+    wrapText += character;
+    return wrapText;
+  },
+
+  box: function (text, length, character) {
+    var boxText = spacer.newLine();
+    boxText += spacer.line(length, character) + spacer.newLine();
+    boxText += spacer.wrap(text, length, character) + spacer.newLine();
+    boxText += spacer.line(length, character) + spacer.newLine();
+    return boxText;
+  }
+};
+
+
+// The Player constructor
 
 var Player = function (name, health) {
+  var newLine = spacer.newLine();
   var items = [];
   var place = null;
+
+
+  var getNameInfo = function () {
+    return name;
+  };
+
+  var getHealthInfo = function () {
+    return "(" + health + ")";
+  };
+
+  var getItemsInfo = function () {
+    var itemsString = "Items:" + newLine;
+
+    items.forEach(function (item, i) {
+      itemsString += "   - " + item + newLine;
+    });
+
+    return itemsString;
+  };
+
+  var getTitleInfo = function () {
+    return getNameInfo() + " " + getHealthInfo();
+  };
+
+  var getInfo = function () {
+    var info = spacer.box(getTitleInfo(), 40, "*");
+    info += "  " + getItemsInfo();
+    info += spacer.line(40, "*");
+    info += newLine;
+
+    return info;
+  };
+
 
   this.addItem = function (item) {
     items.push(item);
   };
 
-  this.showItems = function () {
-    console.log("Items:");
-    items.forEach(function (item, i) {
-      console.log("(" + i + ") " + item);
-    });
-  };
-  
   this.setPlace = function (destination) {
     place = destination;
   };
-    
+
   this.getPlace = function () {
     return place;
   };
 
-  this.showPlace = function () {
-    place.showInfo();
-  };
-
-  this.showHealth = function () {
-    console.log(name + " has health " + health);
-  };
-
-  this.showInfo = function () {
-    console.log(name + ":");
-    this.showHealth();
-    this.showItems();
+  this.showInfo = function (character) {
+    console.log(getInfo(character));
   };
 };
-  
+
+
 
 /* Further Adventures
  *

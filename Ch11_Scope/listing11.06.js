@@ -18,7 +18,7 @@ show = function () {
 show();
 
 console.log(mountain);
-console.log(secretMountain);                                           
+console.log(secretMountain);
 
 
 

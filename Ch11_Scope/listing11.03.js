@@ -1,6 +1,6 @@
 /* Get Programming with JavaScript
  * Listing 11.03
- * A nano-quiz
+ * A tiny quiz
  */
 
 var question = "What is the highest mountain in Wales?";

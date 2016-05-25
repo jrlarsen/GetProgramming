@@ -1,14 +1,103 @@
 /* Get Programming with JavaScript
  * Listing 11.15
- * The Place Constructor
+ * The Place constructor
  */
 
 
+// The spacer namespace
+
+var spacer = {
+  blank: function () {
+    return "";
+  },
+
+  newLine: function () {
+    return "\n";
+  },
+
+  line: function (length, character) {
+    var longString = "****************************************";
+    longString += "----------------------------------------";
+    longString += "========================================";
+    longString += "++++++++++++++++++++++++++++++++++++++++";
+    longString += "                                        ";
+
+    length = Math.max(0, length);
+    length = Math.min(40, length);
+    return longString.substr(longString.indexOf(character), length);
+  },
+
+  wrap : function (text, length, character) {
+    var padLength = length - text.length - 3;
+    var wrapText = character + " " + text;
+    wrapText += spacer.line(padLength, " ");
+    wrapText += character;
+    return wrapText;
+  },
+
+  box: function (text, length, character) {
+    var boxText = spacer.newLine();
+    boxText += spacer.line(length, character) + spacer.newLine();
+    boxText += spacer.wrap(text, length, character) + spacer.newLine();
+    boxText += spacer.line(length, character) + spacer.newLine();
+    return boxText;
+  }
+};
+
+
+// The Place constructor
+
 var Place = function (title, description) {
+  var newLine = spacer.newLine();
+
   this.title = title;
   this.description = description;
-  this.exits = {};
   this.items = [];
+  this.exits = {};
+
+  this.getItemsInfo = function () {
+    var itemsString = "Items: " + newLine;
+    this.items.forEach(function (item) {
+      itemsString += "   - " + item;
+      itemsString += newLine;
+    });
+    return itemsString;
+  };
+
+  this.getExitsInfo = function () {
+    var exitsString = "Exits from " + this.title;
+    exitsString += ":" + newLine;
+
+    Object.keys(this.exits).forEach(function (key) {
+      exitsString += "   - " + key;
+      exitsString += newLine;
+    });
+
+    return exitsString;
+  };
+
+  this.getTitleInfo = function () {
+    return spacer.box(
+        this.title,
+        this.title.length + 4,
+        "="
+    );
+  };
+
+  this.getInfo = function () {
+    var infoString = this.getTitleInfo();
+    infoString += this.description;
+    infoString += newLine + newLine;
+    infoString += this.getItemsInfo() + newLine;
+    infoString += this.getExitsInfo();
+    infoString += spacer.line(40, "=") + newLine;
+    return infoString;
+  };
+
+
+  this.showInfo = function () {
+    console.log(this.getInfo());
+  };
 
   this.addItem = function (item) {
     this.items.push(item);
@@ -17,30 +106,10 @@ var Place = function (title, description) {
   this.addExit = function (direction, exit) {
     this.exits[direction] = exit;
   };
-
-  this.showItems = function () {
-    console.log("Items in " + this.title + ":");
-    this.items.forEach(function (item, i) {
-      console.log("(" + i + ") " + item);
-    });
-  };
-
-  this.showExits = function () {
-    console.log("Exits from " + this.title + ":");
-  
-    Object.keys(this.exits).forEach(function (key) {
-      console.log(key);
-    });
-  };
-
-  this.showInfo = function () {
-    console.log(this.title);
-    console.log(this.description);
-    this.showItems();
-    this.showExits();
-  };
 };
-  
+
+
+
 
 /* Further Adventures
  *

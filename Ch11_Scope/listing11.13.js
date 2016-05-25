@@ -1,10 +1,54 @@
 /* Get Programming with JavaScript
  * Listing 11.13
- * The Player Constructor
+ * The Player constructor
  */
 
+// The spacer namespace
+
+var spacer = {
+  blank: function () {
+    return "";
+  },
+
+  newLine: function () {
+    return "\n";
+  },
+
+  line: function (length, character) {
+    var longString = "****************************************";
+    longString += "----------------------------------------";
+    longString += "========================================";
+    longString += "++++++++++++++++++++++++++++++++++++++++";
+    longString += "                                        ";
+
+    length = Math.max(0, length);
+    length = Math.min(40, length);
+    return longString.substr(longString.indexOf(character), length);
+  },
+
+  wrap : function (text, length, character) {
+    var padLength = length - text.length - 3;
+    var wrapText = character + " " + text;
+    wrapText += spacer.line(padLength, " ");
+    wrapText += character;
+    return wrapText;
+  },
+
+  box: function (text, length, character) {
+    var boxText = spacer.newLine();
+    boxText += spacer.line(length, character) + spacer.newLine();
+    boxText += spacer.wrap(text, length, character) + spacer.newLine();
+    boxText += spacer.line(length, character) + spacer.newLine();
+    return boxText;
+  }
+};
+
+
+// The Player constructor
 
 var Player = function (name, health) {
+  var newLine = spacer.newLine();
+
   this.name = name;
   this.health = health;
   this.items = [];
@@ -14,28 +58,53 @@ var Player = function (name, health) {
     this.items.push(item);
   };
 
-  this.showItems = function () {
-    console.log("Items:");
+  this.getNameInfo = function () {
+    return this.name;
+  };
+
+  this.getHealthInfo = function () {
+    return this.name + " has health " + this.health;
+  };
+
+  this.getPlaceInfo = function () {
+    return this.name + " is in " + this.place.title;
+  };
+
+  this.getItemsInfo = function () {
+    var itemsString = "Items:" + newLine;
+
     this.items.forEach(function (item, i) {
-      console.log("(" + i + ") " + item);
+      itemsString += "   - " + item + newLine;
     });
+
+    return itemsString;
   };
 
-  this.showPlace = function () {
-    this.place.showInfo();
+  this.getInfo = function (character) {
+    var place = this.getPlaceInfo();
+    var health = this.getHealthInfo();
+    var longest = Math.max(place.length, health.length) + 4;
+
+    var info = spacer.box(this.getNameInfo(), longest, character);
+    info += spacer.wrap(place, longest, character);
+    info += newLine + spacer.wrap(health, longest, character);
+    info += newLine + spacer.line(longest, character);
+
+    info += newLine;
+    info += "  " + this.getItemsInfo();
+    info += newLine;
+    info += spacer.line(longest, character);
+    info += newLine;
+
+    return info;
   };
 
-  this.showHealth = function () {
-    console.log(this.name + " has health " + this.health);
-  };
-
-  this.showInfo = function () {
-    console.log(this.name + ":");
-    this.showHealth();
-    this.showItems();
+  this.showInfo = function (character) {
+    console.log(this.getInfo(character));
   };
 };
-  
+
+
 
 /* Further Adventures
  *

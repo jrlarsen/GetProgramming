@@ -5,7 +5,7 @@
 
 var Counter = function () {
   var counter = 0;
-  
+
   this.count = function () {
     counter = counter + 1;
     return counter;

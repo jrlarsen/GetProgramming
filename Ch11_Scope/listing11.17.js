@@ -3,50 +3,146 @@
  * Lots of global variables in the game
  */
 
+// The spacer namespace
+
+var spacer = {
+  blank: function () {
+    return "";
+  },
+
+  newLine: function () {
+    return "\n";
+  },
+
+  line: function (length, character) {
+    var longString = "****************************************";
+    longString += "----------------------------------------";
+    longString += "========================================";
+    longString += "++++++++++++++++++++++++++++++++++++++++";
+    longString += "                                        ";
+
+    length = Math.max(0, length);
+    length = Math.min(40, length);
+    return longString.substr(longString.indexOf(character), length);
+  },
+
+  wrap : function (text, length, character) {
+    var padLength = length - text.length - 3;
+    var wrapText = character + " " + text;
+    wrapText += spacer.line(padLength, " ");
+    wrapText += character;
+    return wrapText;
+  },
+
+  box: function (text, length, character) {
+    var boxText = spacer.newLine();
+    boxText += spacer.line(length, character) + spacer.newLine();
+    boxText += spacer.wrap(text, length, character) + spacer.newLine();
+    boxText += spacer.line(length, character) + spacer.newLine();
+    return boxText;
+  }
+};
+
 
 // Constructors
+
 var Player = function (name, health) {
+  var newLine = spacer.newLine();
   var items = [];
   var place = null;
+
+  var getNameInfo = function () {
+    return name;
+  };
+
+  var getHealthInfo = function () {
+    return "(" + health + ")";
+  };
+
+  var getItemsInfo = function () {
+    var itemsString = "Items:" + newLine;
+
+    items.forEach(function (item, i) {
+      itemsString += "   - " + item + newLine;
+    });
+
+    return itemsString;
+  };
+
+  var getTitleInfo = function () {
+    return getNameInfo() + " " + getHealthInfo();
+  };
+
+  var getInfo = function () {
+    var info = spacer.box(getTitleInfo(), 40, "*");
+    info += "  " + getItemsInfo();
+    info += spacer.line(40, "*");
+    info += newLine;
+
+    return info;
+  };
 
   this.addItem = function (item) {
     items.push(item);
   };
 
-  this.showItems = function () {
-    console.log("Items:");
-    items.forEach(function (item, i) {
-      console.log("(" + i + ") " + item);
-    });
-  };
-  
   this.setPlace = function (destination) {
     place = destination;
   };
-    
+
   this.getPlace = function () {
     return place;
   };
 
-  this.showPlace = function () {
-    place.showInfo();
-  };
-
-  this.showHealth = function () {
-    console.log(name + " has health " + health);
-  };
-
-  this.showInfo = function () {
-    console.log(name + ":");
-    this.showHealth();
-    this.showItems();
+  this.showInfo = function (character) {
+    console.log(getInfo(character));
   };
 };
 
-
 var Place = function (title, description) {
-  var exits = {};
+  var newLine = spacer.newLine();
   var items = [];
+  var exits = {};
+
+  var getItemsInfo = function () {
+    var itemsString = "Items: " + newLine;
+    items.forEach(function (item) {
+      itemsString += "   - " + item;
+      itemsString += newLine;
+    });
+    return itemsString;
+  };
+
+  var getExitsInfo = function () {
+    var exitsString = "Exits from " + title;
+    exitsString += ":" + newLine;
+
+    Object.keys(exits).forEach(function (key) {
+      exitsString += "   - " + key;
+      exitsString += newLine;
+    });
+
+    return exitsString;
+  };
+
+  var getTitleInfo = function () {
+    return spacer.box(title, title.length + 4, "=");
+  };
+
+  var getInfo = function () {
+    var infoString = getTitleInfo();
+    infoString += description;
+    infoString += newLine + newLine;
+    infoString += getItemsInfo() + newLine;
+    infoString += getExitsInfo();
+    infoString += spacer.line(40, "=") + newLine;
+    return infoString;
+  };
+
+
+  this.showInfo = function () {
+    console.log(getInfo());
+  };
 
   this.addItem = function (item) {
     items.push(item);
@@ -55,37 +151,44 @@ var Place = function (title, description) {
   this.addExit = function (direction, exit) {
     exits[direction] = exit;
   };
-    
+
   this.getExit = function (direction) {
     return exits[direction];
   };
 
-  this.showItems = function () {
-    console.log("Items in " + title + ":");
-    items.forEach(function (item, i) {
-      console.log("(" + i + ") " + item);
-    });
-  };
-
-  this.showExits = function () {
-    console.log("Exits from " + title + ":");
-  
-    Object.keys(exits).forEach(function (key) {
-      console.log(key);
-    });
-  };
-
-  this.showInfo = function () {
-    console.log(title);
-    console.log(description);
-    this.showItems();
-    this.showExits();
+  this.getLastItem = function () {
+    return items.pop();
   };
 };
-  
+
+
+// Game controls
+
+var render = function () {
+  console.clear();
+  player.getPlace().showInfo();
+  player.showInfo();
+};
+
+var go = function (direction) {
+  var place = player.getPlace();
+  var destination = place.getExit(direction);
+  player.setPlace(destination);
+  render();
+  return "";
+};
+
+var get = function () {
+  var place = player.getPlace();
+  var item = place.getLastItem();
+  player.addItem(item);
+  render();
+  return "";
+};
 
 
 // Map
+
 var kitchen = new Place(
     "The Kitchen",
     "You are in a kitchen. There is a disturbing smell."
@@ -103,25 +206,34 @@ library.addExit("north", kitchen);
 
 
 // Game initialization
-var kandra = new Player("Kandra", 50);
-kandra.addItem("The Sword of Doom");
 
-kandra.setPlace(kitchen);
-kandra.showInfo();
-kandra.showPlace();
+var player = new Player("Kandra", 50);
+player.addItem("The Sword of Doom");
+player.setPlace(kitchen);
+
+render();
+
 
 
 /* Further Adventures
  *
- * 1) Run the program.
+ * 1) Run the program and play the game.
+ *    The controls are functions assigned
+ *    to the global variables, go and get.
  *
- * 2) At the prompt, type these commands:
+ *    > get()
+ *    > go("south")
  *
- *    > kandra
- *    > var place = kandra.getPlace()
- *    > place.showInfo()
- *    > var exit = place.getExit("south")
- *    > exit.showInfo()
- *    > exit.title
+ * 2) player is also a global variable.
+ *    At the prompt, type player and press Enter.
+ *
+ *    > player
+ *
+ *    The player object's interface will be shown.
+ *
+ * 3) You can access the methods in the
+ *    player interface:
+ *
+ *    > player.setPlace(library);
  *
  */

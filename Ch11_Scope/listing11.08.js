@@ -5,12 +5,12 @@
 
 var getCounter = function () {
   var counter = 0;
-  
+
   var countUpBy1 =  function () {
     counter = counter + 1;
     return counter;
   };
-  
+
   return countUpBy1;
 };
 
