@@ -1,0 +1,14 @@
+{
+  "name": "the-crypt-node",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A text-based adventure game",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "thecrypt@room51.co.uk",
+  "dependencies": {
+    "express": "^4.13.4"
+  }
+}

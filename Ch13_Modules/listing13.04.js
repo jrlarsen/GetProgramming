@@ -1,85 +1,58 @@
-/* Get Programming with JavaScript
- * Listing 13.04
- * The spacer namespace
- */
+// Get Programming with JavaScript
+// Listings 13.03 and 13.04
+// Picking a question at random
+// Uses the number generator module
 
-var spacer = {
-  blank: function () {
-    return "";
-  },
+var getQuiz = function () {
+  var qIndex = 0;
 
-  newLine: function () {
-    return "\n";
-  },
+  var questions = [
+    { question: "7 x 8", answer: "56" },
+    { question: "12 x 12", answer: "144" },
+    { question: "5 x 6", answer: "30" },
+    { question: "9 x 3", answer: "27" }
+  ];
 
-  line: function (length, character) {
-    var characterIndex;
-    
-    var longString = "****************************************";
-    longString += "----------------------------------------";
-    longString += "========================================";
-    longString += "++++++++++++++++++++++++++++++++++++++++";
-    longString += "                                        ";
+  var getQuestion = function () {
+    qIndex = between(0, questions.length - 1);
+    return questions[qIndex].question;
+  };
 
-    length = Math.max(0, length);
-    length = Math.min(40, length);
-    
-    characterIndex = longString.indexOf(character);
-    
-    if (characterIndex === -1) {
-      characterIndex = 0;
+  var checkAnswer = function (userAnswer) {
+    if (userAnswer === questions[qIndex].answer) {
+      return "Correct!";
+    } else {
+      return "No, the answer is " + questions[qIndex].answer;
     }
-    
-    return longString.substr(characterIndex, length);
-  },
-  
-  wrap : function (text, length, character) {
-    var padLength = length - text.length - 3;
-    var wrapText = character + " " + text;      
-    wrapText += spacer.line(padLength, " ");
-    wrapText += character;
-    return wrapText;
-  },
+  };
 
-  box: function (text, length, character) {
-    var boxText = spacer.newLine();
-    boxText += spacer.line(length, character) + spacer.newLine();
-    boxText += spacer.wrap(text, length, character) + spacer.newLine(); 
-    boxText += spacer.line(length, character) + spacer.newLine();
-    return boxText;
-  }
+  return {
+    quizMe: getQuestion,
+    submit: checkAnswer
+  };
 };
+
+var quiz = getQuiz();
 
 
 /* Further Adventures
  *
  * 1) Run the program.
  *
- * The program produces no output but
- * the spacer variable is added to
- * the global scope.
+ * 2) Take the quiz, using the quiz.quizMe and
+ *    quiz.submit methods.
+ *    
+ *    > quiz.quizMe()
+ *      What is the highest mountain in the world?
+ *    > quiz.submit("K2")
  *
- * 2) At the prompt, call the line
- *    method. e.g.
+ * 3) Add some more questions and answers, run the
+ *    program and take the quiz again.
  *
- *    > spacer.line(3, "*")
- *      "***"
+ * 4) Update the program so that it keeps
+ *    a score of correct answers.
  *
- * All of the functions are accessible
- * as methods of spacer, but only a
- * single global variable is used.
- *
- * 3) At the prompt, try calling the
- *    line function directly.
- *
- *    > line(3, "*")
- *
- * 4) Call the box method with a
- *    character not recognized by the
- *    line method.
- *
- *    > spacer.box("Hello", 9, "x")
- *
- * Can you explain the output?
+ * 5) Define a showScore function that displays
+ *    the current score.
  *
  */

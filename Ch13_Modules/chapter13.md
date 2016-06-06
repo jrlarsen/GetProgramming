@@ -1,189 +1,132 @@
 # Chapter 13 - Modules: breaking a program into pieces
 
 
-### Some JavaScript to load into another page
-[JS Bin Listing 13.01](http://jsbin.com/sokewu/edit?js,console) - sokewu
+### The 'between' function
+[JS Bin 'between'](http://jsbin.com/qezoce/edit?js,console) - qezoce
 ```javascript
 /* Get Programming with JavaScript
- * Listing 13.01
- * Some JavaScript to load into another page
+ * The 'between' function
  */
 
-var message1 = "Access JavaScript at http://output.jsbin.com/sokewu.js";
-var message2 = "Scripts can be loaded by using script tags.";
-
-console.log(message1);
-
-
-/* Further Adventures
- *
- * 1) Run the program
- *
- * 2) At the prompt, access the value
- *    of the message1 variable.
- *
- *    > message1
- *
- * 3) Access the value of the
- *    message2 variable.
- *
- *    > message2
- *
- * message1 and message2 are global
- * variables. When this listing is
- * loaded into another page, message1
- * and message2 will be added to the
- * global scope, the collection of
- * variables accessible throughout
- * a program (and at the console).
- *
- */
-
+var between = function (lowest, highest) {
+    var range = highest - lowest + 1;
+    return lowest + Math.floor(Math.random() * range);
+};
 ```
 
 ### Loading JavaScript with a script tag (HTML)
-[JS Bin Listing 13.02](http://jsbin.com/fihinol/edit?html) - fihinol
+[JS Bin Listing 13.01](http://jsbin.com/lifugam/edit?html,js,console) - lifugam
 ```html
-<script src="http://output.jsbin.com/sokewu.js"></script>
+<script src="http://output.jsbin.com/qezoce.js"></script>
 ```
 
 
 ### Loading JavaScript with a script tag
-[JS Bin Listing 13.03](http://jsbin.com/fihinol/edit?js,console) - fihinol
+[JS Bin Listing 13.02](http://jsbin.com/lifugam/edit?html,js,console) - lifugam
 ```javascript
 /* Get Programming with JavaScript
- * Listings 13.02 & 13.03
+ * Listings 13.01 and 13.02
  * Loading JavaScript with a script tag
  */
 
-console.log(message2);
+var num = between(3, 7);
+console.log(num);
 
 
 /* Further Adventures
  *
- * 1) Run the program.
+ * 1) Run the program 4 or 5 times.
  *
- * 2) At the console prompt, access the
- *    message1 variable.
+ * A random number between 3 and 7 inclusive
+ * should be generated each time.
  *
- *    > message1
+ * The 'between' function that generates
+ * the number is loaded via a
+ * script element in the HTML panel.
  *
- * 3) Access the message2 variable.
+ * 2) Create a rectangle object with random
+ *    length and width properties each
+ *    between 1 and 10 units long.
  *
- *    > message2
+ * 3) Define a showArea function that accepts
+ *    a rectangle as an argument and logs its
+ *    area to the console.
  *
- * The external code has been loaded and
- * executed, adding the message1 and
- * message2 variables to the global scope,
- * the collection of variables accessible
- * throughout the program (and at the console).
- *
- * 4) Assign message2 a new value, either
- *    by adding code to the JavaScript panel
- *    or at the console.
- *
- * The global variables message1 and message2
- * can be accessed and changed.
+ *    > a 3 by 7 rectangle has area 21
  *
  */
 ```
 
 
-### The spacer namespace
-[JS Bin Listing 13.04](http://jsbin.com/juneqo/edit?js,console) - juneqo
-```javascript
-/* Get Programming with JavaScript
- * Listing 13.04
- * The spacer namespace
- */
+### Picking a question at random (HTML)
+[JS Bin Listing 13.03](http://jsbin.com/ponogi/edit?html,js,console) - ponogi
+```html
+<!-- Number Generator -->
+<script src="http://output.jsbin.com/qezoce.js"></script>
+```
 
-var spacer = {
-  blank: function () {
-    return "";
-  },
 
-  newLine: function () {
-    return "\n";
-  },
+### Picking a question at random
+[JS Bin Listing 13.04](http://jsbin.com/ponogi/edit?html,js,console) - ponogi
+```js
+// Get Programming with JavaScript
+// Listings 13.03 and 13.04
+// Picking a question at random
+// Uses the number generator module
 
-  line: function (length, character) {
-    var characterIndex;
-    
-    var longString = "****************************************";
-    longString += "----------------------------------------";
-    longString += "========================================";
-    longString += "++++++++++++++++++++++++++++++++++++++++";
-    longString += "                                        ";
+var getQuiz = function () {
+  var qIndex = 0;
 
-    length = Math.max(0, length);
-    length = Math.min(40, length);
-    
-    characterIndex = longString.indexOf(character);
-    
-    if (characterIndex === -1) {
-      characterIndex = 0;
+  var questions = [
+    { question: "7 x 8", answer: "56" },
+    { question: "12 x 12", answer: "144" },
+    { question: "5 x 6", answer: "30" },
+    { question: "9 x 3", answer: "27" }
+  ];
+
+  var getQuestion = function () {
+    qIndex = between(0, questions.length - 1);
+    return questions[qIndex].question;
+  };
+
+  var checkAnswer = function (userAnswer) {
+    if (userAnswer === questions[qIndex].answer) {
+      return "Correct!";
+    } else {
+      return "No, the answer is " + questions[qIndex].answer;
     }
-    
-    return longString.substr(characterIndex, length);
-  },
-  
-  wrap : function (text, length, character) {
-    var padLength = length - text.length - 3;
-    var wrapText = character + " " + text;      
-    wrapText += spacer.line(padLength, " ");
-    wrapText += character;
-    return wrapText;
-  },
-
-  box: function (text, length, character) {
-    var boxText = spacer.newLine();
-    boxText += spacer.line(length, character) + spacer.newLine();
-    boxText += spacer.wrap(text, length, character) + spacer.newLine(); 
-    boxText += spacer.line(length, character) + spacer.newLine();
-    return boxText;
-  }
 };
 
+  return {
+    quizMe: getQuestion,
+    submit: checkAnswer
+  };
+};
+
+var quiz = getQuiz();
+
 
 /* Further Adventures
  *
  * 1) Run the program.
  *
- * The program produces no output but
- * the spacer variable is added to
- * the global scope.
+ * 2) Take the quiz, using the quiz.quizMe and
+ *    quiz.submit methods.
  *
- * 2) At the prompt, call the line
- *    method. e.g.
+ *    > quiz.quizMe()
+ *      What is the highest mountain in the world?
+ *    > quiz.submit("K2")
  *
- *    > spacer.line(3, "*")
- *      "***"
+ * 3) Add some more questions and answers, run the
+ *    program and take the quiz again.
  *
- * All of the functions are accessible
- * as methods of spacer, but only a
- * single global variable is used.
+ * 4) Update the program so that it keeps
+ *    a score of correct answers.
  *
- * 3) At the prompt, try calling the
- *    line function directly.
- *
- *    > line(3, "*")
- *
- * 4) Call the box method with a
- *    character not recognized by the
- *    line method.
- *
- *    > spacer.box("Hello", 9, "x")
- *
- * Can you explain the output?
+ * 5) Define a showScore function that displays
+ *    the current score.
  *
  */
-```
-
-
-### Using spacer (HTML)
-[JS Bin Listing 13.05](http://jsbin.com/mosaho/edit?html) - mosaho
-```html
-<script src="http://jsbin.com/juneqo.js"></script>
 ```
 
 
