@@ -1,1 +1,1 @@
-# Chapter 22 - Node and Express
+# Chapter 22 - Node: running JavaScript outside the browser

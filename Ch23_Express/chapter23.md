@@ -1,1 +1,1 @@
-# Chapter 23 - Sockets
+# Chapter 23 - Express: building an API

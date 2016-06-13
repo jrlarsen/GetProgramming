@@ -41,5 +41,4 @@ function start (req, res) {
 
 app.use(express.static("public"));
 
-
 app.listen(1337);

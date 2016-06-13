@@ -1,0 +1,72 @@
+{
+  "title" : "The Dark House",
+  "firstPlace" : "1",
+
+  "places" : [
+    {
+      "id" : "1",
+      "title" : "The Kitchen",
+      "description" : "You are in a kitchen. There is a disturbing smell.",
+      "items" : [ "a piece of cheese" ],
+      "exits" : [
+        { "direction": "south",
+          "to": "2",
+          "challenge" : {
+            "message" : "A zombie sinks its teeth into your neck.",
+            "success" : "The zombie disintegrates into a puddle of goo.",
+            "failure" : "The zombie is strangely resilient.",
+            "requires" : "holy water",
+            "itemConsumed" : true,
+            "damage" : 20
+          }
+        },
+        { "direction": "west",  "to": "3" },
+        { "direction": "east",  "to": "4" },
+        {
+          "direction": "north",
+          "to": "5",
+          "challenge" : {
+            "message" : "The way north is blocked by a locked door.",
+            "success" : "The key turns smoothly in the lock.",
+            "failure" : "That just doesn't work. The door won't open.",
+            "requires" : "a rusty key",
+            "itemConsumed" : false
+          }
+        }
+      ]
+    },
+    {
+      "id" : "2",
+      "title" : "The Old Library",
+      "description" : "You are in a library. Dusty books line the walls.",
+      "items" : [ "a rusty key" ],
+      "exits" : [
+        { "direction" : "north", "to" : "1" }
+      ]
+    },
+    {
+      "id" : "3",
+      "title" : "The Kitchen Garden",
+      "description" : "You are in a small, walled garden.",
+      "items" : [ "holy water" ],
+      "exits" : [
+        { "direction" : "east", "to" : "1" }
+      ]
+    },
+    {
+      "id" : "4",
+      "title" : "The Kitchen Cupboard",
+      "description" : "You are in a cupboard. It's surprisingly roomy.",
+      "items" : [ "a tin of spam" ],
+      "exits" : [
+        { "direction" : "west", "to" : "1" }
+      ]
+    },
+    {
+      "id" : "5",
+      "title" : "Outside",
+      "description" : "You are outside. Congratulations, you have finished the game!",
+      "items" : [ "a sense of pride" ]
+    }
+  ]
+}

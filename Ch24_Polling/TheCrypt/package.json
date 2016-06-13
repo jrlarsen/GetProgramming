@@ -1,0 +1,10 @@
+{
+  "name": "jahvers-crypt-express",
+  "version": "1.0.0",
+  "description": "A text-based adventure game",
+  "main": "gameServer.js",
+  "dependencies": {
+    "body-parser": "^1.15.1",
+    "express": "^4.13.4"
+  }
+}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>The Crypt</title>
+    <link rel="stylesheet" href="css/theCrypt.css" />
+</head>
+<body>
+
+<h1>The Crypt</h1>
+
+<div id="main" class="hidden">
+    <div id="messages"></div>
+
+    <div id="controls">
+        <input type="text" id="txtCommand" />
+        <input type="button" id="btnCommand" value="Make it so" />
+    </div>
+
+
+    <div id="views">
+        <div id="place"></div>
+        <div id="players"></div>
+    </div>
+</div>
+
+<div id="startControls">
+    <label for="txtPlayerName">Name</label>
+    <input id="txtPlayerName" />
+
+    <label for="txtGameID">Game ID (to join an existing game)</label>
+    <input id="txtGameID" />
+
+    <p><button id="btnStart">Start Your Adventure</button></p>
+</div>
+
+
+<!-- Templates -->
+
+<script type="text/template" id="itemTemplate">
+    <li>{{item}}</li>
+</script>
+
+<script type="text/template" id="playerTemplate">
+    <h3>{{name}}</h3>
+    <p>{{health}}</p>
+
+    <ol id="playerItems_{{name}}"></ol>
+</script>
+
+<script type="text/template" id="placeTemplate">
+    <h3>{{title}}</h3>
+    <p>{{description}}</p>
+
+    <div class="placePanel">
+        <h4>Items</h4>
+        <ol id="placeItems"></ol>
+    </div>
+
+    <div class="placePanel">
+        <h4>Exits</h4>
+        <ol id="placeExits"></ol>
+    </div>
+</script>
+
+<script type="text/template" id="messageTemplate">
+    <p>*** {{message}} ***</p>
+</script>
+
+<script type="text/template" id="userDetailsTemplate">
+    {{playerName}} ({{gameID}})
+</script>
+
+<script src="/socket.io/socket.io.js"></script>
+
+<!-- Modules -->
+<script src="js/commands.js"></script>
+<script src="js/dataLoader-socketio.js"></script>
+<script src="js/gameController.js"></script>
+<script src="js/mainView.js"></script>
+<script src="js/messageView.js"></script>
+<script src="js/placeView.js"></script>
+<script src="js/playerView.js"></script>
+<script src="js/templates.js"></script>
+
+<script src="js/startGame.js"></script>
+
+</body>
+</html>

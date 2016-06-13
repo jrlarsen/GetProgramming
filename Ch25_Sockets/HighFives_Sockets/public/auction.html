@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>High Fives Auctions</title>
+    <link rel="stylesheet" href="auction.css" />
+</head>
+<body>
+<h1>High Fives Auctions</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>Item</th>
+            <th>Bid</th>
+            <th>Asking</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td id="item">The Fruitinator! Action Figure</td>
+            <td id="bid">...loading...</td>
+            <td id="asking">...loading...</td>
+            <td><button id="btnBid">Bid</button></td>
+        </tr>
+    </tbody>
+</table>
+
+<!-- socket.io -->
+<script src="/socket.io/socket.io.js"></script>
+
+<script src="auction.js"></script>
+</body>
+</html>

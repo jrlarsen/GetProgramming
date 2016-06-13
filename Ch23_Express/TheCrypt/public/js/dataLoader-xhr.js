@@ -3,22 +3,22 @@
 (function () {
     "use strict";
     
-    function loadData (url, method, postData, callback) {
+    function loadData (url, method, data, callback) {
         var xhr = new XMLHttpRequest();
-        var dataToSend = null;
+        var requestData = null;
         xhr.open(method, url);
         
-        if (postData) {
-            dataToSend = JSON.stringify(postData);
+        if (data) {
+            requestData = JSON.stringify(data);
             xhr.setRequestHeader('Content-Type', 'application/json');
         }
 
         xhr.addEventListener("load", function () {
-            var data = JSON.parse(xhr.responseText);
-            callback(data);
+            var responseData = JSON.parse(xhr.responseText);
+            callback(responseData);
         });
 
-        xhr.send(dataToSend);
+        xhr.send(requestData);
     }
 
     function postAction (command, callback) {
