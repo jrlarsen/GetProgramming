@@ -23,7 +23,7 @@ function getNewGame () {
 }
 
 function joinGame (playerName, id) {
-    var game = games[id] || getNewGame(playerName);
+    var game = games[id] || getNewGame();
     
     var playerGame = new PlayerGame(playerName, game);
     playerGames[game.id + "_" + playerName] = playerGame;
