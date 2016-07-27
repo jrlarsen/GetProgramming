@@ -1,6 +1,6 @@
 # Chapter 17 - HTML: building web pages
 
-### My Movie Ratings - headings and paragraphs
+### My Movie Ratings - headings and paragraphs (HTML)
 [JS Bin Listing 17.01](http://jsbin.com/nosiwi/edit?html,output) - nosiwi 
 ```HTML
 <!DOCTYPE html>
@@ -39,6 +39,72 @@
 
 
 <!-- Yes, these are HTML comments! -->
+```
+
+
+### Ordered and unordered lists (HTML)
+[JS Bin Listing 17.02](http://jsbin.com/vegahe/edit?html,output) - vegahe 
+```HTML
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Listing 17.02</title>
+</head>
+<body>
+
+  <h1>My Movie Ratings</h1>
+  <p>Brief info about my favorite movies.</p>
+  
+  <h2>Movies</h2>
+  
+  <h3>Inside Out</h3>
+  <p>An emotional adventure inside the head of a young girl.</p>
+  
+  <h4>Actors</h4>
+  <ul>
+    <li>Amy Poehler</li>
+    <li>Bill Hader</li>
+  </ul>
+  
+  <h4>Directors</h4>
+  <ol>
+    <li>Pete Doctor</li>
+    <li>Ronnie del Carmen</li>
+  </ol>
+  
+</body>
+</html>
+
+
+<!-- Further Adventures
+
+     1) Add two more questions.
+        Be careful to match opening and closing tags.
+        Editing HTML can be quite fiddly.
+        Don't forget the forward slash
+        for the closing tags.
+
+     2) The list of questions is between ol tags.
+        Change the ol tags to ul tags.
+        What happens to the output?
+
+     3) Change just the opening ul tag
+        back to an ol tag so the tags
+        don't match.
+
+        <ol> ... list ... </ul>
+
+        The browser will do its best to make
+        sense of the tags and display something
+        reasonable. However, the unmatched
+        tags are malformed HTML and should
+        not be left in such a state.
+
+     4) Fix the opening and closing list tags
+        so they match.
+
+-->
 ```
 
 
