@@ -1,6 +1,6 @@
 // Get Programming with JavaScript
 // Listings 17.03 and 17.04
-// Random greetings
+// Adding content to a paragraph with JavaScript
 
 (function () {
   
