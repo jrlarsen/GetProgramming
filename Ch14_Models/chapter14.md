@@ -1,7 +1,7 @@
 # Chapter 14 - Models: working with data
 
 ### The User Constructor
-[JS Bin Listing 14.01]() -
+[JS Bin Listing 14.01](http://jsbin.com/suzala/edit?js,console) - suzala 
 ```javascript
 // Get Programming with JavaScript
 // Listing 14.01
@@ -47,14 +47,14 @@ var User = function (name) {
 ```
 
 ### Importing the User constructor
-[JS Bin Listing 14.02]() - 
+[JS Bin Listing 14.02](http://jsbin.com/zenire/edit?html,js,console) - zenire
 ```html
 <!-- The User constructor -->
 <script src="http://output.jsbin.com/suzala.js"></script>
 ```
 
 ### A function to build a user model from user data
-[JS Bin Listing 14.03]() - 
+[JS Bin Listing 14.03](http://jsbin.com/zenire/edit?html,js,console) - zenire 
 ```javascript
 // Get Programming with JavaScript
 // Listings 14.02 and 14.03
@@ -101,7 +101,7 @@ console.log(user.addSession("2017-02-15", 40));
 
 
 ### Map data (Kitchen example)
-[JS Bin Listing 14.04]() - 
+[JS Bin Listing 14.04](http://jsbin.com/qonoje/edit?js,console) - qonoje 
 ```JavaScript
 /* Get Programming with JavaScript
  * Listing 14.04
@@ -192,7 +192,7 @@ console.log(user.addSession("2017-02-15", 40));
 
 
 ### A Place constructor with challenges
-[JS Bin Listing 14.05]() - 
+[JS Bin Listing 14.05](http://jsbin.com/ruviso/edit?js,console) - ruviso 
 ```javascript
 /* Get Programming with JavaScript
  * Listing 14.05
@@ -316,7 +316,7 @@ console.log(user.addSession("2017-02-15", 40));
 ```
 
 ### The map builder
-[JS Bin Listing 14.06]() - 
+[JS Bin Listing 14.06](http://jsbin.com/paqihi/edit?js,console) - paqihi 
 ```javascript
 /* Get Programming with JavaScript
  * Listing 14.06
@@ -381,7 +381,7 @@ console.log(user.addSession("2017-02-15", 40));
 ```
 
 ### Using the new map builder
-[JS Bin Listing 14.07]() - 
+[JS Bin Listing 14.07](http://jsbin.com/mogano/edit?js,console) - mogano 
 ```javascript
 // Get Programming with JavaScript
 // Listing 14.07
@@ -458,7 +458,7 @@ console.log(user.addSession("2017-02-15", 40));
 ```
 
 ### Using the map builder
-[JS Bin Listing 14.08]() - 
+[JS Bin Listing 14.08](http://jsbin.com/rulayu/edit?html,console) - rulayu
 
 ```html
 <!-- spacer -->
@@ -479,4 +479,3 @@ console.log(user.addSession("2017-02-15", 40));
 <!-- Game initialization -->
 <script src="http://output.jsbin.com/mogano.js"></script>
 ```
-
