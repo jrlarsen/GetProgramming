@@ -1,80 +1,41 @@
-/* Get Programming with JavaScript
- * Listing 14.03
- * A simplified Place constructor
- */
+// Get Programming with JavaScript
+// Listings 14.02 and 14.03
+// A function to build a user model from user data
+// Requires the User constructor
 
-(function () {
-
-  if (window.theCrypt === undefined) {
-    window.theCrypt = {};
-  }
-
-  theCrypt.Place = function (title, description) {
-    var exits = {};
-    var items = [];
-
-    this.addItem = function (item) {
-      items.push(item);
-    };
+var buildUser = function (userData) {
+  var user = new User(userData.name);
   
-    this.removeItem = function (item) {
-      var itemIndex = items.indexOf(item);
-      if (itemIndex !== -1) {
-        items.splice(itemIndex, 1);
-      }
-    };
+  userData.sessions.forEach(function (sesh) {
+    user.addSession(sesh.sessionDate, sesh.duration);
+  });
   
-    this.hasItem = function (item) {
-      return items.indexOf(item) !== -1;
-    };
+  return user;
+};
 
-    this.addExit = function (direction, exit) {
-      exits[direction] = exit;
-    };
-    
-    this.getExit = function (direction) {
-      return exits[direction];
-    };
+var userData = {
+    "name" : "Mahesha",
+    "sessions" : [
+        { "sessionDate" : "2017-02-05", "duration" : 120 },
+        { "sessionDate" : "2017-02-06", "duration" : 35 },
+        { "sessionDate" : "2017-02-06", "duration" : 45 }
+    ]
+};
 
-    this.getData = function () {
-      var data = {
-        "title" : title,
-        "description" : description,
-        "items" : items.slice(),
-        "exits" : Object.keys(exits)
-      };
-    
-      return data;
-    };
-  };
+var user = buildUser(userData);
 
-})();
-  
+console.log(user.addSession("2017-02-15", 40));
+
 
 
 /* Further Adventures
  *
  * 1) Run the program.
  *
- * 2) Create a new place.
+ * 2) Add a couple more sessions to the user data
+ *    and run the program again.
  *
- *    > var p = new theCrypt.Place("The Farm", "You are at a farm")
- *    > p.getData()
- *
- * 3) Add items.
- *
- *    > p.addItem("a key")
- *    > p.addItem("a cheese")
- *    > p.getData()
- *
- * 4) Check for items.
- *
- *    > p.hasItem("a key")
- *    > p.hasItem("a sword")
- *
- * 5) Add an exit.
- *
- *    > p.addExit("east", "The Farmhouse")
- *    > p.getData()
+ * 3) Use buildUser to create a second user from
+ *    a new user data object.
  *
  */
