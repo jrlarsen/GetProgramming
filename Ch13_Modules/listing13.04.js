@@ -1,7 +1,6 @@
 // Get Programming with JavaScript
 // Listings 13.03 and 13.04
-// Picking a question at random
-// Uses the number generator module
+// Using the Number Generator with the quiz app
 
 var getQuiz = function () {
   var qIndex = 0;
