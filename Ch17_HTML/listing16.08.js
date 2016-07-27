@@ -1,61 +1,56 @@
 /* Get Programming with JavaScript
- * Listing 16.08
- * A web-based Player view
+ * Listing 17.08
+ * A web-based place view
  */
 
 (function () {
+
+  var getItemsInfo = function (placeData) {
+    var itemsString = "Items: " + spacer.newLine();
+    placeData.items.forEach(function (item) {
+      itemsString += "   - " + item;
+      itemsString += spacer.newLine();
+    });
+    return itemsString;
+  };
   
+  var getExitsInfo = function (placeData) {
+    var exitsString = "Exits from " + placeData.title;
+    exitsString += ":" + spacer.newLine();
+        
+    placeData.exits.forEach(function (direction) {
+      exitsString += "   - " + direction;
+      exitsString += spacer.newLine();
+    });
+      
+    return exitsString;
+  };
+
+  var getTitleInfo = function (placeData) {
+    return spacer.box(placeData.title, placeData.title.length + 4, "=");
+  };
+
+  var getInfo = function (placeData) {
+    var infoString = getTitleInfo(placeData);
+    infoString += placeData.description;
+    infoString += spacer.newLine() + spacer.newLine();
+    infoString += getItemsInfo(placeData) + spacer.newLine();
+    infoString += getExitsInfo(placeData);
+    infoString += spacer.line(40, "=") + spacer.newLine();
+    return infoString;
+  };
+  
+  var render = function (place) {
+    var placeDiv = document.getElementById("place");
+    placeDiv.innerHTML = getInfo(place.getData());
+  };
+    
   if (window.theCrypt === undefined) {
     window.theCrypt = {};
   }
+  
+  theCrypt.placeView = {
+    render: render
+  };
 
-  theCrypt.playerView = (function () {
-    var renderName = function (playerData) {
-      return playerData.name;
-    };
-  
-    var renderHealth = function (playerData) {
-      return playerData.name + " has health " + playerData.health;
-    };
-  
-    var renderItems = function (playerData) {
-      var itemsString = "";
-      var items = playerData.items;
-    
-      if (items.length > 0) {
-        itemsString += "Items:\n";
-        items.forEach(function (item, i) {
-          itemsString += "(" + (i + 1) + ") ";
-          itemsString += item + "\n";
-        });
-      }
-    
-      return itemsString;
-    };
-  
-    var renderPlayer = function (playerData) {
-      var playerString = "\n";
-    
-      playerString += renderName(playerData) + "\n";
-      playerString += renderHealth(playerData) + "\n";    
-      playerString += renderItems(playerData);
-    
-      return playerString;
-    };
-  
-    // display player info on the web page
-    var render = function (player) {
-      
-      // get a reference to the div with id "player"
-      var playerDiv = document.getElementById("player");
-      
-      // update the contents of the div
-      playerDiv.innerHTML = renderPlayer(player.getData());
-    };
-  
-    return {
-      render: render
-    };
-  })();
-  
 })();
