@@ -395,7 +395,7 @@ var kalliesCode = {
 
 
 
-### Importing Kallie's namespace (HTML)
+### Importing Kallie's namespace
 [JS Bin Listing 13.14](http://jsbin.com/seqahi/edit?html,js,console) - seqahi 
 ```javascript
 /* Get Programming with JavaScript
