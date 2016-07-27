@@ -1,91 +1,85 @@
 /* Get Programming with JavaScript
  * Listing 14.04
- * A Place view
+ * Map data (Kitchen example)
  */
 
 (function () {
+  
+  var mapData = {
+    "title" : "The Dark House",
+    "firstPlace" : "The Kitchen",
+  
+    "places" : [
+      {
+        "title" : "The Kitchen",
+        "description" : "You are in a kitchen. There is a disturbing smell.",
+        "items" : [ "a piece of cheese" ],
+        "exits" : [
+          { "direction": "south", "to": "The Old Library" },
+          { "direction": "west",  "to": "The Kitchen Garden" },
+          { "direction": "east",  "to": "The Kitchen Cupboard" }
+        ]
+      },
+      {
+        "title" : "The Old Library",
+        "description" : "You are in a library. Dusty books line the walls.",
+        "items" : [ "a rusty key" ],
+        "exits" : [
+          { "direction" : "north", "to" : "The Kitchen" }
+        ]
+      },
+      {
+        "title" : "The Kitchen Garden",
+        "description" : "You are in a small, walled garden.",
+        "exits" : [
+          { "direction" : "east", "to" : "The Kitchen" }
+        ]
+      },
+      {
+        "title" : "The Kitchen Cupboard",
+        "description" : "You are in a cupboard. It's surprisingly roomy.",
+        "items" : [ "a tin of Spam" ],
+        "exits" : [
+          { "direction" : "west", "to" : "The Kitchen" }
+        ]
+      }
+    ]
+  };
 
   if (window.theCrypt === undefined) {
     window.theCrypt = {};
   }
-
-  theCrypt.placeView = (function () {
-    var renderItems = function (placeData) {
-      var itemsString = "";
-
-      if (placeData.items.length > 0) {
-        itemsString += "Items:\n";
-        placeData.items.forEach(function (item, i) {
-          itemsString += "(" + (i + 1) + ") ";
-          itemsString += item + "\n";
-        });
-      }
-    
-      return itemsString;
-    };
   
-    var renderExits = function (placeData) {
-      var exitsString = "";
-      var exits = placeData.exits;
-    
-      if (exits.length > 0) {
-        exitsString += "Exits:\n";
-        exits.forEach(function (exit, i) {
-          exitsString += "(" + (i + 1) + ") ";
-          exitsString += exit + "\n";
-        });
-      }
-    
-      return exitsString;
-    };
-      
-    var renderPlace = function (placeData) {
-      var placeString = "\n";
-    
-      placeString += placeData.title + "\n";
-      placeString += placeData.description + "\n";
-    
-      placeString += renderItems(placeData);
-      placeString += renderExits(placeData);
-    
-      return placeString;
-    };
+  theCrypt.mapData = mapData;
   
-    var render = function (place) {
-      console.log(renderPlace(place.getData()));
-    };
-  
-    return {
-      render: render
-    };
-  })();
-
 })();
-  
 
 
 /* Further Adventures
  *
  * 1) Run the program.
  *
- * 2) Create a place.
+ * 2) At the console prompt, type the following,
+ *    pressing Enter after each one:
  *
- *    > var p = new theCrypt.Place("The Farm", "You are at a farm")
- *    > p.getData()
+ *    > mapData
+ *    > mapData.title
+ *    > mapData.places
+ *    > mapData.places[0]
+ *    > mapData.places[0].description
  *
- * 3) Use the view to display the place.
+ * 3) Create a new empty place and assign it
+ *    to a variable.
  *
- *    > theCrypt.placeView.render(p)
+ *    > var place = {}
  *
- * 4) Add some items.
+ * 4) Add title and description properties
+ *    to the place.
  *
- *    > p.addItem("a horse")
- *    > p.addItem("a cow")
- *    > theCrypt.placeView.render(p)
+ *    > place.title = "The Games Room"
  *
- * 5) Add an exit.
+ * 5) Add the place to the mapData places array.
  *
- *    > p.addExit("east", "The Farmhouse")
- *    > theCrypt.placeView.render(p)
+ *    > mapData.places.push(place)
  *
  */
