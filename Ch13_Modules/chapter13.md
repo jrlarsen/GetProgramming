@@ -591,3 +591,275 @@ var quiz = (function () {
 ```
 
 
+### Importing modules for The Crypt (HTML)
+[JS Bin Listing 13.17](http://jsbin.com/zikuta/edit?html,js.console) - zikuta 
+```HTML
+<!-- spacer -->
+<script src="http://output.jsbin.com/juneqo.js"></script>
+
+<!-- Player constructor -->
+<script src="http://output.jsbin.com/nubijex.js"></script>
+
+<!-- Place constructor -->
+<script src="http://output.jsbin.com/dofuci.js"></script>
+
+<!-- Map code -->
+<script src="http://output.jsbin.com/dipaxo.js"></script>
+
+<!-- Game initialization -->
+<script src="http://output.jsbin.com/fisupe.js"></script>
+```
+
+
+
+### Importing modules for The Crypt
+[JS Bin Listing 13.18](http://jsbin.com/zikuta/edit?html,js.console) - zikuta 
+```javascript
+/* Get Programming with JavaScript
+ * Listings 13.17 and 13.18
+ * Importing modules for The Crypt
+ */
+
+var game = theCrypt.getGame();
+
+
+
+/* Further Adventures
+ *
+ * 1) Run the program and play the game.
+ *
+ *    > game.get()
+ *    > game.go("east")
+ *
+ */
+```
+
+
+### The Player constructor as a module
+[JS Bin Listing 13.19](http://jsbin.com/nubijex/edit?js) - nubijex 
+```javascript
+// Get Programming with JavaScript
+// Listing 13.19
+// The Player constructor as a module
+
+(function () {  
+  
+  var Player = function (name, health) {
+    var newLine = spacer.newLine();
+    var items = [];
+    var place = null;
+
+    var getNameInfo = function () {
+        return name;
+    };
+
+    var getHealthInfo = function () {
+        return "(" + health + ")";
+    };
+
+    var getItemsInfo = function () {
+        var itemsString = "Items:" + newLine;
+       
+        items.forEach(function (item, i) {
+            itemsString += "   - " + item + newLine;
+        });
+
+        return itemsString;
+    };
+  
+    var getTitleInfo = function () {
+        return getNameInfo() + " " + getHealthInfo();
+    };
+
+    var getInfo = function () {
+        var info = spacer.box(getTitleInfo(), 40, "*");
+        info += "  " + getItemsInfo();
+        info += spacer.line(40, "*");
+        info += newLine;
+
+        return info;
+    }; 
+
+    this.addItem = function (item) {
+        items.push(item);
+    };
+  
+    this.setPlace = function (destination) {
+        place = destination;
+    };
+    
+    this.getPlace = function () {
+        return place;
+    };
+
+    this.showInfo = function (character) {
+        console.log(getInfo(character));
+    };
+  };
+  
+  if (window.theCrypt === undefined) {
+    window.theCrypt = {};
+  }
+  
+  theCrypt.Player = Player;
+  
+})();
+
+
+
+/* Further Adventures
+ *
+ * 1) Run the program.
+ *
+ * 2) At the console prompt,
+ *    try to use Player to create a new
+ *    player object.
+ *
+ *    > var p = new Player("Dax", 50)
+ *
+ *    It won't work.
+ *    Player is a private variable.
+ *
+ *    However, Player has also been assigned
+ *    to theCrypt, which is global.
+ *
+ * 3) At the console prompt,
+ *    use theCrypt.Player to create a new
+ *    player object.
+ *
+ *    > var p = new theCrypt.Player("Dax", 50)
+ *
+ *    Okay, it can now find Player.
+ *    But spacer has gone AWOL.
+ *
+ * 4) Add a script element to the HTML Panel
+ *    to include the spacer namespace.
+ *    (JS Bin code for spacer: juneqo)
+ *    (You may have to refresh the page
+ *     to load the script.)
+ *
+ * 5) Create a new player and call p.showInfo()
+ *
+ */
+```
+
+
+### The Place constructor as a module
+[JS Bin Listing 13.20](http://jsbin.com/dofuci/edit?js) - dofuci 
+```javascript
+// Get Programming with JavaScript
+// Listing 13.20
+// The Place constructor as a module
+
+(function () {
+
+  var Place = function (title, description) {
+    var newLine = spacer.newLine();
+    var items = [];
+    var exits = {};
+  
+    var getItemsInfo = function () {
+        var itemsString = "Items: " + newLine;
+        items.forEach(function (item) {
+            itemsString += "   - " + item;
+            itemsString += newLine;
+        });
+        return itemsString;
+    };
+  
+    var getExitsInfo = function () {
+        var exitsString = "Exits from " + title;
+        exitsString += ":" + newLine;
+        
+        Object.keys(exits).forEach(function (key) {
+            exitsString += "   - " + key;
+            exitsString += newLine;
+        });
+      
+        return exitsString;
+    };
+
+    var getTitleInfo = function () {
+        return spacer.box(title, title.length + 4, "=");
+    };
+
+    var getInfo = function () {
+        var infoString = getTitleInfo();
+        infoString += description;
+        infoString += newLine + newLine;
+        infoString += getItemsInfo() + newLine;
+        infoString += getExitsInfo();
+        infoString += spacer.line(40, "=") + newLine;
+        return infoString;
+    };
+
+    this.showInfo = function () {
+        console.log(getInfo());
+    };
+
+    this.addItem = function (item) {
+        items.push(item);
+    };
+  
+    this.addExit = function (direction, exit) {
+        exits[direction] = exit;
+    };
+
+    this.getExit = function (direction) {
+        return exits[direction];
+    };
+  
+    this.getLastItem = function () {
+        return items.pop();
+    };
+  };
+  
+  if (window.theCrypt === undefined) {
+    window.theCrypt = {};
+  }
+  
+  theCrypt.Place = Place;  
+  
+})();
+
+
+
+/* Further Adventures
+ *
+ * Have a play with the global object
+ * at the console prompt:
+ *
+ * 1) Try to access a non-existent variable:
+ *
+ *    > spoon
+ *
+ *    ERROR! There is no spoon!
+ *
+ * 2) Access the global window object:
+ *
+ *    > window
+ *
+ *    Wow! It has lots of properties!
+ *
+ * 3) Try and access a non-existent property:
+ *
+ *    > window.spoon
+ *
+ *    This time, there is no error.
+ *    No spoon property has been defined, so
+ *    the special undefined value is returned.
+ *
+ * 4) Set a value for the spoon property:
+ *
+ *    > window.spoon = 1
+ *
+ *    Setting a property on the window object
+ *    makes it available as a global variable.
+ *
+ * 5) Try to access the spoon variable:
+ *
+ *    > spoon
+ *      1
+ *
+ */
+```
