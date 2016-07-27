@@ -1,42 +1,42 @@
-/* Get Programming with JavaScript
- * Listing 13.08
- * An immediately invoked function expression
- */
+// Get Programming with JavaScript
+// Listings 13.07 and 13.08
+// Using spacer and between in the guessing game
+// Uses Number Generator and spacer
 
-var callMeNow = (function () {
-    console.log("Wow, you’re a quick mover!");
-})();
+var getGuesser = function (lowest, highest) {
+  var secret = between(lowest, highest);
+
+  return function (userNumber) {
+    if (userNumber === secret) {
+      return spacer.box("Well done!", 14, "=");
+    } else if (userNumber > secret) {
+      return spacer.box("Too high!", 13, "+");
+    } else {
+      return spacer.box("Too low!", 12, "-");
+    }
+  };
+};
+
+var guess = getGuesser(5, 10);
+
 
 
 /* Further Adventures
  *
- * 1) Run the program.
+ * 1) Report the number of guesses taken
+ *    at each stage.
  *
- * The function is defined and
- * immediately executed, logging its
- * message to the console.
+ *    > guess(6)
  *
- * The function can't be called again
- * as it hasn't been assigned to
- * a variable.
+ *      ------------------------
+ *      - Too low! (2 guesses) -
+ *      ------------------------
  *
- * 2) Assign the expression to
- *    a variable.
+ * 2) End the game after a certain number
+ *    of guesses.
  *
- * var callMeNow = (function () {
- *   console.log("Wow, you're a quick mover!");
- * })();
- *
- * 3) Run the program.
- *
- * 4) At the prompt, type callMeNow
- *    and press Enter.
- *
- * callMeNow has the value 'undefined'.
- * It was not assigned the function.
- * It was assigned the return value
- * of the function. The function does
- * not return a value, so callMeNow
- * was assigned 'undefined'.
+ *    !!!!!!!!!!!!!!!!!!
+ *    ! Out Of Guesses !
+ *    !!!!!!!!!!!!!!!!!!
  *
  */
