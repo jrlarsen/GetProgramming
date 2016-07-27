@@ -1,1 +1,44 @@
 # Chapter 17 - HTML: building web pages
+
+### My Movie Ratings - headings and paragraphs
+[JS Bin Listing 17.01](http://jsbin.com/nosiwi/edit?html,output) - nosiwi 
+```HTML
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Listing 17.01</title>
+</head>
+<body>
+
+  <h1>My Movie Ratings</h1>
+  
+  <p>Brief info about my favorite movies.</p>
+  
+  <h2>Movies</h2>
+  
+  <h3>Inside Out</h3>
+
+  <p>An emotional adventure inside the head of a young girl.</p>
+ 
+</body>
+</html>
+
+
+<!-- Further Adventures
+
+     1) Have a play! Edit the HTML above
+        and see how the output is affected.
+
+     2) Add second and third movies.
+
+     3) Try adding text that is not
+        between opening and closing tags.
+
+-->
+
+
+<!-- Yes, these are HTML comments! -->
+```
+
+
