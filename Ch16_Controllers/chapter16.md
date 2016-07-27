@@ -72,3 +72,41 @@
 ```
 
 
+### The fitness app (HTML)
+[JS Bin Listing 16.02](http://jsbin.com/huxuti/edit?html,js,console) - huxuti 
+```HTML
+<!-- fitnessApp.userData -->
+<script src="http://output.jsbin.com/tenuwis.js"></script>
+
+<!-- fitnessApp.User -->
+<script src="http://output.jsbin.com/fasebo.js"></script>
+
+<!-- fitnessApp.userView -->
+<script src="http://output.jsbin.com/yapahe.js"></script>
+
+<!-- fitnessApp.controller -->
+<script src="http://output.jsbin.com/goniro.js"></script>
+```
+
+
+### The fitness app
+[JS Bin Listing 16.03](http://jsbin.com/huxuti/edit?html,js,console) - huxuti 
+```javascript
+// Get Programming with JavaScript
+// Listings 16.02 and 16.03
+// The fitness app
+
+var app = fitnessApp.init(fitnessApp.userData);
+
+
+
+/* Further Adventures
+ *
+ * 1) Create your own user data file
+ *    on JS Bin and import it instead
+ *    of the current data file.
+ *
+ * 2) Log some sessions for your user.
+ *
+ */
+```
