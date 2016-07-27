@@ -1,6 +1,6 @@
 /* Get Programming with JavaScript
  * Listings 13.09 and 13.10
- * Importing Kallie's code
+ * Using Kallie's code
  */
 
 var getGuesser = function (lowest, highest) {
