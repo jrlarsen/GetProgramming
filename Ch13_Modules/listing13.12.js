@@ -1,67 +1,43 @@
-/* Get Programming with JavaScript
- * Listing 13.12
- * The view code for posts
- */
+// Get Programming with JavaScript
+// Listing 13.12
+// Kallie's formatting code in a namespace
 
-var view = (function () {
-  var getPostString = function (post) {
-    var postString = "";
-    
-    postString += post.user + " says...\n";
-    postString += post.message;
-    
-    return postString;
-  };
-  
-  var getPostsString = function (posts) {
-    var postsString = "\n";
-    
-    posts.forEach(function (post) {
-      postsString += getPostString(post) + "\n\n";
-    });
-    
-    return postsString;
-  };
-  
-  return {
-    render: function (posts) {
-      console.log(getPostsString(posts));
-    }
-  };
-})();
+var kalliesCode = {
+  spreader: function (text, character) {
+    return text.split("").join(character);
+  },
+
+  spacer: function (text) {
+    return kalliesCode.spreader(text, " ");
+  },
+
+  dasher: function (text) {
+    return kalliesCode.spreader(text, "-");
+  }
+};
+
 
 
 /* Further Adventures
- *
+ * 
  * 1) Run the program.
  *
- * The render method expects to be
- * passed an array of posts.
+ * 2) Test out the three functions
+ *    at the prompt.
  *
- * 2) At the prompt, declare a
- *    myPosts variable and assign
- *    it an empty array.
+ *    > kalliesCode.spacer("Too high!")
+ *      T o o   h i g h !
  *
- *    > var myPosts = []
+ *    > kalliesCode.dasher("Too low!")
+ *      T-o-o- -l-o-w-!
  *
- * Commands at the prompt can span
- * multiple lines.
- * Type shift + Enter to move
- * to a new line without executing.
+ *    > kalliesCode.spreader("Well done!", "*")
+ *      W*e*l*l* *d*o*n*e*!
  *
- * 3) Add a post to myPosts.
+ * 3) Create a function called squasher
+ *    that removes characters added by spreader.
  *
- *    > myPosts.push({
- *        message: "This is my crypt",
- *        user: "Jahver"
- *      })
- *
- * 4) Call the render method with
- *    myPosts as an argument.
- *
- *    > view.render(myPosts)
- *
- * 5) Add a couple more posts and
- *    display them.
+ *    > kalliesCode.squasher("T-o-o- -h-i-g-h-!", "-")
+ *      Too high!
  *
  */
