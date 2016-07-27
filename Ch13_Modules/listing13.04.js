@@ -43,8 +43,8 @@ var quiz = getQuiz();
  *    quiz.submit methods.
  *    
  *    > quiz.quizMe()
- *      What is the highest mountain in the world?
- *    > quiz.submit("K2")
+ *      12 x 12
+ *    > quiz.submit("144")
  *
  * 3) Add some more questions and answers, run the
  *    program and take the quiz again.
