@@ -1,53 +1,37 @@
 /* Get Programming with JavaScript
- * Listing 13.10
- * Using an extra variable rather than an IIFE
+ * Listings 13.09 and 13.10
+ * Importing Kallie's code
  */
 
-var getSecretInterface = function () {
-    var message = "Who let you in here?";
+var getGuesser = function (lowest, highest) {
+  var secret = between(lowest, highest);
 
-    return {
-        share: function () {
-            console.log(message);
-        }
-    };
+  return function (userNumber) {
+    var msg;
+    if (userNumber === secret) {
+      msg = dasher("Well done!");
+      return spacer.wrap(msg, msg.length + 4, "=");
+    } else if (userNumber > secret) {
+      msg = dasher("Too high!");
+      return spacer.wrap(msg, msg.length + 4, "+");
+    } else {
+      msg = dasher("Too low!");
+      return spacer.wrap(msg, msg.length + 4, "-");
+    }
+  };
 };
 
-var secret = getSecretInterface();
+
+var guess = getGuesser(5, 10);
+
 
 
 /* Further Adventures
  *
  * 1) Run the program.
  *
- * 2) Call the share method at
- *    the prompt.
+ * 2) Make a guess.
  *
- *    > secret.share()
- *
- * The share method is executed,
- * logging the message.
- *
- * When functions are called from
- * the prompt, their code is executed
- * and then their return value
- * is displayed.
- *
- * The share method does not have
- * a return statement so it
- * returns 'undefined'.
- *
- * 3) Update the share method so
- *    it returns a value.
- *
- *    share: function () {
- *        console.log(message);
- *        return "Did you log this?";
- *    }
- *
- * 4) Run the program.
- *
- * 5) Call the share method at
- *    the prompt.
+ * !!! Where has spacer.wrap gone? !!!
  *
  */
