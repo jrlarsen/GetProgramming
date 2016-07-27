@@ -1,49 +1,35 @@
-/* Get Programming with JavaScript
- * Listing 13.11
- * Posts data
- */
+// Get Programming with JavaScript
+// Listing 13.11
+// Kallie's formatting code
 
-var postsData = [
-  {
-    "user": "Kandra",
-    "message": "That freaky dog sure doesn't like smelly cheese!"
-  },
-  {
-    "user": "Dax",
-    "message": "Has anyone found the duster?"
-  },
-  {
-    "user": "Kandra",
-    "message": "I think the knight has the duster. Not sure."
-  }
-];
+var spreader = function (text, character) {
+  return text.split("").join(character);
+};
+
+var spacer = function (text) {
+  return spreader(text, " ");
+};
+
+var dasher = function (text) {
+  return spreader(text, "-");
+};
+
 
 
 /* Further Adventures
- *
+ * 
  * 1) Run the program.
  *
- * There is no output but the
- * postsData variable is added
- * to the global scope.
+ * 2) Test out the three functions
+ *    at the prompt.
  *
- * 2) At the prompt, type
- *    postsData and press Enter.
+ *    > spacer("Too high!")
+ *      T o o   h i g h !
  *
- * The postsData array will
- * be displayed.
+ *    > dasher("Too low!")
+ *      T-o-o- -l-o-w-!
  *
- * 3) Type postsData[0] and
- *    press Enter.
- *
- * The first object in the array
- * is displayed.
- *
- * 4) Type postsData[0].message
- *    and press Enter.
- *
- * The message property of the
- * first object in the array
- * is displayed.
+ *    > spreader("Well done!", "*")
+ *      W*e*l*l* *d*o*n*e*!
  *
  */
