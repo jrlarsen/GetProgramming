@@ -1,28 +1,37 @@
-/* Get Programming with JavaScript
- * Listing 13.06
- * Using the spacer namespace
- */
+// Get Programming with JavaScript
+// Listings 13.05 and 13.06
+// Using the number generator in the guessing game
+// tixina
 
-console.log(spacer.box("It's like magic!", 20, "*"));
+var getGuesser = function (lowest, highest) {
+  var secret = between(lowest, highest);
+
+  return function (userNumber) {
+    if (userNumber === secret) {
+      return "Well done!";
+    } else if (userNumber > secret) {
+      return "Too high!";
+    } else {
+      return "Too low!";
+    }
+  };
+};
+
+var guess = getGuesser(5, 10);
+
 
 
 /* Further Adventures
  *
- * 1) Run the program.
+ * 1) Run the program and play the game.
  *
- * 2) One at a time, try different
- *    characters in the call to
- *    spacer.box.
+ * 2) Change the arguments to getGuesser so that
+ *    the number to guess is in a bigger range.
  *
- * 3) At the prompt, type spacer
- *    and press Enter.
+ * 3) Update the game so that it keeps track of
+ *    the number of guesses a player takes to
+ *    find the secret number.
  *
- *    > spacer
- *
- * The spacer object will be displayed
- * along with its methods. spacer was
- * added to the global scope by the
- * module imported using an HTML
- * script element.
+ *    > Well done! You took 6 guesses.
  *
  */
