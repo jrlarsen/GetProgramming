@@ -380,4 +380,214 @@ var kalliesCode = {
  */
 ```
 
+### Importing Kallie's namespace (HTML)
+[JS Bin Listing 13.13](http://jsbin.com/seqahi/edit?html,js,console) - seqahi 
+```HTML
+<!-- number generator -->
+<script src="http://output.jsbin.com/qezoce.js"></script>
+
+<!-- spacer -->
+<script src="http://output.jsbin.com/juneqo.js"></script>
+
+<!-- Kallie’s code -->
+<script src="http://output.jsbin.com/moheka.js"></script>
+```
+
+
+
+### Importing Kallie's namespace (HTML)
+[JS Bin Listing 13.14](http://jsbin.com/seqahi/edit?html,js,console) - seqahi 
+```javascript
+/* Get Programming with JavaScript
+ * Listings 13.13 and 13.14
+ * Importing Kallie's namespace code
+ */
+
+var getGuesser = function (lowest, highest) {
+  var secret = between(lowest, highest);
+
+  return function (userNumber) {
+    var msg;
+    if (userNumber === secret) {
+      msg = kalliesCode.dasher("Well done!");
+      return spacer.wrap(msg, msg.length + 4, "=");
+    } else if (userNumber > secret) {
+      msg = kalliesCode.dasher("Too high!");
+      return spacer.wrap(msg, msg.length + 4, "+");
+    } else {
+      msg = kalliesCode.dasher("Too low!");
+      return spacer.wrap(msg, msg.length + 4, "-");
+    }
+  };
+};
+
+
+var guess = getGuesser(5, 10);
+
+
+
+/* Further Adventures
+ *
+ * 1) Run the program and play the game.
+ *
+ * 2) Change the program to use spreader
+ *    rather than dasher, using the same
+ *    character throughout each message.
+ *
+ *    = W=e=l=l= =d=o=n=e=! =
+ *
+ * Challenge:
+ * 3) Create your own private wrap function,
+ *    within the scope of getGuesser. It 
+ *    should use spreader and wrap to create
+ *    a formatted message.
+ *
+ *    wrap("Too high!", "+")
+ *    + T+o+o+ +h+i+g+h+! +
+ *
+ * 4) Update the function returned from
+ *    getGuesser to use your wrap function.
+ *
+ */
+```
+
+### Random quiz questions with two global variables
+[JS Bin Listing 13.15](http://jsbin.com/ponogi/edit?html,js,console) - ponogi 
+```javascript
+// Get Programming with JavaScript
+// Listings 13.03, 13.04 and 13.15
+// Picking a question at random
+// Uses the number generator module
+
+var getQuiz = function () {
+  var qIndex = 0;
+
+  var questions = [
+    { question: "7 x 8", answer: "56" },
+    { question: "12 x 12", answer: "144" },
+    { question: "5 x 6", answer: "30" },
+    { question: "9 x 3", answer: "27" }
+  ];
+
+  var getQuestion = function () {
+    qIndex = between(0, questions.length - 1);
+    return questions[qIndex].question;
+  };
+
+  var checkAnswer = function (userAnswer) {
+    if (userAnswer === questions[qIndex].answer) {
+      return "Correct!";
+    } else {
+      return "No, the answer is " + questions[qIndex].answer;
+    }
+  };
+
+  return {
+    quizMe: getQuestion,
+    submit: checkAnswer
+  };
+};
+
+var quiz = getQuiz();
+
+
+/* Further Adventures
+ *
+ * 1) Run the program.
+ *
+ * 2) Take the quiz, using the quiz.quizMe and
+ *    quiz.submit methods.
+ *    
+ *    > quiz.quizMe()
+ *      12 x 12
+ *    > quiz.submit("144")
+ *
+ * 3) Add some more questions and answers, run the
+ *    program and take the quiz again.
+ *
+ * 4) Update the program so that it keeps
+ *    a score of correct answers.
+ *
+ * 5) Define a showScore function that displays
+ *    the current score.
+ *
+ */
+```
+
+### Using an IIFE with the quiz app
+[JS Bin Listing 13.16](http://jsbin.com/titano/edit?html,js,console) - titano 
+```javascript
+/* Get Programming with JavaScript
+ * Listing 13.16
+ * Using an IIFE with the quiz app
+ */
+
+var quiz = (function () {
+  var qIndex = 0;
+  
+  var questions = [
+    { question: "7 x 8", answer: "56" },
+    { question: "12 x 12", answer: "144" },
+    { question: "5 x 6", answer: "30" },
+    { question: "9 x 3", answer: "27" }
+  ];
+  
+  var getQuestion = function () {
+    qIndex = between(0, questions.length - 1);
+    return questions[qIndex].question;
+  };
+  
+  var checkAnswer = function (userAnswer) {
+    if (userAnswer === questions[qIndex].answer) {
+      return "Correct!";
+    } else {
+      return "No, the answer is " + questions[qIndex].answer;
+    }
+};
+  
+  return {
+    quizMe: getQuestion,
+    submit: checkAnswer
+  };
+  
+})();
+
+
+
+
+/* Further Adventures
+ *
+ * 1) Run the program.
+ *
+ * 2) Take the quiz, using the quiz.quizMe and
+ *    quiz.submit methods.
+ *    
+ *    > quiz.quizMe()
+ *      12 x 12
+ *    > quiz.submit("144")
+ *
+ * 3) Add some more questions and answers, run the
+ *    program and take the quiz again.
+ *
+ * CHALLENGE:
+ *
+ * 4) Add a hint property for each question.
+ *
+ * 5) Define a getHint function that returns
+ *    the hint for the current question.
+ *
+ * 6) Add a helpMe property to the public interface,
+ *    the object returned by getQuiz. The getHint
+ *    function should be assigned to the
+ *    helpMe property.
+ *
+ *    return {
+ *      quizMe: getQuestion,
+ *      submit: submit,
+ *      helpMe: getHint
+ *    };
+ *
+ */
+```
+
 
