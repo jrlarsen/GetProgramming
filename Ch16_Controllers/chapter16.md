@@ -265,3 +265,68 @@ var app = fitnessApp.init(fitnessApp.userData);
 ```
 
 
+### Loading the game modules
+[JS Bin Listing 16.11](http://jsbin.com/fociqo/edit?html,console) - fociqo 
+```HTML
+<script>
+  console.log("Loading The Crypt ...");
+</script>
+
+<!-- spacer -->
+<script src="http://output.jsbin.com/juneqo.js"></script>
+
+<!-- Place constructor -->
+<script src="http://output.jsbin.com/vuwave.js"></script>
+
+<!-- Player constructor -->
+<script src="http://output.jsbin.com/nonari.js"></script>
+
+
+
+<!-- player view -->
+<script src="http://output.jsbin.com/zucifu.js"></script>
+
+<!-- place view -->
+<script src="http://output.jsbin.com/royine.js"></script>
+
+<!-- message view -->
+<script src="http://output.jsbin.com/jatofe.js"></script>
+
+
+
+<!-- map data -->
+<script src="http://output.jsbin.com/hozefe.js"></script>
+
+<!-- map builder -->
+<script src="http://output.jsbin.com/paqihi.js"></script>
+
+
+
+<!-- game controller -->
+<script src="http://output.jsbin.com/yeqicu.js"></script>
+```
+
+
+### Running the game
+[JS Bin Listing 16.12](http://jsbin.com/fociqo/edit?js,console) - fociqo 
+```javascript
+/* Get Programming with JavaScript
+ * Listing 16.12
+ * Running the game
+ */
+
+var playerName = "Jahver";
+var map = theCrypt.mapData;
+
+game.init(map, playerName);
+
+
+
+/* Further Adventures
+ *
+ * 1) Run the program.
+ *
+ * 2) Play the game.
+ *
+ */
+```
