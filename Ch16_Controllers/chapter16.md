@@ -265,7 +265,7 @@ var app = fitnessApp.init(fitnessApp.userData);
 ```
 
 
-### Loading the game modules
+### Loading the game modules (HTML)
 [JS Bin Listing 16.11](http://jsbin.com/fociqo/edit?html,console) - fociqo 
 ```HTML
 <script>
