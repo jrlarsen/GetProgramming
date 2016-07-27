@@ -1,54 +1,58 @@
-/* Get Programming with JavaScript
- * Listing 13.15
- * Another view for posts
- */
+// Get Programming with JavaScript
+// Listings 13.03, 13.04 and 13.15
+// Picking a question at random
+// Uses the number generator module
 
-var view = (function () {
-  var getPostString = function (post) {
-    var postString = spacer.blank();
-    
-    postString += spacer.box(post.user, post.user.length + 4, "+");
-    postString += post.message + spacer.newLine();
-    
-    postString += spacer.line(40, "=") + spacer.newLine();
-    
-    return postString;
+var getQuiz = function () {
+  var qIndex = 0;
+
+  var questions = [
+    { question: "7 x 8", answer: "56" },
+    { question: "12 x 12", answer: "144" },
+    { question: "5 x 6", answer: "30" },
+    { question: "9 x 3", answer: "27" }
+  ];
+
+  var getQuestion = function () {
+    qIndex = between(0, questions.length - 1);
+    return questions[qIndex].question;
   };
-  
-  var getPostsString = function (posts) {
-    var postsString = spacer.blank();
-    
-    posts.forEach(function (post) {
-      postsString += getPostString(post);
-    });
-    
-    return postsString;
-  };
-  
-  return {
-    render: function (posts) {
-      console.log(getPostsString(posts));
+
+  var checkAnswer = function (userAnswer) {
+    if (userAnswer === questions[qIndex].answer) {
+      return "Correct!";
+    } else {
+      return "No, the answer is " + questions[qIndex].answer;
     }
   };
-})();
+
+  return {
+    quizMe: getQuestion,
+    submit: checkAnswer
+  };
+};
+
+var quiz = getQuiz();
 
 
 /* Further Adventures
  *
- * 1) In the HTML panel,
- *    remove the current HTML.
+ * 1) Run the program.
  *
- * 2) Add a script tag to import data
- *    from nocifi.js
+ * 2) Take the quiz, using the quiz.quizMe and
+ *    quiz.submit methods.
+ *    
+ *    > quiz.quizMe()
+ *      12 x 12
+ *    > quiz.submit("144")
  *
- * 3) Add a script tag to import the
- *    spacer namespace from juneqo.js
+ * 3) Add some more questions and answers, run the
+ *    program and take the quiz again.
  *
- * 4) Run the program.
+ * 4) Update the program so that it keeps
+ *    a score of correct answers.
  *
- * 5) At the prompt, call the render
- *    method with the imported data.
- *
- *    > view.render(postsData);
+ * 5) Define a showScore function that displays
+ *    the current score.
  *
  */
