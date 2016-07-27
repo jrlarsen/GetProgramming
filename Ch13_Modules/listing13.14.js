@@ -1,26 +1,51 @@
 /* Get Programming with JavaScript
- * Listing 13.14
- * Importing and using view and postsData
+ * Listings 13.13 and 13.14
+ * Importing Kallie's namespace code
  */
 
-view.render(postsData);
+var getGuesser = function (lowest, highest) {
+  var secret = between(lowest, highest);
+
+  return function (userNumber) {
+    var msg;
+    if (userNumber === secret) {
+      msg = kalliesCode.dasher("Well done!");
+      return spacer.wrap(msg, msg.length + 4, "=");
+    } else if (userNumber > secret) {
+      msg = kalliesCode.dasher("Too high!");
+      return spacer.wrap(msg, msg.length + 4, "+");
+    } else {
+      msg = kalliesCode.dasher("Too low!");
+      return spacer.wrap(msg, msg.length + 4, "-");
+    }
+  };
+};
+
+
+var guess = getGuesser(5, 10);
+
 
 
 /* Further Adventures
  *
- * 1) Run the program.
+ * 1) Run the program and play the game.
  *
- * The external modules are loaded
- * and posts are displayed.
+ * 2) Change the program to use spreader
+ *    rather than dasher, using the same
+ *    character throughout each message.
  *
- * 2) In the HTML panel,
- *    change the dusacos.js
- *    filename to nocifi.js
+ *    = W=e=l=l= =d=o=n=e=! =
  *
- * 3) Run the program.
+ * Challenge:
+ * 3) Create your own private wrap function,
+ *    within the scope of getGuesser. It 
+ *    should use spreader and wrap to create
+ *    a formatted message.
  *
- * Separate files make it
- * easy to switch from one data
- * source to another.
+ *    wrap("Too high!", "+")
+ *    + T+o+o+ +h+i+g+h+! +
+ *
+ * 4) Update the function returned from
+ *    getGuesser to use your wrap function.
  *
  */
