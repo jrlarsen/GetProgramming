@@ -58,7 +58,7 @@ console.log(num);
 ```
 
 
-### Picking a question at random (HTML)
+### Using the Number Generator with the quiz app (HTML)
 [JS Bin Listing 13.03](http://jsbin.com/ponogi/edit?html,js,console) - ponogi
 ```html
 <!-- Number Generator -->
@@ -66,13 +66,12 @@ console.log(num);
 ```
 
 
-### Picking a question at random
+### Using the Number Generator with the quiz app
 [JS Bin Listing 13.04](http://jsbin.com/ponogi/edit?html,js,console) - ponogi
 ```js
 // Get Programming with JavaScript
 // Listings 13.03 and 13.04
-// Picking a question at random
-// Uses the number generator module
+// Using the Number Generator with the quiz app
 
 var getQuiz = function () {
   var qIndex = 0;
@@ -95,7 +94,7 @@ var getQuiz = function () {
     } else {
       return "No, the answer is " + questions[qIndex].answer;
     }
-};
+  };
 
   return {
     quizMe: getQuestion,
@@ -112,10 +111,10 @@ var quiz = getQuiz();
  *
  * 2) Take the quiz, using the quiz.quizMe and
  *    quiz.submit methods.
- *
+ *    
  *    > quiz.quizMe()
- *      What is the highest mountain in the world?
- *    > quiz.submit("K2")
+ *      12 x 12
+ *    > quiz.submit("144")
  *
  * 3) Add some more questions and answers, run the
  *    program and take the quiz again.
@@ -129,36 +128,50 @@ var quiz = getQuiz();
  */
 ```
 
+### Using the Number Generator in the guessing game (HTML)
+[JS Bin Listing 13.05](http://jsbin.com/tixina/edit?js,console) - tixina
+```html
+<!-- Number Generator -->
+<script src="http://output.jsbin.com/qezoce.js"></script>
+```
 
-### Using spacer
-[JS Bin Listing 13.06](http://jsbin.com/mosaho/edit?js,console) - mosaho
+### Using the Number Generator in the guessing game
+[JS Bin Listing 13.06](http://jsbin.com/tixina/edit?js,console) - tixina
 ```javascript
-/* Get Programming with JavaScript
- * Listings 13.05 and 13.06
- * Using the spacer namespace
- */
+// Get Programming with JavaScript
+// Listings 13.05 and 13.06
+// Using the Number Generator in the guessing game
 
-console.log(spacer.box("It's like magic!", 20, "*"));
+var getGuesser = function (lowest, highest) {
+  var secret = between(lowest, highest);
+
+  return function (userNumber) {
+    if (userNumber === secret) {
+      return "Well done!";
+    } else if (userNumber > secret) {
+      return "Too high!";
+    } else {
+      return "Too low!";
+    }
+  };
+};
+
+var guess = getGuesser(5, 10);
+
 
 
 /* Further Adventures
  *
- * 1) Run the program.
+ * 1) Run the program and play the game.
  *
- * 2) One at a time, try different
- *    characters in the call to
- *    spacer.box.
+ * 2) Change the arguments to getGuesser so that
+ *    the number to guess is in a bigger range.
  *
- * 3) At the prompt, type spacer
- *    and press Enter.
+ * 3) Update the game so that it keeps track of
+ *    the number of guesses a player takes to
+ *    find the secret number.
  *
- *    > spacer
- *
- * The spacer object will be displayed
- * along with its methods. spacer was
- * added to the global scope by the
- * module imported using an HTML
- * script element.
+ *    > Well done! You took 6 guesses.
  *
  */
 ```
