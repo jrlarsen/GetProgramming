@@ -437,3 +437,16 @@ render(moviesData);
 </body>
 </html>
 ```
+
+
+### A web-based The Crypt game (CSS)
+[JS Bin Listing 17.10](http://jsbin.com/toyahi/edit?css) - toyahi 
+```CSS
+div {
+  white-space: pre;
+  font-family: monospace;
+}
+```
+
+
+
