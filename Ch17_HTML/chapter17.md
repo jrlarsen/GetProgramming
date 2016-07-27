@@ -262,7 +262,7 @@ render(moviesData);
 
 
 ### A web-based player view
-[JS Bin Listing 17.07]() - 
+[JS Bin Listing 17.07](http://jsbin.com/cehexi/edit?js,console) - cehexi 
 ```javascript
 /* Get Programming with JavaScript
  * Listing 17.07
@@ -437,5 +437,4 @@ render(moviesData);
 </body>
 </html>
 ```
-
 
