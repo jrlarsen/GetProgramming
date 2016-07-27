@@ -383,7 +383,7 @@ render(moviesData);
 
 
 ### A web-based The Crypt game (HTML)
-[JS Bin Listing 17.09]() - 
+[JS Bin Listing 17.09](http://jsbin.com/zaxaje/edit?html,console,output) - zaxaje 
 ```HTML
 <!DOCTYPE html>
 <html>
@@ -437,4 +437,3 @@ render(moviesData);
 </body>
 </html>
 ```
-
