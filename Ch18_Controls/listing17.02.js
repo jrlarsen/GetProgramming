@@ -1,42 +1,52 @@
-/* Get Programming with JavaScript
- * Listing 17.02
- * Displaying a message when a button is clicked
- */
+// Get Programming with JavaScript
+// Listing 18.02
+// My Movie Ratings greetings with button
 
-var displayMessage = function () {
-  var messageDiv = document.getElementById("message");
-  messageDiv.innerHTML = "I'm going on an adventure!";
-};
-
-var btn = document.getElementById("showMessage");
-
-btn.addEventListener("click", displayMessage);
-
+(function () {
+  "use strict";
+  
+  function getGreeting () {
+    var hellos = [
+      "Nanu nanu!",
+      "Wassup!",
+      "Yo!",
+      "Hello movie lover!",
+      "Ay up me duck!",
+      "Hola!"
+    ];
+  
+    var index = Math.floor(Math.random() * hellos.length);
+    
+    return hellos[index];
+  }
+  
+  function updateGreeting () {
+    para.innerHTML = getGreeting();
+  }
+  
+  var btn = document.getElementById("btnGreeting");
+  var para = document.getElementById("greeting");
+  
+  btn.addEventListener("click", updateGreeting);
+  
+  updateGreeting();
+  
+})();
 
 
 /* Further Adventures
  *
- * 1) Run the program and
- *    click the button.
- *
- * 2) Declare a counter variable
- *    before the displayMessage function
- *    and assign it the value 1.
- *
- * 3) Update the displayMessage function
- *    so it includes the counter value
- *    at the end.
- *
- *    I'm going on an adventure! (1)
- *
- * 4) Increment the counter each time
- *    the button is clicked.
- *
- * 5) Run the program and click the
+ * 1) Run the program and click the
  *    button a few times.
  *
- *    I'm going on an adventure! (1)
- *    I'm going on an adventure! (2)
- *    I'm going on an adventure! (3)
+ * 2) Add a second button to the HTML
+ *    with the caption "Say Bye"
+ *
+ * 3) Add a getBye function to the code
+ *    that returns a random goodbye message.
+ *
+ * 4) Add an updateBye function and make it
+ *    so that clicking your button displays
+ *    the message on the web page.
  *
  */
