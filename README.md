@@ -171,19 +171,34 @@
 
 ## Part 4 – The server, Node, Express and Socket.io (online extras)
 
-### Chapter 22 – Building an API with Node and Express
-* 22.1 JavaScript on the server
-* 22.2 Installing Node and using npm
-* 22.3 Modules and require
-* 22.4 Express
-* 22.5 Loading our map JSON files and responding to API requests
-* 22.6 Saving game state on the server
+### Chapter 22 – Node: running JavaScript outside the browser
+* 22.1 Running JavaScript with Node.js
+* 22.2 Turning your code into Node modules
+* 22.3 Executing JavaScript with the read-eval-print loop
+* 22.4 The Crypt - starting a local project
+* 22.5 The Crypt - tracking multiple players
+* 22.6 The Crypt - controlling players
 * 22.7 Summary
 
-### Chapter 23 – Real-time messaging with Socket.io
-* 23.1 Real-time updates
-* 23.2 Using socket.io on the server and the browser
-* 23.3 Sending and receiving game messages
-* 23.4 Bumping into other characters
-* 23.5 Swapping items
-* 23.6 Summary
+### Chapter 23 - Express: building an API
+* 23.1 Installing packages from npm
+* 23.2 Creating a web server with Express
+* 23.3 Sending data to and from the server
+* 23.4 The Crypt - server and client code
+* 23.5 The Crypt - building the game server
+* 23.6 The Crypt - loading data in the browser
+* 23.7 Summary
+
+### Chapter 24 - Polling: repeating requests with XHR
+* 24.1 High Fives - building an auction app
+* 24.2 High Fives - polling the server for updates
+* 24.3 The Crypt - running a central server
+* 24.4 The Crypt - managing multiple games on the browser
+* 24.5 The Crypt - managing multiple games on the server
+* 24.6 The Crypt - keeping players updated
+* 24.7 Summary
+
+### Chapter 25 - Socket.IO: real-time messaging
+* 25.1 High Fives - sending messages with Socket.IO
+* 25.2 The Crypt - spreading the love
+* 25.3 Summary
