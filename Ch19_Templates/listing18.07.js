@@ -1,42 +1,49 @@
-/* Get Programming with JavaScript
- * Listing 18.07
- * Filling a template with object properties
- */
+// Get Programming with JavaScript
+// Listing 19.07
+// A function to fill templates with data
 
-var template = "<h3>{{title}}</h3><p>{{body}}</p>";
-var filled = template;
+function fill (template, data) {
 
-var post = {
-    title: "That dog",
-    body: "That dog doesn’t know what cheese is"
-};
-
-Object.keys(post).forEach(function (key) {
+  Object.keys(data).forEach(function (key) {
     var placeholder = "{{" + key + "}}";
-    filled = filled.replace(placeholder, post[key]);
-});
+    var value = data[key];
 
-console.log(filled);
+    while (template.indexOf(placeholder) !== -1) {
+      template = template.replace(placeholder, value);
+    }
+  });
 
+  return template;
+}
+  
+  
+// Test the fill function
+
+var data = {
+    title: "Fitness App v1.0 Live!",
+    body: "Yes, version 1 is here...",
+    posted: "October 3rd, 2016",
+    author: "Oskar",
+    social: "@appOskar51"
+};
+  
+var templateScript = document.getElementById("newsItemTemplate");
+var templateString = templateScript.innerHTML;
+var newsContainer = document.getElementById("news");
+  
+newsContainer.innerHTML = fill(templateString, data);
 
 
 /* Further Adventures
  *
- * 1) Run the program.
+ * 1) Replace the author property with
+ *    firstName and lastName properties.
  *
- * Let's take a look at the array
- * of property names created by
- * Object.keys.
+ * 2) On the HTML panel, update the template
+ *    to use the new properties.
  *
- * 2) At the console prompt, type
- *    > Object.keys(post)
- *
- * 3) Add a third placeholder to
- *    the template in the program.
- *
- * 4) Add a corresponding property
- *    to the post object.
- *
- * 5) Run the program.
+ * 3) Run the program and check that the
+ *    new placeholders are automatically
+ *    filled with the correct values.
  *
  */
