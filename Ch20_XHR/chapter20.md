@@ -461,3 +461,116 @@ var app = fitnessApp.init("qiwizo");
 ```
 
 
+### The Crypt (HTML)
+[JS Bin Listing 20.10](http://jsbin.com/cujibok/edit?html) - cujibok
+```HTML
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>The Crypt</title>
+</head>
+<body>
+
+  <h1>The Crypt</h1>
+  
+  <div id="messages" class="hidden"></div>
+  
+  <div id="controls">
+    <input type="text" id="txtCommand" />
+    <input type="button" id="btnCommand" value="Make it so" />
+  </div>
+  
+  
+  <div id="views">
+    <div id="place"></div>
+    <div id="player"></div>
+  </div>
+ 
+  
+  <!-- Templates -->
+  
+  <script type="text/x-template" id="itemTemplate">
+      <li>{{item}}</li>
+  </script>
+  
+  <script type="text/x-template" id="playerTemplate">
+      <h3>{{name}}</h3>
+      <p>{{health}}</p>
+      
+      <ol id="playerItems"></ol>
+  </script>
+  
+  <script type="text/x-template" id="placeTemplate">
+      <h3>{{title}}</h3>
+      <p>{{description}}</p>
+      
+      <div class="placePanel">
+        <h4>Items</h4>
+        <ol id="placeItems"></ol>
+      </div>
+      
+      <div class="placePanel">
+        <h4>Exits</h4>
+        <ol id="placeExits"></ol>
+      </div>
+  </script>
+  
+  <script type="text/x-template" id="messageTemplate">
+      <p>*** {{message}} ***</p>
+  </script>
+  
+  
+  <!-- Modules -->
+  
+  <!-- gpwj.templates -->
+  <script src="http://output.jsbin.com/pugase.js"></script>
+  
+  <!-- gpwj.data -->
+  <script src="http://output.jsbin.com/guzula.js"></script>
+  
+  
+  <!-- Place constructor -->
+  <script src="http://output.jsbin.com/vuwave.js"></script>
+
+  <!-- Player constructor -->
+  <script src="http://output.jsbin.com/nonari.js"></script>
+
+
+  <!-- player view -->
+  <script src="http://output.jsbin.com/suyona.js"></script>
+
+  <!-- place view -->
+  <script src="http://output.jsbin.com/yoquna.js"></script>
+
+  <!-- message view -->
+  <script src="http://output.jsbin.com/jojeyo.js"></script>
+
+
+  <!-- map manager -->
+  <script src="http://output.jsbin.com/xesoxu.js"></script>
+
+
+  <!-- game controller -->
+  <script src="http://output.jsbin.com/vezaza.js"></script>
+
+  <!-- Web Page Controls -->
+  <script src="http://output.jsbin.com/xoyasi.js"></script>
+</body>
+</html>
+``
+
+
+
+### The Crypt
+[JS Bin Listing 20.11](http://jsbin.com/cujibok/edit?js) - cujibok
+```javascript
+// Get Programming with JavaScript
+// Listing 20.11
+// The Crypt
+
+var playerName = "Kandra";
+var firstPlaceId = "vitewib";
+
+game.init(firstPlaceId, playerName);
+```
