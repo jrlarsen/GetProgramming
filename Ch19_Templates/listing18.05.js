@@ -1,16 +1,12 @@
-/* Get Programming with JavaScript
- * Listing 18.05
- * Using a while loop with replace
- */
+// Get Programming with JavaScript
+// Listing 19.05
+// Using a while loop to count
 
-var before = "Kandra. Kandra has health 50. Kandra is in The Dungeon.";
-var oldName = "a";
-var newName = "A";
-var after = before;
+var count = 1;
 
-while (after.indexOf(oldName) !== -1) {
-    after = after.replace(oldName, newName);
-    console.log(after);
+while (count < 11) {
+    console.log(count);
+    count++;
 }
 
 
@@ -19,14 +15,20 @@ while (after.indexOf(oldName) !== -1) {
  *
  * 1) Run the program.
  *
- * 2) Change the program so that it
- *    replaces all occurrences of
- *    "a" with "A".
+ * 2) Change the program so it
+ *    counts down from 10 to 1.
  *
- * 3) Write a function called swap
- *    that replaces all occurrences
- *    of one string with another.
+ * 3) Change it so it shows all
+ *    the odd numbers from 1 to 100.
  *
- *    swap(mainString, replaceThis, withThis) 
+ * 4) Create an array of numbers and
+ *    assign it to a variable.
+ *
+ *    e.g. var nums = [2, 7, 1, 9];
+ *
+ * 5) Use a while loop to display
+ *    the elements of the array.
+ *
+ *    Hint: console.log(nums[count])
  *
  */
