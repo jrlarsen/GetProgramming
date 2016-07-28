@@ -197,3 +197,53 @@ gpwj.data.load("qiwizo", console.log);
 ```
 
 
+### The fitness app (HTML)
+[JS Bin Listing 20.05](http://jsbin.com/mikigo/edit?html,console) - mikigo 
+```HTML
+<!-- fitnessApp.User -->
+<script src="http://output.jsbin.com/fasebo.js"></script>
+
+<!-- fitnessApp.userView -->
+<script src="http://output.jsbin.com/yapahe.js"></script>
+
+<!-- fitnessApp.controller -->
+<script src="http://output.jsbin.com/nudezo.js"></script>
+
+<!-- gpwj.data -->
+<script src="http://output.jsbin.com/guzula.json"></script>
+```
+
+
+
+### The fitness app
+[JS Bin Listing 20.06](http://jsbin.com/mikigo/edit?js,console) - mikigo 
+```javascript
+// Get Programming with JavaScript
+// Listings 20.05 and 20.06
+// The fitness app
+
+var app = fitnessApp.init("qiwizo");
+
+// pobapa - Obinna
+// qapavi - Liang
+// qiwizo - Mahesha
+
+
+/* Further Adventures
+ *
+ * 1) Run the program.
+ *
+ * 2) Log some sessions:
+ *
+ *    > app.log("2017-02-07", 20)
+ *
+ * 3) Load another user:
+ *
+ *    > app.loadUser("pobapa")
+ *    > app.log("2017-02-10", 45)
+ *
+ */
+```
+
+
+
