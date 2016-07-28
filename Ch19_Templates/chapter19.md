@@ -736,3 +736,40 @@ newsContainer.innerHTML = fillList(templateString, posts);
 ```
 
 
+### A message view using templates
+[JS Bin Listing 19.14](http://jsbin.com/jojeyo/edit?js,console) - jojeyo 
+```javascript
+// Get Programming with JavaScript
+// Listing 19.14
+// A message view using templates
+// Depends on gpwj.templates
+
+(function () {
+  "use strict";
+
+  var messageDiv = document.getElementById("messages");
+  var templateScript = document.getElementById("messageTemplate");
+  var template = templateScript.innerHTML;
+  
+  function render (message) {
+    var data = { message: message };
+    messageDiv.innerHTML = gpwj.templates.fill(template, data);
+  }
+
+  function clear () {
+    messageDiv.innerHTML = "";
+  }
+  
+  if (window.theCrypt === undefined) {
+    window.theCrypt = {};
+  }
+  
+  theCrypt.messageView = {
+    render: render,
+    clear: clear
+  };
+  
+})();
+```
+
+
