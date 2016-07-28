@@ -330,7 +330,7 @@ newsContainer.innerHTML = fill(templateString, data);
 
 
 ### Building a list using a template
-[JS Bin Listing 19.08]() - 
+[JS Bin Listing 19.08](http://jsbin.com/hilecu/edit?js,output) - hilecu 
 ```javascript
 // Get Programming with JavaScript
 // Listing 19.08
@@ -412,5 +412,4 @@ newsContainer.innerHTML = fillList(templateString, posts);
  *
  */
 ```
-
 
