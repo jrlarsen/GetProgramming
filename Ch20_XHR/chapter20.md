@@ -246,4 +246,32 @@ var app = fitnessApp.init("qiwizo");
 ```
 
 
+### The JSON data for The Kitchen
+[JS Bin Listing 20.07](http://output.jsbin.com/qulude.json) - qulude 
+```javascript
+{
+  "title" : "The Kitchen",
+  "id" : "qulude",
+  "description" : "You are in a kitchen. There is a disturbing smell.",
+  "items" : [ "a piece of cheese" ],
+  "exits" : [
+    {
+      "direction" : "south",
+      "to" : "The Old Library",
+      "id" : "kacaluy"
+    },
+    {
+      "direction" : "west",
+      "to" : "The Kitchen Garden",
+      "id" : "xulare"
+    },
+    {
+      "direction" : "east",
+      "to" : "The Kitchen Cupboard",
+      "id" : "jodeyo"
+    }
+  ]
+}
+```
+
 
