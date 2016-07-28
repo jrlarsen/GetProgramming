@@ -1,55 +1,43 @@
-/* Get Programming with JavaScript
- * Listing 17.08
- * The command module
- */
+// Get Programming with JavaScript
+// Listing 18.08
+// Converting a command string into a command object
 
-(function () {
-  
-  var parseCommand = function (commandString) {
+function parseCommand (commandString) {
     var commandWords = commandString.split(" ");
     var command = {
         type: commandWords.shift()
     };
 
-    if (command.type === "use" || command.type === "go") {
+    if (command.type === "go" || command.type === "use") {
         command.direction = commandWords.pop();
     }
 
     command.item = commandWords.join(" ");
 
     return command;
-  };
-  
-  var doAction = function () {
-    var commandString = document.getElementById("txtCommand").value;
-    var command = parseCommand(commandString);
-    var game = theCrypt.game;
-  
-    switch (command.type) {
-      
-      case "go":
-        game.go(command.direction);
-        break;
-      
-      case "get":
-        game.get(command.item);
-        game.me();
-        game.here();
-        break;
-      
-      case "use":
-        game.use(command.item, command.direction);
-        game.me();
-        break;
-      
-      default:
-        game.renderMessage("I don't know how to do that");
-      
-    }
-  
-  };
-  
-  var commandButton = document.getElementById("btnCommand");
-  commandButton.addEventListener("click", doAction);
-  
-})();
+}
+
+
+/* Further Adventures
+ *
+ * 1) Run the program.
+ *
+ * 2) At the prompt, test the parseCommand
+ *    function. Check the returned
+ *    objects to make sure they have
+ *    the correct type, direction and item.
+ *
+ *    > parseCommand("go north")
+ *    > parseCommand("get a rusty key")
+ *    > parseCommand("use a rusty key north")
+ *
+ * 4) Assign the returned object to
+ *    a variable and then access
+ *    its properties.
+ *
+ *    > var cmd = parseCommand("use a rusty key north")
+ *    > cmd.type
+ *    > cmd.direction
+ *    > cmd.item
+ *
+ */
