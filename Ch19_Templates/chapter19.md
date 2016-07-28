@@ -550,3 +550,89 @@ newsContainer.innerHTML = fillList(templateString, posts);
 ```
 
 
+### A modular news page (HTML)
+[JS Bin Listing 19.11](http://jsbin.com/vemufa/edit?html,output) - vemufa 
+```HTML
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Fitness App News</title>
+</head>
+<body>
+
+  <h1>Fitness App News</h1>
+  
+  <div id="news"></news>
+  
+  
+  <script type="text/template" id="newsItemTemplate">
+    <div class="newsItem">
+      <h3>{{title}}<span> - by {{author}}</span></h3>
+      <p>{{body}}</p>
+      <p class="posted"><em>Posted: {{posted}}</em></p>
+      <p class="follow">Follow {{author}} {{social}}</p>
+    </div>
+  </script>
+  
+  
+  <!-- templates module -->
+  <script src="http://output.jsbin.com/pugase.js"></script>
+  
+  <!-- news items data -->
+  <script src="http://output.jsbin.com/fupiki.js"></script>
+  
+</body>
+</html>
+```
+
+
+### A modular news page
+[JS Bin Listing 19.12](http://jsbin.com/vemufa/edit?js,output) - vemufa 
+```javascript
+/* Get Programming with JavaScript
+ * Listings 19.11 and 19.12
+ * A modular news page
+ */
+
+(function () {
+  "use strict";
+  
+  var templateScript = document.getElementById("newsItemTemplate");
+  var templateString = templateScript.innerHTML;
+  var newsContainer = document.getElementById("news");
+  
+  
+  var newsData = fitnessApp.news.getItems(3);
+  
+  newsContainer.innerHTML = gpwj.templates.fillList(templateString, newsData);
+  
+})();
+
+
+
+/* Further Adventures
+ *
+ * 1) Create a showItems function that
+ *    displays a specified number of
+ *    news items on the page.
+ *
+ *    e.g. showItems(3)
+ *
+ * 2) Add a drop-down list to the page
+ *    so the reader can choose the number
+ *    of items to display.
+ *
+ * 3) Create an update function that reads
+ *    the number of items to display from
+ *    the drop-down list and then calls
+ *    showItems with the specified number.
+ *
+ * 4) Add a 'show' button that calls the
+ *    update function when clicked.
+ *
+ */
+```
+
+
