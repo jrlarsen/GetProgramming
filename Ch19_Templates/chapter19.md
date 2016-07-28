@@ -1,1 +1,55 @@
 # Chapter 19 - Templates: filling placeholders with data
+
+
+### Fitness app news (HTML)
+[JS Bin Listing 19.01](http://jsbin.com/viyuyo/edit?html,output) - viyuyo 
+```HTML
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Fitness App News</title>
+</head>
+<body>
+
+  <h1>Fitness App News</h1>
+  
+  <div id="news"></news>
+  
+  
+  <script type="text/template" id="newsItemTemplate">
+    <div class="newsItem">
+      <h3>{{title}}<span> - by {{author}}</span></h3>
+      <p>{{body}}</p>
+      <p class="posted"><em>Posted: {{posted}}</em></p>
+      <p class="follow">Follow {{author}} {{social}}</p>
+    </div>
+  </script>
+  
+</body>
+</html>
+
+
+<!-- Further Adventures
+
+1) Run the program to see the output generated
+   when the placeholders are filled with data.
+
+2) Move the first {{author}} placeholder into
+   its own paragraph and run the program again.
+
+3) Look at the post data in the JavaScript panel.
+   Notice how the property names (the keys) match
+   the placeholders.
+
+4) Add a fifth post to the posts array and run
+   the program again.
+
+
+-->
+```
+
+
+
+
