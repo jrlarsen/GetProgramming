@@ -81,7 +81,7 @@
 
 
 ### My Movie Ratings with a drop-down list (HTML)
-[JS Bin Listing 18.03]() - 
+[JS Bin Listing 18.03](http://jsbin.com/hikuzi/edit?js,output) - hikuzi 
 ```HTML
 <!DOCTYPE html>
 <html>
@@ -129,7 +129,7 @@
 
 
 ### My Movie Ratings with a drop-down list
-[JS Bin Listing 18.04]() - 
+[JS Bin Listing 18.04](http://jsbin.com/hikuzi/edit?js,output) - hikuzi 
 ```javascript
 // Get Programming with JavaScript
 // Listing 18.04
@@ -311,6 +311,121 @@
   
 </body>
 </html>
+```
+
+
+### Adding controls to The Crypt (HTML)
+[JS Bin Listing 18.07](http://jsbin.com/rijage/edit?html,output) - rijage 
+```HTML
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>The Crypt</title>
+</head>
+<body>
+
+  <h1>The Crypt</h1>
+  
+  <div id="place"></div>
+  <div id="player"></div>
+  <div id="messages"></div>
+  
+  <div id="controls">
+    <input type="text" id="txtCommand">
+    <button id="btnCommand">Make it so</button>
+  </div>
+  
+  
+  
+  
+  <!-- Modules -->
+  
+  <!-- spacer -->
+  <script src="http://output.jsbin.com/juneqo.js"></script>
+
+
+  <!-- Place constructor -->
+  <script src="http://output.jsbin.com/vuwave.js"></script>
+
+  <!-- Player constructor -->
+  <script src="http://output.jsbin.com/nonari.js"></script>
+
+
+  <!-- player view -->
+  <script src="http://output.jsbin.com/cehexi.js"></script>
+
+  <!-- place view -->
+  <script src="http://output.jsbin.com/cakine.js"></script>
+
+  <!-- message view -->
+  <script src="http://output.jsbin.com/nocosej.js"></script>
+
+
+  <!-- map data -->
+  <script src="http://output.jsbin.com/hozefe.js"></script>
+
+  <!-- map builder -->
+  <script src="http://output.jsbin.com/paqihi.js"></script>
+
+
+  <!-- game controller -->
+  <script src="http://output.jsbin.com/yeqicu.js"></script>
+
+  <!-- Web Page Controls -->
+  <script src="http://output.jsbin.com/qedubi.js"></script>
+  
+</body>
+</html>
+```
+
+
+### Converting a command string into a command object
+[JS Bin Listing 18.08](http://jsbin.com/repebe/edit?js,console) - repebe 
+```javascript
+// Get Programming with JavaScript
+// Listing 18.08
+// Converting a command string into a command object
+
+function parseCommand (commandString) {
+    var commandWords = commandString.split(" ");
+    var command = {
+        type: commandWords.shift()
+    };
+
+    if (command.type === "go" || command.type === "use") {
+        command.direction = commandWords.pop();
+    }
+
+    command.item = commandWords.join(" ");
+
+    return command;
+}
+
+
+/* Further Adventures
+ *
+ * 1) Run the program.
+ *
+ * 2) At the prompt, test the parseCommand
+ *    function. Check the returned
+ *    objects to make sure they have
+ *    the correct type, direction and item.
+ *
+ *    > parseCommand("go north")
+ *    > parseCommand("get a rusty key")
+ *    > parseCommand("use a rusty key north")
+ *
+ * 4) Assign the returned object to
+ *    a variable and then access
+ *    its properties.
+ *
+ *    > var cmd = parseCommand("use a rusty key north")
+ *    > cmd.type
+ *    > cmd.direction
+ *    > cmd.item
+ *
+ */
 ```
 
 
