@@ -90,7 +90,7 @@ console.log(after);
 
 
 ### Chaining calls to replace
-[JS Bin Listing 19.03]() - 
+[JS Bin Listing 19.03](http://jsbin.com/rebugu/edit?js,console) - rebugu 
 ```javascript
 /* Get Programming with JavaScript
  * Listing 19.03
@@ -130,4 +130,3 @@ console.log(after);
  *
  */
 ```
-
