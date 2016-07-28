@@ -1,14 +1,35 @@
 /* Get Programming with JavaScript
- * Listing 18.04
- * Using a while loop to count
+ * Listing 19.04
+ * Calling replace once for each property
  */
 
-var count = 1;
-
-while (count < 11) {
-    console.log(count);
-    count++;
-}
+(function () {
+  "use strict";
+  
+  var data = {
+    title: "Fitness App v1.0 Live!",
+    body: "Yes, version 1 is here...",
+    posted: "October 3rd, 2016",
+    author: "Oskar",
+    social: "@appOskar51"
+  };
+  
+  
+  var templateScript = document.getElementById("newsItemTemplate");
+  var templateString = templateScript.innerHTML;
+  
+  var newsItemHTML = templateString
+      .replace("{{title}}", data.title)
+      .replace("{{author}}", data.author)
+      .replace("{{posted}}", data.posted)
+      .replace("{{body}}", data.body)
+      .replace("{{social}}", data.social);
+  
+  var newsContainer = document.getElementById("news");
+  
+  newsContainer.innerHTML = newsItemHTML;
+  
+})();
 
 
 
@@ -16,20 +37,15 @@ while (count < 11) {
  *
  * 1) Run the program.
  *
- * 2) Change the program so it
- *    counts down from 10 to 1.
+ * Notice on the Output panel that the second
+ * {{author}} placeholder (bottom right) has
+ * not been replaced.
  *
- * 3) Change it so it shows all
- *    the odd numbers from 1 to 100.
+ * 2) Add another call to the replace method
+ *    to fix the problem.
  *
- * 4) Create an array of numbers and
- *    assign it to a variable.
- *
- *    e.g. var nums = [2, 7, 1, 9];
- *
- * 5) Use a while loop to display
- *    the elements of the array.
- *
- *    Hint: console.log(nums[count])
+ * 3) Does rearranging the order of the calls
+ *    to replace make any difference to the
+ *    output?
  *
  */
