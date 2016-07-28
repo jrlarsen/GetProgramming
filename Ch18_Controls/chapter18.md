@@ -172,3 +172,145 @@
 ```
 
 
+### Movies, comments and a random greeting
+[JS Bin Listing 18.05](http://jsbin.com/nevaxit/edit?js,output) - nevaxit 
+```javascript
+// Get Programming with JavaScript
+// Listings 18.05 and 18.06
+// Movies, comments and a random greeting
+
+(function () {
+  "use strict";
+  
+  function getById (id) {
+    return document.getElementById(id);
+  }
+  
+  var rateButton = getById("rate");
+  var ratingList = getById("rating");
+  var movie = getById("movie");
+  
+  var commentsList = getById("comments");
+  var commentBox = getById("txtComment");
+  
+  function rateMovie () {
+    var rating = ratingList.value;
+    var movieTitle = movie.innerHTML;
+    
+    var comments = commentsList.innerHTML;
+    var comment = commentBox.value;
+    
+    comments += "<li>" + comment + " (" + rating + " stars)</li>";
+    
+    commentsList.innerHTML = comments;
+    
+    commentBox.value = "";
+  } 
+  
+  rateButton.addEventListener("click", rateMovie);
+  
+})();
+
+
+// Add a random greeting
+(function () {
+  
+  function getGreeting () {
+    var hellos = [
+      "Nanu nanu!",
+      "Wassup!",
+      "Yo!",
+      "Hello movie lover!",
+      "Ay up me duck!",
+      "Hola!"
+    ];
+  
+    var index = Math.floor(Math.random() * hellos.length);
+    
+    return hellos[index];
+  }
+  
+  function updateGreeting () {
+    para.innerHTML = getGreeting();
+  }
+  
+  var para = document.getElementById("greeting");
+  
+  updateGreeting();
+  
+})();
+
+
+/* Further Adventures
+ *
+ * 1) Add a second text box for the
+ *    rater's name.
+ *
+ * 2) Ammend the comment code so the
+ *    rater's name is included:
+ *
+ *    Great! (4 stars) - Melvin
+ *
+ */
+```
+
+
+### Movies, comments and a random greeting (HTML)
+[JS Bin Listing 18.05](http://jsbin.com/nevaxit/edit?html,output) - nevaxit 
+```HTML
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>My Movie Ratings</title>
+</head>
+<body>
+
+  <h1>My Movie Ratings</h1>
+  
+  <p>Brief info about my favorite movies. <span id="greeting">Welcome!</span></p>
+  
+  <h2>Movies</h2>
+  
+  <div id="movieBox">
+      <h3 id="movie">Inside Out</h3>
+    <p>An emotional adventure inside the head of a young girl.</p>
+    
+    <h4>Actors</h4>
+    <ul>
+      <li>Amy Poehler</li>
+      <li>Bill Hader</li>
+    </ul>
+    
+    <h4>Directors</h4>
+    <ul>
+      <li>Pete Doctor</li>
+      <li>Ronnie del Carmen</li>
+    </ul>
+    
+    <h4>Comments</h4>
+    <ul id="comments"></ul>
+    
+      <div class="controls">
+        
+        <input type="text" id="txtComment" />
+        
+        <select id="rating">
+          <option>1</option>
+          <option>2</option>
+          <option selected>3</option>
+          <option>4</option>
+          <option>5</option>
+        </select>
+        
+        <button id="rate">Rate</button>
+        
+      </div>
+  </div>
+  
+</body>
+</html>
+```
+
+
