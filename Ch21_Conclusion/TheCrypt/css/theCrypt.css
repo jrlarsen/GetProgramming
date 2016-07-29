@@ -1,5 +1,5 @@
 html {
-  background: url(https://jsbin-user-assets.s3.amazonaws.com/jrlarsen/rock2.jpg);
+  background: url(../img/rock2.jpg);
 }
 
 body {
@@ -11,7 +11,7 @@ body {
 }
 
 h1 {
-  background: url(https://jsbin-user-assets.s3.amazonaws.com/jrlarsen/sand2.jpg);
+  background: url(../img/sand2.jpg);
   color: lightyellow;
   text-align: center;
   font-family: fantasy;
@@ -27,7 +27,7 @@ h1 {
 }
 
 #player, #place {
-  background: url(https://jsbin-user-assets.s3.amazonaws.com/jrlarsen/sand2.jpg);
+  background: url(../img/sand2.jpg);
   color: lightyellow;
   display:inline-block;
   width:40%;
@@ -86,7 +86,7 @@ li {
   color: lightyellow;
   font-size:120%;
   text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.8);
-  background: url(https://jsbin-user-assets.s3.amazonaws.com/jrlarsen/sand.jpg);
+  background: url(../img/sand2.jpg);
   text-align: center;
   margin:1em;
   padding: 0;
