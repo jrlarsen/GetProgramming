@@ -457,7 +457,7 @@ console.log(user.addSession("2017-02-15", 40));
  */
 ```
 
-### Using the map builder
+### Using the new map builder (HTML)
 [JS Bin Listing 14.08](http://jsbin.com/rulayu/edit?html,console) - rulayu
 
 ```html
