@@ -228,9 +228,9 @@ var guess = getGuesser(5, 10);
  * 2) End the game after a certain number
  *    of guesses.
  *
- *    !!!!!!!!!!!!!!!!!!
+ *    ******************
  *    ! Out Of Guesses !
- *    !!!!!!!!!!!!!!!!!!
+ *    ******************
  *
  */
 ```
