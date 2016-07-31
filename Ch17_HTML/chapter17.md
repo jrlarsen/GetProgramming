@@ -79,13 +79,13 @@
 
 <!-- Further Adventures
 
-     1) Add two more questions.
+     1) Add two more movies.
         Be careful to match opening and closing tags.
         Editing HTML can be quite fiddly.
         Don't forget the forward slash
         for the closing tags.
 
-     2) The list of questions is between ol tags.
+     2) The list of directors is between ol tags.
         Change the ol tags to ul tags.
         What happens to the output?
 
