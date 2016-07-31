@@ -30,7 +30,7 @@
 * 3.6 The Crypt - a player object
 * 3.7 Summary
 
-### Chapter 4 – Functions: code-on-demand
+### Chapter 4 – Functions: code on demand
 * 4.1 Noticing repetition
 * 4.2 Defining and calling functions
 * 4.3 Reducing repetition
