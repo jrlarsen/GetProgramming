@@ -320,7 +320,7 @@ render(moviesData);
 ```
 
 
-### A web-based player view
+### A web-based place view
 [JS Bin Listing 17.08](http://jsbin.com/cakine/edit?js,console) - cakine 
 ```javascript
 /* Get Programming with JavaScript
