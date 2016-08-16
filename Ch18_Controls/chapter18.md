@@ -256,7 +256,7 @@
 
 
 ### Movies, comments and a random greeting (HTML)
-[JS Bin Listing 18.05](http://jsbin.com/nevaxit/edit?html,output) - nevaxit 
+[JS Bin Listing 18.06](http://jsbin.com/nevaxit/edit?html,output) - nevaxit 
 ```HTML
 <!DOCTYPE html>
 <html>
