@@ -558,7 +558,7 @@ var app = fitnessApp.init("qiwizo");
   <script src="http://output.jsbin.com/xoyasi.js"></script>
 </body>
 </html>
-``
+```
 
 
 
