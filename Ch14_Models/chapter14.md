@@ -167,6 +167,7 @@ console.log(user.addSession("2017-02-15", 40));
  * 2) At the console prompt, type the following,
  *    pressing Enter after each one:
  *
+ *    > var mapData = theCrypt.mapData
  *    > mapData
  *    > mapData.title
  *    > mapData.places
