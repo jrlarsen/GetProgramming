@@ -3,7 +3,7 @@
 ### Using variables to represent a book
 [JS Bin: Listing 3.01](http://jsbin.com/fucuxah/edit?js,console) - fucuxah
 ```javascript
-/* Get Programmimg with JavaScript
+/* Get Programming with JavaScript
  * Listing 3.01
  * Using variables to represent a book
  */
@@ -37,7 +37,7 @@ console.log(bookTitle + " by " + bookAuthor);
 ### Using prefixes to tell book variables apart
 [JS Bin: Listing 3.02](http://jsbin.com/qowagi/edit?js,console) - qowagi
 ```javascript
-/* Get Programmimg with JavaScript
+/* Get Programming with JavaScript
  * Listing 3.02
  * Using prefixes to tell book variables apart
  */
@@ -71,7 +71,7 @@ console.log(book3Title + " by " + book3Author);
 ### A book as an object
 [JS Bin: Listing 3.03](http://jsbin.com/ruruko/edit?js,console) - ruruko
 ```javascript
-/* Get Programmimg with JavaScript
+/* Get Programming with JavaScript
  * Listing 3.03
  * A book as an object
  */
@@ -105,7 +105,7 @@ console.log(book);
 ### Creating an empty object
 [JS Bin: Listing 3.04](http://jsbin.com/kaqatu/edit?js,console) - kaqatu
 ```javascript
-/* Get Programmimg with JavaScript
+/* Get Programming with JavaScript
  * Listing 3.04
  * Creating an empty object
  */
@@ -137,7 +137,7 @@ book = {};
 ### An object with a single property
 [JS Bin: Listing 3.05](http://jsbin.com/robupi/edit?js,console) - robupi
 ```javascript
-/* Get Programmimg with JavaScript
+/* Get Programming with JavaScript
  * Listing 3.05
  * An object with a single property
  */
@@ -207,7 +207,7 @@ book = {
 ### Objects with multiple properties
 [JS Bin: Listing 3.07](http://jsbin.com/bawiqev/edit?js,console) - bawiqev
 ```javascript
-/* Get Programmimg with JavaScript
+/* Get Programming with JavaScript
  * Listing 3.07
  * Objects with multiple properties
  */
@@ -243,7 +243,7 @@ book2 = {
 ### Using dot notation to access property values
 [JS Bin: Listing 3.08](http://jsbin.com/funiyu/edit?js,console) - funiyu
 ```javascript
-/* Get Programmimg with JavaScript
+/* Get Programming with JavaScript
  * Listing 3.08
  * Using dot notation to access property values
  */
@@ -281,7 +281,7 @@ console.log(book.author);
 ### Concatenating string properties
 [JS Bin: Listing 3.09](http://jsbin.com/yoweti/edit?js,console) - yoweti
 ```javascript
-/* Get Programmimg with JavaScript
+/* Get Programming with JavaScript
  * Listing 3.09
  * Concatenating string properties
  */
@@ -322,7 +322,7 @@ console.log(book2.title + " by " + book2.author);
 ### Using dot notation to update a property
 [JS Bin: Listing 3.10](http://jsbin.com/mulimi/edit?js,console) - mulimi
 ```javascript
-/* Get Programmimg with JavaScript
+/* Get Programming with JavaScript
  * Listing 3.10
  * Using dot notation to update a property
  */
@@ -359,7 +359,7 @@ player1.score = 50;
 ### Using a property in a calculation
 [JS Bin: Listing 3.11](http://jsbin.com/cuboko/edit?js,console) - cuboko
 ```javascript
-/* Get Programmimg with JavaScript
+/* Get Programming with JavaScript
  * Listing 3.11
  * Using a property in a calculation
  */
@@ -397,7 +397,7 @@ console.log(player1.name + " has scored " + player1.score);
 ### A blog post
 [JS Bin: Listing 3.12](http://jsbin.com/jiculu/edit?js,console) - jiculu
 ```javascript
-/* Get Programmimg with JavaScript
+/* Get Programming with JavaScript
  * Listing 3.12
  * A blog post
  */
@@ -425,7 +425,7 @@ var post = {
 ### A calendar event
 [JS Bin: Listing 3.13](http://jsbin.com/viroho/edit?js,console) - viroho
 ```javascript
-/* Get Programmimg with JavaScript
+/* Get Programming with JavaScript
  * Listing 3.13
  * A calendar event
  */
@@ -463,7 +463,7 @@ var event = {
 ### Location for a weather app
 [JS Bin: Listing 3.14](http://jsbin.com/diguhe/edit?js,console) - diguhe
 ```javascript
-/* Get Programmimg with JavaScript
+/* Get Programming with JavaScript
  * Listing 3.14
  * Location for a weather app
  */
@@ -513,7 +513,7 @@ var location = {
 ### A question and answer for a quiz app
 [JS Bin: Listing 3.15](http://jsbin.com/damoto/edit?js,console) - damoto
 ```javascript
-/* Get Programmimg with JavaScript
+/* Get Programming with JavaScript
  * Listing 3.15
  * A question and answer for a quiz app
  */
@@ -542,7 +542,7 @@ var questionAndAnswer = {
 ### A player object
 [JS Bin: Listing 3.16](http://jsbin.com/qelene/edit?js,console) - qelene
 ```javascript
-/* Get Programmimg with JavaScript
+/* Get Programming with JavaScript
  * Listing 3.16
  * A player object
  */
