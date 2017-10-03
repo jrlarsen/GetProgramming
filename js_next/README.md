@@ -131,3 +131,191 @@ console.log(`${playerName} is in ${playerLocation}`);
  *
  */
 ```
+
+## Chapter 3
+
+### Using dot notation in templates
+[JS Bin: Listing 3.17](http://jsbin.com/sedehut/edit?js,console) - sedehut
+```javascript
+/* Get Programming with JavaScript
+ * Listing 3.17
+ * Using dot notation in templates
+ */
+
+
+const book = {
+  title     : "The Hobbit",
+	author    : "J. R. R. Tolkien",
+	published : 1937
+};
+
+console.log(`${book.title} by ${book.author}`);
+
+
+
+/* Further Adventures
+ *
+ * 1) Use a placeholder to include the published
+ *    property in the template string.
+ *
+ * 2) Add a second book.
+ *
+ * 3) Log its details to the console using a template.
+ *
+ * The book variable is declared as a constant.
+ *
+ * 4) Try to update one of the properties.
+ *    Does the program still work?
+ *
+ *    book.published = 1938;
+ *
+ */
+```
+
+### Assigning properties to variables
+[JS Bin: Listing 3.18](http://jsbin.com/jefeyid/edit?js,console) - jefeyid
+```javascript
+/* Get Programming with JavaScript
+ * Listing 3.18
+ * Assigning properties to variables
+ */
+
+
+const book = {
+  title     : "The Hobbit",
+	author    : "J. R. R. Tolkien",
+	published : 1937
+};
+
+// declare two variables whose names match
+// properties of the object.
+// assign the matching values to the variables
+
+const { title, author } = book;
+
+console.log(`${title} by ${author}`);
+
+
+
+/* Further Adventures
+ *
+ * Using curly braces on the left of an assignment,
+ *
+ * { name1, name2 } = myObject;
+ *
+ * assigns property values of the object on the right
+ * to variables with matching names.
+ *
+ * The process is called object destructuring
+ *
+ * 1) Assign the published property to a matching variable.
+ *
+ * 2) Include the new variable in the template.
+ *
+ * The destructured variables are declared as constants.
+ *
+ * 4) Add a second book and try the destructuring
+ *    process again.
+ *
+ */
+```
+
+
+### Assigning variables to matching properties
+[JS Bin: Listing 3.19](http://jsbin.com/rivufo/edit?js,console) - rivufo
+```javascript
+/* Get Programming with JavaScript
+ * Listing 3.19
+ * Assigning variables to matching properties
+ */
+
+const author = "Mark Twain";
+const title = "The Adventures of Tom Sawyer";
+
+const book = {
+  author,
+  title
+};
+
+console.log(book);
+
+
+
+/* Further Adventures
+ *
+ * 1) Run the program.
+ *
+ * The book object is displayed on the console.
+ *
+ * When a variable name matches a property name
+ * you want to assign, you can use the shorthand
+ * shown in the listing above.
+ *
+ * 2) Change the program to use the longer syntax.
+ *
+ * e.g. for just the author property:
+ *
+ * const book = {
+ *   author: author
+ * };
+ *
+ * Does it still work?
+ *
+ * 3) Add a third variable and matching property
+ *    using the shorthand.
+ * 
+ */
+```
+
+### Updating objects assigned to constants
+[JS Bin: Listing 3.20](http://jsbin.com/labidah/edit?js,console) - labidah
+```javascript
+/* Get Programming with JavaScript
+ * Listing 3.20
+ * Updating objects assigned to constants
+ */
+
+const player1 = {
+	  name: "Max",
+	  attempted: 0,
+    correct: 0
+};
+
+player1.attempted = 1;
+player1.correct = 1;
+player1.score = 50;
+
+const playerInfo = `
+ * ${player1.name}
+ * has score
+ * ${player1.score}
+`;
+
+console.log(playerInfo);
+
+
+
+/* Further Adventures
+ *
+ * 1) Add more lines to the program to
+ *    update the name and score.
+ *
+ * 2) Log the updated player info to the console.
+ *
+ * You can only assign a value once to a variable
+ * declared with const. However, if you assign an
+ * object to the variable, you can update the
+ * variable's properties.
+ *
+ * 3) At the end of the program,
+ *    try assigning a new object to player1:
+ *
+ *    player1 = { name: "Kandra" };
+ *
+ * 4) Play with the playerInfo template to make
+ *    the info logged more interesting.
+ *
+ * Template strings can span multiple lines.
+ *
+ */
+```
