@@ -319,3 +319,128 @@ console.log(playerInfo);
  *
  */
 ```
+
+## Chapter 4
+
+### Using fat arrow notation
+[JS Bin: Listing 4.15](http://jsbin.com/bolefid/edit?js,console) - bolefid
+```javascript
+/* Get Programming with JavaScript
+ * Listing 4.15
+ * Using fat arrow notation
+ */
+
+const sayHello = () => {
+	console.log("Hello World!");
+};
+
+sayHello();
+sayHello();
+sayHello();
+
+
+
+/* Further Adventures
+ *
+ * 1) Change the message from the sayHello function.
+ *
+ * Enclose the message in backticks to spread it
+ * across multiple lines.
+ *
+ * 2) Break the Hello World! message across two lines.
+ *
+ * 3) Create a function that prints the letters
+ *    of "Hello World!" one by one down the page.
+ *
+ */
+```
+
+### Displaying a menu using a template string
+[JS Bin: Listing 4.16](http://jsbin.com/leqofu/edit?js,console) - leqofu
+```javascript
+/* Get Programming with JavaScript
+ * Listing 4.16
+ * Displaying a menu using a template string
+ */
+
+const displayMenu = () => {
+    console.log(`
+Please choose an option:
+(1) Print log
+(2) Upload file
+(9) Quit
+` );
+};
+
+displayMenu();
+
+
+
+/* Further Adventures
+ *
+ * 1) Add two more options to the displayMenu
+ *    function and run the program.
+ *
+ * 2) Create your own displayMyMenu function.
+ *
+ * 3) Add a line to call your function as well.
+ *    Run the program
+ *
+ */
+```
+
+### A function to display player information
+[JS Bin: Listing 4.17](http://jsbin.com/tosofap/edit?js,console) - tosofap
+```javascript
+/* Get Programming with JavaScript
+ * Listing 4.17
+ * A function to display player information
+ */
+
+let player;
+
+const player1 = {
+    name: "Kandra",
+    place: "The Dungeon of Doom",
+    health: 50
+};
+
+const player2 = {
+    name: "Dax",
+    place: "The Old Library",
+    health: 40
+};
+
+const showPlayerInfo = () => {
+    const { name, place, health } = player;
+    console.log(`
+${name}
+------------------------------
+${name} is in ${place}
+${name} has health ${health}
+------------------------------
+`   );
+};
+
+player = player1;
+showPlayerInfo();
+
+player = player2;
+showPlayerInfo();
+
+
+
+/* Further Adventures
+ *
+ * 1) Write a function that just shows
+ *    where the player is.
+ *
+ * 2) Write a function that just shows
+ *    the player's health.
+ *
+ * 3) Change the showPlayerInfo function
+ *    to use your two functions.
+ *
+ */
+```
+
