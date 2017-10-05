@@ -1,37 +1,26 @@
 /* Get Programming with JavaScript
  * Listing 5.16
- * Using the square function
+ * Defining a function with a default argument
  */
 
-const square = x => x ** 2;
-
-const showSquare = numberToSquare => {
-    const result = square(numberToSquare);
-    console.log(`${numberToSquare} * ${numberToSquare} = ${result}`);
+const showMessage = (message = "Hello World!") => {
+    console.log(`The message is: ${message}`);
 };
 
-showSquare(10);
-showSquare(-2);
-showSquare(1111);
-showSquare(0.5);
+showMessage("It's full of stars!");
+showMessage("Hello to Jason Isaacs");
+showMessage();
 
 
 
 /* Further Adventures
  *
- * 1) Define a cube function that cubes
- *    any number passed in as an argument.
+ * 1) Add a second parameter to the function
+ *    called prefix.
  *
- * 2) Define a showCube function and test it
- *    four times with different arguments.
+ * 2) Change the template string to log the
+ *    prefix followed by the message.
  *
- * Math.sqrt is a built-in function to find
- * the positive square root of a number.
- * e.g. Math.sqrt(9) finds the square root of 9.
- *
- * 3) Define and test a showSquareRoot function
- *    to find square roots and display
- *    them on the console.
- *    e.g. The square root of 9 is 3.
+ * 3) Include a default value for the prefix.
  *
  */

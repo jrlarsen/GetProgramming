@@ -477,11 +477,42 @@ showMessage("Hello to Jason Isaacs and Stephen Fry");
  */
 ```
 
-### Using the square function
-[JS Bin: Listing 5.16](http://jsbin.com/fikireq/edit?js,console) - fikireq
+### Defining a function with a default argument
+[JS Bin: Listing 5.16](http://jsbin.com/ziyivu/edit?js,console) - ziyivu
 ```javascript
 /* Get Programming with JavaScript
  * Listing 5.16
+ * Defining a function with a default argument
+ */
+
+const showMessage = (message = "Hello World!") => {
+    console.log(`The message is: ${message}`);
+};
+
+showMessage("It's full of stars!");
+showMessage("Hello to Jason Isaacs");
+showMessage();
+
+
+
+/* Further Adventures
+ *
+ * 1) Add a second parameter to the function
+ *    called prefix.
+ *
+ * 2) Change the template string to log the
+ *    prefix followed by the message.
+ *
+ * 3) Include a default value for the prefix.
+ *
+ */
+```
+
+### Using the square function
+[JS Bin: Listing 5.17](http://jsbin.com/fikireq/edit?js,console) - fikireq
+```javascript
+/* Get Programming with JavaScript
+ * Listing 5.17
  * Using the square function
  */
 
@@ -520,10 +551,10 @@ showSquare(0.5);
 ```
 
 ### A function with two arguments
-[JS Bin: Listing 5.17](http://jsbin.com/qulicu/edit?js,console) - qulicu
+[JS Bin: Listing 5.18](http://jsbin.com/qulicu/edit?js,console) - qulicu
 ```javascript
 /* Get Programming with JavaScript
- * Listing 5.17
+ * Listing 5.18
  * A function with two arguments
  */
 
@@ -560,10 +591,10 @@ showSum(2.8, -5);
 ```
 
 ### Displaying a player's information using properties
-[JS Bin: Listing 5.18](http://jsbin.com/wovufar/edit?js,console) - wovufar
+[JS Bin: Listing 5.19](http://jsbin.com/wovufar/edit?js,console) - wovufar
 ```javascript
 /* Get Programming with JavaScript
- * Listing 5.18
+ * Listing 5.19
  * Displaying a player's information using properties
  */
 
