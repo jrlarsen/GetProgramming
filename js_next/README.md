@@ -144,9 +144,9 @@ console.log(`${playerName} is in ${playerLocation}`);
 
 
 const book = {
-  title     : "The Hobbit",
-	author    : "J. R. R. Tolkien",
-	published : 1937
+    title     : "The Hobbit",
+    author    : "J. R. R. Tolkien",
+    published : 1937
 };
 
 console.log(`${book.title} by ${book.author}`);
@@ -182,9 +182,9 @@ console.log(`${book.title} by ${book.author}`);
 
 
 const book = {
-  title     : "The Hobbit",
-	author    : "J. R. R. Tolkien",
-	published : 1937
+    title     : "The Hobbit",
+    author    : "J. R. R. Tolkien",
+    published : 1937
 };
 
 // declare two variables whose names match
@@ -276,8 +276,8 @@ console.log(book);
  */
 
 const player1 = {
-	  name: "Max",
-	  attempted: 0,
+    name: "Max",
+    attempted: 0,
     correct: 0
 };
 
@@ -369,7 +369,7 @@ Please choose an option:
 (1) Print log
 (2) Upload file
 (9) Quit
-` );
+`   );
 };
 
 displayMenu();
