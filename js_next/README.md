@@ -550,12 +550,12 @@ showSquare(0.5);
  */
 ```
 
-### A function with two arguments
+### Functions with two parameters
 [JS Bin: Listing 5.18](http://jsbin.com/qulicu/edit?js,console) - qulicu
 ```javascript
 /* Get Programming with JavaScript
  * Listing 5.18
- * A function with two arguments
+ * Functions with two parameters
  */
 
 const sum = (x, y) => x + y;
