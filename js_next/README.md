@@ -657,3 +657,156 @@ showPlayerInfo(player2.name, player2.place, player2.health);
  */
 ```
 
+## Chapter 6
+
+### Returning a value from a function
+[JS Bin: Listing 6.11](http://jsbin.com/xiwagux/edit?js,console) - xiwagux
+```javascript
+/* Get Programming with JavaScript
+ * Listing 6.11
+ * Returning a value from a function
+ */
+
+const getMessage = () => "I’m going on an adventure!";
+
+const response = getMessage();
+
+console.log(response);
+
+
+
+/* Further Adventures
+ *
+ * 1) Write a getMyMessage function
+ *    that returns a message of
+ *    your choosing.
+ *
+ */
+```
+
+### Using the return value as an argument
+[JS Bin: Listing 6.12](http://jsbin.com/yerevom/edit?js,console) - yerevom
+```javascript
+/* Get Programming with JavaScript
+ * Listing 6.12
+ * Using the return value as an argument
+ */
+
+const getHelloTo = name => `Hello to ${name}`;
+
+console.log(getHelloTo("Kandra"));
+console.log(getHelloTo("Dax"));                                         
+
+
+
+/* Further Adventures
+ *
+ * 1) Rewrite the function using curly braces
+ *    for the function body and an explicit
+ *    return statement.
+ *
+ * 2) Run the program to check the output
+ *    is unaffected by the change in form.
+ *
+ * Do you prefer the function with or without
+ * the return statement?
+ *
+ */
+```
+
+### Returning the sum of two numbers
+[JS Bin: Listing 6.13](http://jsbin.com/deqimur/edit?js,console) - deqimur
+```javascript
+/* Get Programming with JavaScript
+ * Listing 6.13
+ * Returning the sum of two numbers
+ */
+
+const add = (x, y) => x + y;
+
+const sum = add(50, 23);
+
+console.log(sum);
+
+
+
+/* Further Adventures
+ *
+ * 1) Find and display the sum of
+ *    a different pair of numbers
+ *
+ * 2) Change the call to console.log so that
+ *    the display on the console reads:
+ *    'The sum of 50 and 23 is 73'
+ *    using the add function to generate the answer.
+ *
+ * 3) Can you use the add function as it is
+ *    to add more than two numbers?
+ *    Hint: You can nest calls to add.
+ *
+ * 4) Create a function to return the sum of
+ *    three numbers given as arguments.
+ *
+ */
+```
+
+### Displaying player information using objects
+[JS Bin: Listing 6.14](http://jsbin.com/yuwuliv/edit?js,console) - yuwuliv
+```javascript
+/* Get Programming with JavaScript
+ * Listing 6.14
+ * Displaying player information using objects
+ */
+
+const getPlayerName = pName => pName;
+
+const getPlayerHealth = (pName, pHealth) => `${pName} has health ${pHealth}`;
+
+const getPlayerPlace = (pName, pPlace) =>`${pName} is in ${pPlace}`;
+
+const getBorder = () => "================================";
+
+const getPlayerInfo = (playerName, playerPlace, playerHealth) => {  
+    return `
+${getPlayerName(playerName)}
+${getBorder()}
+${getPlayerPlace(playerName, playerPlace)}
+${getPlayerHealth(playerName, playerHealth)}
+${getBorder()}
+`;
+};
+
+const player1 = {
+    name: "Kandra",
+    place: "The Dungeon of Doom",
+    health: 50
+};
+
+const player2 = {
+    name: "Dax",
+    place: "The Old Library",
+    health: 40
+};
+
+console.log(getPlayerInfo(player1.name, player1.place, player1.health));
+console.log(getPlayerInfo(player2.name, player2.place, player2.health));
+
+
+
+/* Further Adventures
+ *
+ * 1) Add an items property to both players.
+ *    e.g. items: "a rusty key, a piece of cheese"
+ *
+ * 2) Create a getPlayerItems function to return
+ *    a sensible string including the items.
+ *
+ * 3) Update the getPlayerInfo function to
+ *    include a call to getPlayerItems.
+ *
+ * 4) Change the two calls to getPlayerInfo
+ *    so they also pass the items property
+ *    as an argument.
+ *
+ */
+```
