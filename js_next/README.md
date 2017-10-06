@@ -516,17 +516,15 @@ showMessage();
  * Using the square function
  */
 
-const square = x => x ** 2;
-
-const showSquare = numberToSquare => {
-  const result = square(numberToSquare);
+const square = numberToSquare => {
+  const result = numberToSquare ** 2;
   console.log(`${numberToSquare} * ${numberToSquare} = ${result}`);
 };
 
-showSquare(10);
-showSquare(-2);
-showSquare(1111);
-showSquare(0.5);
+square(10);
+square(-2);
+square(1111);
+square(0.5);
 
 
 
@@ -535,14 +533,14 @@ showSquare(0.5);
  * 1) Define a cube function that cubes
  *    any number passed in as an argument.
  *
- * 2) Define a showCube function and test it
+ * 2) Test your cube function
  *    four times with different arguments.
  *
  * Math.sqrt is a built-in function to find
  * the positive square root of a number.
  * e.g. Math.sqrt(9) finds the square root of 9.
  *
- * 3) Define and test a showSquareRoot function
+ * 3) Define and test a squareRoot function
  *    to find square roots and display
  *    them on the console.
  *    e.g. The square root of 9 is 3.
@@ -555,13 +553,11 @@ showSquare(0.5);
 ```javascript
 /* Get Programming with JavaScript
  * Listing 5.18
- * Functions with two parameters
+ * A function with two arguments
  */
 
-const sum = (x, y) => x + y;
-
 const showSum = (number1, number2) => {
-	const total = sum(number1, number2);
+	const total = number1 + number2;
 	console.log(`The sum is ${total}`);
 };
 
@@ -598,14 +594,10 @@ showSum(2.8, -5);
  * Displaying a player's information using properties
  */
 
-const getPlayerName = playerName => playerName;
-const getPlayerHealth = (playerName, playerHealth) => `${playerName} has health ${playerHealth}`;
-const getPlayerPlace = (playerName, playerPlace) => `${playerName} is in ${playerPlace}`;
-
 var showPlayerInfo = (playerName, playerPlace, playerHealth) => {
-    const name = getPlayerName(playerName);
-    const place = getPlayerPlace(playerName, playerPlace);
-    const health = getPlayerHealth(playerName, playerHealth);
+    const name = playerName;
+    const place = `${playerName} is in ${playerPlace}`;
+    const health = `${playerName} has health ${playerHealth}`;
 
     console.log(`
 ${name}

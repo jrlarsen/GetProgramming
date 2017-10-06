@@ -1,16 +1,12 @@
 /* Get Programming with JavaScript
- * Listing 5.18
+ * Listing 5.19
  * Displaying a player's information using properties
  */
 
-const getPlayerName = playerName => playerName;
-const getPlayerHealth = (playerName, playerHealth) => `${playerName} has health ${playerHealth}`;
-const getPlayerPlace = (playerName, playerPlace) => `${playerName} is in ${playerPlace}`;
-
 var showPlayerInfo = (playerName, playerPlace, playerHealth) => {
-    const name = getPlayerName(playerName);
-    const place = getPlayerPlace(playerName, playerPlace);
-    const health = getPlayerHealth(playerName, playerHealth);
+    const name = playerName;
+    const place = `${playerName} is in ${playerPlace}`;
+    const health = `${playerName} has health ${playerHealth}`;
 
     console.log(`
 ${name}

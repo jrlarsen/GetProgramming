@@ -1,12 +1,10 @@
 /* Get Programming with JavaScript
- * Listing 5.17
+ * Listing 5.18
  * A function with two arguments
  */
 
-const sum = (x, y) => x + y;
-
 const showSum = (number1, number2) => {
-    const total = sum(number1, number2);
+    const total = number1 + number2;
     console.log(`The sum is ${total}`);
 };
 
