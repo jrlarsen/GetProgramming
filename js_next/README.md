@@ -810,3 +810,181 @@ console.log(getPlayerInfo(player2.name, player2.place, player2.health));
  *
  */
 ```
+
+## Chapter 7
+
+### Destructuring an object argument
+[JS Bin: Listing 7.12](http://jsbin.com/fojozoc/edit?js,console) - fojozoc
+```javascript
+/* Get Programming with JavaScript
+ * Listing 7.12
+ * Destructuring an object argument
+ */
+
+const planet1 = {
+    name: "Jupiter",
+    position: 5,
+    type: "Gas Giant",
+    radius: 69911,
+    sizeRank: 1
+};
+
+const getPlanetInfo = planet => {
+    const { name, position } = planet;
+    return `${name}: planet number ${position}`;
+};
+
+console.log(getPlanetInfo(planet1));
+
+
+
+/* Further Adventures
+ *
+ * 1) Create a second planet object.
+ *
+ * 2) Use getPlanetInfo to log details of
+ *    the second planet.
+ *
+ * 3) Update the getPlanetInfo function to
+ *    include more information about
+ *    each planet.
+ *
+ */
+```
+
+
+### Shorthand properties and argument destructuring
+[JS Bin: Listing 7.13](http://jsbin.com/fihihon/edit?js,console) - fihihon
+```javascript
+/* Get Programming with JavaScript
+ * Listing 7.13
+ * Shorthand properties and argument destructuring
+ */
+
+const buildPlanet = function (name, position, type, radius, rank) {
+    return {
+        name,
+        position,
+        type,
+        radius,
+        sizeRank: rank
+    };
+};
+
+const getPlanetInfo = ({name, position}) => `${name.toUpperCase()}: planet ${position}`;
+
+const planet1 = buildPlanet("Jupiter", 5, "Gas Giant", 69911, 1);
+const planet2 = buildPlanet("Neptune", 8, "Ice Giant", 24622, 4);
+
+console.log(getPlanetInfo(planet1));
+console.log(getPlanetInfo(planet2));
+
+
+
+/* Further Adventures
+ *
+ * 1) Create a getPlanetInfo2 function that
+ *    uses destructuring to gather other planet
+ *    properties and returns a different string
+ *    of info.
+ *
+ */
+```
+
+
+### Renaming properties when object destructuring
+[JS Bin: Listing 7.14](http://jsbin.com/micixur/edit?js,console) - micixur
+```javascript
+/* Get Programming with JavaScript
+ * Listing 7.14
+ * Renaming properties when object destructuring
+ */
+
+const move = ({x, y}, {x: dx, y: dy}) => ({x: x + dx, y: y + dy});
+
+const showPoint = ({x, y}) => console.log(`( ${x} , ${y} )`);
+
+const point1 = { x : 2, y : 5 };
+
+const point2 = move(point1, { x : 4, y : -2 });
+
+showPoint(point1);
+console.log("Move 4 across and 2 down");
+showPoint(point2);
+
+
+
+/* Further Adventures
+ *
+ * 1) Change the amount by which the point is moved
+ *    by altering the x and y properties of
+ *    the object literal passed to the move function.
+ *
+ * 2) Write a reflectX function that reflects
+ *    a point in the x-axis, returning the new point.
+ *
+ * 3) How about a rotate90 function that rotates
+ *    the point by 90 degrees anticlockwise
+ *    around ( 0 , 0 )?
+ *
+ */
+```
+
+
+### Shorthand object methods and padding
+[JS Bin: Listing 7.15](http://jsbin.com/nisokav/edit?js,console) - nisokav
+```javascript
+/* Get Programming with JavaScript
+ * Listing 7.15
+ * Shorthand object methods and padding
+ */
+
+var spacer = {
+  blank() {
+    return "";
+  },
+
+  newLine() {
+    return "\n";
+  },
+
+  line(length, character) {
+    return ''.padStart(length, character);
+  },
+  
+  wrap(text, length, character) {
+    return (character + " " + text).padEnd(length - 1) + character;
+  },
+
+  box(text, length, character) {
+    const border = spacer.line(length, character);
+    const wrapText = spacer.wrap(text, length, character);
+    
+    return `
+${border}
+${wrapText}
+${border}
+`;
+  }
+};
+
+console.log(spacer.box("Mercury", 11, "="));
+console.log(spacer.box("Mars", 11, "*"));
+
+
+
+/* Further Adventures
+ *
+ * 1) Change the Spacer.box function so that
+ *    the box is 5 lines high.
+ *
+ *    Spacer.box("Earth");
+ *
+ *    > =========
+ *    > =       =
+ *    > = Earth =
+ *    > =       =
+ *    > =========
+ *
+ */
+```
